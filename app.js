@@ -21,30 +21,45 @@ function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); return tru
 let salvati = load(K_SALV, {});   // {chiave: {tipo,titolo,rif,quando}}
 let note = load(K_NOTE, {});      // {chiave: testo}
 
-function toast(m){
-  const t = $('toast'); t.textContent = m; t.classList.add('on');
-  clearTimeout(toast._t); toast._t = setTimeout(function(){ t.classList.remove('on'); }, 1900);
+function avvisa(m){
+  const t = $('avviso'); t.textContent = m; t.classList.add('visibile');
+  clearTimeout(avvisa._t); avvisa._t = setTimeout(function(){ t.classList.remove('visibile'); }, 1900);
 }
 
 /* ---------------- utilita' ---------------- */
+/* Le sigle di evidenza sono l'unico posto in cui l'atlante usa il colore:
+   ovunque altrove la gerarchia la fanno tipografia e filetti. */
 const LIV_D = {
-  A:'Meta-analisi, oppure più studi concordi su soggetti allenati.',
+  A:'Meta-analisi, oppure più studi concordi su soggetti allenati.',
   B:'Studio singolo controllato, o evidenza indiretta solida.',
   C:'Meccanismo plausibile o consenso pratico: non testato direttamente.'
 };
-function livBadge(l){ return '<span class="liv liv-'+l.toLowerCase()+'">'+l+'</span>'; }
+const PARTI = {
+  muscoli:  ['1','I',  'Muscoli'],
+  problemi: ['2','II', 'Problemi'],
+  studi:    ['3','III','Studi'],
+  miti:     ['4','IV', 'Miti'],
+  fonti:    ['5','V',  'Fonti'],
+  strumenti:['6','VI', 'Strumenti'],
+  note:     ['7','VII','Note']
+};
+function sigla(l){ return '<span class="sigla sigla-'+l.toLowerCase()+'">'+l+'</span>'; }
+function numSez(parte, i){ return '\u00a7'+PARTI[parte][0]+'.'+i; }
+function indiceDi(lista, id){ const i = lista.map(function(x){ return x.id; }).indexOf(id); return i<0?null:i+1; }
+
 function studiById(ids){
   return (ids||[]).map(function(id){ return STUDI.filter(function(s){ return s.id===id; })[0]; })
                   .filter(Boolean);
 }
 function studioRiga(s){
-  return '<div class="st" data-go="#/studio/'+s.id+'">'+
-    '<div class="st-h">'+livBadge(s.liv)+'<span class="st-t">'+esc(s.titolo)+'</span></div>'+
-    '<div class="st-m">'+esc(s.autore)+' · '+esc(s.rivista)+' · '+s.anno+'</div>'+
-  '</div>';
+  const n = indiceDi(STUDI, s.id);
+  return '<div class="studio" data-vai="#/studio/'+s.id+'">'+
+    '<div class="marg">'+sigla(s.liv)+'</div>'+
+    '<div><div class="studio-t">'+esc(s.titolo)+'</div>'+
+      '<div class="studio-r">'+esc(s.autore)+', '+esc(s.rivista)+', '+s.anno+' \u00b7 '+numSez('studi', n)+'</div>'+
+    '</div></div>';
 }
 
-/* ---------------- ricerca locale ---------------- */
 function cercaLocale(q){
   const t = q.toLowerCase().trim();
   if(t.length < 2) return [];
@@ -54,25 +69,27 @@ function cercaLocale(q){
     return parole.every(function(p){ return b.indexOf(p) >= 0; });
   };
   const out = [];
-  MUSCOLI.forEach(function(m){
+  MUSCOLI.forEach(function(m, i){
     const blob = [m.nome, m.gruppo, m.capi.join(' '), m.funzioni.join(' '), m.stimolo,
                   m.esercizi.map(function(e){return e.n+' '+e.f;}).join(' ')].join(' ');
-    if(hit(blob)) out.push({t:'Muscolo', n:m.nome, d:m.funzioni.join(' · '), h:'#/muscolo/'+m.id});
+    if(hit(blob)) out.push({p:'muscoli', n:numSez('muscoli',i+1), t:m.nome,
+                            d:m.funzioni.join(' \u00b7 '), h:'#/muscolo/'+m.id});
   });
-  PROBLEMI.forEach(function(p){
-    const blob = [p.t, p.area, p.sintomo, p.cause.map(function(c){return c.c;}).join(' '),
-                  p.soluzioni.map(function(s){return s.s+' '+s.come;}).join(' ')].join(' ');
-    if(hit(blob)) out.push({t:'Problema', n:p.t, d:p.area, h:'#/problema/'+p.id});
+  PROBLEMI.forEach(function(x, i){
+    const blob = [x.t, x.area, x.sintomo, x.cause.map(function(c){return c.c;}).join(' '),
+                  x.soluzioni.map(function(s){return s.s+' '+s.come;}).join(' ')].join(' ');
+    if(hit(blob)) out.push({p:'problemi', n:numSez('problemi',i+1), t:x.t, d:x.area, h:'#/problema/'+x.id});
   });
-  STUDI.forEach(function(s){
+  STUDI.forEach(function(s, i){
     if(hit([s.titolo, s.sintesi, s.kw, s.autore, s.rivista, s.tema].join(' ')))
-      out.push({t:'Studio', n:s.titolo, d:s.autore+' · '+s.anno+' · '+s.tema, h:'#/studio/'+s.id});
+      out.push({p:'studi', n:numSez('studi',i+1), t:s.titolo,
+                d:s.autore+', '+s.anno+' \u00b7 '+s.tema, h:'#/studio/'+s.id});
   });
   MITI.forEach(function(m, i){
-    if(hit(m.m+' '+m.s)) out.push({t:'Mito', n:m.m, d:'verdetto: '+m.v, h:'#/miti'});
+    if(hit(m.m+' '+m.s)) out.push({p:'miti', n:numSez('miti',i+1), t:m.m, d:'verdetto: '+m.v, h:'#/miti'});
   });
   GLOSSARIO.forEach(function(g){
-    if(hit(g.t+' '+g.d)) out.push({t:'Glossario', n:g.t, d:g.d.slice(0,90)+'…', h:'#/strumenti'});
+    if(hit(g.t+' '+g.d)) out.push({p:'strumenti', n:'\u00a76', t:g.t, d:g.d.slice(0,88)+'\u2026', h:'#/strumenti'});
   });
   return out;
 }
@@ -178,42 +195,58 @@ function etIt(e){ return ET_IT[String(e).toLowerCase()] || e; }
 /* ---------------- viste ---------------- */
 const V = {};
 
+function testa(parte, titolo, sommario, num){
+  return (parte ? '<div class="occhiello">Parte '+PARTI[parte][1]+' · '+PARTI[parte][2]+'</div>' : '')+
+    '<h1>'+(num?'<span class="num">'+num+'</span>':'')+titolo+'</h1>'+
+    (sommario ? '<p class="sommario">'+sommario+'</p>' : '');
+}
+function indietro(href, dove){ return '<button class="indietro" data-vai="'+href+'">← '+dove+'</button>'; }
+function voce(num, tit, des, fin, href){
+  return '<button class="voce" data-vai="'+href+'">'+
+    '<span class="voce-num">'+num+'</span>'+
+    '<span><span class="voce-tit">'+tit+'</span>'+(des?'<span class="voce-des">'+des+'</span>':'')+'</span>'+
+    '<span class="voce-fin">'+(fin||'')+'</span></button>';
+}
+
 V.home = function(){
   const nSalv = Object.keys(salvati).length;
-  return '<h1>Atlante</h1>'+
-  '<p class="lead">Riferimento sull’allenamento basato sulla ricerca. Ogni affermazione porta il suo livello di evidenza; ogni studio citato ha un PMID verificato.</p>'+
-  '<h2>Sezioni</h2>'+
-  '<div class="idx">'+
-    idxRow('Muscoli','#/muscoli', MUSCOLI.length+' schede','Anatomia funzionale, esercizi mappati per funzione e lunghezza, errori tipici.')+
-    idxRow('Problemi','#/problemi', PROBLEMI.length+' casi','Dal sintomo alle cause probabili alle soluzioni, in ordine di resa.')+
-    idxRow('Studi','#/studi', STUDI.length+' voci','Libreria verificata, più ricerca live su PubMed ed Europe PMC.')+
-    idxRow('Miti','#/miti', MITI.length+' voci','Affermazioni da palestra con il verdetto della ricerca.')+
-    idxRow('Fonti','#/fonti', FONTI.length+' archivi','Dove cercare, con ricerche già filtrate sui tuoi argomenti.')+
-    idxRow('Strumenti','#/strumenti','glossario + calcoli','Termini degli studi e quattro calcolatori.')+
-    idxRow('Note','#/note', nSalv+' salvati','Studi messi da parte e appunti tuoi.')+
-  '</div>'+
-  '<h2>Livelli di evidenza</h2>'+
-  '<div class="card"><div class="livkey">'+
-    '<div>'+livBadge('A')+'<span>'+LIV_D.A+'</span></div>'+
-    '<div>'+livBadge('B')+'<span>'+LIV_D.B+'</span></div>'+
-    '<div>'+livBadge('C')+'<span>'+LIV_D.C+'</span></div>'+
-  '</div></div>'+
-  '<p class="sub" style="margin-top:14px;line-height:1.6;">Circa l’ottanta per cento dei partecipanti in questa letteratura non è allenato, e gli effetti si comprimono nei soggetti esperti. Le direzioni restano affidabili, le grandezze no.</p>';
+  const conta = {muscoli:MUSCOLI.length+' schede', problemi:PROBLEMI.length+' casi',
+    studi:STUDI.length+' voci', miti:MITI.length+' voci', fonti:FONTI.length+' archivi',
+    strumenti:GLOSSARIO.length+' voci', note:nSalv+' salvati'};
+  const des = {
+    muscoli:'Anatomia funzionale, esercizi ordinati per funzione e per lunghezza, errori ricorrenti.',
+    problemi:'Dal sintomo alle cause probabili alle soluzioni, in ordine di resa.',
+    studi:'Libreria con identificativo verificato, e ricerca diretta negli archivi.',
+    miti:'Affermazioni correnti messe a confronto con la letteratura.',
+    fonti:'Dove cercare, con interrogazioni già impostate.',
+    strumenti:'Glossario dei termini e quattro calcoli ricorrenti.',
+    note:'Studi messi da parte e annotazioni personali.'};
+  let h = '<h1 style="font-size:34px;margin-bottom:10px;">Atlante<br>dell’allenamento</h1>'+
+    '<p class="sommario" style="font-size:16px;">Opera di consultazione sulla biomeccanica, sulla casistica di sala e sulla letteratura. '+
+    'Ogni affermazione porta la propria sigla di evidenza; ogni studio citato ha un identificativo verificato.</p>'+
+    '<h2>Indice generale</h2><div class="indice">';
+  Object.keys(PARTI).forEach(function(k){
+    h += voce(PARTI[k][1], PARTI[k][2], des[k], conta[k], '#/'+k);
+  });
+  h += '</div>';
+  h += '<h2>Sigle di evidenza</h2><div class="dati legenda">'+
+    '<div><dt class="l-a">A</dt><dd>'+LIV_D.A+'</dd></div>'+
+    '<div><dt class="l-b">B</dt><dd>'+LIV_D.B+'</dd></div>'+
+    '<div><dt class="l-c">C</dt><dd>'+LIV_D.C+'</dd></div></div>';
+  h += '<div class="colophon">Circa l’ottanta per cento dei partecipanti in questa letteratura non è allenato, '+
+    'e gli effetti si comprimono nei soggetti esperti: le direzioni restano affidabili, le grandezze no. '+
+    'I riassunti sono una lettura, non la fonte: accanto a ciascuno c’è il rimando all’originale.</div>';
+  return h;
 };
-function idxRow(nome, href, meta, desc){
-  return '<button class="idx-row" data-go="'+href+'">'+
-    '<div class="idx-name">'+nome+'<div class="idx-desc">'+desc+'</div></div>'+
-    '<span class="idx-meta">'+meta+'</span><span class="chev">›</span></button>';
-}
 
 V.muscoli = function(){
   const gruppi = {};
-  MUSCOLI.forEach(function(m){ (gruppi[m.gruppo] = gruppi[m.gruppo] || []).push(m); });
-  let h = '<h1>Muscoli</h1><p>Una scheda per gruppo muscolare: cosa determina lo stimolo, quali esercizi coprono quale funzione, e a che lunghezza lo fanno.</p>';
+  MUSCOLI.forEach(function(m, i){ (gruppi[m.gruppo] = gruppi[m.gruppo] || []).push([m, i+1]); });
+  let h = testa('muscoli','Muscoli','Una scheda per gruppo: cosa determina lo stimolo, quali esercizi coprono quale funzione, e a che lunghezza il muscolo lavora nel tratto più caricato.');
   Object.keys(gruppi).forEach(function(g){
-    h += '<h2>'+g+'</h2><div class="idx">';
-    gruppi[g].forEach(function(m){
-      h += idxRow(m.nome, '#/muscolo/'+m.id, m.esercizi.length+' esercizi', m.funzioni[0]);
+    h += '<h2>'+g+'</h2><div class="indice">';
+    gruppi[g].forEach(function(par){
+      h += voce(numSez('muscoli',par[1]), par[0].nome, par[0].funzioni[0], par[0].esercizi.length+' es.', '#/muscolo/'+par[0].id);
     });
     h += '</div>';
   });
@@ -221,343 +254,306 @@ V.muscoli = function(){
 };
 
 V.muscolo = function(id){
+  const i = indiceDi(MUSCOLI, id);
   const m = MUSCOLI.filter(function(x){ return x.id===id; })[0];
   if(!m) return V.muscoli();
-  let h = backBtn('#/muscoli','Muscoli') + '<h1>'+m.nome+'</h1>';
-  h += '<dl class="kv">'+
-    '<dt>Gruppo</dt><dd>'+m.gruppo+'</dd>'+
-    '<dt>Capi</dt><dd>'+m.capi.join('<br>')+'</dd>'+
-    '<dt>Funzioni</dt><dd>'+m.funzioni.join('<br>')+'</dd>'+
-    '<dt>Volume</dt><dd>'+m.volume+'</dd>'+
-  '</dl>';
-  h += '<h2>Cosa determina lo stimolo</h2><p class="lead">'+m.stimolo+'</p>';
-  h += '<h2>Esercizi per funzione</h2>';
-  h += '<p class="sub" style="margin-bottom:10px;">Il grado indica quanto l’esercizio serve quel muscolo: A primario, B utile, C marginale. La lunghezza è quella a cui il muscolo lavora nel tratto più caricato.</p>';
+  let h = indietro('#/muscoli','Muscoli') + testa('muscoli', m.nome, '', numSez('muscoli', i));
+  h += '<div class="dati">'+
+    '<div><dt>Gruppo</dt><dd>'+m.gruppo+'</dd></div>'+
+    '<div><dt>Capi</dt><dd>'+m.capi.join('<br>')+'</dd></div>'+
+    '<div><dt>Funzioni</dt><dd>'+m.funzioni.join('<br>')+'</dd></div>'+
+    '<div><dt>Volume</dt><dd>'+m.volume+'</dd></div></div>';
+  h += '<h2>Cosa determina lo stimolo</h2><p>'+m.stimolo+'</p>';
+  h += '<h2>Esercizi per funzione</h2>'+
+    '<p class="guida">Il grado indica quanto l’esercizio serve questo muscolo: A primario, B utile, C marginale.</p>';
   m.esercizi.forEach(function(e){
-    h += '<div class="ex">'+
-      '<span class="ex-g g-'+e.g+'">'+e.g+'</span>'+
-      '<div class="ex-b"><div class="ex-n">'+e.n+'</div>'+
-        '<div class="ex-f">'+e.f+'</div>'+
-        (e.nota ? '<div class="ex-nota">'+e.nota+'</div>' : '')+
-      '</div>'+
-      '<span class="len">'+e.l+'</span>'+
-    '</div>';
+    h += '<div class="es"><span class="es-g g-'+e.g+'">'+e.g+'</span>'+
+      '<span><span class="es-n">'+e.n+'</span><span class="es-f">'+e.f+'</span>'+
+      (e.nota ? '<span class="es-nota">'+e.nota+'</span>' : '')+'</span>'+
+      '<span class="es-len">'+e.l+'</span></div>';
   });
-  h += '<h2>Errori che costano</h2><div class="ol">';
+  h += '<h2>Errori che costano</h2><div class="num-el">';
   m.errori.forEach(function(e){
-    h += '<div class="ol-item"><div class="ol-b">'+
-      '<div class="ol-t">'+e.t+livBadge(e.liv)+'</div><div class="ol-s">'+e.s+'</div></div></div>';
+    h += '<div class="num-v"><div><div class="num-t">'+e.t+sigla(e.liv)+'</div><div class="num-s">'+e.s+'</div></div></div>';
   });
   h += '</div>';
   const st = studiById(m.studi);
-  if(st.length){ h += '<h2>Studi collegati</h2>' + st.map(studioRiga).join(''); }
+  if(st.length) h += '<h2>Riferimenti</h2>' + st.map(studioRiga).join('');
   return h;
 };
 
 V.problemi = function(){
-  let h = '<h1>Problemi</h1><p>Parti dal sintomo. Le cause sono ordinate da più a meno probabile, le soluzioni da quella che risolve più spesso a quella di ripiego.</p><div class="idx">';
-  PROBLEMI.forEach(function(p){
-    h += idxRow(p.t, '#/problema/'+p.id, p.soluzioni.length+' soluz.', p.area);
+  let h = testa('problemi','Problemi','Si parte dal sintomo. Le cause sono ordinate da più a meno probabile, le soluzioni da quella che risolve più spesso a quella di ripiego.')+
+    '<div class="indice">';
+  PROBLEMI.forEach(function(p, i){
+    h += voce(numSez('problemi',i+1), p.t, p.area, p.soluzioni.length+' sol.', '#/problema/'+p.id);
   });
   return h + '</div>';
 };
 
 V.problema = function(id){
+  const i = indiceDi(PROBLEMI, id);
   const p = PROBLEMI.filter(function(x){ return x.id===id; })[0];
   if(!p) return V.problemi();
-  let h = backBtn('#/problemi','Problemi') + '<h1>'+p.t+'</h1>';
-  h += '<p class="sub" style="margin-bottom:16px;">'+p.area+'</p>';
-  h += '<h2>Come si presenta</h2><p class="lead">'+p.sintomo+'</p>';
-  h += '<h2>Cause probabili</h2><div class="ol">';
+  let h = indietro('#/problemi','Problemi') + testa('problemi', p.t, p.area, numSez('problemi', i));
+  h += '<h2>Come si presenta</h2><p>'+p.sintomo+'</p>';
+  h += '<h2>Cause probabili</h2><div class="num-el">';
   p.cause.forEach(function(c){
-    h += '<div class="ol-item"><div class="ol-b"><div class="ol-s">'+c.c+' '+livBadge(c.liv)+'</div></div></div>';
+    h += '<div class="num-v"><div><div class="num-s">'+c.c+' '+sigla(c.liv)+'</div></div></div>';
   });
-  h += '</div><h2>Soluzioni</h2><div class="ol">';
+  h += '</div><h2>Soluzioni</h2><div class="num-el">';
   p.soluzioni.forEach(function(s){
-    h += '<div class="ol-item"><div class="ol-b">'+
-      '<div class="ol-t">'+s.s+livBadge(s.liv)+'</div>'+
-      '<div class="ol-s">'+s.come+'</div></div></div>';
+    h += '<div class="num-v"><div><div class="num-t">'+s.s+sigla(s.liv)+'</div><div class="num-s">'+s.come+'</div></div></div>';
   });
   h += '</div>';
-  if(p.quando_fermarsi){
-    h += '<h2>Quando smettere e farsi vedere</h2><div class="note"><div class="note-t">'+p.quando_fermarsi+'</div></div>';
-  }
+  if(p.quando_fermarsi) h += '<h2>Quando fermarsi</h2><p>'+p.quando_fermarsi+'</p>';
   const st = studiById(p.studi);
-  if(st.length){ h += '<h2>Studi collegati</h2>' + st.map(studioRiga).join(''); }
+  if(st.length) h += '<h2>Riferimenti</h2>' + st.map(studioRiga).join('');
   return h;
 };
 
 let filtroTema = 'tutti';
 V.studi = function(){
   const temi = ['tutti'].concat(Object.keys(STUDI.reduce(function(a,s){ a[s.tema]=1; return a; }, {})).sort());
-  let h = '<h1>Studi</h1><p>'+STUDI.length+' voci con PMID verificato. Il riassunto è mio: la fonte è sempre a un tocco, per controllarmi.</p>';
-  h += '<div class="btnrow" style="margin:0 0 14px;"><button class="btn wide" data-go="#/pubmed">Cerca su PubMed ed Europe PMC ›</button></div>';
-  h += '<div class="filters">' + temi.map(function(t){
-    return '<button class="fbtn'+(t===filtroTema?' on':'')+'" data-tema="'+t+'">'+t+'</button>';
+  let h = testa('studi','Studi', STUDI.length+' voci con identificativo verificato uno per uno. Il riassunto è una lettura: la fonte è sempre a un tocco, per controllarla.');
+  h += '<div class="bottoni" style="margin:0 0 20px;"><button class="bottone largo" data-vai="#/ricerca">Cerca negli archivi →</button></div>';
+  h += '<div class="filtri">' + temi.map(function(t){
+    return '<button class="filtro'+(t===filtroTema?' acceso':'')+'" data-tema="'+t+'">'+t+'</button>';
   }).join('') + '</div>';
-  const lista = filtroTema==='tutti' ? STUDI : STUDI.filter(function(s){ return s.tema===filtroTema; });
-  h += lista.map(function(s){
-    return '<div class="st" data-go="#/studio/'+s.id+'">'+
-      '<div class="st-h">'+livBadge(s.liv)+'<span class="tag">'+s.tema+'</span>'+
-        (s.oa?'<span class="tag oa">testo libero</span>':'')+'</div>'+
-      '<div class="st-t">'+esc(s.titolo)+'</div>'+
-      '<div class="st-m">'+esc(s.autore)+' · '+esc(s.rivista)+' · '+s.anno+'</div>'+
-      '<div class="st-s">'+s.sintesi+'</div>'+
-    '</div>';
-  }).join('');
+  STUDI.forEach(function(s, i){
+    if(filtroTema!=='tutti' && s.tema!==filtroTema) return;
+    h += '<div class="studio" data-vai="#/studio/'+s.id+'">'+
+      '<div class="marg">'+sigla(s.liv)+'<div style="margin-top:6px;">'+numSez('studi',i+1)+'</div></div>'+
+      '<div><div class="studio-t">'+esc(s.titolo)+'</div>'+
+        '<div class="studio-r"><span class="marca">'+esc(s.tema)+'</span>'+
+          (s.oa?'<span class="marca aperto">testo libero</span>':'')+
+          '<span class="marca">'+s.cit+' cit.</span></div>'+
+        '<div class="studio-r" style="margin-top:3px;">'+esc(s.autore)+', '+esc(s.rivista)+', '+s.anno+'</div>'+
+        '<div class="studio-s">'+s.sintesi+'</div></div></div>';
+  });
   return h;
 };
 
 V.studio = function(id){
+  const i = indiceDi(STUDI, id);
   const s = STUDI.filter(function(x){ return x.id===id; })[0];
   if(!s) return V.studi();
-  const chiave = 'pmid:'+s.pmid;
-  const salvo = !!salvati[chiave];
-  let h = backBtn('#/studi','Studi');
-  h += '<div class="st-h" style="margin-bottom:8px;">'+livBadge(s.liv)+'<span class="tag">'+s.tema+'</span>'+
-       (s.oa?'<span class="tag oa">testo libero</span>':'')+'</div>';
-  h += '<h1>'+esc(s.titolo)+'</h1>';
-  h += '<dl class="kv" style="margin-top:14px;">'+
-    '<dt>Autore</dt><dd>'+esc(s.autore)+'</dd>'+
-    '<dt>Rivista</dt><dd>'+esc(s.rivista)+', '+s.anno+'</dd>'+
-    '<dt>PMID</dt><dd class="mono">'+esc(s.pmid)+'</dd>'+
-    (s.doi?'<dt>DOI</dt><dd class="mono" style="word-break:break-all;">'+esc(s.doi)+'</dd>':'')+
-    '<dt>Citazioni</dt><dd>'+s.cit+'</dd>'+
-    '<dt>Evidenza</dt><dd>'+LIV_D[s.liv]+'</dd>'+
-  '</dl>';
-  h += '<h2>Cosa dice</h2><p class="lead">'+s.sintesi+'</p>';
-  h += '<div class="btnrow">'+
-    '<a class="btn" style="flex:1;text-align:center;line-height:42px;border-bottom-width:1px;" href="https://pubmed.ncbi.nlm.nih.gov/'+esc(s.pmid)+'/" target="_blank" rel="noopener">Apri su PubMed</a>'+
-    '<button class="btn'+(salvo?' on':'')+'" data-salva="'+chiave+'" data-tit="'+esc(s.titolo)+'" data-rif="'+esc(s.pmid)+'">'+(salvo?'Salvato':'Salva')+'</button>'+
-  '</div>';
-  h += '<h2>Abstract originale</h2><div id="abs"><div class="spin">carico…</div></div>';
-  h += '<h2>I tuoi appunti</h2>'+
+  const chiave = 'pmid:'+s.pmid, salvo = !!salvati[chiave];
+  let h = indietro('#/studi','Studi') + testa('studi', esc(s.titolo), '', numSez('studi', i));
+  h += '<div class="dati">'+
+    '<div><dt>Autore</dt><dd>'+esc(s.autore)+'</dd></div>'+
+    '<div><dt>Rivista</dt><dd>'+esc(s.rivista)+', '+s.anno+'</dd></div>'+
+    '<div><dt>Tema</dt><dd>'+esc(s.tema)+'</dd></div>'+
+    '<div><dt>Evidenza</dt><dd>'+sigla(s.liv)+' &nbsp;'+LIV_D[s.liv]+'</dd></div>'+
+    '<div><dt>PMID</dt><dd class="macchina">'+esc(s.pmid)+'</dd></div>'+
+    (s.doi?'<div><dt>DOI</dt><dd class="macchina" style="word-break:break-all;font-size:13px;">'+esc(s.doi)+'</dd></div>':'')+
+    '<div><dt>Citazioni</dt><dd>'+s.cit+(s.oa?' · testo completo libero':'')+'</dd></div></div>';
+  h += '<h2>Cosa dice</h2><p>'+s.sintesi+'</p>';
+  h += '<div class="bottoni">'+
+    '<a class="bottone" style="flex:1;text-align:center;line-height:40px;border-bottom-width:1px;" href="https://pubmed.ncbi.nlm.nih.gov/'+esc(s.pmid)+'/" target="_blank" rel="noopener">Vedi su PubMed</a>'+
+    '<button class="bottone'+(salvo?' pieno':'')+'" data-salva="'+chiave+'" data-tit="'+esc(s.titolo)+'" data-rif="'+esc(s.pmid)+'">'+(salvo?'Salvato':'Salva')+'</button></div>';
+  h += '<h2>Abstract originale</h2><div id="abs"><div class="attesa">carico…</div></div>';
+  h += '<h2>Annotazioni</h2>'+
     '<textarea class="ta" id="nota" data-k="'+chiave+'" placeholder="Cosa ti serve ricordare di questo studio…">'+esc(note[chiave]||'')+'</textarea>'+
-    '<div class="btnrow"><button class="btn wide" id="salvanota">Salva appunto</button></div>';
+    '<div class="bottoni"><button class="bottone largo" id="salvanota">Salva annotazione</button></div>';
   setTimeout(function(){ caricaAbstract(s.pmid); }, 0);
   return h;
 };
 
+function rendiAbstract(txt){
+  return abstractSezioni(txt).map(function(p){
+    return '<div class="abs-sez"><div class="abs-et">'+esc(etIt(p.e))+'</div><div class="abs-tx">'+esc(p.c)+'</div></div>';
+  }).join('');
+}
 function caricaAbstract(pmid){
   const box = $('abs'); if(!box) return;
   pubmedCercaGrezza('EXT_ID:'+pmid+' AND SRC:MED').then(function(res){
     if(!box.isConnected) return;
     const r = res[0];
-    if(!r || !r.abstractText){ box.innerHTML = '<div class="empty">Abstract non disponibile in formato leggibile.</div>'; return; }
-    box.innerHTML = abstractSezioni(r.abstractText).map(function(p){
-      return '<dl class="kv"><dt>'+esc(etIt(p.e))+'</dt><dd>'+esc(p.c)+'</dd></dl>';
-    }).join('');
+    if(!r || !r.abstractText){ box.innerHTML = '<div class="vuoto">Abstract non disponibile in formato leggibile.</div>'; return; }
+    box.innerHTML = rendiAbstract(r.abstractText);
   }).catch(function(e){
-    if(box.isConnected) box.innerHTML = '<div class="empty">Non riesco a raggiungere Europe PMC.<br>'+esc(e.message)+'</div>';
+    if(box.isConnected) box.innerHTML = '<div class="vuoto">Archivio non raggiungibile.<br>'+esc(e.message)+'</div>';
   });
 }
 
 V.miti = function(){
-  let h = '<h1>Miti</h1><p>Affermazioni che sentirai in palestra, con il verdetto della ricerca e la fonte da cui viene.</p>';
-  MITI.forEach(function(m){
-    h += '<div class="card"><div class="ol-t" style="margin-bottom:7px;">'+
-      '<span class="verd v-'+m.v+'">'+m.v+'</span>'+livBadge(m.liv)+'</div>'+
-      '<h3 style="margin-bottom:7px;">«'+m.m+'»</h3>'+
-      '<div class="ol-s">'+m.s+'</div>';
+  let h = testa('miti','Miti','Affermazioni che sentirai in sala, con il verdetto della letteratura e il rimando alla fonte.');
+  MITI.forEach(function(m, i){
+    h += '<div class="mito"><div class="marg">'+numSez('miti',i+1)+'<div style="margin-top:6px;">'+sigla(m.liv)+'</div></div>'+
+      '<div><div class="mito-c">«'+m.m+'»</div>'+
+      '<div class="studio-r" style="margin:0 0 8px;"><span class="verdetto v-'+m.v+'">'+m.v+'</span></div>'+
+      '<div class="num-s">'+m.s+'</div>';
     const st = studiById(m.studi);
     if(st.length) h += '<div style="margin-top:10px;">' + st.map(studioRiga).join('') + '</div>';
-    h += '</div>';
+    h += '</div></div>';
   });
   return h;
 };
 
 V.fonti = function(){
-  let h = '<h1>Fonti</h1><p>Dove cercare quando l’atlante non basta. Le ricerche pronte sono già filtrate sugli argomenti che ti interessano: si aprono nel browser.</p>';
-  FONTI.forEach(function(f){
-    h += '<div class="card"><h3>'+f.n+'</h3><p style="margin-bottom:10px;">'+f.cosa+'</p>'+
-      '<div class="btnrow" style="margin:0 0 '+(f.q.length?'10px':'0')+';">'+
-      '<a class="btn wide" style="text-align:center;line-height:42px;border-bottom-width:1px;" href="'+f.url+'" target="_blank" rel="noopener">Apri '+f.n+'</a></div>';
+  let h = testa('fonti','Fonti','Dove cercare quando l’atlante non basta. Le interrogazioni pronte sono già impostate sugli argomenti di questa raccolta.');
+  FONTI.forEach(function(f, i){
+    h += '<div class="mito"><div class="marg">'+numSez('fonti',i+1)+'</div><div>'+
+      '<h3>'+f.n+'</h3><p style="font-size:14.5px;color:var(--inchiostro-2);">'+f.cosa+'</p>'+
+      '<div class="bottoni" style="margin:10px 0 0;"><a class="bottone largo" style="text-align:center;line-height:40px;border-bottom-width:1px;" href="'+f.url+'" target="_blank" rel="noopener">Apri</a></div>';
     if(f.q.length){
-      h += '<div style="border-top:1px solid var(--line);padding-top:4px;">';
+      h += '<div style="margin-top:14px;border-top:1px solid var(--filo);">';
       f.q.forEach(function(q){
-        h += '<div class="ex" style="padding:11px 0;"><div class="ex-b"><a class="ex-n" style="border:none;" href="'+q[1]+'" target="_blank" rel="noopener">'+q[0]+'</a></div><span class="chev">↗</span></div>';
+        h += '<div class="es" style="grid-template-columns:1fr auto;"><a class="es-n" style="border:none;font-size:14.5px;" href="'+q[1]+'" target="_blank" rel="noopener">'+q[0]+'</a><span class="es-len">apri</span></div>';
       });
       h += '</div>';
     }
-    h += '</div>';
+    h += '</div></div>';
   });
   return h;
 };
 
 V.strumenti = function(){
-  let h = '<h1>Strumenti</h1>';
-  h += '<h2>Calcolatori</h2>' + CALC_HTML;
-  h += '<h2>Glossario</h2><table class="tbl"><tbody>';
-  GLOSSARIO.forEach(function(g){
-    h += '<tr><td>'+g.t+'</td><td>'+g.d+'</td></tr>';
-  });
-  return h + '</tbody></table>';
+  let h = testa('strumenti','Strumenti','');
+  h += '<h2>Calcoli</h2>' + CALCOLI;
+  h += '<h2>Glossario</h2><div class="gloss">';
+  GLOSSARIO.forEach(function(g){ h += '<div><dt>'+g.t+'</dt><dd>'+g.d+'</dd></div>'; });
+  return h + '</div>';
 };
 
-const CALC_HTML =
+const CALCOLI =
 '<div class="calc"><h3>Massimale stimato</h3>'+
-  '<div class="calc-row"><div class="calc-lab">Peso<div class="calc-hint">kg sollevati</div></div><input class="calc-in" id="c1w" type="text" inputmode="decimal" value="100"></div>'+
-  '<div class="calc-row"><div class="calc-lab">Ripetizioni</div><input class="calc-in" id="c1r" type="text" inputmode="numeric" value="8"></div>'+
-  '<div class="calc-row"><div class="calc-lab">RIR<div class="calc-hint">ripetizioni che ti restavano</div></div><input class="calc-in" id="c1rir" type="text" inputmode="numeric" value="1"></div>'+
+  '<div class="calc-riga"><span class="calc-et">Peso<span class="calc-nota">chilogrammi sollevati</span></span><input class="calc-in" id="c1w" type="text" inputmode="decimal" value="100"></div>'+
+  '<div class="calc-riga"><span class="calc-et">Ripetizioni</span><input class="calc-in" id="c1r" type="text" inputmode="numeric" value="8"></div>'+
+  '<div class="calc-riga"><span class="calc-et">RIR<span class="calc-nota">ripetizioni che restavano</span></span><input class="calc-in" id="c1rir" type="text" inputmode="numeric" value="1"></div>'+
   '<div class="calc-out" id="c1out"></div>'+
-  '<p class="sub" style="margin:12px 0 0;line-height:1.55;">Epley e Brzycki sono due formule diverse: se divergono molto, sei fuori dall’intervallo in cui sono attendibili (indicativamente sotto le 12 ripetizioni).</p>'+
-'</div>'+
+  '<p class="guida" style="margin-top:12px;">Epley e Brzycki sono formule diverse: se divergono molto sei fuori dall’intervallo in cui sono attendibili, indicativamente sotto le dodici ripetizioni.</p></div>'+
 '<div class="calc"><h3>Volume settimanale di un muscolo</h3>'+
-  '<div class="calc-row"><div class="calc-lab">Serie dirette<div class="calc-hint">il muscolo è il bersaglio</div></div><input class="calc-in" id="c2d" type="text" inputmode="numeric" value="9"></div>'+
-  '<div class="calc-row"><div class="calc-lab">Serie indirette<div class="calc-hint">partecipa ma non è il bersaglio</div></div><input class="calc-in" id="c2i" type="text" inputmode="numeric" value="8"></div>'+
-  '<div class="calc-out" id="c2out"></div>'+
-  '<div class="bar"><i id="c2bar"></i></div>'+
-  '<p class="sub" style="margin:10px 0 0;line-height:1.55;">Le indirette contano mezza serie ciascuna, la convenzione del volume frazionale. Riferimento per un allenato: 10-20 serie settimanali, con rendimenti decrescenti oltre.</p>'+
-'</div>'+
+  '<div class="calc-riga"><span class="calc-et">Serie dirette<span class="calc-nota">il muscolo è il bersaglio</span></span><input class="calc-in" id="c2d" type="text" inputmode="numeric" value="9"></div>'+
+  '<div class="calc-riga"><span class="calc-et">Serie indirette<span class="calc-nota">partecipa ma non è il bersaglio</span></span><input class="calc-in" id="c2i" type="text" inputmode="numeric" value="8"></div>'+
+  '<div class="calc-out" id="c2out"></div><div class="scala"><i id="c2bar"></i></div>'+
+  '<p class="guida" style="margin-top:12px;">Le indirette contano mezza serie, secondo la convenzione del volume frazionale. Riferimento per un allenato: dieci-venti serie a settimana.</p></div>'+
 '<div class="calc"><h3>Carico per un altro numero di ripetizioni</h3>'+
-  '<div class="calc-row"><div class="calc-lab">Peso attuale</div><input class="calc-in" id="c3w" type="text" inputmode="decimal" value="100"></div>'+
-  '<div class="calc-row"><div class="calc-lab">Ripetizioni attuali</div><input class="calc-in" id="c3r" type="text" inputmode="numeric" value="8"></div>'+
-  '<div class="calc-row"><div class="calc-lab">Ripetizioni bersaglio</div><input class="calc-in" id="c3t" type="text" inputmode="numeric" value="12"></div>'+
+  '<div class="calc-riga"><span class="calc-et">Peso attuale</span><input class="calc-in" id="c3w" type="text" inputmode="decimal" value="100"></div>'+
+  '<div class="calc-riga"><span class="calc-et">Ripetizioni attuali</span><input class="calc-in" id="c3r" type="text" inputmode="numeric" value="8"></div>'+
+  '<div class="calc-riga"><span class="calc-et">Ripetizioni bersaglio</span><input class="calc-in" id="c3t" type="text" inputmode="numeric" value="12"></div>'+
   '<div class="calc-out" id="c3out"></div>'+
-  '<p class="sub" style="margin:12px 0 0;line-height:1.55;">A parità di massimale stimato. Utile per cambiare range senza perdere il filo della progressione.</p>'+
-'</div>'+
+  '<p class="guida" style="margin-top:12px;">A parità di massimale stimato. Serve a cambiare intervallo senza perdere il filo della progressione.</p></div>'+
 '<div class="calc"><h3>Percentuale di massimale</h3>'+
-  '<div class="calc-row"><div class="calc-lab">Ripetizioni</div><input class="calc-in" id="c4r" type="text" inputmode="numeric" value="8"></div>'+
-  '<div class="calc-row"><div class="calc-lab">RIR</div><input class="calc-in" id="c4rir" type="text" inputmode="numeric" value="2"></div>'+
+  '<div class="calc-riga"><span class="calc-et">Ripetizioni</span><input class="calc-in" id="c4r" type="text" inputmode="numeric" value="8"></div>'+
+  '<div class="calc-riga"><span class="calc-et">RIR</span><input class="calc-in" id="c4rir" type="text" inputmode="numeric" value="2"></div>'+
   '<div class="calc-out" id="c4out"></div>'+
-  '<p class="sub" style="margin:12px 0 0;line-height:1.55;">Stima a quale percentuale del massimale stai lavorando. Ricorda che le persone sbagliano sistematicamente il RIR, e tendono a sottostimare quanto gli resta.</p>'+
-'</div>';
+  '<p class="guida" style="margin-top:12px;">Stima a quale percentuale del massimale stai lavorando. La stima del RIR è sistematicamente ottimista: vedi '+'§3'+'.</p></div>';
 
 function num(id){ const e=$(id); return e ? (parseFloat(String(e.value).replace(',','.'))||0) : 0; }
-function out(v,l){ return '<div class="out-b"><div class="out-v">'+v+'</div><div class="out-l">'+l+'</div></div>'; }
+function usc(v,e){ return '<div><div class="out-v">'+v+'</div><div class="out-e">'+e+'</div></div>'; }
 function r1(x){ return Math.round(x*10)/10; }
 function calcola(){
   if($('c1out')){
     const w=num('c1w'), r=num('c1r')+num('c1rir');
     const ep = r>0 ? w*(1+r/30) : 0;
     const br = (r>0 && r<37) ? w/(1.0278-0.0278*r) : 0;
-    $('c1out').innerHTML = out(r1(ep)+' kg','Epley') + out(r1(br)+' kg','Brzycki') +
-      out(r1((ep+br)/2)+' kg','Media');
+    $('c1out').innerHTML = usc(r1(ep),'Epley, kg') + usc(r1(br),'Brzycki, kg') + usc(r1((ep+br)/2),'Media');
   }
   if($('c2out')){
     const tot = num('c2d') + num('c2i')*0.5;
-    let g='Sotto la soglia utile', cls='low';
-    if(tot>=10 && tot<=20){ g='Nella fascia produttiva'; cls=''; }
-    else if(tot>20){ g='Oltre: rendimenti bassi, fatica alta'; cls='warn'; }
-    $('c2out').innerHTML = out(r1(tot),'Serie frazionali') + out(g,'Giudizio');
-    const b=$('c2bar').style; b.width=Math.min(100,tot/24*100)+'%';
+    let g='sotto la soglia utile', cls='scarso';
+    if(tot>=10 && tot<=20){ g='fascia produttiva'; cls=''; }
+    else if(tot>20){ g='oltre: resa bassa, fatica alta'; cls='avviso'; }
+    $('c2out').innerHTML = usc(r1(tot),'Serie frazionali') + usc(g,'Giudizio');
+    $('c2bar').style.width = Math.min(100, tot/24*100)+'%';
     $('c2bar').className = cls;
   }
   if($('c3out')){
     const w=num('c3w'), r=num('c3r'), t=num('c3t');
-    const e1 = r>0 ? w*(1+r/30) : 0;
-    const nw = t>0 ? e1/(1+t/30) : 0;
-    $('c3out').innerHTML = out(r1(nw)+' kg','Peso') +
-      out((nw>w?'+':'')+r1(nw-w)+' kg','Differenza') + out(r1(e1)+' kg','Massimale');
+    const e1 = r>0 ? w*(1+r/30) : 0, nw = t>0 ? e1/(1+t/30) : 0;
+    $('c3out').innerHTML = usc(r1(nw),'Peso, kg') + usc((nw>w?'+':'')+r1(nw-w),'Differenza') + usc(r1(e1),'Massimale');
   }
   if($('c4out')){
     const r=num('c4r')+num('c4rir');
-    const p = r>0 ? 100/(1+r/30) : 0;
-    $('c4out').innerHTML = out(Math.round(p)+'%','Del massimale') + out(r1(r),'Rip. equivalenti');
+    $('c4out').innerHTML = usc(Math.round(r>0?100/(1+r/30):0)+'%','Del massimale') + usc(r1(r),'Rip. equivalenti');
   }
 }
 
 V.note = function(){
   const k = Object.keys(salvati);
-  let h = '<h1>Note</h1>';
-  if(!k.length){
-    h += '<div class="empty">Non hai ancora salvato niente.<br>Da qualunque studio, tocca Salva.</div>';
-  } else {
-    h += '<p>'+k.length+' element'+(k.length===1?'o':'i')+' salvat'+(k.length===1?'o':'i')+'.</p>';
-    k.sort(function(a,b){ return (salvati[b].quando||0)-(salvati[a].quando||0); }).forEach(function(c){
-      const s = salvati[c], loc = STUDI.filter(function(x){ return 'pmid:'+x.pmid===c; })[0];
-      h += '<div class="st">'+
-        '<div class="st-t"'+(loc?' data-go="#/studio/'+loc.id+'"':'')+'>'+esc(s.titolo)+'</div>'+
-        '<div class="st-m">PMID '+esc(s.rif)+(loc?' · in libreria':' · da PubMed')+'</div>'+
-        (note[c] ? '<div class="st-s" style="border-left:1px solid var(--line-2);padding-left:10px;margin-top:8px;">'+esc(note[c])+'</div>' : '')+
-        '<div class="btnrow">'+
-          '<a class="btn" style="flex:1;text-align:center;line-height:42px;border-bottom-width:1px;" href="https://pubmed.ncbi.nlm.nih.gov/'+esc(s.rif)+'/" target="_blank" rel="noopener">PubMed</a>'+
-          '<button class="btn" data-rimuovi="'+esc(c)+'">Rimuovi</button>'+
-        '</div></div>';
-    });
-  }
+  let h = testa('note','Note','');
+  if(!k.length) return h + '<div class="vuoto">Non hai ancora messo da parte nulla.<br>Da qualunque studio, tocca Salva.</div>';
+  h += '<p class="guida">'+k.length+' element'+(k.length===1?'o':'i')+'.</p>';
+  k.sort(function(a,b){ return (salvati[b].quando||0)-(salvati[a].quando||0); }).forEach(function(c, i){
+    const s = salvati[c], loc = STUDI.filter(function(x){ return 'pmid:'+x.pmid===c; })[0];
+    h += '<div class="mito"><div class="marg">'+numSez('note',i+1)+'</div><div>'+
+      '<div class="studio-t"'+(loc?' data-vai="#/studio/'+loc.id+'"':'')+'>'+esc(s.titolo)+'</div>'+
+      '<div class="studio-r">PMID '+esc(s.rif)+(loc?' · in libreria':' · dagli archivi')+'</div>'+
+      (note[c] ? '<div class="num-s" style="border-left:1px solid var(--filo-2);padding-left:12px;margin-top:10px;">'+esc(note[c])+'</div>' : '')+
+      '<div class="bottoni"><a class="bottone" style="flex:1;text-align:center;line-height:40px;border-bottom-width:1px;" href="https://pubmed.ncbi.nlm.nih.gov/'+esc(s.rif)+'/" target="_blank" rel="noopener">PubMed</a>'+
+      '<button class="bottone" data-rimuovi="'+esc(c)+'">Rimuovi</button></div></div></div>';
+  });
   return h;
 };
 
-/* ---------------- ricerca live ---------------- */
 let liveQ = '', liveFiltra = true, liveOrdine = 'citazioni';
-V.pubmed = function(){
-  let h = backBtn('#/studi','Studi') + '<h1>Ricerca live</h1>'+
-    '<p>Interroga Europe PMC, che indicizza PubMed più i preprint. Ordinato per numero di citazioni.</p>'+
-    '<div class="searchwrap" style="padding:0;margin-bottom:10px;">'+
-      '<input id="lq" type="search" placeholder="es. lengthened partials biceps" value="'+esc(liveQ)+'">'+
-      '<button class="btn" id="lgo">Cerca</button></div>'+
-    '<div class="btnrow" style="margin:0 0 10px;"><button class="btn wide'+(liveFiltra?' on':'')+'" id="lfil">'+
-      (liveFiltra?'Filtro allenamento attivo':'Filtro allenamento spento')+'</button></div>'+
-    '<div class="btnrow" style="margin:0 0 14px;">'+
-      '<button class="btn'+(liveOrdine==='citazioni'?' on':'')+'" style="flex:1;" data-ord="citazioni">Più citati</button>'+
-      '<button class="btn'+(liveOrdine==='recenti'?' on':'')+'" style="flex:1;" data-ord="recenti">Più recenti</button>'+
-    '</div>'+
-    '<div id="lres"></div>';
+V.ricerca = function(){
+  let h = indietro('#/studi','Studi') + testa('studi','Ricerca negli archivi','Interroga Europe PMC, che indicizza PubMed più i preprint.');
+  h += '<div class="cerca-riga" style="padding:0;margin-bottom:14px;">'+
+      '<input id="lq" type="search" placeholder="es. lengthened partials" value="'+esc(liveQ)+'">'+
+      '<button class="bottone" id="lgo">Cerca</button></div>'+
+    '<div class="filtri">'+
+      '<button class="filtro'+(liveFiltra?' acceso':'')+'" id="lfil">contesto allenamento</button>'+
+      '<button class="filtro'+(liveOrdine==='citazioni'?' acceso':'')+'" data-ord="citazioni">più citati</button>'+
+      '<button class="filtro'+(liveOrdine==='recenti'?' acceso':'')+'" data-ord="recenti">più recenti</button>'+
+    '</div><div id="lres"></div>';
   setTimeout(function(){
     const inp = $('lq');
     $('lgo').onclick = function(){ liveQ = inp.value; eseguiLive(); };
     inp.onkeydown = function(e){ if(e.key==='Enter'){ liveQ = inp.value; eseguiLive(); } };
-    $('lfil').onclick = function(){ liveFiltra = !liveFiltra; liveCache = {}; vai('#/pubmed', true); };
+    $('lfil').onclick = function(){ liveFiltra = !liveFiltra; liveCache = {}; vai('#/ricerca', true); };
     if(liveQ) eseguiLive();
   }, 0);
   return h;
 };
 function eseguiLive(){
   const box = $('lres'); if(!box || !liveQ.trim()) return;
-  box.innerHTML = '<div class="spin">interrogo Europe PMC…</div>';
+  box.innerHTML = '<div class="attesa">interrogo l’archivio…</div>';
   pubmedCerca(liveQ.trim(), liveFiltra).then(function(res){
     if(!box.isConnected) return;
-    if(!res.length){ box.innerHTML = '<div class="empty">Nessun risultato. Prova termini in inglese: la letteratura è in inglese.</div>'; return; }
-    box.innerHTML = '<p class="sub" style="margin-bottom:12px;">'+res.length+' risultati</p>' + res.map(function(r){
-      const jr = (r.journalInfo && r.journalInfo.journal && r.journalInfo.journal.title) || r.journalTitle || r.bookOrReportDetails || '';
-      const tipo = (r.pubType||'').indexOf('review')>=0 ? 'rassegna' : '';
-      return '<div class="st" data-live="'+esc(r.id)+'" data-src="'+esc(r.source)+'">'+
-        '<div class="st-h">'+
-          (r.isOpenAccess==='Y'?'<span class="tag oa">testo libero</span>':'')+
-          (r.source==='PPR'?'<span class="tag" style="color:var(--liv-b);border-color:rgba(217,161,60,0.35);">preprint</span>':'')+
-          (tipo?'<span class="tag">'+tipo+'</span>':'')+
-          '<span class="tag">'+(r.citedByCount||0)+' cit.</span>'+
-        '</div>'+
-        '<div class="st-t">'+esc(r.title||'')+'</div>'+
-        '<div class="st-m">'+esc((r.authorString||'').split(',')[0])+' · '+esc(jr)+' · '+esc(annoDi(r))+'</div>'+
-      '</div>';
+    if(!res.length){ box.innerHTML = '<div class="vuoto">Nessun risultato. La letteratura è in inglese: prova termini inglesi.</div>'; return; }
+    box.innerHTML = '<p class="guida">'+res.length+' risultati</p>' + res.map(function(r, i){
+      const jr = (r.journalInfo && r.journalInfo.journal && r.journalInfo.journal.title) || r.journalTitle || '';
+      return '<div class="studio" data-live="'+esc(r.id)+'">'+
+        '<div class="marg">'+(i+1)+'</div><div>'+
+        '<div class="studio-t">'+esc(r.title||'')+'</div>'+
+        '<div class="studio-r">'+
+          (r.isOpenAccess==='Y'?'<span class="marca aperto">testo libero</span>':'')+
+          (r.source==='PPR'?'<span class="marca">preprint</span>':'')+
+          '<span class="marca">'+(r.citedByCount||0)+' cit.</span></div>'+
+        '<div class="studio-r" style="margin-top:3px;">'+esc((r.authorString||'').split(',')[0])+', '+esc(jr)+', '+esc(annoDi(r))+'</div>'+
+      '</div></div>';
     }).join('');
   }).catch(function(e){
-    if(box.isConnected) box.innerHTML = '<div class="empty">Non riesco a raggiungere Europe PMC.<br>'+esc(e.message)+'</div>';
+    if(box.isConnected) box.innerHTML = '<div class="vuoto">Archivio non raggiungibile.<br>'+esc(e.message)+'</div>';
   });
 }
 V.live = function(id){
-  let h = backBtn('#/pubmed','Ricerca live') + '<div id="lone"><div class="spin">carico…</div></div>';
+  let h = indietro('#/ricerca','Ricerca') + '<div id="lone"><div class="attesa">carico…</div></div>';
   setTimeout(function(){
     pubmedCercaGrezza('EXT_ID:'+id+' OR DOI:"'+id+'"').then(function(res){
       const box = $('lone'); if(!box || !box.isConnected) return;
       const r = res[0];
-      if(!r){ box.innerHTML = '<div class="empty">Non trovato.</div>'; return; }
+      if(!r){ box.innerHTML = '<div class="vuoto">Non trovato.</div>'; return; }
       const jr = (r.journalInfo && r.journalInfo.journal && r.journalInfo.journal.title) || r.journalTitle || '';
       const chiave = 'pmid:'+(r.pmid||r.id), salvo = !!salvati[chiave];
-      let b = '<div class="st-h" style="margin-bottom:8px;">'+
-        (r.isOpenAccess==='Y'?'<span class="tag oa">testo libero</span>':'')+
-        '<span class="tag">'+(r.citedByCount||0)+' cit.</span></div>'+
-        '<h1>'+esc(r.title||'')+'</h1>'+
-        '<dl class="kv" style="margin-top:14px;">'+
-          '<dt>Autori</dt><dd>'+esc(r.authorString||'')+'</dd>'+
-          '<dt>Rivista</dt><dd>'+esc(jr)+', '+esc(annoDi(r))+'</dd>'+
-          (r.pmid?'<dt>PMID</dt><dd class="mono">'+esc(r.pmid)+'</dd>':'')+
-          (r.doi?'<dt>DOI</dt><dd class="mono" style="word-break:break-all;">'+esc(r.doi)+'</dd>':'')+
-        '</dl>'+
-        '<div class="btnrow">'+
-          (r.pmid?'<a class="btn" style="flex:1;text-align:center;line-height:42px;border-bottom-width:1px;" href="https://pubmed.ncbi.nlm.nih.gov/'+esc(r.pmid)+'/" target="_blank" rel="noopener">PubMed</a>':'')+
-          '<button class="btn'+(salvo?' on':'')+'" data-salva="'+chiave+'" data-tit="'+esc(r.title||'')+'" data-rif="'+esc(r.pmid||'')+'">'+(salvo?'Salvato':'Salva')+'</button>'+
-        '</div>'+
-        '<h2>Abstract</h2>';
-      b += r.abstractText
-        ? abstractSezioni(r.abstractText).map(function(p){
-            return '<dl class="kv"><dt>'+esc(etIt(p.e))+'</dt><dd>'+esc(p.c)+'</dd></dl>'; }).join('')
-        : '<div class="empty">Abstract non disponibile.</div>';
-      b += '<h2>I tuoi appunti</h2><textarea class="ta" id="nota" data-k="'+chiave+'">'+esc(note[chiave]||'')+'</textarea>'+
-           '<div class="btnrow"><button class="btn wide" id="salvanota">Salva appunto</button></div>';
-      box.innerHTML = b;
+      box.innerHTML = testa('studi', esc(r.title||''), '', 'dagli archivi')+
+        '<div class="dati">'+
+          '<div><dt>Autori</dt><dd>'+esc(r.authorString||'')+'</dd></div>'+
+          '<div><dt>Rivista</dt><dd>'+esc(jr)+', '+esc(annoDi(r))+'</dd></div>'+
+          (r.pmid?'<div><dt>PMID</dt><dd class="macchina">'+esc(r.pmid)+'</dd></div>':'')+
+          (r.doi?'<div><dt>DOI</dt><dd class="macchina" style="word-break:break-all;font-size:13px;">'+esc(r.doi)+'</dd></div>':'')+
+          '<div><dt>Citazioni</dt><dd>'+(r.citedByCount||0)+(r.isOpenAccess==='Y'?' · testo completo libero':'')+'</dd></div></div>'+
+        '<div class="bottoni">'+
+          (r.pmid?'<a class="bottone" style="flex:1;text-align:center;line-height:40px;border-bottom-width:1px;" href="https://pubmed.ncbi.nlm.nih.gov/'+esc(r.pmid)+'/" target="_blank" rel="noopener">PubMed</a>':'')+
+          '<button class="bottone'+(salvo?' pieno':'')+'" data-salva="'+chiave+'" data-tit="'+esc(r.title||'')+'" data-rif="'+esc(r.pmid||'')+'">'+(salvo?'Salvato':'Salva')+'</button></div>'+
+        '<h2>Abstract</h2>'+
+        (r.abstractText ? rendiAbstract(r.abstractText) : '<div class="vuoto">Abstract non disponibile.</div>')+
+        '<h2>Annotazioni</h2><textarea class="ta" id="nota" data-k="'+chiave+'"></textarea>'+
+        '<div class="bottoni"><button class="bottone largo" id="salvanota">Salva annotazione</button></div>';
+      const ta = $('nota'); if(ta) ta.value = note[chiave]||'';
     });
   }, 0);
   return h;
@@ -565,75 +561,69 @@ V.live = function(id){
 
 V.cerca = function(q){
   const r = cercaLocale(q);
-  let h = '<h1>Risultati</h1><p class="sub" style="margin-bottom:16px;">«'+esc(q)+'» · '+r.length+' nell’atlante</p>';
-  if(!r.length){
-    h += '<div class="empty">Niente nell’atlante per questi termini.</div>';
-  } else {
+  let h = '<h1>Ricerca</h1><p class="sommario">«'+esc(q)+'» · '+r.length+' riscontri nell’atlante</p>';
+  if(!r.length) h += '<div class="vuoto">Nessun riscontro per questi termini.</div>';
+  else {
     const per = {};
-    r.forEach(function(x){ (per[x.t] = per[x.t] || []).push(x); });
-    Object.keys(per).forEach(function(t){
-      h += '<h2>'+t+'</h2><div class="idx">';
-      per[t].forEach(function(x){
-        h += '<button class="idx-row" data-go="'+x.h+'"><div class="idx-name">'+esc(x.n)+
-             '<div class="idx-desc">'+esc(x.d)+'</div></div><span class="chev">›</span></button>';
-      });
+    r.forEach(function(x){ (per[x.p] = per[x.p] || []).push(x); });
+    Object.keys(PARTI).forEach(function(k){
+      if(!per[k]) return;
+      h += '<h2>Parte '+PARTI[k][1]+' · '+PARTI[k][2]+'</h2><div class="indice">';
+      per[k].forEach(function(x){ h += voce(x.n, esc(x.t), esc(x.d), '', x.h); });
       h += '</div>';
     });
   }
-  h += '<div class="btnrow" style="margin-top:20px;"><button class="btn wide" id="tolive">Cerca «'+esc(q)+'» su PubMed ›</button></div>';
+  h += '<div class="bottoni" style="margin-top:24px;"><button class="bottone largo" id="tolive">Cerca «'+esc(q)+'» negli archivi →</button></div>';
   setTimeout(function(){
     const b = $('tolive');
-    if(b) b.onclick = function(){ liveQ = q; vai('#/pubmed'); };
+    if(b) b.onclick = function(){ liveQ = q; vai('#/ricerca'); };
   }, 0);
   return h;
 };
 
-function backBtn(href, nome){ return '<button class="back" data-go="'+href+'">‹ '+nome+'</button>'; }
-
-/* ---------------- router ---------------- */
-const TITOLI = {muscoli:'Muscoli',problemi:'Problemi',studi:'Studi',miti:'Miti',fonti:'Fonti',
-                strumenti:'Strumenti',note:'Note',pubmed:'Ricerca live',cerca:'Ricerca'};
+/* ---------------- navigazione ---------------- */
 function vai(hash, sostituisci){
-  if(sostituisci) location.replace(hash); else location.hash = hash;
-  if(sostituisci) route();
+  if(sostituisci){ location.replace(hash); route(); } else location.hash = hash;
 }
 function route(){
   const parti = (location.hash || '#/').replace(/^#\/?/, '').split('/');
   const v = parti[0] || 'home', arg = decodeURIComponent(parti[1] || '');
-  let html, crumb = '';
-  if(v==='muscolo'){ html = V.muscolo(arg); crumb = 'Muscoli'; }
-  else if(v==='problema'){ html = V.problema(arg); crumb = 'Problemi'; }
-  else if(v==='studio'){ html = V.studio(arg); crumb = 'Studi'; }
-  else if(v==='live'){ html = V.live(arg); crumb = 'Ricerca live'; }
-  else if(v==='cerca'){ html = V.cerca(arg); crumb = 'Ricerca'; }
-  else if(V[v]){ html = V[v](); crumb = TITOLI[v] || ''; }
+  let html, corrente = '';
+  const cap = function(k){ return 'Parte '+PARTI[k][1]+' · '+PARTI[k][2]; };
+  if(v==='muscolo'){ html = V.muscolo(arg); corrente = cap('muscoli'); }
+  else if(v==='problema'){ html = V.problema(arg); corrente = cap('problemi'); }
+  else if(v==='studio'){ html = V.studio(arg); corrente = cap('studi'); }
+  else if(v==='live'){ html = V.live(arg); corrente = cap('studi'); }
+  else if(v==='ricerca'){ html = V.ricerca(); corrente = cap('studi'); }
+  else if(v==='cerca'){ html = V.cerca(arg); corrente = 'Ricerca'; }
+  else if(V[v] && PARTI[v]){ html = V[v](); corrente = cap(v); }
   else { html = V.home(); }
   $('main').innerHTML = html;
-  $('crumb').textContent = crumb;
+  $('corrente').textContent = corrente;
   window.scrollTo(0, 0);
   calcola();
 }
 window.addEventListener('hashchange', route);
 
-/* ---------------- eventi globali ---------------- */
+/* ---------------- eventi ---------------- */
 document.addEventListener('click', function(ev){
-  const go = ev.target.closest('[data-go]');
-  if(go){ vai(go.getAttribute('data-go')); return; }
-  const live = ev.target.closest('[data-live]');
-  if(live){ vai('#/live/'+encodeURIComponent(live.getAttribute('data-live'))); return; }
-  const ord = ev.target.closest('[data-ord]');
-  if(ord){ liveOrdine = ord.getAttribute('data-ord'); liveCache = {}; vai('#/pubmed', true); return; }
-  const tema = ev.target.closest('[data-tema]');
-  if(tema){ filtroTema = tema.getAttribute('data-tema'); vai('#/studi', true); return; }
+  const g = ev.target.closest('[data-vai]');
+  if(g){ vai(g.getAttribute('data-vai')); return; }
+  const l = ev.target.closest('[data-live]');
+  if(l){ vai('#/live/'+encodeURIComponent(l.getAttribute('data-live'))); return; }
+  const o = ev.target.closest('[data-ord]');
+  if(o){ liveOrdine = o.getAttribute('data-ord'); liveCache = {}; vai('#/ricerca', true); return; }
+  const t = ev.target.closest('[data-tema]');
+  if(t){ filtroTema = t.getAttribute('data-tema'); vai('#/studi', true); return; }
   const sv = ev.target.closest('[data-salva]');
   if(sv){
     const k = sv.getAttribute('data-salva');
-    if(salvati[k]){ delete salvati[k]; sv.classList.remove('on'); sv.textContent='Salva'; toast('Rimosso dai salvati.'); }
+    if(salvati[k]){ delete salvati[k]; sv.classList.remove('pieno'); sv.textContent='Salva'; avvisa('Rimosso.'); }
     else {
       salvati[k] = {tipo:'studio', titolo:sv.getAttribute('data-tit'), rif:sv.getAttribute('data-rif'), quando:Date.now()};
-      sv.classList.add('on'); sv.textContent='Salvato'; toast('Salvato.');
+      sv.classList.add('pieno'); sv.textContent='Salvato'; avvisa('Messo da parte.');
     }
-    if(!save(K_SALV, salvati)) toast('Salvato solo per questa sessione.');
+    if(!save(K_SALV, salvati)) avvisa('Salvato solo per questa sessione.');
     return;
   }
   const rm = ev.target.closest('[data-rimuovi]');
@@ -641,21 +631,20 @@ document.addEventListener('click', function(ev){
     const k = rm.getAttribute('data-rimuovi');
     delete salvati[k]; delete note[k];
     save(K_SALV, salvati); save(K_NOTE, note);
-    vai('#/note', true); toast('Rimosso.');
+    vai('#/note', true); avvisa('Rimosso.');
     return;
   }
   if(ev.target.id==='salvanota'){
     const ta = $('nota'); if(!ta) return;
     const k = ta.getAttribute('data-k');
     if(ta.value.trim()) note[k] = ta.value.trim(); else delete note[k];
-    toast(save(K_NOTE, note) ? 'Appunto salvato.' : 'Salvato solo per questa sessione.');
+    avvisa(save(K_NOTE, note) ? 'Annotazione salvata.' : 'Salvata solo per questa sessione.');
   }
 });
 document.addEventListener('input', function(ev){
   if(ev.target.classList && ev.target.classList.contains('calc-in')) calcola();
 });
 
-/* ricerca nell’atlante: aspetta che smetti di scrivere */
 let tq = null;
 $('q').addEventListener('input', function(e){
   const val = e.target.value;
@@ -665,6 +654,23 @@ $('q').addEventListener('input', function(e){
     else if((location.hash||'').indexOf('#/cerca') === 0) vai('#/', true);
   }, 260);
 });
-$('brand').addEventListener('click', function(){ $('q').value=''; vai('#/'); });
+$('marchio').addEventListener('click', function(){ $('q').value=''; vai('#/'); });
+
+/* Giorno e notte: l'atlante si legge in sala e sul divano. */
+const K_TEMA = 'atlante-tema';
+function applicaTema(t){
+  document.documentElement.setAttribute('data-tema', t);
+  $('tema').textContent = t==='notte' ? 'Giorno' : 'Notte';
+  const m = document.querySelector('meta[name="theme-color"]');
+  if(m) m.setAttribute('content', t==='notte' ? '#15161a' : '#f4f2ec');
+}
+let tema = 'giorno';
+try{ tema = localStorage.getItem(K_TEMA) || 'giorno'; }catch(e){}
+applicaTema(tema);
+$('tema').addEventListener('click', function(){
+  tema = tema==='notte' ? 'giorno' : 'notte';
+  applicaTema(tema);
+  try{ localStorage.setItem(K_TEMA, tema); }catch(e){}
+});
 
 route();

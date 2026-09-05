@@ -17,13 +17,21 @@ poi apri `http://localhost:8000` e, da iPhone, "Aggiungi a Home".
 |---|---|
 | `index.html` | Scheletro della pagina |
 | `icon-*.png`, `apple-touch-icon.png` | Icone generate: tre barre nei colori dei livelli di evidenza |
-| `style.css` | Sistema visivo. Interfaccia monocromatica: il colore è riservato al livello di evidenza |
+| `style.css` | Impaginazione da manuale stampato: carta chiara, testo in grazie, sezioni numerate, colonna di margine. Il colore è riservato alle sigle di evidenza |
 | `app.js` | Navigazione su hash, viste, ricerca locale, ricerca live, calcolatori, salvataggi |
 | `data-studi.js` | 109 studi con PMID verificato, tema, livello di evidenza e riassunto |
 | `data-muscoli.js` | 18 schede di biomeccanica, 144 esercizi mappati per funzione e lunghezza |
 | `data-contenuti.js` | 28 problemi, 28 miti, 60 voci di glossario, 18 archivi con ricerche pronte |
 
-## Livelli di evidenza
+## Impianto
+
+Sette parti numerate (§1 Muscoli … §7 Note), ognuna con titolo corrente
+in testa alla pagina e numero di sezione su ogni voce. La navigazione è su
+hash, così il tasto indietro dell'iPhone funziona.
+
+Due modi di lettura, giorno e notte, con la preferenza ricordata.
+
+## Sigle di evidenza
 
 - **A** — meta-analisi, oppure più studi concordi su soggetti allenati
 - **B** — studio singolo controllato, o evidenza indiretta solida
