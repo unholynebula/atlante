@@ -74,7 +74,32 @@ button,input,textarea{font-family:inherit;color:inherit;}
   font-family:var(--bastoni);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;
   padding:5px 8px;cursor:pointer;flex:none;
 }
-main{max-width:660px;margin:0 auto;padding:22px 20px 100px;}
+/* Unghiature: la striscia di sfoglio resta sempre in testa, come i tagli
+   laterali di un dizionario. Da qui si raggiunge ogni parte in un tocco,
+   compreso l'indice generale. */
+.sfoglio{
+  max-width:660px;margin:0 auto;padding:0 20px;display:flex;gap:0 18px;
+  overflow-x:auto;-webkit-overflow-scrolling:touch;
+}
+.sfoglio::-webkit-scrollbar{display:none;}
+.unghia{
+  flex:none;background:none;border:none;cursor:pointer;padding:7px 0 8px;
+  font-family:var(--bastoni);font-size:11px;letter-spacing:0.09em;
+  color:var(--inchiostro-3);border-bottom:2px solid transparent;white-space:nowrap;
+}
+.unghia .rom{font-family:var(--macchina);font-size:9.5px;margin-right:5px;opacity:.75;}
+.unghia.qui{color:var(--rosso);border-bottom-color:var(--rosso);}
+.unghia.casa{color:var(--inchiostro);font-weight:600;}
+.chiusura{
+  margin-top:38px;padding-top:14px;border-top:1px solid var(--filo-2);
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+}
+.chiusura button{
+  background:none;border:none;cursor:pointer;padding:0;font-family:var(--bastoni);
+  font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--inchiostro-3);
+}
+.chiusura button:first-child{color:var(--rosso);}
+main{max-width:660px;margin:0 auto;padding:20px 20px 100px;}
 
 /* ---------- impianto a due colonne: margine + testo ---------- */
 .pagina{display:grid;grid-template-columns:var(--margine) 1fr;column-gap:14px;}

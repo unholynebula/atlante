@@ -201,6 +201,22 @@ function testa(parte, titolo, sommario, num){
     (sommario ? '<p class="sommario">'+sommario+'</p>' : '');
 }
 function indietro(href, dove){ return '<button class="indietro" data-vai="'+href+'">← '+dove+'</button>'; }
+/* Ogni pagina si chiude con il rimando all'indice e alla parte che la
+   contiene: dopo una lunga scorsa il ritorno deve essere sotto il pollice,
+   non solo in cima. */
+function chiusura(parte){
+  return '<div class="chiusura"><button data-vai="#/">↑ Indice generale</button>'+
+    (parte ? '<button data-vai="#/'+parte+'">Parte '+PARTI[parte][1]+' · '+PARTI[parte][2]+'</button>' : '')+
+    '</div>';
+}
+function disegnaSfoglio(attiva){
+  let h = '<button class="unghia casa'+(attiva===null?' qui':'')+'" data-vai="#/">Indice</button>';
+  Object.keys(PARTI).forEach(function(k){
+    h += '<button class="unghia'+(attiva===k?' qui':'')+'" data-vai="#/'+k+'">'+
+      '<span class="rom">'+PARTI[k][1]+'</span>'+PARTI[k][2]+'</button>';
+  });
+  $('sfoglio').innerHTML = h;
+}
 function voce(num, tit, des, fin, href){
   return '<button class="voce" data-vai="'+href+'">'+
     '<span class="voce-num">'+num+'</span>'+
@@ -588,18 +604,20 @@ function vai(hash, sostituisci){
 function route(){
   const parti = (location.hash || '#/').replace(/^#\/?/, '').split('/');
   const v = parti[0] || 'home', arg = decodeURIComponent(parti[1] || '');
-  let html, corrente = '';
-  const cap = function(k){ return 'Parte '+PARTI[k][1]+' · '+PARTI[k][2]; };
+  let html, corrente = '', parte = null;
+  const cap = function(k){ parte = k; return 'Parte '+PARTI[k][1]+' · '+PARTI[k][2]; };
   if(v==='muscolo'){ html = V.muscolo(arg); corrente = cap('muscoli'); }
   else if(v==='problema'){ html = V.problema(arg); corrente = cap('problemi'); }
   else if(v==='studio'){ html = V.studio(arg); corrente = cap('studi'); }
   else if(v==='live'){ html = V.live(arg); corrente = cap('studi'); }
   else if(v==='ricerca'){ html = V.ricerca(); corrente = cap('studi'); }
-  else if(v==='cerca'){ html = V.cerca(arg); corrente = 'Ricerca'; }
+  else if(v==='cerca'){ html = V.cerca(arg); corrente = 'Ricerca'; parte = 'nessuna'; }
   else if(V[v] && PARTI[v]){ html = V[v](); corrente = cap(v); }
-  else { html = V.home(); }
+  else { html = V.home(); corrente = ''; }
+  if(v !== 'home' && v !== '') html += chiusura(PARTI[parte] ? parte : null);
   $('main').innerHTML = html;
   $('corrente').textContent = corrente;
+  disegnaSfoglio(parte);
   window.scrollTo(0, 0);
   calcola();
 }
@@ -655,6 +673,7 @@ $('q').addEventListener('input', function(e){
   }, 260);
 });
 $('marchio').addEventListener('click', function(){ $('q').value=''; vai('#/'); });
+/* la ricerca non e' una parte dell'opera: la striscia non evidenzia nulla */
 
 /* Giorno e notte: l'atlante si legge in sala e sul divano. */
 const K_TEMA = 'atlante-tema';
