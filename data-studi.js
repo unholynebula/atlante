@@ -30,6 +30,21 @@ const STUDI = [
 "kw": "memoria muscolare epigenetica ricrescita"
 },
 {
+"id": "vigotsky_moment",
+"pmid": "26644989",
+"doi": "10.7717/peerj.1462",
+"titolo": "Biomechanical implications of skeletal muscle hypertrophy and atrophy: a musculoskeletal model",
+"rivista": "PeerJ",
+"anno": "2015",
+"autore": "Vigotsky AD",
+"oa": true,
+"cit": 13,
+"tema": "anatomia",
+"liv": "B",
+"sintesi": "Modello muscoloscheletrico: quando un muscolo cresce, il suo braccio di leva interno cambia, e con esso la coppia che riesce a produrre. L’ipertrofia non è solo più tessuto, è anche una leva diversa.",
+"kw": "braccio di leva ipertrofia modello coppia"
+},
+{
 "id": "franchi_architettura",
 "pmid": "24387247",
 "doi": "10.1111/apha.12225",
@@ -43,6 +58,81 @@ const STUDI = [
 "liv": "B",
 "sintesi": "Carico concentrico ed eccentrico producono adattamenti architetturali diversi: l’eccentrico allunga i fascicoli, il concentrico aumenta l’angolo di pennazione.",
 "kw": "architettura fascicoli pennazione"
+},
+{
+"id": "blazevich_arch",
+"pmid": "17717119",
+"doi": "10.1152/japplphysiol.00578.2007",
+"titolo": "Influence of concentric and eccentric resistance training on architectural adaptation in human quadriceps muscles",
+"rivista": "Journal of applied physiology (Bethesda, Md. : 1985)",
+"anno": "2007",
+"autore": "Blazevich AJ",
+"oa": false,
+"cit": 343,
+"tema": "anatomia",
+"liv": "B",
+"sintesi": "Allenamento concentrico ed eccentrico a confronto sull’architettura del quadricipite: i due producono adattamenti architetturali diversi, non solo quantità diverse di crescita.",
+"kw": "architettura concentrico eccentrico quadricipite"
+},
+{
+"id": "reeves_tendine",
+"pmid": "12626673",
+"doi": "10.1113/jphysiol.2002.035576",
+"titolo": "Effect of strength training on human patella tendon mechanical properties of older individuals",
+"rivista": "The Journal of physiology",
+"anno": "2003",
+"autore": "Reeves ND",
+"oa": false,
+"cit": 298,
+"tema": "anatomia",
+"liv": "B",
+"sintesi": "L’allenamento di forza cambia le proprietà meccaniche del tendine rotuleo: aumenta la rigidezza, che a sua volta cambia come la forza viene trasmessa.",
+"kw": "tendine rotuleo rigidezza forza adattamento"
+},
+{
+"id": "kubo_tendine",
+"pmid": "11600697",
+"doi": "10.1111/j.1469-7793.2001.0649c.xd",
+"titolo": "Effects of different duration isometric contractions on tendon elasticity in human quadriceps muscles",
+"rivista": "The Journal of physiology",
+"anno": "2001",
+"autore": "Kubo K",
+"oa": false,
+"cit": 111,
+"tema": "anatomia",
+"liv": "B",
+"sintesi": "Contrazioni isometriche di durata diversa e loro effetto sull’elasticità del tendine del quadricipite: il tendine si adatta al carico, con tempi propri.",
+"kw": "tendine elasticità isometria adattamento"
+},
+{
+"id": "lieber_design",
+"pmid": "11054744",
+"doi": "10.1002/1097-4598(200011)23:11<1647::aid-mus1>3.0.co;2-m",
+"titolo": "Functional and clinical significance of skeletal muscle architecture",
+"rivista": "Muscle & nerve",
+"anno": "2000",
+"autore": "Lieber RL",
+"oa": false,
+"cit": 804,
+"tema": "anatomia",
+"liv": "A",
+"sintesi": "La rassegna di riferimento sull’architettura muscolare: perché la sezione trasversa fisiologica, e non il volume, predice la forza, e cosa comportano lunghezza dei fascicoli e angolo di pennazione.",
+"kw": "architettura sezione fisiologica pennazione fascicoli"
+},
+{
+"id": "inman_scapola",
+"pmid": "8804269",
+"doi": "10.1097/00003086-199609000-00002",
+"titolo": "Observations of the function of the shoulder joint. 1944",
+"rivista": "Clinical orthopaedics and related research",
+"anno": "1996",
+"autore": "Inman VT",
+"oa": false,
+"cit": 237,
+"tema": "anatomia",
+"liv": "A",
+"sintesi": "Il lavoro del 1944 che ha descritto il ritmo scapolo-omerale, cioè il fatto che l’elevazione del braccio richiede la rotazione della scapola. È la fonte da cui deriva il rapporto due a uno che si cita ancora oggi.",
+"kw": "scapola ritmo scapolo-omerale elevazione spalla"
 },
 {
 "id": "plotkin_overload",
@@ -133,6 +223,36 @@ const STUDI = [
 "liv": "B",
 "sintesi": "Su uomini ben allenati, carichi bassi ad alte ripetizioni e carichi alti producono ipertrofia paragonabile, con vantaggio dei carichi alti sulla forza.",
 "kw": "carico allenati ripetizioni"
+},
+{
+"id": "mitchell_carico",
+"pmid": "22518835",
+"doi": "10.1152/japplphysiol.00307.2012",
+"titolo": "Resistance exercise load does not determine training-mediated hypertrophic gains in young men",
+"rivista": "Journal of applied physiology (Bethesda, Md. : 1985)",
+"anno": "2012",
+"autore": "Mitchell CJ",
+"oa": false,
+"cit": 445,
+"tema": "carico",
+"liv": "B",
+"sintesi": "Il carico non determina l’ipertrofia: 30% e 80% del massimale, portati a cedimento, producono guadagni simili in giovani uomini. È lo studio che ha reso difficile continuare a sostenere le zone di ripetizioni.",
+"kw": "carico trenta ottanta percento cedimento ipertrofia"
+},
+{
+"id": "burd_carico",
+"pmid": "20711498",
+"doi": "10.1371/journal.pone.0012033",
+"titolo": "Low-load high volume resistance exercise stimulates muscle protein synthesis more than high-load low volume resistance exercise in young men",
+"rivista": "PloS one",
+"anno": "2010",
+"autore": "Burd NA",
+"oa": true,
+"cit": 373,
+"tema": "carico",
+"liv": "B",
+"sintesi": "Carico basso ad alto volume portato a cedimento stimola la sintesi proteica miofibrillare più del carico alto a volume basso. È la prova meccanicistica dietro al fatto che l’ipertrofia funzioni in un ampio spettro di carichi.",
+"kw": "carico basso volume sintesi proteica cedimento"
 },
 {
 "id": "grgic_rir_aff",
@@ -375,6 +495,36 @@ const STUDI = [
 "kw": "nordic prevenzione infortuni metodo"
 },
 {
+"id": "kingma_flessione",
+"pmid": "11595553",
+"doi": "10.1016/s1050-6411(01)00011-6",
+"titolo": "Lumbar loading during lifting: a comparative study of three measurement techniques",
+"rivista": "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology",
+"anno": "2001",
+"autore": "Kingma I",
+"oa": false,
+"cit": 43,
+"tema": "infortuni",
+"liv": "B",
+"sintesi": "Confronto fra tre metodi di misura del carico lombare durante il sollevamento: le stime cambiano molto con il metodo, il che spiega perché studi diversi riportano numeri diversi.",
+"kw": "carico lombare misura metodi sollevamento"
+},
+{
+"id": "cholewicki_stacco",
+"pmid": "1758295",
+"doi": "10.1249/00005768-199110000-00012",
+"titolo": "Lumbar spine loads during the lifting of extremely heavy weights",
+"rivista": "Medicine and science in sports and exercise",
+"anno": "1991",
+"autore": "Cholewicki J",
+"oa": false,
+"cit": 86,
+"tema": "infortuni",
+"liv": "B",
+"sintesi": "Carichi sulla colonna lombare durante sollevamenti massimali nei powerlifter: quantifica compressione e taglio, e mostra quanto siano alti anche con tecnica corretta.",
+"kw": "colonna lombare carico compressione taglio stacco"
+},
+{
 "id": "stiramento_mobilita",
 "pmid": "42551249",
 "doi": "10.1016/j.rehab.2026.102153",
@@ -416,7 +566,7 @@ const STUDI = [
 "cit": 11,
 "tema": "lunghezza",
 "liv": "B",
-"sintesi": "Leg extension con anca a circa 40 gradi contro 90 gradi: la posizione più estesa allunga il retto femorale e ne produce più ipertrofia.",
+"sintesi": "22 uomini **non allenati**, 10 settimane, una gamba per condizione. Con l’anca a 40 gradi invece che a 90 il retto femorale cresce di più, con evidenza «estrema»; sul vasto laterale invece l’evidenza è «forte» che non ci sia differenza.",
 "kw": "leg extension anca retto femorale schienale"
 },
 {
@@ -431,7 +581,7 @@ const STUDI = [
 "cit": 22,
 "tema": "lunghezza",
 "liv": "A",
-"sintesi": "Estensione del gomito sopra la testa contro braccio neutro, 12 settimane, disegno intra-soggetto. Tricipite +19,9% contro +13,5%: circa il 40% di crescita in più con la spalla flessa, perché il capo lungo parte allungato.",
+"sintesi": "Estensione del gomito ai cavi sopra la testa contro braccio neutro, 21 adulti, un braccio per condizione, 12 settimane. Tricipite intero **+19,9% contro +13,9%**, cioè 1,4 volte tanto. Sul capo lungo, quello biarticolare, il divario è maggiore: **+28,5% contro +19,6%**. Il braccio overhead ha sollevato carichi assoluti inferiori del 34-39% e ha comunque prodotto più ipertrofia.",
 "kw": "tricipiti overhead pushdown capo lungo"
 },
 {
@@ -660,6 +810,21 @@ const STUDI = [
 "kw": "interferenza molecolare segnalazione"
 },
 {
+"id": "duchateau_reclut",
+"pmid": "21762884",
+"doi": "10.1016/j.brainres.2011.06.011",
+"titolo": "Human motor unit recordings: origins and insight into the integrated motor system",
+"rivista": "Brain research",
+"anno": "2011",
+"autore": "Duchateau J",
+"oa": false,
+"cit": 169,
+"tema": "meccanismi",
+"liv": "A",
+"sintesi": "Stato dell’arte sulle registrazioni di unità motorie nell’uomo: come vengono reclutate e modulate, e quali sono i limiti di quello che possiamo misurare.",
+"kw": "unità motorie reclutamento modulazione"
+},
+{
 "id": "schoenfeld_mechanisms",
 "pmid": "20847704",
 "doi": "10.1519/jsc.0b013e3181e840f3",
@@ -673,6 +838,21 @@ const STUDI = [
 "liv": "A",
 "sintesi": "La rassegna che ha reso popolare la tripartizione tensione meccanica, stress metabolico e danno muscolare. Storicamente centrale, oggi in parte superata sul ruolo del danno.",
 "kw": "meccanismi tensione stress metabolico danno"
+},
+{
+"id": "henneman_size",
+"pmid": "14328454",
+"doi": "10.1152/jn.1965.28.3.560",
+"titolo": "FUNCTIONAL SIGNIFICANCE OF CELL SIZE IN SPINAL MOTONEURONS",
+"rivista": "Journal of neurophysiology",
+"anno": "1965",
+"autore": "HENNEMAN E",
+"oa": false,
+"cit": 1399,
+"tema": "meccanismi",
+"liv": "A",
+"sintesi": "Il lavoro del 1965 che ha stabilito il principio della dimensione: le unità motorie vengono reclutate in ordine crescente di grandezza. È la base neurofisiologica su cui poggia tutto il ragionamento su carico e vicinanza al cedimento.",
+"kw": "reclutamento unità motorie principio dimensione"
 },
 {
 "id": "vieira_intraserie",
@@ -750,6 +930,21 @@ const STUDI = [
 "kw": "EMG attivazione limiti interpretazione"
 },
 {
+"id": "kwah_fascicolo",
+"pmid": "23305989",
+"doi": "10.1152/japplphysiol.01430.2011",
+"titolo": "Reliability and validity of ultrasound measurements of muscle fascicle length and pennation in humans: a systematic review",
+"rivista": "Journal of applied physiology (Bethesda, Md. : 1985)",
+"anno": "2013",
+"autore": "Kwah LK",
+"oa": false,
+"cit": 159,
+"tema": "metodo",
+"liv": "B",
+"sintesi": "Quanto sono affidabili le misure ecografiche di lunghezza del fascicolo e angolo di pennazione. Serve a sapere quanto rumore c’è nei numeri di architettura che si leggono negli studi.",
+"kw": "ecografia affidabilità fascicolo pennazione"
+},
+{
 "id": "guest_caffeina",
 "pmid": "33388079",
 "doi": "10.1186/s12970-020-00383-4",
@@ -776,7 +971,7 @@ const STUDI = [
 "cit": 763,
 "tema": "nutrizione",
 "liv": "A",
-"sintesi": "Meta-analisi e meta-regressione sulle proteine: l’integrazione aumenta massa e forza da allenamento, con un plateau intorno a 1,6 g per kg al giorno.",
+"sintesi": "49 studi, 1863 partecipanti. L’integrazione proteica aumenta massa magra e forza da allenamento. Oltre **1,62 g per kg al giorno** di apporto totale non si osservano ulteriori guadagni. L’effetto cala con l’età e cresce con l’esperienza di allenamento.",
 "kw": "proteine integrazione grammi massa"
 },
 {
@@ -1151,7 +1346,7 @@ const STUDI = [
 "cit": 277,
 "tema": "popolazioni",
 "liv": "A",
-"sintesi": "Lo studio classico sulla variabilità: allenando un braccio in 585 persone, i guadagni vanno da nulli a oltre il 50%. Lo stesso programma non dà lo stesso risultato a due persone.",
+"sintesi": "585 persone allenate su un solo braccio per 12 settimane. La variazione di sezione va da **−2% a +59%**, il massimale da 0 a +250%, la forza isometrica da −32% a +149%. Alcuni non guadagnano nulla, altri raddoppiano la forza. Le donne hanno guadagnato più degli uomini in forza relativa.",
 "kw": "variabilità risposta individuale responder"
 },
 {
@@ -1166,7 +1361,7 @@ const STUDI = [
 "cit": 8,
 "tema": "recupero",
 "liv": "A",
-"sintesi": "Meta-analisi bayesiana sui recuperi tra le serie: la crescita migliore si osserva intorno a 1-2 minuti, e le differenze fra le fasce di recupero sono piccole. Oltre i 2 minuti non emerge un vantaggio.",
+"sintesi": "9 studi, 19 misure. Le durate di recupero si sovrappongono ampiamente e l’eterogeneità è alta. Nei confronti controllati le stime centrali **tendono a favorire i recuperi più lunghi** su braccio e coscia (0,13 e 0,17 a favore), mentre sul corpo intero sono vicine a zero. La conclusione utile è che la durata del recupero è una leva debole: accorciare non fa crescere di più.",
 "kw": "recupero pause tra serie"
 },
 {
@@ -1425,6 +1620,51 @@ const STUDI = [
 "kw": "lat machine presa larghezza"
 },
 {
+"id": "mcgill_colonna",
+"pmid": "19620925",
+"doi": "10.1519/jsc.0b013e3181b07334",
+"titolo": "Comparison of different rowing exercises: trunk muscle activation and lumbar spine motion, load, and stiffness",
+"rivista": "Journal of strength and conditioning research",
+"anno": "2009",
+"autore": "Fenwick CM",
+"oa": false,
+"cit": 15,
+"tema": "selezione",
+"liv": "B",
+"sintesi": "Confronto fra varianti di rematore: attivazione del tronco e carico sulla colonna cambiano sensibilmente fra le versioni, a parità di esercizio nominale.",
+"kw": "rematore varianti tronco colonna attivazione"
+},
+{
+"id": "escamilla_squat",
+"pmid": "11194098",
+"doi": "10.1097/00005768-200101000-00020",
+"titolo": "Knee biomechanics of the dynamic squat exercise",
+"rivista": "Medicine and science in sports and exercise",
+"anno": "2001",
+"autore": "Escamilla RF.",
+"oa": false,
+"cit": 243,
+"tema": "selezione",
+"liv": "A",
+"sintesi": "Rassegna biomeccanica sul ginocchio nell’accosciata: come profondità, larghezza della base e posizione del bilanciere cambiano forze e coppie articolari. È il riferimento classico per capire cosa carica cosa.",
+"kw": "squat ginocchio biomeccanica coppie profondità"
+},
+{
+"id": "escamilla_stacco",
+"pmid": "10912892",
+"doi": "10.1097/00005768-200007000-00013",
+"titolo": "A three-dimensional biomechanical analysis of sumo and conventional style deadlifts",
+"rivista": "Medicine and science in sports and exercise",
+"anno": "2000",
+"autore": "Escamilla RF",
+"oa": false,
+"cit": 62,
+"tema": "selezione",
+"liv": "A",
+"sintesi": "Analisi tridimensionale di stacco sumo e convenzionale: distribuzione diversa delle coppie fra anca, ginocchio e colonna a parità di carico sollevato.",
+"kw": "stacco sumo convenzionale coppie tridimensionale"
+},
+{
 "id": "loenneke_bfr",
 "pmid": "42549104",
 "doi": "10.3389/fphys.2026.1812707",
@@ -1545,6 +1785,36 @@ const STUDI = [
 "kw": "tempo cadenza durata ripetizione"
 },
 {
+"id": "saeterbakken_instab",
+"pmid": "23096062",
+"doi": "10.1519/jsc.0b013e318276b873",
+"titolo": "Effects of body position and loading modality on muscle activity and strength in shoulder presses",
+"rivista": "Journal of strength and conditioning research",
+"anno": "2013",
+"autore": "Saeterbakken AH",
+"oa": false,
+"cit": 25,
+"tema": "tecniche",
+"liv": "B",
+"sintesi": "Posizione del corpo e tipo di carico nelle spinte sopra la testa: seduti si esprime più forza che in piedi, e con bilanciere più che con manubri. La stabilità della base è forza esprimibile.",
+"kw": "stabilità posizione spinte forza seduto"
+},
+{
+"id": "behm_instabilita",
+"pmid": "20130672",
+"doi": "10.1139/h09-127",
+"titolo": "The use of instability to train the core musculature",
+"rivista": "Applied physiology, nutrition, and metabolism = Physiologie appliquee, nutrition et metabolisme",
+"anno": "2010",
+"autore": "Behm DG",
+"oa": false,
+"cit": 166,
+"tema": "tecniche",
+"liv": "A",
+"sintesi": "Rassegna sull’allenamento su superfici instabili: riduce il carico esprimibile e non offre vantaggi di ipertrofia rispetto al lavoro stabile.",
+"kw": "instabilità core superfici allenamento"
+},
+{
 "id": "roig_eccentric",
 "pmid": "18981046",
 "doi": "10.1136/bjsm.2008.051417",
@@ -1571,7 +1841,7 @@ const STUDI = [
 "cit": 4,
 "tema": "volume",
 "liv": "A",
-"sintesi": "67 studi, 2058 soggetti. L’ipertrofia cresce con il volume settimanale senza un tetto netto, ma con rendimenti decrescenti: circa +0,24% di ipertrofia per serie aggiunta intorno alle 12 serie settimanali. La frequenza, a volume pari, non ha un effetto identificabile sull’ipertrofia.",
+"sintesi": "67 studi, 2058 partecipanti. La probabilità che il volume aumenti sia ipertrofia sia forza è del 100%, con rendimenti decrescenti più marcati sulla forza. Per la frequenza l’effetto sull’ipertrofia è compatibile con nulla, mentre sulla forza è identificabile. Lo studio valida anche il conteggio frazionale, cioè contare mezza serie il lavoro indiretto.",
 "kw": "volume serie settimanali dose risposta frequenza"
 },
 {

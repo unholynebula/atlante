@@ -253,5 +253,264 @@ const PRINCIPI = [
 "risposta_variabile",
 "squat_stance"
 ]
+},
+{
+"id": "stallo_punto",
+"t": "Il punto di stallo",
+"gruppo": "Fisica",
+"liv": "M",
+"sommario": "Ogni esercizio ha un punto in cui fallisce, ed è quello che decide quanto peso puoi usare.",
+"corpo": [
+"Il momento richiesto cambia lungo l’escursione, e cambia anche la forza che il muscolo può produrre, per due ragioni: la relazione lunghezza-tensione e il braccio di leva interno del muscolo, che a sua volta varia con l’angolo articolare.",
+"Il punto di stallo è dove il rapporto fra momento richiesto e momento disponibile è più sfavorevole. In panca cade tipicamente pochi centimetri sopra il petto, dove il braccio di leva sulla spalla è ancora lungo ma il pettorale ha già perso il vantaggio della posizione allungata. Nell’accosciata cade poco sopra il parallelo, dove il momento al ginocchio è alto e il quadricipite non ha ancora recuperato la leva.",
+"Questo ha una conseguenza pratica precisa: **il peso che usi è determinato dal punto peggiore, non dalla media**. Tutto il resto dell’escursione lavora sotto quel massimo, ed è il motivo per cui un esercizio con curva di resistenza molto irregolare carica bene solo una piccola porzione di movimento.",
+"È anche il motivo per cui certe varianti permettono più carico senza allenare di più: accorciare l’escursione per evitare il punto di stallo aumenta il numero sul bilanciere e riduce lo stimolo. La progressione va misurata a escursione costante, altrimenti misura solo quanto stai barando."
+],
+"studi": [
+"escamilla_squat",
+"braccio_leva",
+"vigotsky_moment"
+]
+},
+{
+"id": "inerzia",
+"t": "Inerzia, accelerazione e momento reale",
+"gruppo": "Fisica",
+"liv": "M",
+"sommario": "Il carico che il muscolo sente non è il peso scritto sul disco.",
+"corpo": [
+"La seconda legge della dinamica dice che la forza necessaria a muovere una massa vale massa per accelerazione. Quando sollevi un peso non stai solo vincendo la gravità: lo stai anche accelerando.",
+"Nella prima parte di una ripetizione, per mettere in moto il carico, la forza richiesta supera il peso. Nella parte finale, se il carico sta decelerando, la forza richiesta è **inferiore** al peso. È il motivo per cui l’ultimo tratto di un’alzata esplosiva è quasi scarico: il bilanciere sta salendo per inerzia, non perché tu lo stia spingendo.",
+"Ne discende un’indicazione che vale per l’ipertrofia: un movimento controllato mantiene la tensione per tutta l’escursione, mentre un movimento balistico concentra il lavoro all’inizio e lascia il resto all’inerzia. Non serve rallentare artificialmente, perché la durata della ripetizione nell’intervallo da mezzo secondo a otto secondi non cambia l’ipertrofia: serve non buttare il peso.",
+"Vale anche l’opposto nella discesa. Se lasci cadere il carico e lo fermi di colpo in fondo, il picco di forza che attraversa l’articolazione può essere molto superiore al peso. È lì che si fanno male le persone, non nella salita."
+],
+"studi": [
+"schoenfeld_tempo",
+"cholewicki_stacco"
+]
+},
+{
+"id": "catena",
+"t": "Catena cinetica aperta e chiusa",
+"gruppo": "Fisica",
+"liv": "M",
+"sommario": "Se l’estremità è libera o appoggiata cambia come il carico si distribuisce.",
+"corpo": [
+"In una catena **aperta** l’estremità distale è libera di muoversi: la leg extension, il curl, l’alzata laterale. Il carico agisce su un solo segmento, il movimento avviene a una sola articolazione, e puoi isolare con precisione.",
+"In una catena **chiusa** l’estremità è fissa contro il terreno o una piattaforma: l’accosciata, la pressa, il push-up. Il movimento coinvolge più articolazioni in sequenza obbligata, e la posizione di una determina quella delle altre.",
+"La differenza pratica non è che una sia superiore. È che nella catena chiusa **non puoi scegliere dove cade il carico**: la geometria lo decide. Se vuoi caricare il retto femorale, l’accosciata non te lo permette, perché la flessione d’anca che accompagna la flessione di ginocchio lo mantiene a lunghezza quasi costante. Serve la catena aperta.",
+"Viceversa la catena chiusa permette carichi molto più alti e distribuisce le forze su più articolazioni, riducendo il picco su ciascuna. È il motivo per cui l’accosciata carica il quadricipite più di quanto potrebbe mai fare una leg extension, pur essendo meno selettiva."
+],
+"studi": [
+"squat_regional",
+"pressa_squat",
+"escamilla_squat"
+]
+},
+{
+"id": "piano_scapolare",
+"t": "Il piano della scapola",
+"gruppo": "Biologia",
+"liv": "M",
+"sommario": "Il braccio non lavora bene né davanti né di lato, ma nel mezzo.",
+"corpo": [
+"La scapola non è appoggiata piatta sulla schiena: sta inclinata di circa trenta-quaranta gradi in avanti rispetto al piano frontale. La cavità glenoidea, dove si articola l’omero, guarda quindi leggermente in avanti e di lato.",
+"Il piano scapolare è il piano che contiene questa orientazione. Muovere il braccio dentro quel piano significa mantenere l’allineamento naturale fra testa dell’omero e glena: la capsula è in tensione uniforme, la cuffia dei rotatori lavora con leve favorevoli, e lo spazio sotto l’acromion è massimo.",
+"Da qui una regola pratica che spiega molti fastidi di spalla: **le spinte sopra la testa e le alzate rendono meglio e disturbano meno se il braccio viene portato leggermente in avanti rispetto alla linea frontale**, invece che rigorosamente di lato. Non è una correzione posturale generica, è geometria articolare.",
+"Nelle alzate laterali questo significa che qualche grado di anteposizione è normale e desiderabile. Nelle spinte significa che il bilanciere dietro la nuca, che forza il braccio sul piano frontale puro, è la variante meno tollerata dalla spalla."
+],
+"studi": [
+"inman_scapola",
+"spalla_impingement"
+]
+},
+{
+"id": "fibre",
+"t": "Tipi di fibra",
+"gruppo": "Biologia",
+"liv": "B",
+"sommario": "Cosa cambia davvero fra fibre lente e veloci, e cosa non puoi cambiare.",
+"corpo": [
+"Le fibre si classificano per l’isoforma di miosina che esprimono: tipo I, lente e resistenti alla fatica, e tipo II, veloci e più potenti ma meno resistenti. La proporzione fra i due tipi in un dato muscolo è in buona parte determinata geneticamente.",
+"L’allenamento contro resistenza può spostare le fibre **dentro** il tipo II, tipicamente da IIx verso IIa, ma non converte in modo apprezzabile il tipo I in tipo II o viceversa. Non puoi riprogettare la composizione: puoi far crescere quello che hai.",
+"Le fibre di tipo II hanno un potenziale ipertrofico maggiore, e questo alimenta l’idea che servano carichi alti per allenarle. Ma il principio della dimensione dice che vengono reclutate comunque quando la serie si avvicina al cedimento, anche con carichi bassi.",
+"Esistono indizi di una tendenza: i carichi bassi favorirebbero relativamente le fibre di tipo I, quelli alti le tipo II. È un effetto di piccola entità e non giustifica costruire un programma attorno a una composizione di fibre che non hai misurato."
+],
+"studi": [
+"schoenfeld_load",
+"henneman_size",
+"mitchell_carico",
+"burd_carico"
+]
+},
+{
+"id": "tendine",
+"t": "Il tendine",
+"gruppo": "Biologia",
+"liv": "B",
+"sommario": "Trasmette la forza, immagazzina energia, e si adatta con tempi propri.",
+"corpo": [
+"Il muscolo non tira direttamente sull’osso: la forza passa attraverso il tendine, che non è un cavo rigido ma un elemento elastico. Si allunga sotto carico e restituisce energia quando si accorcia.",
+"La **rigidezza** del tendine determina quanta della forza muscolare arriva all’osso subito e quanta viene assorbita nell’allungamento. Un tendine più rigido trasmette più rapidamente, ed è vantaggioso per la forza esplosiva; un tendine più cedevole immagazzina più energia, ed è vantaggioso nella corsa.",
+"L’allenamento di forza aumenta la rigidezza tendinea, e le contrazioni isometriche di lunga durata sono particolarmente efficaci. Ma il tendine si adatta **più lentamente del muscolo**: ha meno vascolarizzazione e ricambio più lento.",
+"Questo asincronismo è la spiegazione meccanica più plausibile di molti fastidi da sovraccarico: il muscolo diventa forte prima che il tendine si sia adeguato, e la struttura più lenta a rispondere diventa quella che protesta. È anche il motivo per cui la gestione di una tendinopatia passa dalla riduzione del carico mantenendo il volume, non dal riposo."
+],
+"studi": [
+"kubo_tendine",
+"reeves_tendine",
+"tendine_carico"
+]
+},
+{
+"id": "forza_velocita",
+"t": "Forza e velocità",
+"gruppo": "Biologia",
+"liv": "B",
+"sommario": "Più veloce un muscolo si accorcia, meno forza produce.",
+"corpo": [
+"La relazione forza-velocità dice che la forza che un muscolo può produrre in accorciamento diminuisce all’aumentare della velocità. A velocità zero, cioè in isometria, la forza è massima; a velocità elevata è bassa.",
+"In eccentrico la curva si comporta diversamente: il muscolo può sopportare forze **superiori** al suo massimo isometrico. È il motivo per cui riesci a frenare più peso di quanto riesci a sollevare, e la base meccanica del sovraccarico eccentrico.",
+"In pratica questo significa che la velocità dell’esecuzione è un indicatore del carico relativo: a parità di persona, un bilanciere che sale lento è vicino al massimale. Su questo si fonda l’allenamento basato sulla velocità, e la caduta di velocità dentro la serie è un indicatore oggettivo di vicinanza al cedimento.",
+"Attenzione a non trarne che «più lento è meglio». La durata della ripetizione, nell’intervallo praticabile, non cambia l’ipertrofia. La velocità è utile come **misura**, non come obiettivo."
+],
+"studi": [
+"helms_rpe",
+"roig_eccentric",
+"schoenfeld_eccentric",
+"schoenfeld_tempo"
+]
+},
+{
+"id": "regionale",
+"t": "Ipertrofia regionale",
+"gruppo": "Biologia",
+"liv": "B",
+"sommario": "Un muscolo non cresce in modo uniforme, e l’esercizio decide dove.",
+"corpo": [
+"Un muscolo non è un’unità funzionale omogenea. Le fibre possono essere organizzate in compartimenti con innervazione parzialmente distinta, e la crescita in risposta all’allenamento risulta disomogenea lungo il ventre muscolare.",
+"Gli esempi documentati sono numerosi. Lo squat fa crescere il vasto laterale nella porzione centrale e lascia quasi fermo il retto femorale. Il grande pettorale si attiva per regioni distinte secondo la direzione del movimento, e clavicolare e sternale non sono intercambiabili. Negli ischiocrurali la selezione dell’esercizio cambia quale capo lavora.",
+"Non tutti i muscoli però si comportano così. Sui flessori del gomito il confronto diretto ha trovato crescita distribuita in modo simile: il «picco del bicipite» non si costruisce scegliendo l’esercizio giusto.",
+"La lezione pratica è misurata: per i gruppi con compartimentazione documentata la varietà di angoli e di linee di trazione ha una ragione meccanica, per gli altri è probabilmente indifferente. Vale la pena variare dove c’è una motivazione anatomica, non per principio."
+],
+"studi": [
+"squat_regional",
+"pec_fiber",
+"biceps_regional",
+"schoenfeld_range_att",
+"bourne_hamstring"
+]
+},
+{
+"id": "nervoso",
+"t": "Adattamento nervoso e ipertrofia",
+"gruppo": "Biologia",
+"liv": "A",
+"sommario": "Le prime settimane non fanno crescere: insegnano.",
+"corpo": [
+"Quando un principiante aumenta il massimale del quaranta per cento in due mesi, la maggior parte di quel guadagno non è tessuto nuovo. È coordinazione: reclutamento più completo, sincronizzazione migliore, minore attivazione degli antagonisti, tecnica più efficiente.",
+"Questo è verificabile con una misura semplice: la forza cresce molto più rapidamente della sezione muscolare. E parte di quell’aumento di sezione misurato nelle prime settimane non è nemmeno crescita, ma gonfiore da edema.",
+"La sintesi proteica racconta la stessa storia. Nelle prime settimane il suo aumento è in gran parte riparazione del danno, e correla con l’ipertrofia solo dopo che il danno si attenua.",
+"Le conseguenze pratiche sono due. Primo: non valutare un programma dai risultati delle prime settimane, che sono in buona parte apprendimento. Secondo: gli studi brevi su principianti sovrastimano sistematicamente l’ipertrofia, ed è una delle ragioni per cui le grandezze osservate in letteratura non si trasferiscono a chi si allena da anni."
+],
+"studi": [
+"damas_timeline",
+"damas_edema",
+"duchateau_reclut",
+"risposta_variabile"
+]
+},
+{
+"id": "stiramento_accorciamento",
+"t": "Il ciclo allungamento-accorciamento",
+"gruppo": "Biologia",
+"liv": "B",
+"sommario": "Perché rimbalzare rende l’esercizio più facile, non più efficace.",
+"corpo": [
+"Quando un muscolo viene allungato attivamente e subito dopo si accorcia, produce più forza di quanta ne produrrebbe partendo da fermo. Il contributo viene in parte dall’energia elastica immagazzinata nel tendine e in parte da meccanismi contrattili.",
+"È un vantaggio reale in atletica, dove serve esprimere potenza. Nell’allenamento per l’ipertrofia però è un problema: **quello che il tendine restituisce, il muscolo non lo produce.** Rimbalzare in fondo a un’accosciata o a una panca riduce il lavoro muscolare proprio nel tratto dove il muscolo è più lungo, cioè quello che vorresti caricare.",
+"Il contributo elastico decade rapidamente: basta una pausa di un secondo in posizione allungata per annullarlo quasi del tutto. È la ragione meccanica della pausa in basso nel calf raise, nello stacco a pausa, nella panca fermata al petto.",
+"Non è un obbligo. È una scelta: la pausa toglie carico dal numero sul bilanciere e lo restituisce al muscolo."
+],
+"studi": [
+"kinoshita_calf",
+"kassiano_partials",
+"tendine_carico"
+]
+},
+{
+"id": "lunga_trasversa",
+"t": "Crescere in lunghezza o in sezione",
+"gruppo": "Biologia",
+"liv": "B",
+"sommario": "Due modi diversi di diventare più grossi, con conseguenze diverse.",
+"corpo": [
+"Un muscolo può aumentare di volume aggiungendo sarcomeri **in parallelo**, cioè ingrossando le fibre esistenti, oppure aggiungendone **in serie**, cioè allungando i fascicoli. Le due strade danno risultati funzionali diversi.",
+"L’aggiunta in parallelo aumenta la sezione trasversa fisiologica e quindi la forza. L’aggiunta in serie aumenta la lunghezza e la velocità di accorciamento, e sposta la curva lunghezza-tensione verso lunghezze maggiori.",
+"L’evidenza disponibile suggerisce che il carico eccentrico e il lavoro a lunghezza elevata tendano a favorire l’allungamento dei fascicoli, mentre il lavoro concentrico tenda ad aumentare l’angolo di pennazione. Sono tendenze, non leggi, e le misure ecografiche di architettura hanno un’affidabilità limitata.",
+"Per un bodybuilder la distinzione conta relativamente poco, perché entrambe le strade aggiungono volume. Conta di più per chi allena atleti, dove la lunghezza dei fascicoli si associa alla velocità e all’escursione sicura sotto carico."
+],
+"studi": [
+"franchi_architettura",
+"blazevich_arch",
+"lieber_design",
+"kwah_fascicolo"
+]
+},
+{
+"id": "fatica",
+"t": "Fatica periferica e centrale",
+"gruppo": "Biologia",
+"liv": "B",
+"sommario": "Non tutta la stanchezza è la stessa cosa, e non tutta va evitata.",
+"corpo": [
+"La fatica periferica avviene dentro il muscolo: accumulo di metaboliti, alterazione dell’accoppiamento fra eccitazione e contrazione, esaurimento dei substrati. È locale, si recupera in minuti o ore, ed è inseparabile dal lavoro utile.",
+"La fatica centrale è una riduzione della capacità del sistema nervoso di reclutare pienamente le unità motorie. Si accumula più lentamente e si smaltisce più lentamente, ed è quella che rende la seduta di giovedì peggiore di quella di lunedì.",
+"Il cedimento produce entrambe in misura sproporzionata. Una serie di panca portata a cedimento lascia la velocità di sollevamento molto più compromessa di una fermata a una o due ripetizioni dal limite, e quella compromissione si porta nelle serie successive.",
+"Da qui la logica che regge tutta la programmazione: il volume di serie dure è il motore della crescita, e la fatica è ciò che limita quanto volume puoi sostenere. Ogni scelta che riduce fatica a parità di stimolo — non andare a cedimento sui multiarticolari, distribuire il volume, tenere il cedimento sugli isolamenti — aumenta il volume utile settimanale."
+],
+"studi": [
+"refalo_failure",
+"grgic_failure",
+"pelland_volume",
+"doms_hypertrophy"
+]
+},
+{
+"id": "compressione",
+"t": "Compressione e taglio sulla colonna",
+"gruppo": "Fisica",
+"liv": "B",
+"sommario": "Due sollecitazioni diverse, con cause diverse e rimedi diversi.",
+"corpo": [
+"La colonna sotto carico subisce due sollecitazioni distinte. La **compressione** agisce lungo l’asse verticale del rachide e dipende soprattutto dal carico totale, incluso quello generato dalla contrazione dei muscoli stessi. Il **taglio** tende a far scorrere una vertebra sull’altra e cresce con l’inclinazione del busto.",
+"Le misure su sollevamenti massimali mostrano valori di compressione molto alti anche con tecnica corretta: è una conseguenza inevitabile del fatto che i muscoli spinali lavorano con bracci di leva cortissimi, e per generare la coppia necessaria devono produrre forze enormi.",
+"I metodi di misura del carico lombare danno però stime che variano parecchio fra loro, e questo spiega perché studi diversi riportino numeri difficilmente confrontabili. Le cifre assolute vanno prese con cautela; le differenze relative fra tecniche sono più affidabili.",
+"In pratica: il carico compressivo lo riduci alzando meno peso o cambiando esercizio, il taglio lo riduci tenendo il busto più verticale e il carico più vicino. Sono due leve diverse, e sapere quale tirare dipende da dove senti il problema."
+],
+"studi": [
+"cholewicki_stacco",
+"kingma_flessione",
+"escamilla_stacco",
+"mcgill_colonna"
+]
+},
+{
+"id": "specificita",
+"t": "Specificità e trasferimento",
+"gruppo": "Biologia",
+"liv": "A",
+"sommario": "Migliori in quello che alleni, e il trasferimento è più stretto di quanto sembri.",
+"corpo": [
+"Gli adattamenti sono specifici per movimento, angolo, velocità e modalità. Allenare in isometria a un dato angolo migliora la forza soprattutto a quell’angolo. Allenare con pesi liberi migliora i test con pesi liberi più di quanto faccia allenare a macchina, e viceversa.",
+"Questo spiega un risultato che a prima vista sembra contraddittorio: macchine e pesi liberi producono ipertrofia simile, ma non forza simile nei test. L’ipertrofia risponde alla tensione, la forza espressa risponde anche alla familiarità con il compito.",
+"Per un bodybuilder la conseguenza è liberatoria: se l’obiettivo è la massa, la scelta dell’attrezzo importa poco e conviene scegliere quello che permette di caricare bene la posizione utile. Per chi allena forza su un gesto specifico, la conseguenza è opposta: quel gesto va allenato.",
+"Vale anche per l’escursione. Allenare in un range parziale migliora soprattutto quel range, e questo è un argomento indipendente a favore dell’escursione completa quando la mobilità lo consente."
+],
+"studi": [
+"haun_hypertrophy",
+"pressa_squat",
+"speirs_unilateral",
+"pedrosa_rom"
+]
 }
 ];

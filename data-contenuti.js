@@ -493,7 +493,7 @@ const PROBLEMI = [
 },
 {
 "s": "Aggiungi 2-4 serie settimanali",
-"come": "Circa +0,24% di ipertrofia per serie aggiunta intorno alle 12 settimanali, con rendimenti decrescenti ma senza tetto netto.",
+"come": "L’ipertrofia cresce col volume con rendimenti decrescenti: la probabilità che aumenti è del 100% nella meta-regressione su 67 studi.",
 "liv": "A"
 },
 {
@@ -1041,8 +1041,8 @@ const PROBLEMI = [
 ],
 "soluzioni": [
 {
-"s": "Porta i recuperi a 2 minuti sui multiarticolari",
-"come": "La crescita migliore si osserva intorno a 1-2 minuti e le differenze fra le fasce sono piccole. Su 20 serie recuperi 20 minuti.",
+"s": "Accorcia i recuperi solo per guadagnare tempo, sapendo cosa costa",
+"come": "La meta-analisi bayesiana più recente trova ampia sovrapposizione fra le durate e alta eterogeneità, con le stime centrali che semmai **favoriscono i recuperi più lunghi** su braccio e coscia. Accorciare non fa crescere di più: è un compromesso che paghi in prestazione sulle serie successive per finire prima. Se il tempo non ti manca, non c’è motivo di farlo.",
 "liv": "A"
 },
 {
@@ -1459,6 +1459,697 @@ const PROBLEMI = [
 "stiramento_mobilita",
 "kubo_moment"
 ]
+},
+{
+"id": "panca_stallo",
+"t": "La panca è ferma da mesi",
+"area": "Torso",
+"sintomo": "Il massimale in panca non sale, mentre altri esercizi progrediscono.",
+"cause": [
+{
+"c": "Il punto di stallo cade pochi centimetri sopra il petto e non è allenato specificamente",
+"liv": "M"
+},
+{
+"c": "Volume di petto sotto la soglia utile, con la panca come unico esercizio",
+"liv": "A"
+},
+{
+"c": "Instabilità della base: scapole non fissate, piedi che non spingono",
+"liv": "M"
+},
+{
+"c": "Tricipiti come anello debole nel tratto finale",
+"liv": "C"
+}
+],
+"soluzioni": [
+{
+"s": "Allena il punto di stallo",
+"come": "Panca fermata al petto per uno o due secondi: elimina il contributo elastico e ti obbliga a produrre forza proprio dove fallisci.",
+"liv": "M"
+},
+{
+"s": "Aggiungi volume di petto altrove",
+"come": "Croci e inclinata portano il pettorale in fascia produttiva senza aggiungere serie di panca pesante.",
+"liv": "A"
+},
+{
+"s": "Costruisci la base",
+"come": "Scapole retratte e depresse, piedi piantati: nelle spinte la stabilità della base è forza esprimibile, ed è misurabile.",
+"liv": "B"
+},
+{
+"s": "Se cedono i tricipiti, allenali con la spalla flessa",
+"come": "Il capo lungo è oltre metà del tricipite e i pushdown lo lasciano accorciato.",
+"liv": "A"
+}
+],
+"quando_fermarsi": "",
+"studi": [
+"panca_presa",
+"saeterbakken_instab",
+"maeo_triceps",
+"pelland_volume"
+]
+},
+{
+"id": "collo",
+"t": "Fastidio al collo nelle scrollate e nei rematori",
+"area": "Spalla",
+"sintomo": "Tensione o dolore alla base del collo durante o dopo il lavoro di schiena.",
+"cause": [
+{
+"c": "Rotazione delle spalle nelle scrollate, che carica l’articolazione in posizione debole",
+"liv": "M"
+},
+{
+"c": "Testa portata in avanti per compensare il carico",
+"liv": "C"
+},
+{
+"c": "Carico che eccede la capacità del trapezio superiore",
+"liv": "C"
+}
+],
+"soluzioni": [
+{
+"s": "Su e giù in linea",
+"come": "La scrollata è un’elevazione, non una rotazione: ruotare non aggiunge escursione utile.",
+"liv": "M"
+},
+{
+"s": "Collo neutro e sguardo avanti",
+"come": "Non portare la testa verso la spalla né estendere il collo per aiutare.",
+"liv": "C"
+},
+{
+"s": "Passa ai cavi o alle manopole",
+"come": "Distribuiscono diversamente il carico e permettono un percorso più naturale.",
+"liv": "C"
+},
+{
+"s": "Allena il collo direttamente se lo vuoi grosso",
+"come": "Estensioni e flessioni con resistenza bassa: cresce come qualsiasi muscolo, ma non è quello che stanno facendo le scrollate.",
+"liv": "C"
+}
+],
+"quando_fermarsi": "Dolore irradiato al braccio, formicolii o debolezza: valutazione.",
+"studi": [
+"mcgill_colonna"
+]
+},
+{
+"id": "respiro",
+"t": "Mi gira la testa nelle serie pesanti",
+"area": "Programmazione",
+"sintomo": "Vista che si annebbia o capogiro alla fine di una serie di accosciate o stacchi.",
+"cause": [
+{
+"c": "Manovra di Valsalva prolungata, che aumenta la pressione intratoracica e riduce il ritorno venoso",
+"liv": "M"
+},
+{
+"c": "Apnea mantenuta per troppe ripetizioni consecutive",
+"liv": "C"
+},
+{
+"c": "Passaggio rapido dalla posizione flessa a quella eretta",
+"liv": "C"
+}
+],
+"soluzioni": [
+{
+"s": "Espira fra una ripetizione e l’altra nelle serie lunghe",
+"come": "La Valsalva serve a irrigidire il tronco nella singola ripetizione pesante, non a tenerla per dieci.",
+"liv": "M"
+},
+{
+"s": "Non trattenere oltre due o tre ripetizioni",
+"come": "Riprendi il respiro nel punto di minor carico del movimento.",
+"liv": "C"
+},
+{
+"s": "Rialzati con calma dopo la serie",
+"come": "Il capogiro spesso arriva nel passaggio posturale, non durante lo sforzo.",
+"liv": "C"
+}
+],
+"quando_fermarsi": "Capogiri ricorrenti, svenimenti, dolore toracico: fermati e fai valutare la pressione.",
+"studi": []
+},
+{
+"id": "mobilita_spalla",
+"t": "Non riesco a portare le braccia sopra la testa",
+"area": "Spalla",
+"sintomo": "Nelle spinte overhead la schiena si inarca perché il braccio non arriva in verticale.",
+"cause": [
+{
+"c": "Escursione limitata in elevazione della spalla",
+"liv": "C"
+},
+{
+"c": "Rotazione superiore della scapola insufficiente",
+"liv": "M"
+},
+{
+"c": "Rigidità del gran dorsale, che limita l’elevazione",
+"liv": "C"
+}
+],
+"soluzioni": [
+{
+"s": "Lavora sul piano scapolare",
+"come": "Porta le braccia leggermente in avanti rispetto alla linea frontale: è l’allineamento naturale della glena e apre lo spazio disponibile.",
+"liv": "M"
+},
+{
+"s": "Allena la rotazione scapolare",
+"come": "Serratus slide al muro e Y raise su panca inclinata, carichi bassissimi.",
+"liv": "C"
+},
+{
+"s": "Passa alla spinta con manubri o su panca molto inclinata",
+"come": "Non forzi un’escursione che non hai e continui a caricare il deltoide.",
+"liv": "C"
+},
+{
+"s": "Non compensare con la schiena",
+"come": "Se devi inarcare per chiudere, il peso è troppo o l’escursione non c’è.",
+"liv": "M"
+}
+],
+"quando_fermarsi": "",
+"studi": [
+"inman_scapola",
+"spalla_impingement"
+]
+},
+{
+"id": "adduttori_stiro",
+"t": "Fastidio agli adduttori nell’accosciata larga",
+"area": "Gamba",
+"sintomo": "Tensione o dolore all’interno coscia con base larga o squat sumo.",
+"cause": [
+{
+"c": "Escursione aumentata rapidamente senza adattamento",
+"liv": "C"
+},
+{
+"c": "Adduttore magno che lavora molto in allungamento e non è abituato",
+"liv": "B"
+},
+{
+"c": "Base troppo larga per la conformazione dell’anca",
+"liv": "C"
+}
+],
+"soluzioni": [
+{
+"s": "Restringi la base e risali gradualmente",
+"come": "La larghezza va adattata alla tua anca, non copiata.",
+"liv": "B"
+},
+{
+"s": "Aggiungi lavoro diretto di adduzione",
+"come": "Macchina adduttori con escursione completa: prepara il tessuto al lavoro in allungamento.",
+"liv": "B"
+},
+{
+"s": "Riduci il carico mantenendo il volume",
+"come": "Come per ogni tessuto connettivo, il carico gestito adatta, il salto improvviso irrita.",
+"liv": "B"
+}
+],
+"quando_fermarsi": "Dolore acuto durante un movimento, gonfiore o perdita di forza: valutazione.",
+"studi": [
+"adductor_squat",
+"squat_stance"
+]
+},
+{
+"id": "presa_stacco",
+"t": "La presa cede prima della schiena nello stacco",
+"area": "Torso · Braccio",
+"sintomo": "Le mani si aprono mentre le gambe e la schiena avrebbero ancora margine.",
+"cause": [
+{
+"c": "Forza di presa inferiore alla capacità della catena posteriore",
+"liv": "B"
+},
+{
+"c": "Presa doppia prona, la più sfavorevole con carichi alti",
+"liv": "M"
+},
+{
+"c": "Nessun allenamento diretto della presa",
+"liv": "B"
+}
+],
+"soluzioni": [
+{
+"s": "Fasce sulle serie pesanti",
+"come": "Spostano il limite dove deve stare. Non è barare: è togliere una variabile che non stai allenando.",
+"liv": "M"
+},
+{
+"s": "Presa mista o a uncino",
+"come": "Alternative alle fasce, con i loro compromessi: la mista introduce asimmetria, l’uncino è scomodo.",
+"liv": "C"
+},
+{
+"s": "Allena la presa a parte",
+"come": "Farmer walk e dead hang in fondo alla seduta: la forza di presa risponde ad allenamento specifico.",
+"liv": "B"
+}
+],
+"quando_fermarsi": "",
+"studi": [
+"presa_forza",
+"escamilla_stacco"
+]
+},
+{
+"id": "ginocchio_pressa",
+"t": "Il ginocchio protesta alla pressa e non nell’accosciata",
+"area": "Gamba",
+"sintomo": "Fastidio anteriore alla pressa, assente o minore nello squat libero.",
+"cause": [
+{
+"c": "Piedi troppo bassi sulla piattaforma, che aumenta il momento al ginocchio",
+"liv": "M"
+},
+{
+"c": "Escursione forzata oltre il punto in cui il bacino si stacca",
+"liv": "M"
+},
+{
+"c": "Blocco completo in estensione con carico alto",
+"liv": "C"
+}
+],
+"soluzioni": [
+{
+"s": "Alza i piedi sulla piattaforma",
+"come": "Sposta lavoro dal ginocchio all’anca cambiando la geometria, senza cambiare esercizio.",
+"liv": "M"
+},
+{
+"s": "Ferma la discesa prima che il bacino si stacchi",
+"come": "Oltre quel punto stai flettendo la colonna sotto un carico elevato.",
+"liv": "M"
+},
+{
+"s": "Non bloccare le ginocchia in alto",
+"come": "Fermati poco prima dell’estensione completa: mantiene tensione e toglie il picco articolare.",
+"liv": "C"
+}
+],
+"quando_fermarsi": "Gonfiore, cedimenti o blocchi: valutazione.",
+"studi": [
+"escamilla_squat",
+"pressa_squat"
+]
+},
+{
+"id": "dorsale_asimm",
+"t": "Sento un lato della schiena più dell’altro",
+"area": "Torso",
+"sintomo": "Nei tiri bilaterali una scapola si muove diversamente o un lato sente di più.",
+"cause": [
+{
+"c": "Dominanza d’uso e asimmetria naturale di forza",
+"liv": "A"
+},
+{
+"c": "Compensazione nei movimenti bilaterali",
+"liv": "C"
+},
+{
+"c": "Differenza di mobilità o di controllo scapolare fra i due lati",
+"liv": "C"
+}
+],
+"soluzioni": [
+{
+"s": "Aggiungi tiri monolaterali",
+"come": "Rematore con manubrio e lat machine a braccio singolo: nel bilaterale il lato forte compensa, nel monolaterale no.",
+"liv": "B"
+},
+{
+"s": "Parti dal lato debole e pareggia le ripetizioni",
+"come": "Il lato forte fa quello che riesce a fare il debole.",
+"liv": "C"
+},
+{
+"s": "Accetta una differenza modesta",
+"come": "Negli studi su singolo arto i guadagni variano moltissimo fra lati e fra persone.",
+"liv": "A"
+}
+],
+"quando_fermarsi": "Asimmetria improvvisa con debolezza o formicolii: valutazione.",
+"studi": [
+"risposta_variabile",
+"speirs_unilateral"
+]
+},
+{
+"id": "volume_quanto",
+"t": "Non so quanto volume mi serve",
+"area": "Programmazione",
+"sintomo": "Dubbio su quante serie settimanali fare per ciascun muscolo.",
+"cause": [
+{
+"c": "Il volume ottimale varia molto fra persone",
+"liv": "A"
+},
+{
+"c": "Il lavoro indiretto non viene contato",
+"liv": "A"
+},
+{
+"c": "Confusione fra serie totali e serie dure",
+"liv": "C"
+}
+],
+"soluzioni": [
+{
+"s": "Conta in modo frazionale",
+"come": "Una serie diretta vale 1, una indiretta 0,5. La meta-regressione più recente mostra che è questo conteggio a predire meglio gli adattamenti.",
+"liv": "A"
+},
+{
+"s": "Parti da 10-20 serie settimanali e osserva",
+"come": "È la fascia in cui si concentra la resa. Sotto le 8 difficilmente si vede qualcosa.",
+"liv": "A"
+},
+{
+"s": "Aggiungi 2-4 serie e valuta dopo un mese",
+"come": "Se i carichi salgono e recuperi, il volume è sostenibile; se ristagni e sei stanco, sei oltre.",
+"liv": "A"
+},
+{
+"s": "Non copiare il volume di qualcun altro",
+"come": "La variabilità di risposta individuale è grande e documentata.",
+"liv": "A"
+}
+],
+"quando_fermarsi": "",
+"studi": [
+"pelland_volume",
+"risposta_variabile",
+"volume_alto",
+"currier_volume"
+]
+},
+{
+"id": "stretching",
+"t": "Devo fare stretching prima o dopo?",
+"area": "Programmazione",
+"sintomo": "Dubbio su quando e se fare allungamento.",
+"cause": [
+{
+"c": "Aspettativa che lo stretching prevenga infortuni",
+"liv": "C"
+},
+{
+"c": "Confusione fra riscaldamento e allungamento",
+"liv": "C"
+}
+],
+"soluzioni": [
+{
+"s": "Non fare stretching statico prolungato prima delle serie pesanti",
+"come": "Riduce temporaneamente l’espressione di forza. Scalda con serie di avvicinamento dell’esercizio stesso.",
+"liv": "B"
+},
+{
+"s": "Se ti serve mobilità, allenala a parte",
+"come": "La dose efficace per aumentare l’escursione è documentata, e va programmata come qualsiasi altro lavoro.",
+"liv": "A"
+},
+{
+"s": "Sappi che lo stiramento prolungato produce anche ipertrofia",
+"come": "È un risultato curioso e reale, ma richiede volumi di stiramento che nessuno fa in pratica.",
+"liv": "B"
+}
+],
+"quando_fermarsi": "",
+"studi": [
+"warneke_stretch",
+"stiramento_mobilita"
+]
+},
+{
+"id": "quante_volte",
+"t": "Quante volte a settimana devo allenare un muscolo",
+"area": "Programmazione",
+"sintomo": "Dubbio sulla frequenza ottimale.",
+"cause": [
+{
+"c": "Convinzione che la frequenza alta sia di per sé superiore",
+"liv": "A"
+},
+{
+"c": "Volume settimanale concentrato in una sola seduta",
+"liv": "A"
+}
+],
+"soluzioni": [
+{
+"s": "Scegli la frequenza in base a quanto volume devi distribuire",
+"come": "A volume pari la frequenza non ha un effetto identificabile sull’ipertrofia. Ne ha invece sulla forza.",
+"liv": "A"
+},
+{
+"s": "Se un muscolo richiede molte serie, spalmale",
+"come": "Quindici serie in una seduta hanno le ultime molto affaticate; le stesse su due sedute no.",
+"liv": "A"
+},
+{
+"s": "Non aumentare la frequenza sperando in un vantaggio automatico",
+"come": "Aumenti la frequenza per sostenere più volume, non per il numero in sé.",
+"liv": "A"
+}
+],
+"quando_fermarsi": "",
+"studi": [
+"schoenfeld_freq",
+"pelland_volume",
+"grgic_freq"
+]
+},
+{
+"id": "macchine",
+"t": "Le macchine valgono meno dei pesi liberi?",
+"area": "Programmazione",
+"sintomo": "Dubbio sulla scelta dell’attrezzo.",
+"cause": [
+{
+"c": "Convinzione che i pesi liberi siano superiori per la crescita",
+"liv": "B"
+},
+{
+"c": "Confusione fra specificità della forza e ipertrofia",
+"liv": "A"
+}
+],
+"soluzioni": [
+{
+"s": "Per la massa scegli quello che carica meglio la posizione utile",
+"come": "A volume e intensità pari non emergono differenze di ipertrofia fra macchine e pesi liberi.",
+"liv": "B"
+},
+{
+"s": "Per la forza in un gesto specifico, allena quel gesto",
+"come": "Gli adattamenti sono specifici: la forza misurata coi pesi liberi migliora più allenandosi con pesi liberi.",
+"liv": "A"
+},
+{
+"s": "Usa la macchina dove il peso libero sbaglia la curva",
+"come": "Se un esercizio libero scarica proprio dove il muscolo è lungo, una macchina ben progettata o un cavo lo correggono.",
+"liv": "M"
+}
+],
+"quando_fermarsi": "",
+"studi": [
+"haun_hypertrophy",
+"pressa_squat",
+"lateral_raise"
+]
+},
+{
+"id": "cedimento_quando",
+"t": "Quando devo andare a cedimento",
+"area": "Programmazione",
+"sintomo": "Dubbio su quanto spingere ogni serie.",
+"cause": [
+{
+"c": "Convinzione che il cedimento sia sempre necessario",
+"liv": "A"
+},
+{
+"c": "Stima del RIR sistematicamente ottimista",
+"liv": "B"
+}
+],
+"soluzioni": [
+{
+"s": "Tieni il cedimento sugli isolamenti e sulle macchine",
+"come": "Lì il costo in fatica è basso e il rischio tecnico minimo.",
+"liv": "A"
+},
+{
+"s": "Ferma i multiarticolari a una o due ripetizioni dal limite",
+"come": "Il cedimento raddoppia la fatica rispetto a 1 RIR senza aggiungere crescita, e la porti nelle serie dopo.",
+"liv": "A"
+},
+{
+"s": "Verifica ogni tanto la tua stima",
+"come": "Porta una serie a cedimento vero su una macchina e conta: molti scoprono di avere più margine di quanto credevano.",
+"liv": "B"
+}
+],
+"quando_fermarsi": "",
+"studi": [
+"refalo_failure",
+"refalo_review",
+"grgic_failure",
+"steele_effort",
+"grgic_rir_aff"
+]
+},
+{
+"id": "infortunio_ritorno",
+"t": "Come rientro dopo uno stop",
+"area": "Programmazione",
+"sintomo": "Ripresa dopo un infortunio o una pausa lunga.",
+"cause": [
+{
+"c": "Aspettativa di ripartire dai carichi precedenti",
+"liv": "B"
+},
+{
+"c": "Tendine e tessuto connettivo più lenti del muscolo a riadattarsi",
+"liv": "B"
+}
+],
+"soluzioni": [
+{
+"s": "Riparti da carichi che non danno sintomi e sali del 5-10% a settimana",
+"come": "Il tessuto risponde al carico gestito, male ai salti.",
+"liv": "B"
+},
+{
+"s": "Aspettati un ritorno più rapido della prima costruzione",
+"come": "Il muscolo conserva una memoria epigenetica dell’ipertrofia: la ricrescita è più veloce.",
+"liv": "B"
+},
+{
+"s": "Mantieni il volume e riduci l’intensità",
+"come": "È il modo di accumulare lavoro senza sollecitare la struttura che sta rientrando.",
+"liv": "C"
+}
+],
+"quando_fermarsi": "Dolore che aumenta di settimana in settimana invece di calare: fermati e fai rivalutare.",
+"studi": [
+"memoria_muscolare",
+"bosquet_detraining",
+"tendine_carico",
+"ogasawara_ritorno"
+]
+},
+{
+"id": "caviglia",
+"t": "Non riesco a tenere i talloni a terra",
+"area": "Gamba",
+"sintomo": "Nell’accosciata i talloni si staccano o il busto crolla in avanti.",
+"cause": [
+{
+"c": "Escursione limitata in flessione dorsale della caviglia",
+"liv": "B"
+},
+{
+"c": "Base troppo stretta per la conformazione dell’anca",
+"liv": "C"
+},
+{
+"c": "Tentativo di tenere il busto più verticale di quanto la caviglia permetta",
+"liv": "M"
+}
+],
+"soluzioni": [
+{
+"s": "Alza i talloni",
+"come": "Scarpe da sollevamento o un rialzo: è la soluzione più diretta e agisce sulla causa geometrica.",
+"liv": "M"
+},
+{
+"s": "Allarga la base e ruota i piedi in fuori",
+"come": "Riduce la flessione dorsale richiesta a parità di profondità.",
+"liv": "B"
+},
+{
+"s": "Allena la mobilità di caviglia a parte",
+"come": "L’escursione passiva risponde all’allenamento, con dosi documentate.",
+"liv": "A"
+},
+{
+"s": "Usa hack squat o pressa nel frattempo",
+"come": "Con la schiena appoggiata la profondità piena è accessibile subito.",
+"liv": "C"
+}
+],
+"quando_fermarsi": "",
+"studi": [
+"mobilita_squat",
+"squat_stance",
+"stiramento_mobilita"
+]
+},
+{
+"id": "bruciore",
+"t": "Bruciore fortissimo ma nessun risultato",
+"area": "Programmazione",
+"sintomo": "Serie che bruciano molto ma muscoli che non crescono.",
+"cause": [
+{
+"c": "Carichi bassi e recuperi cortissimi, che producono metaboliti ma poche serie dure",
+"liv": "A"
+},
+{
+"c": "Confusione fra stress metabolico e stimolo",
+"liv": "A"
+},
+{
+"c": "Nessuna progressione misurata nel tempo",
+"liv": "A"
+}
+],
+"soluzioni": [
+{
+"s": "Misura la progressione, non la sensazione",
+"come": "L’unico indicatore affidabile è se peso e ripetizioni salgono di mese in mese.",
+"liv": "A"
+},
+{
+"s": "Alza il carico e allunga i recuperi",
+"come": "Il bruciore è accumulo di metaboliti: la tensione meccanica è il segnale principale.",
+"liv": "A"
+},
+{
+"s": "Conta le serie dure, non il tempo passato in palestra",
+"come": "Il volume di serie vicine al cedimento è la variabile che predice la crescita.",
+"liv": "A"
+}
+],
+"quando_fermarsi": "",
+"studi": [
+"schoenfeld_mechanisms",
+"roberts_mechanisms",
+"pelland_volume",
+"plotkin_overload"
+]
 }
 ];
 const MITI = [
@@ -1735,6 +2426,179 @@ const MITI = [
 "lixandrao_bfr",
 "loenneke_bfr"
 ]
+},
+{
+"m": "Il cavo è superiore al manubrio perché mantiene tensione costante",
+"v": "parziale",
+"liv": "B",
+"s": "Il vantaggio del cavo è reale ma diverso da come lo si racconta: non è «tensione costante», è **direzione orientabile**. Puoi scegliere dove cade il picco di carico rispetto alla lunghezza del muscolo. Quando però la cosa è stata messa alla prova direttamente, confrontando alzate laterali ai cavi e con manubri per otto settimane su allenati, la differenza attesa non si è vista.",
+"studi": [
+"lateral_raise",
+"haun_hypertrophy"
+]
+},
+{
+"m": "Il ginocchio non deve superare la punta del piede",
+"v": "falso",
+"liv": "B",
+"s": "È quello che succede necessariamente quando scendi in profondità con il busto verticale. Vietarlo obbliga a inclinare il busto, che sposta il carico dal ginocchio alla colonna: non riduce lo stress, lo trasferisce. Il vincolo reale è la mobilità della caviglia.",
+"studi": [
+"escamilla_squat",
+"mobilita_squat",
+"kubo_moment"
+]
+},
+{
+"m": "Bisogna spingere le scapole indietro anche nelle trazioni",
+"v": "falso",
+"liv": "M",
+"s": "Nelle spinte la retrazione dà all’omero una base stabile ed è utile. Nelle tirate è il contrario: partire con le scapole già depresse accorcia il movimento proprio dove il dorsale è più lungo. Il dorsale si allunga quando la scapola sale, ed è quella la posizione da cui partire.",
+"studi": [
+"inman_scapola",
+"wolf_partials"
+]
+},
+{
+"m": "Le superfici instabili allenano meglio il core",
+"v": "falso",
+"liv": "A",
+"s": "L’instabilità riduce il carico che puoi esprimere, e il carico è quello che genera tensione. La rassegna sull’argomento non trova vantaggi di ipertrofia rispetto al lavoro stabile. Serve in riabilitazione e per il controllo, non per costruire massa.",
+"studi": [
+"behm_instabilita",
+"saeterbakken_instab"
+]
+},
+{
+"m": "Il tempo sotto tensione è la variabile che conta",
+"v": "falso",
+"liv": "A",
+"s": "Nell’intervallo praticabile, da mezzo secondo a otto secondi per fase, la durata della ripetizione non cambia l’ipertrofia. Allungare artificialmente i tempi riduce il carico usabile senza compensare con altro. Quello che conta è il numero di serie dure vicine al cedimento.",
+"studi": [
+"schoenfeld_tempo",
+"pelland_volume"
+]
+},
+{
+"m": "Con il carico basso alleni solo la resistenza",
+"v": "falso",
+"liv": "A",
+"s": "Il principio della dimensione dice che le unità motorie grandi vengono reclutate comunque quando la serie si avvicina al cedimento. Con il 30% del massimale portato a cedimento l’ipertrofia è paragonabile a quella con l'80%. Cambia quante ripetizioni servono, non se arrivi allo stimolo.",
+"studi": [
+"mitchell_carico",
+"burd_carico",
+"henneman_size",
+"schoenfeld_load"
+]
+},
+{
+"m": "Bisogna evitare qualsiasi flessione della colonna sotto carico",
+"v": "parziale",
+"liv": "B",
+"s": "Evitare il movimento non protegge: la terapia con esercizio funziona per la lombalgia cronica e nessuna modalità risulta superiore. Allo stesso tempo, flettersi sotto un carico massimale in un punto di momento elevato ha poco da guadagnare. La posizione difendibile è intermedia: la colonna non è di vetro, ma con carichi alti conviene una posizione stabile.",
+"studi": [
+"lombalgia_esercizio",
+"cholewicki_stacco",
+"kingma_flessione"
+]
+},
+{
+"m": "Se non senti bruciare non hai allenato",
+"v": "falso",
+"liv": "A",
+"s": "Il bruciore è accumulo di metaboliti, e lo stress metabolico è considerato un contributo secondario. Il segnale primario è la tensione meccanica, che non produce necessariamente bruciore. Serie pesanti a ripetizioni basse crescono benissimo senza bruciare.",
+"studi": [
+"roberts_mechanisms",
+"schoenfeld_mechanisms",
+"wackerhage_mech"
+]
+},
+{
+"m": "Un muscolo cresce in modo uniforme, quindi l’esercizio non cambia la forma",
+"v": "falso",
+"liv": "B",
+"s": "L’ipertrofia regionale è documentata su più muscoli: lo squat fa crescere il vasto laterale ma quasi non tocca il retto femorale, il pettorale si attiva per regioni secondo la direzione del movimento. Non vale però ovunque: sui flessori del gomito il confronto diretto trova crescita distribuita in modo simile.",
+"studi": [
+"squat_regional",
+"pec_fiber",
+"biceps_regional"
+]
+},
+{
+"m": "Allenare a corpo libero non fa crescere",
+"v": "falso",
+"liv": "A",
+"s": "Quello che conta è la tensione e la vicinanza al cedimento, non l’attrezzo. Il limite del corpo libero è la **progressione**: quando il peso corporeo non basta più, serve un modo di aggiungere carico. Finché la progressione c’è, la crescita c’è.",
+"studi": [
+"plotkin_overload",
+"mitchell_carico",
+"haun_hypertrophy"
+]
+},
+{
+"m": "Gli integratori pre-allenamento migliorano la crescita",
+"v": "parziale",
+"liv": "A",
+"s": "La caffeina migliora la prestazione in molti contesti, e più prestazione può significare più volume nel tempo. Ma nessuno degli stimolanti agisce direttamente sull’ipertrofia. Gli unici integratori con effetto documentato sulla massa sono creatina e proteine, e nessuno dei due va preso prima.",
+"studi": [
+"guest_caffeina",
+"kreider_creatina",
+"morton_protein"
+]
+},
+{
+"m": "La finestra per rientrare dopo uno stop è brevissima",
+"v": "falso",
+"liv": "B",
+"s": "La forza cala gradualmente e il muscolo conserva una memoria epigenetica dell’ipertrofia che rende la ricrescita più rapida della costruzione iniziale. Sei mesi di allenamento continuo o alternati a pause producono ipertrofia finale simile.",
+"studi": [
+"memoria_muscolare",
+"bosquet_detraining",
+"ogasawara_ritorno"
+]
+},
+{
+"m": "Il volume alto serve solo agli avanzati",
+"v": "parziale",
+"liv": "A",
+"s": "La relazione dose-risposta fra volume e ipertrofia è crescente con rendimenti decrescenti, e vale in generale. Quello che cambia con l’esperienza non è la direzione ma la quantità che riesci a recuperare, e l’entità del guadagno che ti aspetti da ogni serie in più.",
+"studi": [
+"pelland_volume",
+"volume_alto",
+"currier_volume"
+]
+},
+{
+"m": "Serve allenare l’esercizio, non il muscolo",
+"v": "parziale",
+"liv": "A",
+"s": "Dipende dall’obiettivo. Gli adattamenti di forza sono specifici del gesto, quindi chi vuole alzare di più in panca deve fare panca. L’ipertrofia invece risponde alla tensione sul muscolo, e lì conta quale muscolo carichi e a che lunghezza, non come si chiama l’esercizio.",
+"studi": [
+"haun_hypertrophy",
+"pressa_squat",
+"maeo_triceps"
+]
+},
+{
+"m": "Il rimbalzo in fondo aiuta a fare più ripetizioni, quindi è utile",
+"v": "falso",
+"liv": "B",
+"s": "È vero che aiuta a fare più ripetizioni, ed è esattamente il problema: quello che il tendine restituisce, il muscolo non lo produce. Il rimbalzo toglie lavoro proprio nel tratto in cui il muscolo è più lungo, cioè quello che vorresti caricare. Una pausa di un secondo annulla quasi del tutto il contributo elastico.",
+"studi": [
+"kinoshita_calf",
+"kassiano_partials",
+"tendine_carico"
+]
+},
+{
+"m": "Chi ha braccia lunghe non potrà mai avere una buona panca",
+"v": "parziale",
+"liv": "B",
+"s": "Le leve individuali contano davvero: braccia lunghe aumentano l’escursione e il momento sulla spalla, e questo si riflette nel carico esprimibile. Ma le variazioni dei bracci di leva interni sono altrettanto importanti e non si vedono da fuori. La conformazione sposta il punto di partenza, non il potere di migliorare.",
+"studi": [
+"braccio_leva",
+"vigotsky_moment",
+"risposta_variabile"
+]
 }
 ];
 const GLOSSARIO = [
@@ -1977,6 +2841,166 @@ const GLOSSARIO = [
 {
 "t": "Fattore d’impatto",
 "d": "Media delle citazioni di una rivista. Dice qualcosa sulla rivista, quasi nulla sulla qualità del singolo articolo."
+},
+{
+"t": "Momento (o coppia)",
+"d": "Prodotto di una forza per il braccio di leva. È la grandezza che il muscolo deve realmente vincere, non il peso."
+},
+{
+"t": "Braccio di leva",
+"d": "Distanza perpendicolare fra la linea d’azione di una forza e il centro di rotazione. Con un peso libero è la distanza orizzontale."
+},
+{
+"t": "Punto di stallo",
+"d": "Il punto dell’escursione in cui il rapporto fra momento richiesto e momento disponibile è più sfavorevole. Determina il carico usabile."
+},
+{
+"t": "Curva di resistenza",
+"d": "Come varia il carico richiesto lungo l’escursione. Diversa per pesi liberi, cavi e macchine con camma."
+},
+{
+"t": "Camma",
+"d": "Puleggia di forma non circolare che varia il braccio di leva di una macchina lungo il movimento, modellando la curva di resistenza."
+},
+{
+"t": "Catena cinetica aperta",
+"d": "L’estremità distale è libera: leg extension, curl. Permette di isolare, il carico agisce su un solo segmento."
+},
+{
+"t": "Catena cinetica chiusa",
+"d": "L’estremità è fissa contro il terreno o una piattaforma: accosciata, pressa. Più articolazioni in sequenza obbligata."
+},
+{
+"t": "Sezione trasversa fisiologica",
+"d": "Area della sezione perpendicolare alle fibre, che tiene conto della pennazione. È la grandezza che predice la forza, non il volume."
+},
+{
+"t": "Insufficienza attiva",
+"d": "Un muscolo biarticolare troppo accorciato a entrambe le articolazioni non riesce a produrre forza."
+},
+{
+"t": "Insufficienza passiva",
+"d": "Un muscolo biarticolare troppo allungato a entrambe le articolazioni diventa il vincolo che ferma il movimento."
+},
+{
+"t": "Ritmo scapolo-omerale",
+"d": "Il rapporto fra rotazione dell’omero e rotazione della scapola durante l’elevazione del braccio, indicativamente due a uno."
+},
+{
+"t": "Piano scapolare",
+"d": "Il piano in cui giace la scapola, ruotato di circa trenta-quaranta gradi in avanti. È l’allineamento in cui la spalla lavora meglio."
+},
+{
+"t": "Rotazione superiore della scapola",
+"d": "Movimento prodotto da trapezio superiore, inferiore e dentato anteriore, necessario perché il braccio salga sopra la testa."
+},
+{
+"t": "Protrazione e retrazione",
+"d": "La scapola che scorre in avanti o indietro sulla gabbia toracica. Da non confondere con elevazione e depressione."
+},
+{
+"t": "Compressione assiale",
+"d": "Carico lungo l’asse della colonna. Cresce con il peso totale, incluso quello generato dai muscoli spinali."
+},
+{
+"t": "Taglio",
+"d": "Componente che tende a far scorrere una vertebra sull’altra. Cresce con l’inclinazione del busto."
+},
+{
+"t": "Manovra di Valsalva",
+"d": "Espirazione forzata a glottide chiusa che aumenta la pressione intra-addominale e irrigidisce il tronco. Serve per la singola ripetizione pesante, non per dieci."
+},
+{
+"t": "Ciclo allungamento-accorciamento",
+"d": "Allungamento attivo seguito da accorciamento immediato, che aumenta la forza prodotta grazie all’energia elastica. Utile in atletica, controproducente per l’ipertrofia."
+},
+{
+"t": "Rigidezza tendinea",
+"d": "Quanto un tendine si allunga sotto carico. Aumenta con l’allenamento di forza, ma più lentamente degli adattamenti muscolari."
+},
+{
+"t": "Relazione forza-velocità",
+"d": "Più velocemente un muscolo si accorcia, meno forza produce. In eccentrico può sopportare forze superiori al massimo isometrico."
+},
+{
+"t": "Principio della dimensione",
+"d": "Le unità motorie vengono reclutate in ordine crescente di grandezza. Base neurofisiologica del perché la vicinanza al cedimento conti più del carico."
+},
+{
+"t": "Meccanotrasduzione",
+"d": "Il processo con cui la deformazione meccanica della fibra viene tradotta in segnali chimici che avviano la sintesi proteica."
+},
+{
+"t": "Ipertrofia in parallelo",
+"d": "Aggiunta di sarcomeri in parallelo: aumenta la sezione e quindi la forza."
+},
+{
+"t": "Ipertrofia in serie",
+"d": "Aggiunta di sarcomeri in serie: allunga i fascicoli, aumenta velocità ed escursione."
+},
+{
+"t": "Fatica periferica",
+"d": "Fatica che avviene dentro il muscolo. Locale, si recupera in minuti o ore."
+},
+{
+"t": "Fatica centrale",
+"d": "Riduzione della capacità del sistema nervoso di reclutare pienamente. Si accumula e si smaltisce lentamente."
+},
+{
+"t": "Fibre di tipo I e II",
+"d": "Lente e resistenti contro veloci e potenti. La proporzione è in buona parte genetica e l’allenamento non la converte in modo apprezzabile."
+},
+{
+"t": "Specificità",
+"d": "Gli adattamenti sono specifici per movimento, angolo, velocità e modalità. Spiega perché macchine e pesi liberi diano ipertrofia simile ma forza diversa nei test."
+},
+{
+"t": "Isometria",
+"d": "Contrazione senza movimento articolare. Produce adattamenti specifici dell’angolo allenato ed è efficace sul tendine."
+},
+{
+"t": "Coppia di forze",
+"d": "Due forze che agiscono insieme per produrre una rotazione. È così che trapezio e dentato ruotano la scapola."
+},
+{
+"t": "Momento d’inerzia",
+"d": "Resistenza di un corpo a essere messo in rotazione. Spiega perché un bilanciere lungo sia più difficile da controllare."
+},
+{
+"t": "Forza risultante",
+"d": "Somma vettoriale delle forze agenti. Nei cavi la direzione della risultante dipende da dove sta la puleggia rispetto a te."
+},
+{
+"t": "Volume frazionale",
+"d": "Convenzione che conta 1 le serie dirette e 0,5 le indirette. La meta-regressione più recente mostra che è il conteggio che predice meglio gli adattamenti."
+},
+{
+"t": "Serie dura",
+"d": "Serie portata abbastanza vicino al cedimento da contare come stimolo. È l’unità di misura del volume utile."
+},
+{
+"t": "Probabilità posteriore",
+"d": "Nella statistica bayesiana, la probabilità di un’ipotesi dopo aver visto i dati. Compare nelle meta-analisi recenti al posto del valore p."
+},
+{
+"t": "Fattore di Bayes",
+"d": "Rapporto fra quanto i dati sostengono un’ipotesi rispetto a un’altra. Sotto 1 sostiene l’ipotesi nulla, sopra 3 comincia a essere evidenza apprezzabile."
+},
+{
+"t": "Disegno entro soggetto su arti",
+"d": "Un arto per condizione nella stessa persona: elimina la variabilità fra individui, ma non permette di studiare effetti sistemici."
+},
+{
+"t": "Effetto placebo e aspettativa",
+"d": "L’attesa di un risultato può modificare la prestazione. Motivo per cui gli studi non ciechi sull’allenamento vanno letti con cautela."
+},
+{
+"t": "Coefficiente di variazione",
+"d": "Deviazione standard divisa per la media. Misura quanto una risposta è dispersa: nei guadagni da allenamento è alto."
+},
+{
+"t": "Validità ecologica",
+"d": "Quanto un risultato di laboratorio si trasferisce alla pratica reale. Spesso il punto debole degli studi sull’allenamento."
 }
 ];
 const FONTI = [
@@ -2189,6 +3213,89 @@ const FONTI = [
 "n": "Unpaywall e OA Button",
 "cosa": "Trovano legalmente la versione ad accesso aperto di un articolo a pagamento, se esiste. Da usare con il DOI.",
 "url": "https://unpaywall.org/",
+"q": []
+},
+{
+"n": "Journal of Biomechanics",
+"cosa": "La rivista di riferimento per la meccanica del movimento umano: momenti articolari, bracci di leva, modelli muscoloscheletrici.",
+"url": "https://www.sciencedirect.com/journal/journal-of-biomechanics",
+"q": [
+[
+"Biomeccanica degli esercizi con sovraccarico",
+"https://pubmed.ncbi.nlm.nih.gov/?term=%22J+Biomech%22%5BJournal%5D+AND+%28squat+OR+deadlift+OR+bench+press%29&sort=date"
+],
+[
+"Bracci di leva e coppie articolari",
+"https://pubmed.ncbi.nlm.nih.gov/?term=%22J+Biomech%22%5BJournal%5D+AND+%28moment+arm%29&sort=date"
+]
+]
+},
+{
+"n": "Journal of Applied Physiology",
+"cosa": "Fisiologia integrata: architettura muscolare, adattamenti tendinei, funzione delle unità motorie.",
+"url": "https://journals.physiology.org/journal/jappl",
+"q": [
+[
+"Architettura e adattamento muscolare",
+"https://pubmed.ncbi.nlm.nih.gov/?term=%22J+Appl+Physiol%22%5BJournal%5D+AND+%28muscle+architecture+OR+pennation%29&sort=date"
+]
+]
+},
+{
+"n": "Journal of Electromyography and Kinesiology",
+"cosa": "Attivazione muscolare e cinematica. Da leggere ricordando che l’ampiezza del segnale non predice la crescita.",
+"url": "https://www.sciencedirect.com/journal/journal-of-electromyography-and-kinesiology",
+"q": [
+[
+"Attivazione negli esercizi con sovraccarico",
+"https://pubmed.ncbi.nlm.nih.gov/?term=%22J+Electromyogr+Kinesiol%22%5BJournal%5D+AND+resistance&sort=date"
+]
+]
+},
+{
+"n": "Clinical Biomechanics",
+"cosa": "Biomeccanica applicata al carico articolare e alla colonna. Utile per la parte su infortuni e tolleranza al carico.",
+"url": "https://www.sciencedirect.com/journal/clinical-biomechanics",
+"q": [
+[
+"Carico sulla colonna nel sollevamento",
+"https://pubmed.ncbi.nlm.nih.gov/?term=%22Clin+Biomech%22%5BJournal%5D+AND+%28lumbar+AND+lifting%29&sort=date"
+]
+]
+},
+{
+"n": "Scandinavian Journal of Medicine and Science in Sports",
+"cosa": "Molta ricerca su tendine, ipertrofia regionale e adattamenti architetturali.",
+"url": "https://onlinelibrary.wiley.com/journal/16000838",
+"q": [
+[
+"Tendine e adattamento al carico",
+"https://pubmed.ncbi.nlm.nih.gov/?term=%22Scand+J+Med+Sci+Sports%22%5BJournal%5D+AND+tendon&sort=date"
+]
+]
+},
+{
+"n": "PEDro",
+"cosa": "Banca dati di studi controllati in fisioterapia, con punteggio di qualità metodologica su ogni voce. Il posto giusto per le domande su infortuni e riabilitazione.",
+"url": "https://pedro.org.au/",
+"q": []
+},
+{
+"n": "Retraction Watch",
+"cosa": "Traccia gli articoli ritirati e i casi di frode. Prima di costruire una convinzione su un singolo studio, vale la pena controllare che sia ancora in piedi.",
+"url": "https://retractionwatch.com/",
+"q": []
+},
+{
+"n": "OpenAlex",
+"cosa": "Catalogo aperto della letteratura scientifica, con grafo delle citazioni interrogabile. Alternativa libera a Scopus e Web of Science.",
+"url": "https://openalex.org/",
+"q": []
+},
+{
+"n": "ResearchGate",
+"cosa": "Molti autori caricano qui il testo completo dei propri articoli. Utile quando l’editore chiede il pagamento.",
+"url": "https://www.researchgate.net/",
 "q": []
 }
 ];

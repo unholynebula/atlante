@@ -19,10 +19,10 @@ poi apri `http://localhost:8000` e, da iPhone, "Aggiungi a Home".
 | `icon-*.png`, `apple-touch-icon.png` | Icone generate: tre barre nei colori dei livelli di evidenza |
 | `style.css` | Impaginazione da manuale stampato: carta chiara, testo in grazie, sezioni numerate, colonna di margine. Il colore è riservato alle sigle di evidenza |
 | `app.js` | Navigazione su hash, viste, ricerca locale, ricerca live, calcolatori, salvataggi |
-| `data-principi.js` | 14 voci di meccanica e biologia: momenti, curve di resistenza, lunghezza-tensione, ritmo scapolo-omerale |
-| `data-studi.js` | 109 studi con PMID verificato, tema, livello di evidenza e riassunto |
+| `data-principi.js` | 28 voci di meccanica e biologia: momenti, curve di resistenza, lunghezza-tensione, ritmo scapolo-omerale |
+| `data-studi.js` | 127 studi con PMID verificato, tema, livello di evidenza e riassunto |
 | `data-muscoli.js` | 18 schede: meccanica, posizione articolare, 144 esercizi mappati per funzione e lunghezza |
-| `data-contenuti.js` | 28 problemi, 28 miti, 60 voci di glossario, 18 archivi con ricerche pronte |
+| `data-contenuti.js` | 44 problemi, 44 miti, 100 voci di glossario, 27 archivi con ricerche pronte |
 
 ## Impianto
 

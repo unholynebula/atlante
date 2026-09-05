@@ -45,6 +45,9 @@ const PARTI = {
   strumenti:['7','VII', 'Strumenti'],
   note:     ['8','VIII','Note']
 };
+/* Il testo dei contenuti usa **asterischi** per il grassetto: la conversione
+   avviene qui, in un punto solo. */
+function gr(t){ return String(t==null?'':t).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>'); }
 function sigla(l){ return '<span class="sigla sigla-'+l.toLowerCase()+'">'+l+'</span>'; }
 function numSez(parte, i){ return '\u00a7'+PARTI[parte][0]+'.'+i; }
 function indiceDi(lista, id){ const i = lista.map(function(x){ return x.id; }).indexOf(id); return i<0?null:i+1; }
@@ -292,7 +295,7 @@ V.principio = function(id){
   let h = indietro('#/principi','Principi') + testa('principi', x.t, '', numSez('principi', i));
   h += '<p class="sommario">'+x.sommario+' '+sigla(x.liv)+'</p>';
   h += '<div class="prosa saggio">' + x.corpo.map(function(par){
-    return '<p>'+par.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')+'</p>';
+    return '<p>'+gr(par)+'</p>';
   }).join('') + '</div>';
   const st = studiById(x.studi);
   if(st.length) h += '<h2>Riferimenti</h2>' + st.map(studioRiga).join('');
@@ -323,15 +326,15 @@ V.muscolo = function(id){
     '<div><dt>Capi</dt><dd>'+m.capi.join('<br>')+'</dd></div>'+
     '<div><dt>Funzioni</dt><dd>'+m.funzioni.join('<br>')+'</dd></div>'+
     '<div><dt>Volume</dt><dd>'+m.volume+'</dd></div></div>';
-  h += '<h2>Cosa determina lo stimolo</h2><p>'+m.stimolo+'</p>';
+  h += '<h2>Cosa determina lo stimolo</h2><p>'+gr(m.stimolo)+'</p>';
   if(m.meccanica){
     h += '<h2>Meccanica '+sigla('M')+'</h2><div class="prosa"><p>'+
-      m.meccanica.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>')+'</p></div>';
+      gr(m.meccanica)+'</p></div>';
   }
   if(m.posizione && m.posizione.length){
     h += '<h2>Posizione articolare</h2><div class="artic">';
     m.posizione.forEach(function(v){
-      const t = v.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+      const t = gr(v);
       const et = (v.match(/^\*\*([^*]+)\*\*/) || [null,''])[1];
       h += '<div><div class="marg">'+et+'</div><div class="artic-t">'+
         t.replace(/^<strong>[^<]+<\/strong>\s*/,'')+'</div></div>';
@@ -343,12 +346,12 @@ V.muscolo = function(id){
   m.esercizi.forEach(function(e){
     h += '<div class="es"><span class="es-g g-'+e.g+'">'+e.g+'</span>'+
       '<span><span class="es-n">'+e.n+'</span><span class="es-f">'+e.f+'</span>'+
-      (e.nota ? '<span class="es-nota">'+e.nota+'</span>' : '')+'</span>'+
+      (e.nota ? '<span class="es-nota">'+gr(e.nota)+'</span>' : '')+'</span>'+
       '<span class="es-len">'+e.l+'</span></div>';
   });
   h += '<h2>Errori che costano</h2><div class="num-el">';
   m.errori.forEach(function(e){
-    h += '<div class="num-v"><div><div class="num-t">'+e.t+sigla(e.liv)+'</div><div class="num-s">'+e.s+'</div></div></div>';
+    h += '<div class="num-v"><div><div class="num-t">'+e.t+sigla(e.liv)+'</div><div class="num-s">'+gr(e.s)+'</div></div></div>';
   });
   h += '</div>';
   const st = studiById(m.studi);
@@ -370,17 +373,17 @@ V.problema = function(id){
   const p = PROBLEMI.filter(function(x){ return x.id===id; })[0];
   if(!p) return V.problemi();
   let h = indietro('#/problemi','Problemi') + testa('problemi', p.t, p.area, numSez('problemi', i));
-  h += '<h2>Come si presenta</h2><p>'+p.sintomo+'</p>';
+  h += '<h2>Come si presenta</h2><p>'+gr(p.sintomo)+'</p>';
   h += '<h2>Cause probabili</h2><div class="num-el">';
   p.cause.forEach(function(c){
-    h += '<div class="num-v"><div><div class="num-s">'+c.c+' '+sigla(c.liv)+'</div></div></div>';
+    h += '<div class="num-v"><div><div class="num-s">'+gr(c.c)+' '+sigla(c.liv)+'</div></div></div>';
   });
   h += '</div><h2>Soluzioni</h2><div class="num-el">';
   p.soluzioni.forEach(function(s){
-    h += '<div class="num-v"><div><div class="num-t">'+s.s+sigla(s.liv)+'</div><div class="num-s">'+s.come+'</div></div></div>';
+    h += '<div class="num-v"><div><div class="num-t">'+gr(s.s)+sigla(s.liv)+'</div><div class="num-s">'+gr(s.come)+'</div></div></div>';
   });
   h += '</div>';
-  if(p.quando_fermarsi) h += '<h2>Quando fermarsi</h2><p>'+p.quando_fermarsi+'</p>';
+  if(p.quando_fermarsi) h += '<h2>Quando fermarsi</h2><p>'+gr(p.quando_fermarsi)+'</p>';
   const st = studiById(p.studi);
   if(st.length) h += '<h2>Riferimenti</h2>' + st.map(studioRiga).join('');
   return h;
@@ -403,7 +406,7 @@ V.studi = function(){
           (s.oa?'<span class="marca aperto">testo libero</span>':'')+
           '<span class="marca">'+s.cit+' cit.</span></div>'+
         '<div class="studio-r" style="margin-top:3px;">'+esc(s.autore)+', '+esc(s.rivista)+', '+s.anno+'</div>'+
-        '<div class="studio-s">'+s.sintesi+'</div></div></div>';
+        '<div class="studio-s">'+gr(s.sintesi)+'</div></div></div>';
   });
   return h;
 };
@@ -422,7 +425,7 @@ V.studio = function(id){
     '<div><dt>PMID</dt><dd class="macchina">'+esc(s.pmid)+'</dd></div>'+
     (s.doi?'<div><dt>DOI</dt><dd class="macchina" style="word-break:break-all;font-size:13px;">'+esc(s.doi)+'</dd></div>':'')+
     '<div><dt>Citazioni</dt><dd>'+s.cit+(s.oa?' · testo completo libero':'')+'</dd></div></div>';
-  h += '<h2>Cosa dice</h2><p>'+s.sintesi+'</p>';
+  h += '<h2>Cosa dice</h2><p>'+gr(s.sintesi)+'</p>';
   h += '<div class="bottoni">'+
     '<a class="bottone" style="flex:1;text-align:center;line-height:40px;border-bottom-width:1px;" href="https://pubmed.ncbi.nlm.nih.gov/'+esc(s.pmid)+'/" target="_blank" rel="noopener">Vedi su PubMed</a>'+
     '<button class="bottone'+(salvo?' pieno':'')+'" data-salva="'+chiave+'" data-tit="'+esc(s.titolo)+'" data-rif="'+esc(s.pmid)+'">'+(salvo?'Salvato':'Salva')+'</button></div>';
@@ -455,9 +458,9 @@ V.miti = function(){
   let h = testa('miti','Miti','Affermazioni che sentirai in sala, con il verdetto della letteratura e il rimando alla fonte.');
   MITI.forEach(function(m, i){
     h += '<div class="mito"><div class="marg">'+numSez('miti',i+1)+'<div style="margin-top:6px;">'+sigla(m.liv)+'</div></div>'+
-      '<div><div class="mito-c">«'+m.m+'»</div>'+
+      '<div><div class="mito-c">«'+gr(m.m)+'»</div>'+
       '<div class="studio-r" style="margin:0 0 8px;"><span class="verdetto v-'+m.v+'">'+m.v+'</span></div>'+
-      '<div class="num-s">'+m.s+'</div>';
+      '<div class="num-s">'+gr(m.s)+'</div>';
     const st = studiById(m.studi);
     if(st.length) h += '<div style="margin-top:10px;">' + st.map(studioRiga).join('') + '</div>';
     h += '</div></div>';
