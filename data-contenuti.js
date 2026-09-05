@@ -2160,7 +2160,8 @@ const MITI = [
 "liv": "C",
 "studi": [
 "plotkin_overload"
-]
+],
+"id": "bisogna_confondere_il_muscolo_cambiando"
 },
 {
 "m": "L’indolenzimento del giorno dopo indica che l’allenamento ha funzionato",
@@ -2170,7 +2171,8 @@ const MITI = [
 "studi": [
 "damas_timeline",
 "doms_hypertrophy"
-]
+],
+"id": "l_indolenzimento_del_giorno_dopo"
 },
 {
 "m": "Le ripetizioni alte definiscono, quelle basse costruiscono massa",
@@ -2181,7 +2183,8 @@ const MITI = [
 "schoenfeld_load",
 "lopez_load",
 "schoenfeld_load15"
-]
+],
+"id": "le_ripetizioni_alte_definiscono_quelle"
 },
 {
 "m": "Serve andare a cedimento su ogni serie",
@@ -2192,7 +2195,8 @@ const MITI = [
 "refalo_failure",
 "refalo_review",
 "grgic_failure"
-]
+],
+"id": "serve_andare_a_cedimento_su"
 },
 {
 "m": "Un muscolo va allenato una volta a settimana per recuperare",
@@ -2202,7 +2206,8 @@ const MITI = [
 "studi": [
 "schoenfeld_freq",
 "pelland_volume"
-]
+],
+"id": "un_muscolo_va_allenato_una"
 },
 {
 "m": "L’EMG dice quale esercizio fa crescere di più un muscolo",
@@ -2212,7 +2217,8 @@ const MITI = [
 "studi": [
 "vigotsky_emg",
 "squat_regional"
-]
+],
+"id": "l_emg_dice_quale_esercizio"
 },
 {
 "m": "Bisogna sentire il muscolo lavorare perché l’esercizio funzioni",
@@ -2221,7 +2227,8 @@ const MITI = [
 "liv": "B",
 "studi": [
 "vigotsky_emg"
-]
+],
+"id": "bisogna_sentire_il_muscolo_lavorare"
 },
 {
 "m": "Il range completo è sempre superiore alle ripetizioni parziali",
@@ -2232,7 +2239,8 @@ const MITI = [
 "pedrosa_rom",
 "wolf_partials",
 "kassiano_partials"
-]
+],
+"id": "il_range_completo_e_sempre"
 },
 {
 "m": "Lo stretching prima di allenarsi previene gli infortuni e migliora la prestazione",
@@ -2241,7 +2249,8 @@ const MITI = [
 "liv": "B",
 "studi": [
 "warneke_stretch"
-]
+],
+"id": "lo_stretching_prima_di_allenarsi"
 },
 {
 "m": "L’ordine degli esercizi è decisivo",
@@ -2250,7 +2259,8 @@ const MITI = [
 "liv": "A",
 "studi": [
 "nunes_order"
-]
+],
+"id": "l_ordine_degli_esercizi_e"
 },
 {
 "m": "Serve una finestra anabolica di 30 minuti dopo l’allenamento",
@@ -2259,7 +2269,8 @@ const MITI = [
 "liv": "A",
 "studi": [
 "morton_protein"
-]
+],
+"id": "serve_una_finestra_anabolica_di"
 },
 {
 "m": "Il deload è obbligatorio ogni 4-6 settimane",
@@ -2268,7 +2279,8 @@ const MITI = [
 "liv": "B",
 "studi": [
 "deload"
-]
+],
+"id": "il_deload_e_obbligatorio_ogni"
 },
 {
 "m": "Più tonnellaggio significa allenamento migliore",
@@ -2278,7 +2290,8 @@ const MITI = [
 "studi": [
 "pelland_volume",
 "refalo_failure"
-]
+],
+"id": "piu_tonnellaggio_significa_allenamento_migliore"
 },
 {
 "m": "Le macchine sono inferiori ai pesi liberi per la crescita",
@@ -2287,7 +2300,8 @@ const MITI = [
 "liv": "B",
 "studi": [
 "haun_hypertrophy"
-]
+],
+"id": "le_macchine_sono_inferiori_ai"
 },
 {
 "m": "La creatina fa male ai reni",
@@ -2296,7 +2310,8 @@ const MITI = [
 "s": "Il documento di posizione della International Society of Sports Nutrition la definisce fra gli integratori con il profilo di sicurezza meglio documentato. Nei soggetti sani non ci sono prove di danno renale, e l’aumento di creatinina nel sangue è un artefatto della misura, non un segno di danno.",
 "studi": [
 "kreider_creatina"
-]
+],
+"id": "la_creatina_fa_male_ai"
 },
 {
 "m": "Bisogna mangiare proteine ogni tre ore o si perde muscolo",
@@ -2307,7 +2322,8 @@ const MITI = [
 "morton_protein",
 "schoenfeld_timing",
 "jager_proteine"
-]
+],
+"id": "bisogna_mangiare_proteine_ogni_tre"
 },
 {
 "m": "Le donne devono allenarsi in modo diverso",
@@ -2316,7 +2332,8 @@ const MITI = [
 "s": "Le differenze assolute di forza sono grandi, ma quelle relative alla sezione muscolare sono molto minori, e gli adattamenti relativi all’allenamento sono simili. Programmazione, volume e vicinanza al cedimento seguono gli stessi principi.",
 "studi": [
 "nuzzo_sesso"
-]
+],
+"id": "le_donne_devono_allenarsi_in"
 },
 {
 "m": "Il cardio brucia i muscoli",
@@ -2327,7 +2344,8 @@ const MITI = [
 "schoenfeld_concurrent",
 "petre_concurrent",
 "fyfe_interferenza"
-]
+],
+"id": "il_cardio_brucia_i_muscoli"
 },
 {
 "m": "Bisogna controllare i tempi di esecuzione, tipo 3-1-3",
@@ -2336,7 +2354,8 @@ const MITI = [
 "s": "Nell’intervallo da mezzo secondo a otto secondi per fase non emergono differenze di ipertrofia. Contare i tempi aggiunge complicazione senza aggiungere risultato: basta non buttare giù il peso.",
 "studi": [
 "schoenfeld_tempo"
-]
+],
+"id": "bisogna_controllare_i_tempi_di"
 },
 {
 "m": "Lo squat profondo rovina le ginocchia",
@@ -2347,7 +2366,8 @@ const MITI = [
 "squat_depth",
 "kubo_moment",
 "tendine_carico"
-]
+],
+"id": "lo_squat_profondo_rovina_le"
 },
 {
 "m": "Il pump indica che il muscolo sta crescendo",
@@ -2357,7 +2377,8 @@ const MITI = [
 "studi": [
 "damas_edema",
 "damas_timeline"
-]
+],
+"id": "il_pump_indica_che_il"
 },
 {
 "m": "I drop set e il rest-pause aggiungono stimolo",
@@ -2367,7 +2388,8 @@ const MITI = [
 "studi": [
 "grgic_dropset",
 "sodergren_restpause"
-]
+],
+"id": "i_drop_set_e_il"
 },
 {
 "m": "La periodizzazione è indispensabile per crescere",
@@ -2377,7 +2399,8 @@ const MITI = [
 "studi": [
 "period_meta",
 "pelland_volume"
-]
+],
+"id": "la_periodizzazione_e_indispensabile_per"
 },
 {
 "m": "Chi non risponde all’allenamento non esiste, sta solo sbagliando",
@@ -2387,7 +2410,8 @@ const MITI = [
 "studi": [
 "risposta_variabile",
 "roberts_responders"
-]
+],
+"id": "chi_non_risponde_all_allenamento"
 },
 {
 "m": "Se smetti per un mese perdi tutto",
@@ -2398,7 +2422,8 @@ const MITI = [
 "bosquet_detraining",
 "memoria_muscolare",
 "ogasawara_ritorno"
-]
+],
+"id": "se_smetti_per_un_mese"
 },
 {
 "m": "L’ipertrofia sarcoplasmatica spiega i bodybuilder grossi ma non forti",
@@ -2408,14 +2433,16 @@ const MITI = [
 "studi": [
 "roberts_sarcoplasma",
 "haun_hypertrophy"
-]
+],
+"id": "l_ipertrofia_sarcoplasmatica_spiega_i"
 },
 {
 "m": "Il core va allenato perché migliora tutti gli altri esercizi",
 "v": "parziale",
 "liv": "C",
 "s": "Gli effetti del lavoro di stabilità del core sulla prestazione sono piccoli e incerti. Allena l’addome perché lo vuoi vedere, non perché ti farà alzare più peso.",
-"studi": []
+"studi": [],
+"id": "il_core_va_allenato_perche"
 },
 {
 "m": "La restrizione del flusso sanguigno è una scorciatoia inutile",
@@ -2425,7 +2452,8 @@ const MITI = [
 "studi": [
 "lixandrao_bfr",
 "loenneke_bfr"
-]
+],
+"id": "la_restrizione_del_flusso_sanguigno"
 },
 {
 "m": "Il cavo è superiore al manubrio perché mantiene tensione costante",
@@ -2435,7 +2463,8 @@ const MITI = [
 "studi": [
 "lateral_raise",
 "haun_hypertrophy"
-]
+],
+"id": "il_cavo_e_superiore_al"
 },
 {
 "m": "Il ginocchio non deve superare la punta del piede",
@@ -2446,7 +2475,8 @@ const MITI = [
 "escamilla_squat",
 "mobilita_squat",
 "kubo_moment"
-]
+],
+"id": "il_ginocchio_non_deve_superare"
 },
 {
 "m": "Bisogna spingere le scapole indietro anche nelle trazioni",
@@ -2456,7 +2486,8 @@ const MITI = [
 "studi": [
 "inman_scapola",
 "wolf_partials"
-]
+],
+"id": "bisogna_spingere_le_scapole_indietro"
 },
 {
 "m": "Le superfici instabili allenano meglio il core",
@@ -2466,7 +2497,8 @@ const MITI = [
 "studi": [
 "behm_instabilita",
 "saeterbakken_instab"
-]
+],
+"id": "le_superfici_instabili_allenano_meglio"
 },
 {
 "m": "Il tempo sotto tensione è la variabile che conta",
@@ -2476,7 +2508,8 @@ const MITI = [
 "studi": [
 "schoenfeld_tempo",
 "pelland_volume"
-]
+],
+"id": "il_tempo_sotto_tensione_e"
 },
 {
 "m": "Con il carico basso alleni solo la resistenza",
@@ -2488,7 +2521,8 @@ const MITI = [
 "burd_carico",
 "henneman_size",
 "schoenfeld_load"
-]
+],
+"id": "con_il_carico_basso_alleni"
 },
 {
 "m": "Bisogna evitare qualsiasi flessione della colonna sotto carico",
@@ -2499,7 +2533,8 @@ const MITI = [
 "lombalgia_esercizio",
 "cholewicki_stacco",
 "kingma_flessione"
-]
+],
+"id": "bisogna_evitare_qualsiasi_flessione_della"
 },
 {
 "m": "Se non senti bruciare non hai allenato",
@@ -2510,7 +2545,8 @@ const MITI = [
 "roberts_mechanisms",
 "schoenfeld_mechanisms",
 "wackerhage_mech"
-]
+],
+"id": "se_non_senti_bruciare_non"
 },
 {
 "m": "Un muscolo cresce in modo uniforme, quindi l’esercizio non cambia la forma",
@@ -2521,7 +2557,8 @@ const MITI = [
 "squat_regional",
 "pec_fiber",
 "biceps_regional"
-]
+],
+"id": "un_muscolo_cresce_in_modo"
 },
 {
 "m": "Allenare a corpo libero non fa crescere",
@@ -2532,7 +2569,8 @@ const MITI = [
 "plotkin_overload",
 "mitchell_carico",
 "haun_hypertrophy"
-]
+],
+"id": "allenare_a_corpo_libero_non"
 },
 {
 "m": "Gli integratori pre-allenamento migliorano la crescita",
@@ -2543,7 +2581,8 @@ const MITI = [
 "guest_caffeina",
 "kreider_creatina",
 "morton_protein"
-]
+],
+"id": "gli_integratori_pre_allenamento_migliorano"
 },
 {
 "m": "La finestra per rientrare dopo uno stop è brevissima",
@@ -2554,7 +2593,8 @@ const MITI = [
 "memoria_muscolare",
 "bosquet_detraining",
 "ogasawara_ritorno"
-]
+],
+"id": "la_finestra_per_rientrare_dopo"
 },
 {
 "m": "Il volume alto serve solo agli avanzati",
@@ -2565,7 +2605,8 @@ const MITI = [
 "pelland_volume",
 "volume_alto",
 "currier_volume"
-]
+],
+"id": "il_volume_alto_serve_solo"
 },
 {
 "m": "Serve allenare l’esercizio, non il muscolo",
@@ -2576,7 +2617,8 @@ const MITI = [
 "haun_hypertrophy",
 "pressa_squat",
 "maeo_triceps"
-]
+],
+"id": "serve_allenare_l_esercizio_non"
 },
 {
 "m": "Il rimbalzo in fondo aiuta a fare più ripetizioni, quindi è utile",
@@ -2587,7 +2629,8 @@ const MITI = [
 "kinoshita_calf",
 "kassiano_partials",
 "tendine_carico"
-]
+],
+"id": "il_rimbalzo_in_fondo_aiuta"
 },
 {
 "m": "Chi ha braccia lunghe non potrà mai avere una buona panca",
@@ -2598,7 +2641,8 @@ const MITI = [
 "braccio_leva",
 "vigotsky_moment",
 "risposta_variabile"
-]
+],
+"id": "chi_ha_braccia_lunghe_non"
 }
 ];
 const GLOSSARIO = [
@@ -3029,7 +3073,8 @@ const FONTI = [
 "Vicinanza al cedimento",
 "https://pubmed.ncbi.nlm.nih.gov/?term=%28failure%5BTitle%5D+OR+repetitions+in+reserve%5BTitle%5D%29+AND+hypertrophy&sort=date"
 ]
-]
+],
+"id": "pubmed"
 },
 {
 "n": "Europe PMC",
@@ -3048,7 +3093,8 @@ const FONTI = [
 "Selezione degli esercizi",
 "https://europepmc.org/search?query=%22exercise%20selection%22%20AND%20hypertrophy&sortBy=P_PDATE_D%2Bdesc"
 ]
-]
+],
+"id": "europe_pmc"
 },
 {
 "n": "SportRxiv",
@@ -3059,7 +3105,8 @@ const FONTI = [
 "Tutti i preprint recenti",
 "https://sportrxiv.org/index.php/server/preprint/all"
 ]
-]
+],
+"id": "sportrxiv"
 },
 {
 "n": "Journal of Strength and Conditioning Research",
@@ -3070,7 +3117,8 @@ const FONTI = [
 "Cerca su PubMed dentro questa rivista",
 "https://pubmed.ncbi.nlm.nih.gov/?term=%22J+Strength+Cond+Res%22%5BJournal%5D+AND+hypertrophy&sort=date"
 ]
-]
+],
+"id": "journal_of_strength_and_conditioning"
 },
 {
 "n": "Sports Medicine",
@@ -3081,7 +3129,8 @@ const FONTI = [
 "Meta-analisi su ipertrofia in questa rivista",
 "https://pubmed.ncbi.nlm.nih.gov/?term=%22Sports+Med%22%5BJournal%5D+AND+%28hypertrophy+OR+resistance+training%29&filter=pubt.meta-analysis&sort=date"
 ]
-]
+],
+"id": "sports_medicine"
 },
 {
 "n": "European Journal of Applied Physiology",
@@ -3092,19 +3141,22 @@ const FONTI = [
 "Cerca dentro questa rivista",
 "https://pubmed.ncbi.nlm.nih.gov/?term=%22Eur+J+Appl+Physiol%22%5BJournal%5D+AND+hypertrophy&sort=date"
 ]
-]
+],
+"id": "european_journal_of_applied_physiology"
 },
 {
 "n": "Stronger by Science",
 "cosa": "Divulgazione tecnica di alto livello, con revisioni della letteratura firmate. Utile per orientarsi, sempre da verificare sulla fonte primaria.",
 "url": "https://www.strongerbyscience.com/",
-"q": []
+"q": [],
+"id": "stronger_by_science"
 },
 {
 "n": "MASS Research Review",
 "cosa": "Rassegna mensile a pagamento che riassume gli studi nuovi. Il modo più efficiente di stare aggiornato se non hai tempo di leggere i paper.",
 "url": "https://www.massresearchreview.com/",
-"q": []
+"q": [],
+"id": "mass_research_review"
 },
 {
 "n": "Google Scholar",
@@ -3115,7 +3167,8 @@ const FONTI = [
 "Ipertrofia, ultimi anni",
 "https://scholar.google.com/scholar?q=resistance+training+hypertrophy&as_ylo=2024&scisbd=1"
 ]
-]
+],
+"id": "google_scholar"
 },
 {
 "n": "Cochrane Library",
@@ -3130,7 +3183,8 @@ const FONTI = [
 "Esercizio e forza",
 "https://pubmed.ncbi.nlm.nih.gov/?term=%22Cochrane+Database+Syst+Rev%22%5BJournal%5D+AND+resistance+training&sort=date"
 ]
-]
+],
+"id": "cochrane_library"
 },
 {
 "n": "Journal of the International Society of Sports Nutrition",
@@ -3141,7 +3195,8 @@ const FONTI = [
 "Tutti i documenti di posizione",
 "https://pubmed.ncbi.nlm.nih.gov/?term=%22International+Society+of+Sports+Nutrition+position+stand%22&sort=date"
 ]
-]
+],
+"id": "journal_of_the_international_society"
 },
 {
 "n": "Sports Medicine - Open",
@@ -3152,7 +3207,8 @@ const FONTI = [
 "Ipertrofia e forza, accesso aperto",
 "https://europepmc.org/search?query=JOURNAL%3A%22Sports%20medicine%20-%20open%22%20AND%20%28hypertrophy%20OR%20%22resistance%20training%22%29&sortBy=P_PDATE_D%2Bdesc"
 ]
-]
+],
+"id": "sports_medicine_open"
 },
 {
 "n": "PeerJ",
@@ -3163,7 +3219,8 @@ const FONTI = [
 "Allenamento contro resistenza",
 "https://europepmc.org/search?query=JOURNAL%3A%22PeerJ%22%20AND%20%22resistance%20training%22&sortBy=P_PDATE_D%2Bdesc"
 ]
-]
+],
+"id": "peerj"
 },
 {
 "n": "Frontiers in Physiology",
@@ -3174,7 +3231,8 @@ const FONTI = [
 "Ipertrofia",
 "https://europepmc.org/search?query=JOURNAL%3A%22Frontiers%20in%20physiology%22%20AND%20hypertrophy&sortBy=P_PDATE_D%2Bdesc"
 ]
-]
+],
+"id": "frontiers_in_physiology"
 },
 {
 "n": "Journal of Sports Sciences",
@@ -3185,7 +3243,8 @@ const FONTI = [
 "Biomeccanica degli esercizi",
 "https://pubmed.ncbi.nlm.nih.gov/?term=%22J+Sports+Sci%22%5BJournal%5D+AND+%28biomechanics+OR+hypertrophy%29&sort=date"
 ]
-]
+],
+"id": "journal_of_sports_sciences"
 },
 {
 "n": "ClinicalTrials.gov",
@@ -3196,7 +3255,8 @@ const FONTI = [
 "Studi in corso su ipertrofia",
 "https://clinicaltrials.gov/search?cond=&term=resistance%20training%20hypertrophy&aggFilters=status:rec"
 ]
-]
+],
+"id": "clinicaltrials_gov"
 },
 {
 "n": "Semantic Scholar",
@@ -3207,13 +3267,15 @@ const FONTI = [
 "Ipertrofia e allenamento",
 "https://www.semanticscholar.org/search?q=resistance%20training%20hypertrophy&sort=pub-date"
 ]
-]
+],
+"id": "semantic_scholar"
 },
 {
 "n": "Unpaywall e OA Button",
 "cosa": "Trovano legalmente la versione ad accesso aperto di un articolo a pagamento, se esiste. Da usare con il DOI.",
 "url": "https://unpaywall.org/",
-"q": []
+"q": [],
+"id": "unpaywall_e_oa_button"
 },
 {
 "n": "Journal of Biomechanics",
@@ -3228,7 +3290,8 @@ const FONTI = [
 "Bracci di leva e coppie articolari",
 "https://pubmed.ncbi.nlm.nih.gov/?term=%22J+Biomech%22%5BJournal%5D+AND+%28moment+arm%29&sort=date"
 ]
-]
+],
+"id": "journal_of_biomechanics"
 },
 {
 "n": "Journal of Applied Physiology",
@@ -3239,7 +3302,8 @@ const FONTI = [
 "Architettura e adattamento muscolare",
 "https://pubmed.ncbi.nlm.nih.gov/?term=%22J+Appl+Physiol%22%5BJournal%5D+AND+%28muscle+architecture+OR+pennation%29&sort=date"
 ]
-]
+],
+"id": "journal_of_applied_physiology"
 },
 {
 "n": "Journal of Electromyography and Kinesiology",
@@ -3250,7 +3314,8 @@ const FONTI = [
 "Attivazione negli esercizi con sovraccarico",
 "https://pubmed.ncbi.nlm.nih.gov/?term=%22J+Electromyogr+Kinesiol%22%5BJournal%5D+AND+resistance&sort=date"
 ]
-]
+],
+"id": "journal_of_electromyography_and_kinesiology"
 },
 {
 "n": "Clinical Biomechanics",
@@ -3261,7 +3326,8 @@ const FONTI = [
 "Carico sulla colonna nel sollevamento",
 "https://pubmed.ncbi.nlm.nih.gov/?term=%22Clin+Biomech%22%5BJournal%5D+AND+%28lumbar+AND+lifting%29&sort=date"
 ]
-]
+],
+"id": "clinical_biomechanics"
 },
 {
 "n": "Scandinavian Journal of Medicine and Science in Sports",
@@ -3272,30 +3338,35 @@ const FONTI = [
 "Tendine e adattamento al carico",
 "https://pubmed.ncbi.nlm.nih.gov/?term=%22Scand+J+Med+Sci+Sports%22%5BJournal%5D+AND+tendon&sort=date"
 ]
-]
+],
+"id": "scandinavian_journal_of_medicine_and"
 },
 {
 "n": "PEDro",
 "cosa": "Banca dati di studi controllati in fisioterapia, con punteggio di qualità metodologica su ogni voce. Il posto giusto per le domande su infortuni e riabilitazione.",
 "url": "https://pedro.org.au/",
-"q": []
+"q": [],
+"id": "pedro"
 },
 {
 "n": "Retraction Watch",
 "cosa": "Traccia gli articoli ritirati e i casi di frode. Prima di costruire una convinzione su un singolo studio, vale la pena controllare che sia ancora in piedi.",
 "url": "https://retractionwatch.com/",
-"q": []
+"q": [],
+"id": "retraction_watch"
 },
 {
 "n": "OpenAlex",
 "cosa": "Catalogo aperto della letteratura scientifica, con grafo delle citazioni interrogabile. Alternativa libera a Scopus e Web of Science.",
 "url": "https://openalex.org/",
-"q": []
+"q": [],
+"id": "openalex"
 },
 {
 "n": "ResearchGate",
 "cosa": "Molti autori caricano qui il testo completo dei propri articoli. Utile quando l’editore chiede il pagamento.",
 "url": "https://www.researchgate.net/",
-"q": []
+"q": [],
+"id": "researchgate"
 }
 ];

@@ -95,7 +95,11 @@ function cercaLocale(q){
                 d:s.autore+', '+s.anno+' \u00b7 '+s.tema, h:'#/studio/'+s.id});
   });
   MITI.forEach(function(m, i){
-    if(hit(m.m+' '+m.s)) out.push({p:'miti', n:numSez('miti',i+1), t:m.m, d:'verdetto: '+m.v, h:'#/miti'});
+    if(hit(m.m+' '+m.s)) out.push({p:'miti', n:numSez('miti',i+1), t:m.m, d:'verdetto: '+m.v, h:'#/mito/'+m.id});
+  });
+  FONTI.forEach(function(f, i){
+    if(hit([f.n, f.cosa].join(' ')))
+      out.push({p:'fonti', n:numSez('fonti',i+1), t:f.n, d:f.cosa.slice(0,88)+'…', h:'#/fonte/'+f.id});
   });
   GLOSSARIO.forEach(function(g){
     if(hit(g.t+' '+g.d)) out.push({p:'strumenti', n:'\u00a76', t:g.t, d:g.d.slice(0,88)+'\u2026', h:'#/strumenti'});
@@ -455,34 +459,53 @@ function caricaAbstract(pmid){
 }
 
 V.miti = function(){
-  let h = testa('miti','Miti','Affermazioni che sentirai in sala, con il verdetto della letteratura e il rimando alla fonte.');
+  let h = testa('miti','Miti','Affermazioni che sentirai in sala, con il verdetto della letteratura e il rimando alla fonte.')+
+    '<div class="indice">';
   MITI.forEach(function(m, i){
-    h += '<div class="mito"><div class="marg">'+numSez('miti',i+1)+'<div style="margin-top:6px;">'+sigla(m.liv)+'</div></div>'+
-      '<div><div class="mito-c">«'+gr(m.m)+'»</div>'+
-      '<div class="studio-r" style="margin:0 0 8px;"><span class="verdetto v-'+m.v+'">'+m.v+'</span></div>'+
-      '<div class="num-s">'+gr(m.s)+'</div>';
-    const st = studiById(m.studi);
-    if(st.length) h += '<div style="margin-top:10px;">' + st.map(studioRiga).join('') + '</div>';
-    h += '</div></div>';
+    h += voce(numSez('miti',i+1), '«'+gr(m.m)+'»',
+              '', '<span class="verdetto v-'+m.v+'">'+m.v+'</span>', '#/mito/'+m.id);
   });
+  return h + '</div>';
+};
+
+V.mito = function(id){
+  const i = indiceDi(MITI, id);
+  const m = MITI.filter(function(x){ return x.id===id; })[0];
+  if(!m) return V.miti();
+  let h = indietro('#/miti','Miti') + testa('miti', '«'+gr(m.m)+'»', '', numSez('miti', i));
+  h += '<div class="dati">'+
+    '<div><dt>Verdetto</dt><dd><span class="verdetto v-'+m.v+'">'+m.v+'</span></dd></div>'+
+    '<div><dt>Evidenza</dt><dd>'+sigla(m.liv)+' &nbsp;'+LIV_D[m.liv]+'</dd></div></div>';
+  h += '<h2>Perché</h2><div class="prosa"><p>'+gr(m.s)+'</p></div>';
+  const st = studiById(m.studi);
+  if(st.length) h += '<h2>Riferimenti</h2>' + st.map(studioRiga).join('');
   return h;
 };
 
 V.fonti = function(){
-  let h = testa('fonti','Fonti','Dove cercare quando l’atlante non basta. Le interrogazioni pronte sono già impostate sugli argomenti di questa raccolta.');
+  let h = testa('fonti','Fonti','Dove cercare quando l’atlante non basta. Le interrogazioni pronte sono già impostate sugli argomenti di questa raccolta.')+
+    '<div class="indice">';
   FONTI.forEach(function(f, i){
-    h += '<div class="mito"><div class="marg">'+numSez('fonti',i+1)+'</div><div>'+
-      '<h3>'+f.n+'</h3><p style="font-size:14.5px;color:var(--inchiostro-2);">'+f.cosa+'</p>'+
-      '<div class="bottoni" style="margin:10px 0 0;"><a class="bottone largo" style="text-align:center;line-height:40px;border-bottom-width:1px;" href="'+f.url+'" target="_blank" rel="noopener">Apri</a></div>';
-    if(f.q.length){
-      h += '<div style="margin-top:14px;border-top:1px solid var(--filo);">';
-      f.q.forEach(function(q){
-        h += '<div class="es" style="grid-template-columns:1fr auto;"><a class="es-n" style="border:none;font-size:14.5px;" href="'+q[1]+'" target="_blank" rel="noopener">'+q[0]+'</a><span class="es-len">apri</span></div>';
-      });
-      h += '</div>';
-    }
-    h += '</div></div>';
+    h += voce(numSez('fonti',i+1), f.n, f.cosa,
+              f.q.length ? f.q.length+' ric.' : '', '#/fonte/'+f.id);
   });
+  return h + '</div>';
+};
+
+V.fonte = function(id){
+  const i = indiceDi(FONTI, id);
+  const f = FONTI.filter(function(x){ return x.id===id; })[0];
+  if(!f) return V.fonti();
+  let h = indietro('#/fonti','Fonti') + testa('fonti', f.n, '', numSez('fonti', i));
+  h += '<div class="prosa"><p>'+f.cosa+'</p></div>';
+  h += '<div class="bottoni" style="margin:0 0 4px;"><a class="bottone largo" style="text-align:center;line-height:40px;border-bottom-width:1px;" href="'+f.url+'" target="_blank" rel="noopener">Apri '+f.n+'</a></div>';
+  if(f.q.length){
+    h += '<h2>Ricerche pronte</h2><div class="artic">';
+    f.q.forEach(function(q){
+      h += '<div><div class="marg">apri</div><div class="artic-t"><a href="'+q[1]+'" target="_blank" rel="noopener">'+q[0]+'</a></div></div>';
+    });
+    h += '</div>';
+  }
   return h;
 };
 
@@ -668,6 +691,8 @@ function route(){
   let html, corrente = '', parte = null;
   const cap = function(k){ parte = k; return 'Parte '+PARTI[k][1]+' · '+PARTI[k][2]; };
   if(v==='principio'){ html = V.principio(arg); corrente = cap('principi'); }
+  else if(v==='mito'){ html = V.mito(arg); corrente = cap('miti'); }
+  else if(v==='fonte'){ html = V.fonte(arg); corrente = cap('fonti'); }
   else if(v==='muscolo'){ html = V.muscolo(arg); corrente = cap('muscoli'); }
   else if(v==='problema'){ html = V.problema(arg); corrente = cap('problemi'); }
   else if(v==='studio'){ html = V.studio(arg); corrente = cap('studi'); }

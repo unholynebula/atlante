@@ -50,6 +50,13 @@ per difetto cerca nel testo completo, e `lateral raise trapezius` senza
 qualificazione restituisce 1016 risultati quasi tutti irrilevanti contro 6 pertinenti.
 Le frasi tra virgolette restano nel campo predefinito, dove funzionano.
 
+## Dopo ogni modifica
+
+I file sono richiamati con un'impronta (`app.js?v=…`) perche' il browser non
+serva la versione vecchia dalla cache. Dopo aver toccato un file:
+
+    python3 versiona.py
+
 ## Come aggiungere contenuto
 
 I file `data-*.js` sono semplici array. Per aggiungere uno studio serve un PMID reale:
