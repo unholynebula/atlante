@@ -410,7 +410,7 @@ V.studi = function(){
   let h = testa('studi','Studi', STUDI.length+' voci con identificativo verificato uno per uno. Il riassunto è una lettura: la fonte è sempre a un tocco, per controllarla.');
   h += '<div class="bottoni" style="margin:0 0 20px;"><button class="bottone largo" data-vai="#/ricerca">Cerca negli archivi →</button></div>';
   h += '<div class="filtri">' + temi.map(function(t){
-    return '<button class="filtro'+(t===filtroTema?' acceso':'')+'" data-tema="'+t+'">'+t+'</button>';
+    return '<button class="filtro'+(t===filtroTema?' acceso':'')+'" data-filtro-tema="'+t+'">'+t+'</button>';
   }).join('') + '</div>';
   STUDI.forEach(function(s, i){
     if(filtroTema!=='tutti' && s.tema!==filtroTema) return;
@@ -443,7 +443,7 @@ V.studio = function(id){
   h += '<h2>Cosa dice</h2><p>'+gr(s.sintesi)+'</p>';
   h += '<div class="bottoni">'+
     '<a class="bottone" style="flex:1;text-align:center;line-height:40px;border-bottom-width:1px;" href="https://pubmed.ncbi.nlm.nih.gov/'+esc(s.pmid)+'/" target="_blank" rel="noopener">Vedi su PubMed</a>'+
-    '<button class="bottone'+(salvo?' pieno':'')+'" data-salva="'+chiave+'" data-tit="'+esc(s.titolo)+'" data-rif="'+esc(s.pmid)+'">'+(salvo?'Salvato':'Salva')+'</button></div>';
+    '<button class="bottone'+(salvo?' pieno':'')+'" data-salva="'+chiave+'" data-tit="'+esc(s.titolo)+'" data-pmid="'+esc(s.pmid)+'">'+(salvo?'Salvato':'Salva')+'</button></div>';
   h += '<h2>Abstract originale</h2><div id="abs"><div class="attesa">carico…</div></div>';
   h += '<h2>Annotazioni</h2>'+
     '<textarea class="ta" id="nota" data-k="'+chiave+'" placeholder="Cosa ti serve ricordare di questo studio…">'+esc(note[chiave]||'')+'</textarea>'+
@@ -611,10 +611,12 @@ V.ricerca = function(){
       '<button class="filtro'+(liveOrdine==='recenti'?' acceso':'')+'" data-ord="recenti">più recenti</button>'+
     '</div><div id="lres"></div>';
   setTimeout(function(){
-    const inp = $('lq');
-    $('lgo').onclick = function(){ liveQ = inp.value; eseguiLive(); };
+    /* Se nel frattempo si e' cambiata pagina, questi elementi non esistono piu'. */
+    const inp = $('lq'), go = $('lgo'), fil = $('lfil');
+    if(!inp || !go || !fil) return;
+    go.onclick = function(){ liveQ = inp.value; eseguiLive(); };
     inp.onkeydown = function(e){ if(e.key==='Enter'){ liveQ = inp.value; eseguiLive(); } };
-    $('lfil').onclick = function(){ liveFiltra = !liveFiltra; liveCache = {}; vai('#/ricerca', true); };
+    fil.onclick = function(){ liveFiltra = !liveFiltra; liveCache = {}; vai('#/ricerca', true); };
     if(liveQ) eseguiLive();
   }, 0);
   return h;
@@ -659,7 +661,7 @@ V.live = function(id){
           '<div><dt>Citazioni</dt><dd>'+(r.citedByCount||0)+(r.isOpenAccess==='Y'?' · testo completo libero':'')+'</dd></div></div>'+
         '<div class="bottoni">'+
           (r.pmid?'<a class="bottone" style="flex:1;text-align:center;line-height:40px;border-bottom-width:1px;" href="https://pubmed.ncbi.nlm.nih.gov/'+esc(r.pmid)+'/" target="_blank" rel="noopener">PubMed</a>':'')+
-          '<button class="bottone'+(salvo?' pieno':'')+'" data-salva="'+chiave+'" data-tit="'+esc(r.title||'')+'" data-rif="'+esc(r.pmid||'')+'">'+(salvo?'Salvato':'Salva')+'</button></div>'+
+          '<button class="bottone'+(salvo?' pieno':'')+'" data-salva="'+chiave+'" data-tit="'+esc(r.title||'')+'" data-pmid="'+esc(r.pmid||'')+'">'+(salvo?'Salvato':'Salva')+'</button></div>'+
         '<h2>Abstract</h2>'+
         (r.abstractText ? rendiAbstract(r.abstractText) : '<div class="vuoto">Abstract non disponibile.</div>')+
         '<h2>Annotazioni</h2><textarea class="ta" id="nota" data-k="'+chiave+'"></textarea>'+
@@ -723,6 +725,10 @@ window.addEventListener('hashchange', route);
 
 /* ---------------- eventi ---------------- */
 document.addEventListener('click', function(ev){
+  /* I gestori sotto cercano attributi risalendo l'albero: se un attributo con
+     lo stesso nome vive su <html> o <body>, ogni clic lo troverebbe. Si limita
+     la ricerca a cio' che sta dentro l'interfaccia. */
+  if(!ev.target.closest('#main, #top, .avviso-fisso')) return;
   const g = ev.target.closest('[data-vai]');
   if(g){ vai(g.getAttribute('data-vai')); return; }
   const rif = ev.target.closest('[data-rif]');
@@ -740,14 +746,14 @@ document.addEventListener('click', function(ev){
   if(l){ vai('#/live/'+encodeURIComponent(l.getAttribute('data-live'))); return; }
   const o = ev.target.closest('[data-ord]');
   if(o){ liveOrdine = o.getAttribute('data-ord'); liveCache = {}; vai('#/ricerca', true); return; }
-  const t = ev.target.closest('[data-tema]');
-  if(t){ filtroTema = t.getAttribute('data-tema'); vai('#/studi', true); return; }
+  const t = ev.target.closest('[data-filtro-tema]');
+  if(t){ filtroTema = t.getAttribute('data-filtro-tema'); vai('#/studi', true); return; }
   const sv = ev.target.closest('[data-salva]');
   if(sv){
     const k = sv.getAttribute('data-salva');
     if(salvati[k]){ delete salvati[k]; sv.classList.remove('pieno'); sv.textContent='Salva'; avvisa('Rimosso.'); }
     else {
-      salvati[k] = {tipo:'studio', titolo:sv.getAttribute('data-tit'), rif:sv.getAttribute('data-rif'), quando:Date.now()};
+      salvati[k] = {tipo:'studio', titolo:sv.getAttribute('data-tit'), rif:sv.getAttribute('data-pmid'), quando:Date.now()};
       sv.classList.add('pieno'); sv.textContent='Salvato'; avvisa('Messo da parte.');
     }
     if(!save(K_SALV, salvati)) avvisa('Salvato solo per questa sessione.');
