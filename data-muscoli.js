@@ -100,8 +100,8 @@ const MUSCOLI = [
 "liv": "B"
 },
 {
-"t": "Inclinare troppo la panca",
-"s": "Oltre i 45 gradi il lavoro passa al deltoide anteriore. Per il pettorale alto bastano 15-30 gradi.",
+"t": "Inseguire un’inclinazione precisa",
+"s": "Man mano che la panca si alza, la linea di trazione si avvicina a quella del deltoide anteriore e il contributo del capo clavicolare del pettorale cresce fino a un certo punto, poi cala. È un passaggio graduale, non una soglia: i lavori elettromiografici non concordano su dove cada il massimo, e comunque l’attivazione acuta non predice la crescita. Quindici-trenta gradi è un intervallo ragionevole da cui partire, non un numero da rispettare.",
 "liv": "C"
 },
 {
@@ -126,7 +126,14 @@ const MUSCOLI = [
 "wolf_partials",
 "panca_presa"
 ],
-"volume": "10-20 serie settimanali. Conta anche il lavoro indiretto da spinte sopra la testa e dips."
+"volume": "10-20 serie settimanali. Conta anche il lavoro indiretto da spinte sopra la testa e dips.",
+"meccanica": "Il pettorale è più lungo con il braccio aperto e portato indietro, e lì il momento richiesto è massimo sia in panca sia nelle croci: è uno dei casi in cui carico e lunghezza coincidono, e per questo la parte bassa della discesa è quella che conta. Nelle croci con manubri però il momento crolla in chiusura, perché la distanza orizzontale fra spalla e mano va a zero: la strizzata finale è quasi scarica. Ai cavi la tensione resta, perché la direzione della forza la decidi tu.",
+"posizione": [
+"**Scapole** retratte e leggermente depresse, mantenute così per tutta la serie: danno all’omero una base contro cui spingere e limitano l’estensione della spalla in basso.",
+"**Torace** alto, curva toracica leggermente accentuata: accorcia il percorso e migliora l’angolo di lavoro.",
+"**Gomiti** a quarantacinque-sessanta gradi rispetto al tronco, non a novanta: riduce lo stress sulla spalla senza togliere lavoro al pettorale.",
+"**Piedi** piantati e bacino a contatto: la spinta parte da terra, e una base ferma è forza espressa."
+]
 },
 {
 "id": "dorsale",
@@ -254,7 +261,14 @@ const MUSCOLI = [
 "wolf_partials",
 "pulldown_presa"
 ],
-"volume": "10-20 serie settimanali fra verticali e orizzontali."
+"volume": "10-20 serie settimanali fra verticali e orizzontali.",
+"meccanica": "Il dorsale è più lungo con il braccio sopra la testa, ed è lì che il momento è massimo alla lat machine: i due punti coincidono, e il tratto iniziale a braccia distese è quello che vale. Nel rematore invece il momento massimo cade a metà escursione, con il muscolo a lunghezza intermedia.",
+"posizione": [
+"**Scapole** libere di salire in partenza: partire con le scapole già depresse accorcia il movimento proprio dove il dorsale è più lungo.",
+"**Spalla** che si estende e adduce: pensa a portare il gomito verso l’anca, non la mano verso il petto.",
+"**Busto** fermo nel rematore: se si alza a ogni ripetizione stai aggiungendo un’estensione d’anca che non avevi previsto.",
+"**Presa** neutra o prona se i flessori del gomito cedono per primi; fasce se cede la mano."
+]
 },
 {
 "id": "altoschiena",
@@ -359,7 +373,13 @@ const MUSCOLI = [
 "vigotsky_emg",
 "schoenfeld_range_att"
 ],
-"volume": "Deltoide posteriore 8-16 serie settimanali, incluso il contributo dei rematori."
+"volume": "Deltoide posteriore 8-16 serie settimanali, incluso il contributo dei rematori.",
+"meccanica": "Sono movimenti di abduzione orizzontale con braccio quasi teso: il braccio di leva è lungo e il momento è alto per tutta l’escursione, motivo per cui bastano carichi ridicoli. Il momento è massimo con il braccio perpendicolare al tronco.",
+"posizione": [
+"**Scapole** che si avvicinano al termine del movimento, senza forzare: la retrazione è parte dell’esercizio.",
+"**Gomito** quasi fisso: se lo pieghi trasformi l’apertura in una trazione e coinvolgi il dorsale.",
+"**Busto** immobile: nessuno slancio, nessuna estensione della schiena per accompagnare."
+]
 },
 {
 "id": "deltoide",
@@ -460,9 +480,9 @@ const MUSCOLI = [
 "liv": "C"
 },
 {
-"t": "Alzare oltre la linea delle spalle",
-"s": "Sopra i 90 gradi il lavoro passa al trapezio superiore.",
-"liv": "C"
+"t": "Credere che sopra i novanta gradi «il lavoro passi al trapezio»",
+"s": "Non è così, e l’avevo scritto male. Con un manubrio il momento da vincere vale peso × lunghezza del braccio × seno dell’angolo: è massimo a novanta gradi e da lì in poi **cala**. Sopra la linea delle spalle non stai regalando il lavoro a un altro muscolo, stai lavorando sotto carico minore. Nel frattempo il trapezio superiore aumenta il suo contributo perché deve ruotare la scapola verso l’alto, cosa senza la quale il braccio non si alza affatto: è il suo mestiere, non un furto. Fermarsi intorno ai novanta gradi resta ragionevole per restare nel tratto più caricato, ma è un argomento di efficienza, non di sicurezza né di attivazione.",
+"liv": "M"
 },
 {
 "t": "Portare troppo carico sul laterale",
@@ -474,7 +494,14 @@ const MUSCOLI = [
 "lateral_raise",
 "vigotsky_emg"
 ],
-"volume": "Laterale 10-20 serie, posteriore 8-16, anteriore raramente da integrare."
+"volume": "Laterale 10-20 serie, posteriore 8-16, anteriore raramente da integrare.",
+"meccanica": "È il caso di scuola del disaccoppiamento fra carico e lunghezza. Il deltoide laterale è più lungo con il braccio al fianco, dove il momento è quasi nullo; il momento è massimo a novanta gradi, dove il muscolo è già corto. Nessuna variante risolve del tutto il problema, e nel confronto diretto fra cavo e manubrio la differenza attesa non si è vista.",
+"posizione": [
+"**Scapola** libera di ruotare verso l’alto: è necessaria all’elevazione e non va bloccata.",
+"**Spalla** che non si eleva verso l’orecchio: la scrollata è il segnale che il carico è eccessivo.",
+"**Gomito** leggermente flesso e fisso, per accorciare il braccio di leva quel tanto che rende il carico gestibile.",
+"**Busto** fermo: se accompagna, il deltoide smette di essere il motore."
+]
 },
 {
 "id": "bicipite",
@@ -590,7 +617,14 @@ const MUSCOLI = [
 "sato_rom",
 "biceps_regional"
 ],
-"volume": "8-16 serie dirette settimanali, oltre al contributo indiretto dei tiri."
+"volume": "8-16 serie dirette settimanali, oltre al contributo indiretto dei tiri.",
+"meccanica": "Con il manubrio il momento è massimo a gomito a novanta gradi, dove il bicipite è a lunghezza intermedia, e crolla sia a braccio disteso sia in chiusura. Il capo lungo è più lungo con la spalla estesa: il curl su panca inclinata e il curl ai cavi dietro il corpo servono a spostare il carico verso quella posizione.",
+"posizione": [
+"**Gomito** fermo al fianco: portarlo in avanti aggiunge una flessione di spalla e scarica il bicipite.",
+"**Spalla** ferma o deliberatamente estesa se cerchi il capo lungo; mai in flessione progressiva.",
+"**Polso** neutro o leggermente esteso: con il bilanciere diritto la supinazione è bloccata e il gomito può protestare.",
+"**Escursione** completa in basso, dove il muscolo è lungo e quasi tutti si fermano prima."
+]
 },
 {
 "id": "tricipite",
@@ -697,7 +731,14 @@ const MUSCOLI = [
 "maeo_triceps",
 "wolf_partials"
 ],
-"volume": "10-20 serie settimanali, di cui almeno metà dirette."
+"volume": "10-20 serie settimanali, di cui almeno metà dirette.",
+"meccanica": "Il capo lungo è più lungo con la spalla flessa, cioè con il braccio sopra la testa. Nell’estensione overhead il momento è alto proprio lì: carico e lunghezza coincidono, ed è il motivo meccanico dietro al quaranta per cento di crescita in più rispetto al pushdown, dove il capo lungo lavora accorciato.",
+"posizione": [
+"**Spalla** portata deliberatamente in flessione per il capo lungo: sopra la testa o su panca inclinata.",
+"**Gomito** fermo nello spazio: se scende e sale, stai aggiungendo una spinta di spalla.",
+"**Escursione** profonda dietro la nuca: è il tratto allungato, ed è quello che conta.",
+"**Polso** neutro: con il bilanciere diritto l’avambraccio è bloccato e il gomito accusa."
+]
 },
 {
 "id": "quadricipite",
@@ -825,7 +866,14 @@ const MUSCOLI = [
 "mobilita_squat",
 "squat_stance"
 ],
-"volume": "10-20 serie settimanali."
+"volume": "10-20 serie settimanali.",
+"meccanica": "Nell’accosciata il momento al ginocchio cresce con la profondità e i vasti lavorano allungati: carico e lunghezza coincidono, ed è per questo che scendere conta. Il retto femorale fa eccezione perché è biarticolare: mentre si allunga al ginocchio si accorcia all’anca, e resta a lunghezza quasi costante. Nella leg extension il momento è massimo a ginocchio esteso, cioè dove il quadricipite è corto: reclinare lo schienale non cambia questo, ma allunga il retto femorale all’anca.",
+"posizione": [
+"**Anca** aperta nella leg extension: schienale reclinato il più possibile.",
+"**Ginocchia** che seguono la direzione dei piedi, libere di avanzare oltre la punta se la caviglia lo permette.",
+"**Piedi** a base media con punte leggermente extraruotate; allarga se il bacino si ribalta.",
+"**Colonna** in posizione stabile: il crollo del busto in avanti sposta il carico dal ginocchio alla schiena."
+]
 },
 {
 "id": "femorali",
@@ -942,7 +990,14 @@ const MUSCOLI = [
 "nordic_prevenzione",
 "schoenfeld_range_att"
 ],
-"volume": "10-20 serie settimanali fra le due funzioni."
+"volume": "10-20 serie settimanali fra le due funzioni.",
+"meccanica": "Due funzioni, due meccaniche opposte. Nel leg curl il momento è massimo a ginocchio semi-esteso e cala in chiusura; ad anca flessa i capi biarticolari partono più lunghi, ed è la ragione per cui la versione seduta rende più della prona. Nello stacco rumeno il momento all’anca è massimo a busto orizzontale, dove i femorali sono al massimo dell’allungamento: carico e lunghezza coincidono.",
+"posizione": [
+"**Anca** flessa nel leg curl per allungare i capi biarticolari; bacino incollato alla panca nella versione prona.",
+"**Ginocchia** quasi ferme nello stacco rumeno: se si piegano è diventato uno stacco.",
+"**Colonna** in posizione stabile e bilanciere addosso: la distanza orizzontale è ciò che carica la schiena.",
+"**Escursione** fino a dove arriva la mobilità dell’anca, non oltre."
+]
 },
 {
 "id": "glutei",
@@ -1046,7 +1101,14 @@ const MUSCOLI = [
 "adductor_squat",
 "hip_thrust_squat"
 ],
-"volume": "8-16 serie settimanali, molte delle quali condivise con quadricipite e femorali."
+"volume": "8-16 serie settimanali, molte delle quali condivise con quadricipite e femorali.",
+"meccanica": "Il gluteo è più lungo ad anca molto flessa, cioè in fondo a un’accosciata profonda o a uno stacco rumeno, e lì il momento all’anca è massimo: coincidenza favorevole. L’hip thrust è il contrario: il momento massimo cade a anca estesa, dove il gluteo è corto. Sono due stimoli complementari, non alternativi.",
+"posizione": [
+"**Bacino** in posizione neutra, senza ribaltamento in fondo.",
+"**Anca** portata in flessione profonda dove l’esercizio lo consente: è lì che il gluteo si allunga.",
+"**Busto** inclinato in avanti nell’affondo bulgaro per aumentare il momento all’anca.",
+"**Piedi** più avanti nella pressa per spostare lavoro dal ginocchio all’anca."
+]
 },
 {
 "id": "adduttori",
@@ -1137,7 +1199,13 @@ const MUSCOLI = [
 "stacco_stile",
 "squat_stance"
 ],
-"volume": "4-10 serie settimanali dirette, più il contributo delle accosciate profonde."
+"volume": "4-10 serie settimanali dirette, più il contributo delle accosciate profonde.",
+"meccanica": "L’adduttore magno agisce soprattutto come estensore dell’anca, e il suo momento è massimo ad anca molto flessa: in fondo all’accosciata profonda e nell’affondo con passo lungo. Alla macchina adduttori il momento è massimo in apertura, che è anche il punto di massimo allungamento.",
+"posizione": [
+"**Anca** in flessione profonda e base larga: è la combinazione che carica l’adduttore magno.",
+"**Escursione** completa in apertura alla macchina, che è il tratto che conta.",
+"**Piedi** extraruotati nello squat sumo, coerenti con la direzione delle ginocchia."
+]
 },
 {
 "id": "polpacci",
@@ -1226,7 +1294,13 @@ const MUSCOLI = [
 "kassiano_partials",
 "tendine_carico"
 ],
-"volume": "8-16 serie settimanali se sono una priorità, 4-6 per mantenere."
+"volume": "8-16 serie settimanali se sono una priorità, 4-6 per mantenere.",
+"meccanica": "Il momento alla caviglia è massimo a piede piatto o in flessione dorsale, cioè dove il tricipite surale è allungato: coincidenza favorevole, purché non si rimbalzi. Il gastrocnemio è biarticolare: a ginocchio piegato è già accorciato e smette di contribuire, e resta solo il soleo.",
+"posizione": [
+"**Ginocchio** esteso per il gastrocnemio, flesso se vuoi isolare il soleo.",
+"**Caviglia** in escursione completa, con pausa in basso per annullare il contributo elastico del tendine.",
+"**Avampiede** stabile sul gradino, senza cedimenti laterali."
+]
 },
 {
 "id": "core",
@@ -1330,7 +1404,13 @@ const MUSCOLI = [
 "studi": [
 "plotkin_overload"
 ],
-"volume": "4-12 serie settimanali dirette."
+"volume": "4-12 serie settimanali dirette.",
+"meccanica": "Nel crunch il momento è massimo a tronco quasi disteso e cala man mano che ti chiudi. Nel sollevamento gambe da appeso il momento all’anca è massimo a gambe orizzontali. Negli esercizi anti-estensione, come la ruota, il momento cresce con la distanza fra mani e bacino: il punto più lontano è il più duro.",
+"posizione": [
+"**Bacino** portato in retroversione nei sollevamenti: senza quello lavorano i flessori d’anca, non l’addome.",
+"**Colonna** che si flette deliberatamente nei crunch: qui la flessione è l’esercizio, non un errore.",
+"**Respiro** espirato in chiusura per completare la flessione."
+]
 },
 {
 "id": "avambracci",
@@ -1407,7 +1487,13 @@ const MUSCOLI = [
 "studi": [
 "presa_forza"
 ],
-"volume": "4-10 serie settimanali dirette se la presa ti limita, altrimenti bastano i farmer walk."
+"volume": "4-10 serie settimanali dirette se la presa ti limita, altrimenti bastano i farmer walk.",
+"meccanica": "Nella tenuta il momento è statico e dipende dal peso: cresce con il tempo sotto carico, non con l’angolo. Nei curl ai polsi il momento è massimo a polso in estensione, che è anche la posizione di massimo allungamento dei flessori.",
+"posizione": [
+"**Polso** in escursione completa nei curl al polso, senza compensare col gomito.",
+"**Avambraccio** appoggiato e fermo: è l’unico modo di isolare il movimento del polso.",
+"**Presa** a uncino o mista nelle tenute lunghe, se la presa in chiusura cede prima."
+]
 },
 {
 "id": "trapsup",
@@ -1475,7 +1561,13 @@ const MUSCOLI = [
 }
 ],
 "studi": [],
-"volume": "4-12 serie settimanali dirette, più il contributo dei farmer walk e delle tirate."
+"volume": "4-12 serie settimanali dirette, più il contributo dei farmer walk e delle tirate.",
+"meccanica": "Nelle scrollate il momento è verticale e quasi costante lungo la breve escursione, motivo per cui l’esercizio tollera carichi alti. La rotazione della spalla non aggiunge escursione utile e carica l’articolazione in una posizione debole.",
+"posizione": [
+"**Scapola** che sale e scende in linea, senza rotazioni.",
+"**Collo** neutro: non portare la testa verso la spalla.",
+"**Braccia** come ganci: se i gomiti si piegano stai facendo un rematore."
+]
 },
 {
 "id": "erettori",
@@ -1553,7 +1645,13 @@ const MUSCOLI = [
 "lombalgia_esercizio",
 "tendine_carico"
 ],
-"volume": "4-10 serie settimanali dirette, oltre al lavoro isometrico di stacchi e accosciate."
+"volume": "4-10 serie settimanali dirette, oltre al lavoro isometrico di stacchi e accosciate.",
+"meccanica": "Il lavoro è quasi sempre isometrico: gli erettori non producono il movimento, impediscono alla colonna di flettersi. Il momento che devono contrastare vale peso × distanza orizzontale fra carico e colonna, e cresce man mano che il busto si inclina. Nelle iperestensioni invece il momento è massimo a busto orizzontale.",
+"posizione": [
+"**Colonna** in posizione stabile mantenuta per tutta la serie: è un lavoro di tenuta.",
+"**Anca** che produce il movimento nelle iperestensioni a quarantacinque gradi, se vuoi caricare i glutei; colonna che si estende se vuoi gli erettori.",
+"**Carico** vicino al corpo, sempre: la distanza orizzontale è ciò che paghi."
+]
 },
 {
 "id": "flessorianca",
@@ -1624,7 +1722,13 @@ const MUSCOLI = [
 "leg_ext_hip",
 "squat_regional"
 ],
-"volume": "4-8 serie settimanali, in buona parte condivise con l’addome."
+"volume": "4-8 serie settimanali, in buona parte condivise con l’addome.",
+"meccanica": "L’ileopsoas ha il momento massimo nella prima parte della flessione d’anca. Il retto femorale è biarticolare: nella leg extension con anca estesa parte lungo, ed è la posizione in cui rende di più.",
+"posizione": [
+"**Bacino** in retroversione nei sollevamenti gambe, altrimenti l’escursione utile non arriva.",
+"**Anca** aperta nella leg extension e nel sissy squat: è ciò che allunga il retto femorale.",
+"**Colonna** che non si inarca per compensare la mancanza di escursione d’anca."
+]
 },
 {
 "id": "tibiale",
@@ -1681,7 +1785,13 @@ const MUSCOLI = [
 "studi": [
 "mobilita_squat"
 ],
-"volume": "3-8 serie settimanali, bastano pochi minuti a fine seduta gambe."
+"volume": "3-8 serie settimanali, bastano pochi minuti a fine seduta gambe.",
+"meccanica": "Il momento in flessione dorsale è massimo a caviglia estesa, cioè dove il tibiale è allungato. È un muscolo piccolo con escursione breve: risponde a carichi bassi e ripetizioni alte.",
+"posizione": [
+"**Tallone** fermo come perno, avampiede libero di salire.",
+"**Ginocchio** quasi esteso: piegarlo riduce l’escursione utile.",
+"**Escursione** completa fino alla flessione plantare massima che controlli."
+]
 },
 {
 "id": "serrato",
@@ -1750,6 +1860,12 @@ const MUSCOLI = [
 "studi": [
 "spalla_impingement"
 ],
-"volume": "3-8 serie settimanali, oppure integrati nel riscaldamento delle spinte."
+"volume": "3-8 serie settimanali, oppure integrati nel riscaldamento delle spinte.",
+"meccanica": "Il dentato anteriore lavora quasi sempre in isometria o in escursioni brevi, contro momenti piccoli: il suo compito non è muovere un carico ma tenere la scapola aderente alla gabbia e ruotarla verso l’alto insieme al trapezio.",
+"posizione": [
+"**Scapola** che protrae e ruota verso l’alto, senza staccarsi dalla gabbia toracica.",
+"**Braccio** che sale in linea con il piano della scapola, non sul piano frontale puro.",
+"**Carico** basso: sono muscoli di controllo, con carichi alti il movimento lo fanno altri."
+]
 }
 ];

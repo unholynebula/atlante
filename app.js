@@ -32,16 +32,18 @@ function avvisa(m){
 const LIV_D = {
   A:'Meta-analisi, oppure più studi concordi su soggetti allenati.',
   B:'Studio singolo controllato, o evidenza indiretta solida.',
-  C:'Meccanismo plausibile o consenso pratico: non testato direttamente.'
+  C:'Meccanismo plausibile o consenso pratico: non testato direttamente.',
+  M:'Deriva dalla meccanica o dall’anatomia: non è un’ipotesi da verificare, è una conseguenza.'
 };
 const PARTI = {
-  muscoli:  ['1','I',  'Muscoli'],
-  problemi: ['2','II', 'Problemi'],
-  studi:    ['3','III','Studi'],
-  miti:     ['4','IV', 'Miti'],
-  fonti:    ['5','V',  'Fonti'],
-  strumenti:['6','VI', 'Strumenti'],
-  note:     ['7','VII','Note']
+  principi: ['1','I',   'Principi'],
+  muscoli:  ['2','II',  'Muscoli'],
+  problemi: ['3','III', 'Problemi'],
+  studi:    ['4','IV',  'Studi'],
+  miti:     ['5','V',   'Miti'],
+  fonti:    ['6','VI',  'Fonti'],
+  strumenti:['7','VII', 'Strumenti'],
+  note:     ['8','VIII','Note']
 };
 function sigla(l){ return '<span class="sigla sigla-'+l.toLowerCase()+'">'+l+'</span>'; }
 function numSez(parte, i){ return '\u00a7'+PARTI[parte][0]+'.'+i; }
@@ -69,6 +71,10 @@ function cercaLocale(q){
     return parole.every(function(p){ return b.indexOf(p) >= 0; });
   };
   const out = [];
+  PRINCIPI.forEach(function(x, i){
+    if(hit([x.t, x.sommario, x.gruppo, x.corpo.join(' ')].join(' ')))
+      out.push({p:'principi', n:numSez('principi',i+1), t:x.t, d:x.sommario, h:'#/principio/'+x.id});
+  });
   MUSCOLI.forEach(function(m, i){
     const blob = [m.nome, m.gruppo, m.capi.join(' '), m.funzioni.join(' '), m.stimolo,
                   m.esercizi.map(function(e){return e.n+' '+e.f;}).join(' ')].join(' ');
@@ -234,11 +240,12 @@ function voce(num, tit, des, fin, href){
 
 V.home = function(){
   const nSalv = Object.keys(salvati).length;
-  const conta = {muscoli:MUSCOLI.length+' schede', problemi:PROBLEMI.length+' casi',
+  const conta = {principi:PRINCIPI.length+' voci', muscoli:MUSCOLI.length+' schede', problemi:PROBLEMI.length+' casi',
     studi:STUDI.length+' voci', miti:MITI.length+' voci', fonti:FONTI.length+' archivi',
     strumenti:GLOSSARIO.length+' voci', note:nSalv+' salvati'};
   const des = {
-    muscoli:'Anatomia funzionale, esercizi ordinati per funzione e per lunghezza, errori ricorrenti.',
+    principi:'Meccanica e biologia: momenti, curve di resistenza, lunghezza e tensione, posizione delle articolazioni.',
+    muscoli:'Anatomia funzionale, meccanica, posizione articolare, esercizi ordinati per funzione, errori ricorrenti.',
     problemi:'Dal sintomo alle cause probabili alle soluzioni, in ordine di resa.',
     studi:'Libreria con identificativo verificato, e ricerca diretta negli archivi.',
     miti:'Affermazioni correnti messe a confronto con la letteratura.',
@@ -256,10 +263,39 @@ V.home = function(){
   h += '<h2>Sigle di evidenza</h2><div class="dati legenda">'+
     '<div><dt class="l-a">A</dt><dd>'+LIV_D.A+'</dd></div>'+
     '<div><dt class="l-b">B</dt><dd>'+LIV_D.B+'</dd></div>'+
-    '<div><dt class="l-c">C</dt><dd>'+LIV_D.C+'</dd></div></div>';
+    '<div><dt class="l-c">C</dt><dd>'+LIV_D.C+'</dd></div>'+
+    '<div><dt class="l-m">M</dt><dd>'+LIV_D.M+'</dd></div></div>';
   h += '<div class="colophon">Circa l’ottanta per cento dei partecipanti in questa letteratura non è allenato, '+
     'e gli effetti si comprimono nei soggetti esperti: le direzioni restano affidabili, le grandezze no. '+
     'I riassunti sono una lettura, non la fonte: accanto a ciascuno c’è il rimando all’originale.</div>';
+  return h;
+};
+
+V.principi = function(){
+  const gruppi = {};
+  PRINCIPI.forEach(function(x, i){ (gruppi[x.gruppo] = gruppi[x.gruppo] || []).push([x, i+1]); });
+  let h = testa('principi','Principi','Perché un esercizio funziona, prima di quale esercizio scegliere. Momenti e bracci di leva, curve di resistenza, relazione fra lunghezza e tensione, posizione delle articolazioni.');
+  Object.keys(gruppi).forEach(function(g){
+    h += '<h2>'+g+'</h2><div class="indice">';
+    gruppi[g].forEach(function(par){
+      h += voce(numSez('principi',par[1]), par[0].t, par[0].sommario, '', '#/principio/'+par[0].id);
+    });
+    h += '</div>';
+  });
+  return h;
+};
+
+V.principio = function(id){
+  const i = indiceDi(PRINCIPI, id);
+  const x = PRINCIPI.filter(function(y){ return y.id===id; })[0];
+  if(!x) return V.principi();
+  let h = indietro('#/principi','Principi') + testa('principi', x.t, '', numSez('principi', i));
+  h += '<p class="sommario">'+x.sommario+' '+sigla(x.liv)+'</p>';
+  h += '<div class="prosa saggio">' + x.corpo.map(function(par){
+    return '<p>'+par.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')+'</p>';
+  }).join('') + '</div>';
+  const st = studiById(x.studi);
+  if(st.length) h += '<h2>Riferimenti</h2>' + st.map(studioRiga).join('');
   return h;
 };
 
@@ -288,6 +324,20 @@ V.muscolo = function(id){
     '<div><dt>Funzioni</dt><dd>'+m.funzioni.join('<br>')+'</dd></div>'+
     '<div><dt>Volume</dt><dd>'+m.volume+'</dd></div></div>';
   h += '<h2>Cosa determina lo stimolo</h2><p>'+m.stimolo+'</p>';
+  if(m.meccanica){
+    h += '<h2>Meccanica '+sigla('M')+'</h2><div class="prosa"><p>'+
+      m.meccanica.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>')+'</p></div>';
+  }
+  if(m.posizione && m.posizione.length){
+    h += '<h2>Posizione articolare</h2><div class="artic">';
+    m.posizione.forEach(function(v){
+      const t = v.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+      const et = (v.match(/^\*\*([^*]+)\*\*/) || [null,''])[1];
+      h += '<div><div class="marg">'+et+'</div><div class="artic-t">'+
+        t.replace(/^<strong>[^<]+<\/strong>\s*/,'')+'</div></div>';
+    });
+    h += '</div>';
+  }
   h += '<h2>Esercizi per funzione</h2>'+
     '<p class="guida">Il grado indica quanto l’esercizio serve questo muscolo: A primario, B utile, C marginale.</p>';
   m.esercizi.forEach(function(e){
@@ -614,7 +664,8 @@ function route(){
   const v = parti[0] || 'home', arg = decodeURIComponent(parti[1] || '');
   let html, corrente = '', parte = null;
   const cap = function(k){ parte = k; return 'Parte '+PARTI[k][1]+' · '+PARTI[k][2]; };
-  if(v==='muscolo'){ html = V.muscolo(arg); corrente = cap('muscoli'); }
+  if(v==='principio'){ html = V.principio(arg); corrente = cap('principi'); }
+  else if(v==='muscolo'){ html = V.muscolo(arg); corrente = cap('muscoli'); }
   else if(v==='problema'){ html = V.problema(arg); corrente = cap('problemi'); }
   else if(v==='studio'){ html = V.studio(arg); corrente = cap('studi'); }
   else if(v==='live'){ html = V.live(arg); corrente = cap('studi'); }

@@ -66,7 +66,7 @@ const PROBLEMI = [
 "liv": "C"
 },
 {
-"c": "Stai alzando oltre i 90 gradi: sopra la linea delle spalle l’elevazione scapolare diventa dominante",
+"c": "Carico oltre quello che il deltoide può gestire, con la spalla che si eleva per compensare",
 "liv": "C"
 },
 {
@@ -85,9 +85,9 @@ const PROBLEMI = [
 "liv": "C"
 },
 {
-"s": "Fermati all’altezza delle spalle",
-"come": "Sopra i 90 gradi il lavoro passa al trapezio. Non serve arrivare in alto.",
-"liv": "C"
+"s": "Distingui la scrollata dalla rotazione della scapola",
+"come": "La scapola che ruota verso l’alto mentre alzi il braccio è normale e necessaria: senza quella rotazione l’elevazione non è possibile, e il trapezio superiore è uno dei muscoli che la producono. Quello che devi togliere è la **scrollata**, cioè la spalla che sale verso l’orecchio senza rotazione, e che compare quando il carico è troppo alto. Non cercare di spegnere il trapezio: togli il peso di troppo.",
+"liv": "M"
 },
 {
 "s": "Passa alla macchina o ai cavi da seduto",
@@ -103,6 +103,11 @@ const PROBLEMI = [
 "s": "Metti le alzate dopo un esercizio che stanca il trapezio",
 "come": "Se il trapezio arriva già affaticato, è meno propenso a dominare il movimento. Rimedio parziale.",
 "liv": "C"
+},
+{
+"s": "Se vuoi restare dove il carico è massimo, fermati intorno alla linea delle spalle",
+"come": "È un argomento di efficienza, non di attivazione: il momento richiesto è massimo a novanta gradi e sopra cala. Salire più in alto non è dannoso, semplicemente aggiunge ripetizioni sotto carico minore.",
+"liv": "M"
 }
 ],
 "quando_fermarsi": "Se il fastidio al collo persiste a riposo o si accompagna a mal di testa, sospendi e fai valutare.",
