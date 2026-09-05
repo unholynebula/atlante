@@ -108,10 +108,11 @@ let liveCache = {};
    che l'utente qualifica lui (TITLE:, AUTH:, EXT_ID:) passano intatti. */
 function costruisciQuery(q){
   const pezzi = q.match(/"[^"]*"|\S+/g) || [];
-  const termini = pezzi.map(function(t){
+  const nude = [], termini = pezzi.map(function(t){
     if(t.charAt(0) === '"') return t;
     if(t.indexOf(':') > 0) return t;
     if(/^(AND|OR|NOT)$/i.test(t)) return t.toUpperCase();
+    nude.push(t);
     return 'TITLE_ABS:' + t;
   });
   const uniti = [];
@@ -119,7 +120,14 @@ function costruisciQuery(q){
     if(i > 0 && !/^(AND|OR|NOT)$/.test(t) && !/^(AND|OR|NOT)$/.test(termini[i-1])) uniti.push('AND');
     uniti.push(t);
   });
-  return uniti.join(' ');
+  const perTermini = uniti.join(' ');
+  /* Due parole nude possono essere una frase fatta: "lengthened partials"
+     come termini separati da' un solo riscontro, come frase sei. Si cercano
+     entrambe le forme e si uniscono, cosi' non se ne perde nessuna. */
+  if(nude.length > 1 && nude.length === pezzi.length){
+    return '("' + nude.join(' ').replace(/"/g, '') + '") OR (' + perTermini + ')';
+  }
+  return perTermini;
 }
 /* Il contesto non contiene termini generici come "muscle" o "hypertrophy":
    sono parole che l'utente digita, e includerle renderebbe il filtro inutile.
