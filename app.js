@@ -56,12 +56,23 @@ function studiById(ids){
   return (ids||[]).map(function(id){ return STUDI.filter(function(s){ return s.id===id; })[0]; })
                   .filter(Boolean);
 }
+/* Un riferimento in fondo a una scheda e' una nota, non una porta: toccarlo
+   apre la sintesi sul posto invece di spostarti nella parte Studi. Chi vuole
+   la scheda intera ha il rimando esplicito dentro l'apertura. */
 function studioRiga(s){
   const n = indiceDi(STUDI, s.id);
-  return '<div class="studio" data-vai="#/studio/'+s.id+'">'+
+  return '<div class="studio rif" data-rif="'+s.id+'">'+
     '<div class="marg">'+sigla(s.liv)+'</div>'+
     '<div><div class="studio-t">'+esc(s.titolo)+'</div>'+
-      '<div class="studio-r">'+esc(s.autore)+', '+esc(s.rivista)+', '+s.anno+' \u00b7 '+numSez('studi', n)+'</div>'+
+      '<div class="studio-r">'+esc(s.autore)+', '+esc(s.rivista)+', '+s.anno+
+        ' \u00b7 <span class="rif-apri">'+numSez('studi', n)+' ▸</span></div>'+
+      '<div class="rif-corpo" hidden>'+
+        '<div class="rif-sintesi">'+gr(s.sintesi)+'</div>'+
+        '<div class="rif-azioni">'+
+          '<button class="rif-link" data-vai="#/studio/'+s.id+'">Scheda completa</button>'+
+          '<a class="rif-link" href="https://pubmed.ncbi.nlm.nih.gov/'+esc(s.pmid)+'/" target="_blank" rel="noopener">PubMed</a>'+
+        '</div>'+
+      '</div>'+
     '</div></div>';
 }
 
@@ -714,6 +725,17 @@ window.addEventListener('hashchange', route);
 document.addEventListener('click', function(ev){
   const g = ev.target.closest('[data-vai]');
   if(g){ vai(g.getAttribute('data-vai')); return; }
+  const rif = ev.target.closest('[data-rif]');
+  if(rif && !ev.target.closest('[data-vai]') && !ev.target.closest('a')){
+    const c = rif.querySelector('.rif-corpo');
+    const seg = rif.querySelector('.rif-apri');
+    if(c){
+      c.hidden = !c.hidden;
+      if(seg) seg.textContent = seg.textContent.replace(c.hidden ? '▾' : '▸', c.hidden ? '▸' : '▾');
+      rif.classList.toggle('aperto', !c.hidden);
+    }
+    return;
+  }
   const l = ev.target.closest('[data-live]');
   if(l){ vai('#/live/'+encodeURIComponent(l.getAttribute('data-live'))); return; }
   const o = ev.target.closest('[data-ord]');

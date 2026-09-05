@@ -225,6 +225,18 @@ a{color:var(--inchiostro);text-decoration:none;border-bottom:1px solid var(--ros
 .studio-t{font-size:16px;font-weight:600;line-height:1.32;}
 .studio-r{font-family:var(--bastoni);font-size:11.5px;color:var(--inchiostro-3);margin-top:5px;}
 .studio-s{font-size:14.5px;color:var(--inchiostro-2);line-height:1.58;margin-top:7px;}
+/* riferimenti: nota che si apre sul posto */
+.rif{cursor:pointer;}
+.rif.aperto{background:var(--carta-2);}
+.rif-apri{font-family:var(--macchina);font-size:10.5px;color:var(--rosso);white-space:nowrap;}
+.rif-corpo{margin-top:10px;padding-left:12px;border-left:1px solid var(--filo-2);}
+.rif-sintesi{font-size:14px;line-height:1.6;color:var(--inchiostro-2);}
+.rif-azioni{display:flex;gap:18px;margin-top:10px;}
+.rif-link{
+  background:none;border:none;padding:0;cursor:pointer;font-family:var(--bastoni);
+  font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--rosso);
+  border-bottom:1px solid var(--rosso);
+}
 .marca{
   font-family:var(--bastoni);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;
   color:var(--inchiostro-3);white-space:nowrap;
