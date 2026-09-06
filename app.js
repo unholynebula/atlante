@@ -328,8 +328,33 @@ V.muscoli = function(){
     });
     h += '</div>';
   });
+  h += '<div class="colophon">Le tavole delle schede sono incisioni anatomiche storiche, '+
+    'riprodotte come maschere così da prendere i colori della pagina: il tratto in inchiostro, '+
+    'il muscolo della scheda in rosso. Vengono da Wikimedia Commons — in gran parte tavole della '+
+    'Gray’s Anatomy del 1918 di Henry Vandyke Carter, in pubblico dominio, e rielaborazioni con '+
+    'licenza CC BY-SA 3.0. Autore e licenza sono in didascalia sotto ogni tavola. Su avambracci '+
+    'ed erettori la tavola disponibile non evidenzia un muscolo: resta la sola incisione.</div>';
   return h;
 };
+
+/* Due strati sovrapposti, mascherati dalle due immagini: il muscolo sotto in
+   rosso, il tratto dell'incisione sopra in inchiostro. I colori vengono dai
+   token del tema, quindi il modo notte funziona senza una seconda immagine. */
+function tavola(mid){
+  const t = (typeof TAVOLE === 'undefined') ? null : TAVOLE[mid];
+  if(!t) return '';
+  const base = 'anatomia/' + mid;
+  /* Le tavole verticali sarebbero altissime a piena larghezza: restringo la
+     figura quanto basta perché non superi un'altezza ragionevole. */
+  const largMax = Math.min(330, Math.round(430 * t.w / t.h));
+  let h = '<figure class="tav"><div class="tav-f" style="aspect-ratio:' + t.w + '/' + t.h +
+          ';max-width:' + largMax + 'px">';
+  if(t.ev) h += '<i class="tav-m" style="-webkit-mask-image:url(' + base + '-muscolo.png);mask-image:url(' + base + '-muscolo.png)"></i>';
+  h += '<i class="tav-l" style="-webkit-mask-image:url(' + base + '-linee.png);mask-image:url(' + base + '-linee.png)"></i>';
+  h += '</div><figcaption>' + (t.ev ? 'Il muscolo di questa scheda è in evidenza. ' : '') +
+       esc(t.aut) + ' · ' + esc(t.lic) + '</figcaption></figure>';
+  return h;
+}
 
 V.muscolo = function(id){
   const i = indiceDi(MUSCOLI, id);
@@ -341,6 +366,7 @@ V.muscolo = function(id){
     '<div><dt>Capi</dt><dd>'+m.capi.join('<br>')+'</dd></div>'+
     '<div><dt>Funzioni</dt><dd>'+m.funzioni.join('<br>')+'</dd></div>'+
     '<div><dt>Volume</dt><dd>'+m.volume+'</dd></div></div>';
+  h += tavola(m.id);
   h += '<h2>Cosa determina lo stimolo</h2><p>'+gr(m.stimolo)+'</p>';
   if(m.meccanica){
     h += '<h2>Meccanica '+sigla('M')+'</h2><div class="prosa"><p>'+

@@ -1,0 +1,146 @@
+{
+ "adduttori": {
+  "file": "Gray430.png",
+  "licenza": "Pubblico dominio",
+  "autore": "Gray’s Anatomy 1918, Henry Vandyke Carter",
+  "evidenziato": true,
+  "w": 236,
+  "h": 819
+ },
+ "altoschiena": {
+  "file": "Trapezius.png",
+  "licenza": "CC BY-SA 3.0",
+  "autore": "Wikimedia Commons",
+  "evidenziato": true,
+  "w": 459,
+  "h": 504
+ },
+ "avambracci": {
+  "file": "Brachioradialis.png",
+  "licenza": "Pubblico dominio",
+  "autore": "Gray’s Anatomy 1918, Henry Vandyke Carter",
+  "evidenziato": false,
+  "w": 265,
+  "h": 820
+ },
+ "bicipite": {
+  "file": "Biceps brachii.png",
+  "licenza": "CC BY-SA 3.0",
+  "autore": "Wikimedia Commons",
+  "evidenziato": true,
+  "w": 460,
+  "h": 464
+ },
+ "core": {
+  "file": "Rectus abdominis.png",
+  "licenza": "CC BY-SA 3.0",
+  "autore": "Wikimedia Commons",
+  "evidenziato": true,
+  "w": 460,
+  "h": 462
+ },
+ "deltoide": {
+  "file": "Deltoideus.png",
+  "licenza": "CC BY-SA 3.0",
+  "autore": "Wikimedia Commons",
+  "evidenziato": true,
+  "w": 460,
+  "h": 456
+ },
+ "dorsale": {
+  "file": "Latissimus dorsi.PNG",
+  "licenza": "Pubblico dominio",
+  "autore": "Mikael Häggström",
+  "evidenziato": true,
+  "w": 460,
+  "h": 725
+ },
+ "erettori": {
+  "file": "Gray389 - Erector spinae.png",
+  "licenza": "Pubblico dominio",
+  "autore": "Gray’s Anatomy 1918, Henry Vandyke Carter",
+  "evidenziato": false,
+  "w": 434,
+  "h": 820
+ },
+ "femorali": {
+  "file": "Biceps femoris muscle long head.PNG",
+  "licenza": "Pubblico dominio",
+  "autore": "Mikael Häggström",
+  "evidenziato": true,
+  "w": 301,
+  "h": 820
+ },
+ "flessorianca": {
+  "file": "Tensor fasciae latae.png",
+  "licenza": "Pubblico dominio",
+  "autore": "Wikimedia Commons",
+  "evidenziato": true,
+  "w": 459,
+  "h": 501
+ },
+ "glutei": {
+  "file": "Gluteus maximus muscle.PNG",
+  "licenza": "Pubblico dominio",
+  "autore": "Mikael Häggström",
+  "evidenziato": true,
+  "w": 301,
+  "h": 820
+ },
+ "pettorale": {
+  "file": "Pectoralis major.png",
+  "licenza": "CC BY-SA 3.0",
+  "autore": "Wikimedia Commons",
+  "evidenziato": true,
+  "w": 460,
+  "h": 468
+ },
+ "polpacci": {
+  "file": "Gastrocnemius.png",
+  "licenza": "CC BY-SA 3.0",
+  "autore": "Wikimedia Commons",
+  "evidenziato": true,
+  "w": 460,
+  "h": 516
+ },
+ "quadricipite": {
+  "file": "Vastus lateralis2.png",
+  "licenza": "CC BY-SA 3.0",
+  "autore": "Wikimedia Commons",
+  "evidenziato": true,
+  "w": 460,
+  "h": 477
+ },
+ "serrato": {
+  "file": "Serratus anterior.png",
+  "licenza": "CC BY-SA 3.0",
+  "autore": "Wikimedia Commons",
+  "evidenziato": true,
+  "w": 460,
+  "h": 478
+ },
+ "tibiale": {
+  "file": "Tibialis.png",
+  "licenza": "CC BY-SA 3.0",
+  "autore": "Wikimedia Commons",
+  "evidenziato": true,
+  "w": 460,
+  "h": 489
+ },
+ "trapsup": {
+  "file": "Trapezius.png",
+  "licenza": "CC BY-SA 3.0",
+  "autore": "Wikimedia Commons",
+  "evidenziato": true,
+  "w": 459,
+  "h": 504
+ },
+ "tricipite": {
+  "file": "Triceps brachii.png",
+  "licenza": "CC BY-SA 3.0",
+  "autore": "Wikimedia Commons",
+  "evidenziato": true,
+  "w": 460,
+  "h": 504
+ }
+}

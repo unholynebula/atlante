@@ -110,3 +110,24 @@ I file `data-*.js` sono semplici array. Per aggiungere uno studio serve un PMID 
 verificalo prima con
 
     curl -s 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PMID&format=json&resultType=core'
+
+## Tavole anatomiche
+
+Ogni scheda muscolo porta un'illustrazione: un'incisione anatomica storica
+riprodotta come **due maschere PNG** — il tratto e il muscolo evidenziato.
+In pagina diventano due strati colorati con i token del tema, quindi seguono
+il modo giorno e il modo notte senza una seconda serie di immagini.
+
+Le fonti sono su Wikimedia Commons: in gran parte tavole della *Gray's
+Anatomy* del 1918 di Henry Vandyke Carter (pubblico dominio) e rielaborazioni
+con licenza CC BY-SA 3.0. Autore e licenza sono in didascalia sotto ogni
+tavola, e in `anatomia/fonti.json`.
+
+Ogni tavola e' stata verificata in tre modi prima di entrare: fondo bianco con
+tratto scuro e area rossa; descrizione su Commons che nomina il muscolo
+giusto; e uso effettivo nella voce di Wikipedia di quel muscolo. Tre candidate
+sono state scartate proprio da questo controllo, perche' raffiguravano un
+muscolo diverso da quello atteso.
+
+Su **avambracci** ed **erettori** la tavola disponibile non ha un muscolo
+evidenziato: resta la sola incisione, e la didascalia non promette altro.

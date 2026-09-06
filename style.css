@@ -199,6 +199,27 @@ a{color:var(--inchiostro);text-decoration:none;border-bottom:1px solid var(--ros
 }
 .dati dd{margin:0;font-size:14.5px;line-height:1.5;color:var(--inchiostro-2);}
 
+/* ---------- tavole anatomiche ---------- */
+/* L'immagine e' una maschera, non un colore: il tratto prende var(--inchiostro-2)
+   e il muscolo var(--rosso), quindi l'illustrazione segue il tema da sola. */
+.tav{margin:22px 0 26px;padding:0;}
+.tav-f{
+  position:relative;width:100%;max-width:330px;margin:0 auto;
+}
+.tav-f i{
+  position:absolute;inset:0;display:block;
+  -webkit-mask-size:contain;mask-size:contain;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  -webkit-mask-position:center;mask-position:center;
+}
+.tav-l{background:var(--inchiostro-2);}
+.tav-m{background:var(--rosso);opacity:.88;}
+.tav figcaption{
+  margin-top:12px;text-align:center;
+  font-family:var(--bastoni);font-size:10px;letter-spacing:0.06em;
+  color:var(--inchiostro-3);line-height:1.5;
+}
+
 /* ---------- elenco esercizi ---------- */
 .es{
   display:grid;grid-template-columns:var(--margine) 1fr auto;column-gap:14px;
