@@ -19,10 +19,10 @@ poi apri `http://localhost:8000` e, da iPhone, "Aggiungi a Home".
 | `icon-*.png`, `apple-touch-icon.png` | Icone generate: tre barre nei colori dei livelli di evidenza |
 | `style.css` | Impaginazione da manuale stampato: carta chiara, testo in grazie, sezioni numerate, colonna di margine. Il colore è riservato alle sigle di evidenza |
 | `app.js` | Navigazione su hash, viste, ricerca locale, ricerca live, calcolatori, salvataggi |
-| `data-principi.js` | 28 voci di meccanica e biologia: momenti, curve di resistenza, lunghezza-tensione, ritmo scapolo-omerale |
-| `data-studi.js` | 127 studi con PMID verificato, tema, livello di evidenza e riassunto |
+| `data-principi.js` | 33 voci di meccanica e biologia: momenti, curve di resistenza, lunghezza-tensione, ritmo scapolo-omerale |
+| `data-studi.js` | 138 studi con PMID verificato, tema, livello di evidenza e riassunto |
 | `data-muscoli.js` | 18 schede: meccanica, posizione articolare, 144 esercizi mappati per funzione e lunghezza |
-| `data-contenuti.js` | 44 problemi, 44 miti, 100 voci di glossario, 27 archivi con ricerche pronte |
+| `data-contenuti.js` | 48 problemi, 54 miti, 110 voci di glossario, 27 archivi con ricerche pronte |
 
 ## Impianto
 
@@ -56,6 +56,16 @@ I file sono richiamati con un'impronta (`app.js?v=…`) perche' il browser non
 serva la versione vecchia dalla cache. Dopo aver toccato un file:
 
     python3 versiona.py
+
+## Come si verifica una voce
+
+Il metodo, in ordine:
+
+1. il titolo si cerca su Europe PMC e deve tornare un aggancio **esatto**;
+   gli agganci approssimativi si scartano
+2. si recupera l'abstract e **la sintesi si scrive da quello**, non a memoria
+3. ogni cifra citata deve comparire nell'abstract; se non c'e', si toglie
+4. i PMID si ricontrollano in blocco: `python3 verifica_pmid.py`
 
 ## Come aggiungere contenuto
 

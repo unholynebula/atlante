@@ -575,7 +575,10 @@ const PROBLEMI = [
 "refalo_failure",
 "grgic_failure",
 "doms_hypertrophy",
-"trexler_metabolic"
+"trexler_metabolic",
+"refalo_velocita",
+"moran_recupero",
+"refalo_ipertrofia"
 ]
 },
 {
@@ -2016,7 +2019,10 @@ const PROBLEMI = [
 "refalo_review",
 "grgic_failure",
 "steele_effort",
-"grgic_rir_aff"
+"grgic_rir_aff",
+"refalo_velocita",
+"moran_recupero",
+"refalo_ipertrofia"
 ]
 },
 {
@@ -2149,6 +2155,181 @@ const PROBLEMI = [
 "roberts_mechanisms",
 "pelland_volume",
 "plotkin_overload"
+]
+},
+{
+"id": "integratori_quali",
+"t": "Quali integratori servono davvero",
+"area": "Programmazione",
+"sintomo": "Spesa mensile in integratori senza sapere quali abbiano un effetto.",
+"cause": [
+{
+"c": "Marketing che presenta come equivalenti prodotti con prove molto diverse",
+"liv": "A"
+},
+{
+"c": "Aspettativa che un integratore sostituisca volume o alimentazione",
+"liv": "A"
+}
+],
+"soluzioni": [
+{
+"s": "Parti da proteine e creatina",
+"come": "Sono i due con il rapporto fra prova ed effetto davvero solido. Oltre 1,62 g per kg al giorno di proteine totali non si osservano ulteriori guadagni.",
+"liv": "A"
+},
+{
+"s": "La caffeina è per la prestazione, non per la crescita",
+"come": "Più prestazione può dare più volume nel tempo, ma non agisce sull’ipertrofia.",
+"liv": "A"
+},
+{
+"s": "Beta-alanina solo se fai sforzi da uno a quattro minuti",
+"come": "Fuori da quella finestra l’effetto documentato non c’è.",
+"liv": "A"
+},
+{
+"s": "Togli gli antinfiammatori dalla routine",
+"come": "Dosi massime da banco di ibuprofene sono state associate a meno ipertrofia.",
+"liv": "B"
+}
+],
+"quando_fermarsi": "",
+"studi": [
+"morton_protein",
+"kreider_creatina",
+"guest_caffeina",
+"trexler_beta_alanina",
+"lilja_ibuprofene"
+]
+},
+{
+"id": "dormo_poco",
+"t": "Dormo poco e non so quanto mi costa",
+"area": "Programmazione",
+"sintomo": "Sonno insufficiente cronico, dubbio su quanto incida sui risultati.",
+"cause": [
+{
+"c": "Privazione acuta che peggiora la prestazione, con effetto maggiore nel pomeriggio",
+"liv": "A"
+},
+{
+"c": "Fatica centrale che si accumula e riduce il volume sostenibile",
+"liv": "B"
+}
+],
+"soluzioni": [
+{
+"s": "Proteggi il sonno prima di aggiungere volume",
+"come": "È la variabile fuori dalla palestra con le prove migliori. Aggiungere serie mentre dormi male peggiora il conto.",
+"liv": "A"
+},
+{
+"s": "Sposta le sedute pesanti al mattino se dormi poco",
+"come": "L’effetto della privazione acuta è più marcato nel pomeriggio.",
+"liv": "A"
+},
+{
+"s": "Riduci il volume nelle settimane storte",
+"come": "Meglio meno serie fatte bene che le stesse fatte da stanco.",
+"liv": "B"
+}
+],
+"quando_fermarsi": "Sonno rotto per settimane, battito a riposo alto, calo di peso involontario: fermati e rivedi il carico complessivo.",
+"studi": [
+"craven_sleep",
+"knowles_sleep"
+]
+},
+{
+"id": "confronto",
+"t": "Mi confronto con quelli che vedo online",
+"area": "Programmazione",
+"sintomo": "Frustrazione nel non avvicinarsi ai risultati che si vedono in rete.",
+"cause": [
+{
+"c": "Confronto con persone che usano farmacologia, senza saperlo",
+"liv": "A"
+},
+{
+"c": "Variabilità individuale di risposta molto ampia e documentata",
+"liv": "A"
+},
+{
+"c": "Leve e proporzioni diverse, che cambiano l’aspetto a parità di muscolo",
+"liv": "B"
+}
+],
+"soluzioni": [
+{
+"s": "Sappi la scala del divario",
+"come": "Nello studio sul testosterone sovrafisiologico, chi lo riceveva senza allenarsi aumentava l’area del tricipite di 424 mm² mentre il placebo la riduceva di 81. Non è una differenza colmabile con la programmazione.",
+"liv": "A"
+},
+{
+"s": "Confrontati con te stesso di sei mesi fa",
+"come": "È l’unico confronto informativo. I carichi e le ripetizioni registrati sono il dato.",
+"liv": "A"
+},
+{
+"s": "Accetta la variabilità",
+"come": "Allenando 585 persone allo stesso modo, la variazione di sezione andava da −2% a +59%.",
+"liv": "A"
+}
+],
+"quando_fermarsi": "",
+"studi": [
+"bhasin_testosterone",
+"risposta_variabile",
+"braccio_leva"
+]
+},
+{
+"id": "cliente_sfida",
+"t": "Un cliente contesta quello che gli dico",
+"area": "Programmazione",
+"sintomo": "Chi alleni porta in sala un’informazione letta online che contraddice il tuo programma.",
+"cause": [
+{
+"c": "Affermazione popolare senza supporto, ripetuta abbastanza da sembrare vera",
+"liv": "A"
+},
+{
+"c": "Studio singolo presentato come definitivo",
+"liv": "A"
+},
+{
+"c": "Differenza reale fra ciò che dice la ricerca e ciò che vale per lui",
+"liv": "A"
+}
+],
+"soluzioni": [
+{
+"s": "Cerca l’affermazione nei Miti",
+"come": "Quarantaquattro voci con il verdetto e la fonte. Se c’è, hai già la risposta e il rimando.",
+"liv": "A"
+},
+{
+"s": "Distingui il livello di evidenza",
+"come": "Una meta-analisi su allenati e un meccanismo plausibile non si citano allo stesso modo. Le sigle servono a questo.",
+"liv": "A"
+},
+{
+"s": "Ammetti l’incertezza quando c’è",
+"come": "Dire «su questo la ricerca non è chiara, ecco perché ho scelto così» costruisce più fiducia di una certezza inventata.",
+"liv": "C"
+},
+{
+"s": "Cerca negli archivi davanti a lui",
+"come": "La ricerca live è a due tocchi. Mostrare come si verifica una cosa vale più della cosa verificata.",
+"liv": "C"
+}
+],
+"quando_fermarsi": "",
+"studi": [
+"vigotsky_emg",
+"haun_hypertrophy",
+"coratella_emg"
 ]
 }
 ];
@@ -2643,6 +2824,115 @@ const MITI = [
 "risposta_variabile"
 ],
 "id": "chi_ha_braccia_lunghe_non"
+},
+{
+"m": "Bisogna allenarsi per massimizzare il picco di testosterone",
+"v": "falso",
+"liv": "A",
+"s": "Le oscillazioni ormonali indotte dall’esercizio sono troppo piccole e troppo brevi per spiegare la crescita, e nello studio da cui nasce l’idea le concentrazioni **a riposo** non cambiavano dopo dodici settimane. Il segnale primario è la tensione meccanica. Per capire la scala vera: nel confronto sul testosterone sovrafisiologico, chi lo riceveva senza allenarsi guadagnava area muscolare mentre il placebo la perdeva.",
+"studi": [
+"mccall_ormoni",
+"bhasin_testosterone",
+"roberts_mechanisms"
+],
+"id": "bisogna_allenarsi_per_massimizzare_il"
+},
+{
+"m": "La beta-alanina aiuta a costruire muscolo",
+"v": "falso",
+"liv": "A",
+"s": "Aumenta la carnosina muscolare e tampona il pH, ma l’effetto documentato sulla prestazione si concentra in sforzi continui da uno a quattro minuti. Una serie di otto ripetizioni non cade in quella finestra. Non c’è motivo di aspettarsi ipertrofia.",
+"studi": [
+"trexler_beta_alanina"
+],
+"id": "la_beta_alanina_aiuta_a"
+},
+{
+"m": "Prendere un antinfiammatorio dopo l’allenamento aiuta il recupero",
+"v": "falso",
+"liv": "B",
+"s": "Dosi massime da banco di ibuprofene assunte con regolarità durante un programma sono state associate a **meno** ipertrofia rispetto a dosi basse di acido acetilsalicilico. Se ti serve per un dolore prendilo, ma non come routine post-allenamento.",
+"studi": [
+"lilja_ibuprofene"
+],
+"id": "prendere_un_antinfiammatorio_dopo_l"
+},
+{
+"m": "Le donne devono evitare il cedimento perché recuperano peggio",
+"v": "falso",
+"liv": "B",
+"s": "È il contrario. Dopo sei serie di panca a cedimento, il calo di velocità a quattro minuti era del 29% negli uomini contro il 21% nelle donne, e il calo dalla prima all’ultima serie del 15% contro il 9%. Le donne tollerano meglio il lavoro vicino al cedimento.",
+"studi": [
+"refalo_velocita",
+"nuzzo_sesso"
+],
+"id": "le_donne_devono_evitare_il"
+},
+{
+"m": "L’allenamento coi pesi blocca la crescita nei ragazzi",
+"v": "falso",
+"liv": "A",
+"s": "Esiste un documento di consenso internazionale sull’allenamento contro resistenza nei giovani, adottato da società di medicina dello sport, scienze motorie e pediatria. Il punto critico è la supervisione tecnica e la progressione graduale, non l’età.",
+"studi": [
+"lloyd_giovani"
+],
+"id": "l_allenamento_coi_pesi_blocca"
+},
+{
+"m": "Dopo i sessant’anni serve allenarsi più leggero",
+"v": "parziale",
+"liv": "A",
+"s": "Cambiano le dosi, non i principi. La relazione dose-risposta negli anziani esiste ancora, e la risposta all’integrazione proteica **cala** con l’età, cioè serve più proteina per lo stesso effetto. Abbassare tutto per prudenza toglie proprio lo stimolo che conserva l’autonomia.",
+"studi": [
+"borde_anziani",
+"morton_protein"
+],
+"id": "dopo_i_sessant_anni_serve"
+},
+{
+"m": "Andare a cedimento fa crescere di più",
+"v": "falso",
+"liv": "A",
+"s": "In otto settimane su persone allenate, con una gamba a cedimento e l’altra a 1-2 ripetizioni in riserva, l’aumento di spessore del quadricipite è risultato praticamente identico: 0,181 contro 0,182 centimetri. Quello che cambia è la fatica, costantemente maggiore a cedimento.",
+"studi": [
+"refalo_ipertrofia",
+"refalo_velocita",
+"grgic_failure"
+],
+"id": "andare_a_cedimento_fa_crescere"
+},
+{
+"m": "Il recupero fra le serie non conta, basta il volume",
+"v": "parziale",
+"liv": "A",
+"s": "Nella meta-analisi bayesiana le durate si sovrappongono ampiamente, ma nel confronto diretto su allenati tre minuti hanno prodotto più forza di un minuto. E allenare a cedimento rallenta il recupero **fino a 24-48 ore**, anche a parità di volume totale. Il recupero conta soprattutto per quello che ti permette di fare dopo.",
+"studi": [
+"singer_rest",
+"schoenfeld_rest",
+"moran_recupero"
+],
+"id": "il_recupero_fra_le_serie"
+},
+{
+"m": "Se fumi basta allenarsi di più per compensare",
+"v": "falso",
+"liv": "B",
+"s": "Nei fumatori di lungo corso la sintesi proteica muscolare è depressa e l’espressione di miostatina, che è un freno alla crescita, è aumentata. Non è una questione di volume: è il macchinario della crescita a lavorare peggio.",
+"studi": [
+"petersen_fumo"
+],
+"id": "se_fumi_basta_allenarsi_di"
+},
+{
+"m": "Il calo di velocità del bilanciere è solo una moda",
+"v": "falso",
+"liv": "B",
+"s": "È la misura oggettiva più semplice della fatica accumulata. Quattro minuti dopo sei serie di panca, la velocità era scesa del 25% a cedimento, del 13% a 1 RIR e dell'8% a 3 RIR, e a 48 ore le differenze erano sparite. Ti dice quanto stai pagando una scelta, senza chiederti come ti senti.",
+"studi": [
+"refalo_velocita",
+"helms_rpe"
+],
+"id": "il_calo_di_velocita_del"
 }
 ];
 const GLOSSARIO = [
@@ -3045,6 +3335,46 @@ const GLOSSARIO = [
 {
 "t": "Validità ecologica",
 "d": "Quanto un risultato di laboratorio si trasferisce alla pratica reale. Spesso il punto debole degli studi sull’allenamento."
+},
+{
+"t": "Dose sovrafisiologica",
+"d": "Quantità di un ormone superiore a quella che il corpo produce. Nel riferimento del 1996 erano 600 mg di testosterone enantato a settimana."
+},
+{
+"t": "Miostatina",
+"d": "Proteina che frena la crescita muscolare. La sua espressione aumenta in condizioni sfavorevoli, per esempio nei fumatori di lungo corso."
+},
+{
+"t": "Carnosina",
+"d": "Dipeptide che tampona il pH dentro la fibra. La beta-alanina ne aumenta la concentrazione."
+},
+{
+"t": "HMB",
+"d": "Metabolita della leucina. Sicuro, con meccanismo proposto duplice; l’entità dell’effetto in allenati ben nutriti resta discussa."
+},
+{
+"t": "Fase follicolare",
+"d": "Prima metà del ciclo mestruale, con estrogeno in aumento. Alcuni studi indicano forza e capacità anaerobica maggiori."
+},
+{
+"t": "Calo di velocità",
+"d": "Riduzione della velocità di sollevamento dopo o dentro una serie. Misura oggettiva della fatica: 25% a cedimento contro 8% a 3 RIR, quattro minuti dopo."
+},
+{
+"t": "Ipotesi ormonale",
+"d": "Idea che i picchi ormonali acuti guidino l’ipertrofia. Nata da correlazioni su campioni piccoli, oggi ampiamente ridimensionata."
+},
+{
+"t": "Studio entro soggetto su arti",
+"d": "Un arto per condizione: elimina la variabilità fra persone. Usato in quasi tutti i confronti diretti fra esercizi citati qui."
+},
+{
+"t": "Intervallo di credibilità",
+"d": "L’equivalente bayesiano dell’intervallo di confidenza: la fascia in cui il valore vero sta con una data probabilità, dati i dati e il modello."
+},
+{
+"t": "Effetto di ordine",
+"d": "Distorsione dovuta alla sequenza in cui si somministrano le condizioni. Motivo per cui i confronti seri le randomizzano."
 }
 ];
 const FONTI = [

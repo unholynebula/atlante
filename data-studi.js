@@ -131,7 +131,7 @@ const STUDI = [
 "cit": 237,
 "tema": "anatomia",
 "liv": "A",
-"sintesi": "Il lavoro del 1944 che ha descritto il ritmo scapolo-omerale, cioè il fatto che l’elevazione del braccio richiede la rotazione della scapola. È la fonte da cui deriva il rapporto due a uno che si cita ancora oggi.",
+"sintesi": "Il lavoro del 1944 che ha descritto il ritmo scapolo-omerale, cioè il fatto che l’elevazione del braccio richiede la rotazione della scapola. È la fonte a cui si fa risalire il rapporto comunemente citato fra movimento dell’omero e della scapola. L’abstract non è disponibile in archivio: il rimando vale come attribuzione storica.",
 "kw": "scapola ritmo scapolo-omerale elevazione spalla"
 },
 {
@@ -146,7 +146,7 @@ const STUDI = [
 "cit": 40,
 "tema": "carico",
 "liv": "B",
-"sintesi": "Progredire aggiungendo ripetizioni a parità di carico produce ipertrofia paragonabile a progredire aggiungendo carico. Il sovraccarico non deve per forza essere in chili.",
+"sintesi": "43 persone con almeno un anno di allenamento, 8 settimane. Aumentare il carico tenendo fisse le ripetizioni contro aumentare le ripetizioni tenendo fisso il carico: gli esiti su ipertrofia, forza e resistenza sono risultati paragonabili. Il sovraccarico progressivo non deve per forza essere in chili.",
 "kw": "sovraccarico progressivo ripetizioni carico"
 },
 {
@@ -236,7 +236,7 @@ const STUDI = [
 "cit": 445,
 "tema": "carico",
 "liv": "B",
-"sintesi": "Il carico non determina l’ipertrofia: 30% e 80% del massimale, portati a cedimento, producono guadagni simili in giovani uomini. È lo studio che ha reso difficile continuare a sostenere le zone di ripetizioni.",
+"sintesi": "18 uomini, 10 settimane, una gamba per condizione. Aumenti di volume muscolare misurati in risonanza: **+6,8% al 30% del massimale per 3 serie, +7,2% all'80% per 3 serie, +3,2% all'80% per una sola serie**. Nessuna differenza fra le tre. La forza dinamica massimale invece è cresciuta di più con l'80%: il carico non decide l’ipertrofia, decide la forza.",
 "kw": "carico trenta ottanta percento cedimento ipertrofia"
 },
 {
@@ -285,6 +285,21 @@ const STUDI = [
 "kw": "cedimento RIR ipertrofia forza"
 },
 {
+"id": "refalo_ipertrofia",
+"pmid": "38393985",
+"doi": "10.1080/02640414.2024.2321021",
+"titolo": "Similar muscle hypertrophy following eight weeks of resistance training to momentary muscular failure or with repetitions-in-reserve in resistance-trained individuals",
+"rivista": "Journal of sports sciences",
+"anno": "2024",
+"autore": "Refalo MC",
+"oa": false,
+"cit": 14,
+"tema": "cedimento",
+"liv": "B",
+"sintesi": "18 persone allenate, 8 settimane, una gamba per condizione su pressa e leg extension. Cedimento contro 1-2 RIR: **l’aumento di spessore del quadricipite è risultato praticamente identico** (0,181 contro 0,182 cm). Il calo di velocità e di ripetizioni era invece costantemente maggiore a cedimento. Stesso risultato, più fatica.",
+"kw": "cedimento RIR quadricipite spessore ipertrofia"
+},
+{
 "id": "refalo_review",
 "pmid": "36334240",
 "doi": "10.1007/s40279-022-01784-y",
@@ -300,6 +315,21 @@ const STUDI = [
 "kw": "cedimento RIR rassegna"
 },
 {
+"id": "refalo_velocita",
+"pmid": "36752989",
+"doi": "10.1186/s40798-023-00554-y",
+"titolo": "Influence of Resistance Training Proximity-to-Failure, Determined by Repetitions-in-Reserve, on Neuromuscular Fatigue in Resistance-Trained Males and Females",
+"rivista": "Sports medicine - open",
+"anno": "2023",
+"autore": "Refalo MC",
+"oa": true,
+"cit": 31,
+"tema": "cedimento",
+"liv": "B",
+"sintesi": "24 persone allenate, sei serie di panca al 75% del massimale portate a cedimento, a 1 RIR o a 3 RIR. **Quattro minuti dopo, la velocità di sollevamento era scesa del 25% a cedimento, del 13% a 1 RIR e dell'8% a 3 RIR.** A 24 ore il divario era quasi chiuso e a 48 ore sparito. Il calo di velocità dalla prima all’ultima serie era del 22% a cedimento contro il 9% a 1 RIR. Negli uomini il calo era maggiore che nelle donne.",
+"kw": "cedimento RIR fatica velocità recupero panca"
+},
+{
 "id": "grgic_failure",
 "pmid": "33497853",
 "doi": "10.1016/j.jshs.2021.01.007",
@@ -311,7 +341,7 @@ const STUDI = [
 "cit": 111,
 "tema": "cedimento",
 "liv": "A",
-"sintesi": "Meta-analisi su cedimento contro non cedimento: nessuna differenza significativa di ipertrofia, con la fatica che è però molto maggiore andando a cedimento.",
+"sintesi": "15 studi. Nessuna differenza significativa fra cedimento e non cedimento né sulla forza (ES −0,09) né sull’ipertrofia (ES 0,22). Negli studi in cui il volume non era pareggiato, il non cedimento risultava anzi favorito sulla forza. Tutti i partecipanti erano giovani adulti.",
 "kw": "cedimento fatica"
 },
 {
@@ -358,6 +388,21 @@ const STUDI = [
 "liv": "B",
 "sintesi": "Le persone sbagliano sistematicamente a stimare quante ripetizioni mancano al cedimento, e tendono a sottostimare lo sforzo residuo. È il limite pratico di ogni prescrizione basata sul RIR.",
 "kw": "RIR stima errore autovalutazione"
+},
+{
+"id": "moran_recupero",
+"pmid": "28965198",
+"doi": "10.1007/s00421-017-3725-7",
+"titolo": "Time course of recovery following resistance training leading or not to failure",
+"rivista": "European journal of applied physiology",
+"anno": "2017",
+"autore": "Morán-Navarro R",
+"oa": false,
+"cit": 121,
+"tema": "cedimento",
+"liv": "B",
+"sintesi": "10 uomini allenati, tre protocolli su panca e accosciata. Allenare a cedimento in ogni serie produce un calo acuto di prestazione maggiore **anche a parità di volume totale**, e il recupero è più lento fra le 24 e le 48 ore. Ammoniaca, ormone della crescita e creatinchinasi confermano il quadro: il cedimento allunga il tempo necessario a tornare in condizione.",
+"kw": "cedimento recupero fatica volume pareggiato"
 },
 {
 "id": "zourdos_rir",
@@ -416,7 +461,7 @@ const STUDI = [
 "cit": 189,
 "tema": "frequenza",
 "liv": "A",
-"sintesi": "Meta-analisi precedente sulla frequenza, che trovava un vantaggio per due sedute a settimana. Molti studi inclusi però non pareggiavano il volume: da leggere insieme all’aggiornamento del 2019.",
+"sintesi": "10 studi. L’analisi per frequenza binaria trova un effetto significativo sull’ipertrofia (P = 0,002), a favore della frequenza più alta. Il limite noto è che molti studi inclusi non pareggiavano il volume settimanale, ed è il motivo per cui l’aggiornamento del 2019 su soli confronti a volume pari arriva a conclusioni diverse.",
 "kw": "frequenza due volte settimana"
 },
 {
@@ -716,7 +761,7 @@ const STUDI = [
 "cit": 114,
 "tema": "lunghezza",
 "liv": "B",
-"sintesi": "Squat profondo contro squat parziale con carico pesante, 12 settimane: il profondo produce più ipertrofia sul quadricipite e adattamenti tendinei maggiori.",
+"sintesi": "17 studenti, 12 settimane, accosciata profonda (0-120° di flessione del ginocchio) contro parziale (0-60°). La profonda produce un aumento superiore della sezione della coscia anteriore (4-7%) e più forza isometrica e salto. **Sulla sezione del tendine rotuleo non emergono differenze**: il vantaggio è muscolare, non tendineo.",
 "kw": "squat profondità range quadricipite"
 },
 {
@@ -840,6 +885,21 @@ const STUDI = [
 "kw": "meccanismi tensione stress metabolico danno"
 },
 {
+"id": "mccall_ormoni",
+"pmid": "9916184",
+"doi": "10.1139/h99-009",
+"titolo": "Acute and chronic hormonal responses to resistance training designed to promote muscle hypertrophy",
+"rivista": "Canadian journal of applied physiology = Revue canadienne de physiologie appliquee",
+"anno": "1999",
+"autore": "McCall GE",
+"oa": false,
+"cit": 138,
+"tema": "meccanismi",
+"liv": "B",
+"sintesi": "11 studenti, 12 settimane, 33 sedute ad alto volume. **Le concentrazioni ormonali a riposo non sono cambiate** né per ormone della crescita né per testosterone o IGF-1. Gli aumenti acuti durante la seduta sì, e l’aumento acuto di ormone della crescita correlava con l’ipertrofia delle fibre (r fra 0,70 e 0,74). È uno studio piccolo e una correlazione: l’ipotesi ormonale è stata poi ampiamente ridimensionata.",
+"kw": "ormoni testosterone GH acuto cronico ipertrofia"
+},
+{
 "id": "henneman_size",
 "pmid": "14328454",
 "doi": "10.1152/jn.1965.28.3.560",
@@ -851,7 +911,7 @@ const STUDI = [
 "cit": 1399,
 "tema": "meccanismi",
 "liv": "A",
-"sintesi": "Il lavoro del 1965 che ha stabilito il principio della dimensione: le unità motorie vengono reclutate in ordine crescente di grandezza. È la base neurofisiologica su cui poggia tutto il ragionamento su carico e vicinanza al cedimento.",
+"sintesi": "Il lavoro del 1965 a cui si fa risalire il principio della dimensione: le unità motorie vengono reclutate in ordine crescente di grandezza. È la base neurofisiologica del ragionamento su carico e vicinanza al cedimento. L’abstract non è disponibile in archivio: il rimando vale come attribuzione storica.",
 "kw": "reclutamento unità motorie principio dimensione"
 },
 {
@@ -945,6 +1005,36 @@ const STUDI = [
 "kw": "ecografia affidabilità fascicolo pennazione"
 },
 {
+"id": "rathmacher_hmb",
+"pmid": "39699070",
+"doi": "10.1080/15502783.2024.2434734",
+"titolo": "International society of sports nutrition position stand: β-hydroxy-β-methylbutyrate (HMB)",
+"rivista": "Journal of the International Society of Sports Nutrition",
+"anno": "2025",
+"autore": "Rathmacher JA",
+"oa": true,
+"cit": 29,
+"tema": "nutrizione",
+"liv": "A",
+"sintesi": "Documento di posizione. L’HMB è un metabolita della leucina; il consumo cronico risulta sicuro fino ad almeno un anno e senza effetti negativi su tolleranza al glucosio e sensibilità insulinica. Il meccanismo proposto è duplice, aumento della sintesi proteica e riduzione della degradazione, per una via indipendente da quella che rileva la leucina. Può ridurre il danno muscolare.",
+"kw": "HMB leucina metabolita sintesi degradazione"
+},
+{
+"id": "lilja_ibuprofene",
+"pmid": "36794689",
+"doi": "10.1152/japplphysiol.00698.2022",
+"titolo": "Limited effect of over-the-counter doses of ibuprofen on mechanisms regulating muscle hypertrophy during resistance training in young adults",
+"rivista": "Journal of applied physiology (Bethesda, Md. : 1985)",
+"anno": "2023",
+"autore": "Lilja M",
+"oa": false,
+"cit": 7,
+"tema": "nutrizione",
+"liv": "B",
+"sintesi": "31 giovani, 8 settimane di leg extension con ibuprofene a 1200 mg al giorno contro acido acetilsalicilico a 75 mg. Gli autori avevano già mostrato che le dosi massime da banco di ibuprofene **riducono l’ipertrofia**; qui cercavano il meccanismo e hanno trovato pochissime differenze molecolari. L’indicazione pratica resta: non prendere antinfiammatori per abitudine dopo l’allenamento.",
+"kw": "ibuprofene antinfiammatori FANS ipertrofia recupero"
+},
+{
 "id": "guest_caffeina",
 "pmid": "33388079",
 "doi": "10.1186/s12970-020-00383-4",
@@ -1020,6 +1110,21 @@ const STUDI = [
 "kw": "deficit calorico dieta sintesi proteica"
 },
 {
+"id": "trexler_beta_alanina",
+"pmid": "26175657",
+"doi": "10.1186/s12970-015-0090-y",
+"titolo": "International society of sports nutrition position stand: Beta-Alanine",
+"rivista": "Journal of the International Society of Sports Nutrition",
+"anno": "2015",
+"autore": "Trexler ET",
+"oa": true,
+"cit": 182,
+"tema": "nutrizione",
+"liv": "A",
+"sintesi": "Documento di posizione. Quattro settimane a 4-6 g al giorno aumentano la carnosina muscolare, che agisce da tampone del pH dentro la cellula. Migliora la prestazione **soprattutto in sforzi continui da 1 a 4 minuti**: fuori da quella finestra l’effetto è poco rilevante, e per l’ipertrofia non c’è motivo di aspettarsi granché. L’unico effetto collaterale riportato è il formicolio, attenuabile con dosi frazionate da 1,6 g.",
+"kw": "beta alanina carnosina tampone formicolio"
+},
+{
 "id": "trexler_metabolic",
 "pmid": "24571926",
 "doi": "10.1186/1550-2783-11-7",
@@ -1091,7 +1196,7 @@ const STUDI = [
 "cit": 5,
 "tema": "organizzazione",
 "liv": "B",
-"sintesi": "Una settimana di scarico a metà di un programma di 9 settimane non migliora né peggiora l’ipertrofia, e riduce leggermente la forza nel breve.",
+"sintesi": "39 persone allenate, 29 uomini e 10 donne. Una settimana di stop a metà di un programma di 9 settimane: nessuna differenza apprezzabile su dimensione muscolare, resistenza locale e potenza, mentre il gruppo che ha allenato senza interruzione ha guadagnato **più forza** isometrica e dinamica.",
 "kw": "scarico deload settimana"
 },
 {
@@ -1320,6 +1425,21 @@ const STUDI = [
 "kw": "sesso donne uomini differenze"
 },
 {
+"id": "kissow_ciclo",
+"pmid": "35471634",
+"doi": "10.1007/s40279-022-01679-y",
+"titolo": "Effects of Follicular and Luteal Phase-Based Menstrual Cycle Resistance Training on Muscle Strength and Mass",
+"rivista": "Sports medicine (Auckland, N.Z.)",
+"anno": "2022",
+"autore": "Kissow J",
+"oa": false,
+"cit": 47,
+"tema": "popolazioni",
+"liv": "C",
+"sintesi": "Rassegna critica sull’allenamento programmato secondo la fase del ciclo mestruale. Gli studi indicano che capacità anaerobica e forza sono maggiori nella fase follicolare, quando l’estrogeno è al massimo, e che l’allenamento concentrato in quella fase **potrebbe** essere superiore. È una possibilità sostenuta da pochi studi, non una raccomandazione consolidata.",
+"kw": "ciclo mestruale fase follicolare luteale donne"
+},
+{
 "id": "borde_anziani",
 "pmid": "26420238",
 "doi": "10.1007/s40279-015-0385-9",
@@ -1335,6 +1455,36 @@ const STUDI = [
 "kw": "anziani dose risposta età"
 },
 {
+"id": "lloyd_giovani",
+"pmid": "24055781",
+"doi": "10.1136/bjsports-2013-092952",
+"titolo": "Position statement on youth resistance training: the 2014 International Consensus",
+"rivista": "British journal of sports medicine",
+"anno": "2014",
+"autore": "Lloyd RS",
+"oa": false,
+"cit": 270,
+"tema": "popolazioni",
+"liv": "A",
+"sintesi": "Documento di consenso internazionale sull’allenamento contro resistenza nei giovani, adottato da più società scientifiche di medicina dello sport, scienze motorie e pediatria. **L’abstract in archivio riporta solo la genesi del documento**: per le raccomandazioni operative va letto il testo, che è ad accesso aperto.",
+"kw": "giovani adolescenti bambini sicurezza consenso"
+},
+{
+"id": "petersen_fumo",
+"pmid": "17609255",
+"doi": "10.1152/ajpendo.00301.2007",
+"titolo": "Smoking impairs muscle protein synthesis and increases the expression of myostatin and MAFbx in muscle",
+"rivista": "American journal of physiology. Endocrinology and metabolism",
+"anno": "2007",
+"autore": "Petersen AM",
+"oa": false,
+"cit": 139,
+"tema": "popolazioni",
+"liv": "B",
+"sintesi": "8 fumatori da almeno vent’anni contro 8 non fumatori, appaiati per sesso, età e corporatura. Nei fumatori la sintesi proteica muscolare è depressa e l’espressione di miostatina e MAFbx, cioè dei freni alla crescita, è aumentata. Campione piccolo e partecipanti sopra i sessant’anni, ma la direzione è netta.",
+"kw": "fumo sigarette sintesi proteica miostatina"
+},
+{
 "id": "risposta_variabile",
 "pmid": "15947721",
 "doi": null,
@@ -1348,6 +1498,21 @@ const STUDI = [
 "liv": "A",
 "sintesi": "585 persone allenate su un solo braccio per 12 settimane. La variazione di sezione va da **−2% a +59%**, il massimale da 0 a +250%, la forza isometrica da −32% a +149%. Alcuni non guadagnano nulla, altri raddoppiano la forza. Le donne hanno guadagnato più degli uomini in forza relativa.",
 "kw": "variabilità risposta individuale responder"
+},
+{
+"id": "bhasin_testosterone",
+"pmid": "8637535",
+"doi": "10.1056/nejm199607043350101",
+"titolo": "The effects of supraphysiologic doses of testosterone on muscle size and strength in normal men",
+"rivista": "The New England journal of medicine",
+"anno": "1996",
+"autore": "Bhasin S",
+"oa": false,
+"cit": 943,
+"tema": "popolazioni",
+"liv": "A",
+"sintesi": "43 uomini sani divisi in quattro gruppi: placebo senza allenamento, testosterone senza allenamento, placebo con allenamento, testosterone con allenamento. 600 mg di testosterone enantato a settimana per 10 settimane. **Fra chi non si allenava, il testosterone ha aumentato l’area del tricipite di 424 mm² mentre il placebo la riduceva di 81 mm².** La conclusione degli autori è che dosi sovrafisiologiche aumentano massa magra, dimensione e forza, soprattutto se combinate con l’allenamento. È il riferimento che quantifica il divario fra natural e non.",
+"kw": "testosterone steroidi dose sovrafisiologica massa"
 },
 {
 "id": "singer_rest",
@@ -1391,7 +1556,7 @@ const STUDI = [
 "cit": 94,
 "tema": "recupero",
 "liv": "B",
-"sintesi": "Su allenati, 3 minuti di recupero producono più forza e ipertrofia di 1 minuto. È il lavoro che ha spostato la pratica verso recuperi lunghi.",
+"sintesi": "21 uomini allenati, 8 settimane, 3 sedute a settimana. Recuperi di 3 minuti contro 1 minuto: la forza massimale su squat e panca è risultata significativamente maggiore con i 3 minuti. È il lavoro che ha spostato la pratica verso recuperi lunghi.",
 "kw": "recupero tre minuti un minuto"
 },
 {

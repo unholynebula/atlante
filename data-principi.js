@@ -472,7 +472,10 @@ const PRINCIPI = [
 "refalo_failure",
 "grgic_failure",
 "pelland_volume",
-"doms_hypertrophy"
+"doms_hypertrophy",
+"refalo_velocita",
+"moran_recupero",
+"refalo_ipertrofia"
 ]
 },
 {
@@ -511,6 +514,106 @@ const PRINCIPI = [
 "pressa_squat",
 "speirs_unilateral",
 "pedrosa_rom"
+]
+},
+{
+"id": "ormoni",
+"t": "Ormoni e crescita muscolare",
+"gruppo": "Biologia",
+"liv": "A",
+"sommario": "Quanto contano davvero i picchi ormonali dell’allenamento, e quanto conta invece la farmacologia.",
+"corpo": [
+"Per anni si è insegnato che il picco di testosterone e ormone della crescita dopo una seduta fosse un motore dell’ipertrofia, e che quindi convenisse costruire l’allenamento per massimizzarlo. L’origine è uno studio del 1999 su undici studenti in cui l’aumento acuto di ormone della crescita correlava con l’ipertrofia delle fibre. Correlazione, campione piccolo, e nessun cambiamento delle concentrazioni **a riposo** dopo dodici settimane.",
+"L’ipotesi è stata poi ampiamente ridimensionata: le oscillazioni ormonali fisiologiche indotte dall’esercizio sono troppo piccole e troppo brevi per spiegare la crescita, e il segnale primario resta la tensione meccanica letta dalla cellula.",
+"Il confronto che chiarisce la scala è però un altro. Nello studio del 1996 su dosi sovrafisiologiche di testosterone, **gli uomini che ricevevano testosterone senza allenarsi aumentavano l’area del tricipite di 424 mm², mentre chi riceveva placebo senza allenarsi la riduceva di 81 mm².** Non è un effetto ormonale sottile: è un’altra categoria di intervento.",
+"La conseguenza pratica per chi allena natural è duplice. Primo: smetti di progettare l’allenamento attorno ai picchi ormonali, non è quella la leva. Secondo: quando confronti i tuoi risultati con quelli che vedi online, ricorda che la differenza fra i due mondi è quantificata in letteratura e non si colma con la programmazione."
+],
+"studi": [
+"mccall_ormoni",
+"bhasin_testosterone",
+"roberts_mechanisms",
+"wackerhage_mech"
+]
+},
+{
+"id": "integratori",
+"t": "Cosa fanno davvero gli integratori",
+"gruppo": "Biologia",
+"liv": "A",
+"sommario": "Una scala di priorità onesta, dal molto documentato al quasi irrilevante.",
+"corpo": [
+"**Proteine.** L’integrazione aumenta massa magra e forza da allenamento, e oltre 1,62 g per kg al giorno di apporto totale non si osservano ulteriori guadagni. L’effetto cala con l’età e cresce con l’esperienza di allenamento. Non serve una polvere: serve arrivare alla quantità.",
+"**Creatina.** Fra gli integratori con il profilo di sicurezza meglio documentato, con effetti su forza e massa magra. È il secondo e ultimo con un rapporto fra prova ed effetto davvero solido.",
+"**Caffeina.** Migliora la prestazione in molti contesti, e più prestazione può significare più volume accumulato nel tempo. Non agisce sull’ipertrofia direttamente.",
+"**Beta-alanina.** Aumenta la carnosina muscolare e funziona da tampone del pH, ma l’effetto sulla prestazione si concentra in sforzi continui da uno a quattro minuti. Una serie da otto ripetizioni non è quella finestra.",
+"**HMB.** Metabolita della leucina, sicuro, con un meccanismo proposto plausibile. L’entità dell’effetto in persone allenate che già mangiano abbastanza proteine resta il punto discusso.",
+"**Antinfiammatori da banco.** Non sono integratori ma vanno nella stessa colonna: dosi massime di ibuprofene assunte con regolarità sono state associate a **meno** ipertrofia. Se ti serve per un dolore, prendilo; non prenderlo per abitudine dopo l’allenamento."
+],
+"studi": [
+"morton_protein",
+"kreider_creatina",
+"guest_caffeina",
+"trexler_beta_alanina",
+"rathmacher_hmb",
+"lilja_ibuprofene"
+]
+},
+{
+"id": "donne",
+"t": "Allenare le donne",
+"gruppo": "Biologia",
+"liv": "A",
+"sommario": "Cosa cambia davvero rispetto agli uomini, e cosa non cambia affatto.",
+"corpo": [
+"Le differenze assolute di forza sono grandi, ma quelle **relative alla sezione muscolare** sono molto minori: a parità di muscolo la qualità contrattile è simile. Gli adattamenti relativi all’allenamento sono paragonabili, e in alcuni confronti le donne guadagnano più degli uomini in forza relativa.",
+"Sulla fatica c’è una differenza misurata: dopo sei serie di panca portate a cedimento, il calo di velocità a quattro minuti era del 29% negli uomini contro il 21% nelle donne, e il calo dalla prima all’ultima serie del 15% contro il 9%. Le donne tollerano meglio il lavoro vicino al cedimento e recuperano prima fra le serie.",
+"Sul ciclo mestruale la letteratura indica che forza e capacità anaerobica siano maggiori nella fase follicolare, e che concentrare il lavoro in quella fase **potrebbe** rendere di più. È una possibilità sostenuta da pochi studi: utile saperla, prematuro costruirci sopra un programma.",
+"Quello che non cambia: volume, vicinanza al cedimento, lunghezza muscolare e sovraccarico progressivo funzionano allo stesso modo. Non esiste un allenamento femminile diverso per principio, esistono aggiustamenti di dose."
+],
+"studi": [
+"nuzzo_sesso",
+"refalo_velocita",
+"risposta_variabile",
+"kissow_ciclo"
+]
+},
+{
+"id": "eta",
+"t": "Età: giovani e over sessanta",
+"gruppo": "Biologia",
+"liv": "A",
+"sommario": "Agli estremi dell’età cambiano le dosi e le priorità, non i principi.",
+"corpo": [
+"**Negli anziani** la relazione dose-risposta esiste ancora ma è spostata: durata, frequenza e intensità che producono i guadagni migliori non coincidono con quelle dei giovani, e la risposta all’integrazione proteica **cala con l’età**, cioè serve più proteina per lo stesso effetto, non meno.",
+"La priorità cambia anche di natura. Nei giovani si allena per crescere; oltre i sessanta si allena anche per conservare, e la forza è il fattore che conserva l’autonomia. La progressione va mantenuta, non abbandonata per prudenza.",
+"**Nei giovani** il timore che l’allenamento contro resistenza danneggi la crescita non è sostenuto: esiste un documento di consenso internazionale, adottato da società di medicina dello sport e pediatria, che ne definisce le condizioni di sicurezza. Il punto critico è la supervisione tecnica e la progressione graduale, non l’età anagrafica.",
+"Da coach la lezione è che l’età non cambia i principi meccanici. Il momento resta il momento, la lunghezza resta la lunghezza. Cambiano il carico tollerabile, i tempi di recupero e cosa vale la pena inseguire."
+],
+"studi": [
+"borde_anziani",
+"morton_protein",
+"lloyd_giovani",
+"bosquet_detraining"
+]
+},
+{
+"id": "vita",
+"t": "Sonno, fumo e alcol",
+"gruppo": "Biologia",
+"liv": "B",
+"sommario": "Le variabili fuori dalla palestra che hanno prove, e quelle che non le hanno.",
+"corpo": [
+"**Sonno.** La privazione acuta peggiora la prestazione fisica in modo misurabile, con effetto più marcato nel pomeriggio e sulle attività prolungate. Sul sonno insufficiente cronico e la forza esiste una rassegna dedicata con implicazioni dirette per chi si allena. È la variabile fuori dalla palestra con le prove migliori.",
+"**Fumo.** Nel confronto fra fumatori di lungo corso e non fumatori appaiati, la sintesi proteica muscolare è depressa e l’espressione di miostatina, che è un freno alla crescita, è aumentata. Campione piccolo, ma la direzione è netta e il meccanismo plausibile.",
+"**Deficit calorico.** In restrizione la sintesi proteica miofibrillare cala, ma allenamento e apporto proteico adeguato distribuito nella giornata la riportano su. In dieta l’obiettivo realistico è mantenere, e va accompagnato da meno volume, non da più.",
+"Su molte altre variabili di stile di vita si parla più di quanto si sappia. Quando l’atlante non ha una voce su qualcosa, spesso è perché la letteratura non ne ha una decente."
+],
+"studi": [
+"craven_sleep",
+"knowles_sleep",
+"petersen_fumo",
+"murphy_deficit",
+"trexler_metabolic"
 ]
 }
 ];
