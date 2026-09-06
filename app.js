@@ -575,7 +575,7 @@ box('Volume distribuito sulle sedute',
   riga('Serie settimanali','per questo muscolo','c6v','16','numeric')+
   riga('Sedute a settimana','in cui lo alleni','c6s','2','numeric'),
   'c6out',
-  'A volume pareggiato la frequenza non cambia l’ipertrofia (Schoenfeld 2019), ma i grandi gruppi vanno allenati **almeno due volte a settimana** (Grgic 2018). Oltre le dieci serie in una sola seduta la resa per serie cala.', 'c6bar')+
+  'A volume pareggiato la frequenza non cambia l’ipertrofia (Schoenfeld 2019), ma i grandi gruppi vanno allenati **almeno due volte a settimana** (Grgic 2018). Sul numero di serie in una **singola** seduta non esiste una soglia stabilita: confrontando 7, 14 e 21 serie su allenati, le 21 alzano lo sforzo percepito e abbassano il recupero percepito, senza però peggiorare spessore muscolare o prestazione nelle 72 ore dopo (Alvarez 2026). Quello che ha una dose-risposta documentata è il volume **settimanale**, con rendimenti decrescenti (Pelland 2025).', 'c6bar')+
 box('Durata della seduta',
   riga('Serie totali','tutte le serie allenanti','c7n','20','numeric')+
   riga('Recupero medio','secondi fra le serie','c7r','150','numeric')+
@@ -594,10 +594,14 @@ box('Ritmo di dimagrimento',
   riga('Peso obiettivo','chilogrammi','c9b','78'),
   'c9out',
   'Perdere fra lo 0,5 e l’1% del peso a settimana è l’intervallo che massimizza il mantenimento del muscolo (Helms 2014). Le settimane stimate sono ottimistiche: il dispendio energetico cala durante la perdita di peso e il deficit va rivisto strada facendo (Trexler 2014).')+
-box('Caffeina e creatina per il tuo peso',
+box('Caffeina per il tuo peso',
   riga('Peso corporeo','chilogrammi','c10p','80'),
   'c10out',
-  'Caffeina: 3-6 mg per kg migliorano la prestazione; sopra i 9 mg per kg gli effetti collaterali aumentano senza vantaggi (Guest 2021). Creatina monoidrato: la dose abituale indicata è 3 g al giorno, e l’assunzione fino a 30 g al giorno per cinque anni risulta sicura e ben tollerata (Kreider 2017).');
+  '3-6 mg per kg migliorano la prestazione. La dose minima efficace non è chiara e potrebbe scendere fino a 2 mg per kg. Sopra i 9 mg per kg gli effetti collaterali diventano frequenti **senza** vantaggi aggiuntivi (Guest 2021).')+
+box('Creatina: carico e mantenimento',
+  riga('Peso corporeo','chilogrammi','c11p','80'),
+  'c11out',
+  'Il modo più rapido di saturare le riserve è **0,3 g per kg al giorno per 5-7 giorni**, divisi in quattro assunzioni, poi **3-5 g al giorno** per mantenerle. Il carico è opzionale: 3-5 g al giorno da subito saturano le riserve in 3-4 settimane, ma in quel caso l’effetto sulla prestazione nelle prime settimane è meno sostenuto. Gli atleti più grossi possono averne bisogno di **5-10 g al giorno** per mantenere le riserve. Fino a 30 g al giorno per cinque anni l’assunzione risulta sicura e ben tollerata (Kreider 2017).');
 
 function num(id){ const e=$(id); return e ? (parseFloat(String(e.value).replace(',','.'))||0) : 0; }
 function usc(v,e){ return '<div><div class="out-v">'+v+'</div><div class="out-e">'+e+'</div></div>'; }
@@ -643,12 +647,14 @@ function calcola(){
   if($('c6out')){
     const v=num('c6v'), s=Math.max(1,Math.round(num('c6s')));
     const per=v/s;
-    let g='equilibrato', cls='';
+    let g='nella norma', cls='';
     if(s<2){ g='meno di due sedute: sotto il riferimento'; cls='avviso'; }
-    else if(per>10){ g='troppe serie in una seduta'; cls='avviso'; }
+    /* Nessuna soglia per seduta e' stabilita: l'unico valore provato in modo diretto
+       e' 21 serie, dove sale il costo percepito senza perdite misurabili. */
+    else if(per>21){ g='oltre le 21 serie provate negli studi'; cls='avviso'; }
     else if(per<2){ g='poche serie per seduta'; cls='scarso'; }
     $('c6out').innerHTML = usc(r1(per),'Serie per seduta') + usc(s,'Sedute') + usc(g,'Giudizio');
-    $('c6bar').style.width = Math.min(100, per/12*100)+'%';
+    $('c6bar').style.width = Math.min(100, per/21*100)+'%';
     $('c6bar').className = cls;
   }
   if($('c7out')){
@@ -677,8 +683,18 @@ function calcola(){
   }
   if($('c10out')){
     const p=num('c10p');
-    $('c10out').innerHTML = usc(Math.round(p*3)+'-'+Math.round(p*6),'Caffeina, mg')
-      + usc(Math.round(p*9),'Soglia effetti avversi, mg') + usc('3','Creatina, g al giorno');
+    $('c10out').innerHTML = usc(Math.round(p*3)+'-'+Math.round(p*6),'Utile, mg')
+      + usc(Math.round(p*2),'Minimo possibile, mg')
+      + usc(Math.round(p*9),'Soglia effetti avversi, mg');
+  }
+  if($('c11out')){
+    const p=num('c11p');
+    /* Il documento di posizione indica 0,3 g/kg al giorno per 5-7 giorni per saturare,
+       poi 3-5 g al giorno di mantenimento; 5-10 g per gli atleti piu' grossi. */
+    const car=p*0.3;
+    $('c11out').innerHTML = usc(r1(car),'Carico, g al giorno')
+      + usc(r1(car/4),'Per assunzione, ×4')
+      + usc('3-5','Mantenimento, g al giorno');
   }
 }
 

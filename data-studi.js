@@ -1076,8 +1076,9 @@ const STUDI = [
 "cit": 485,
 "tema": "nutrizione",
 "liv": "A",
-"sintesi": "Documento di posizione della International Society of Sports Nutrition sulla creatina monoidrato: efficace sulla forza e sulla massa magra, con un profilo di sicurezza fra i meglio documentati di qualunque integratore.",
-"kw": "creatina integratore sicurezza"
+"sintesi": "Documento di posizione sulla creatina monoidrato. Le dosi, dal testo completo: il modo più rapido di saturare le riserve muscolari è **0,3 g per kg al giorno per 5-7 giorni**, divisi in quattro assunzioni; poi **3-5 g al giorno** di mantenimento, con gli atleti più grossi che possono averne bisogno di **5-10 g**. Il carico non è obbligatorio: 3-5 g al giorno da subito saturano le riserve in 3-4 settimane, ma con effetti sulla prestazione meno sostenuti nelle prime settimane. Assunzioni fino a 30 g al giorno per cinque anni risultano sicure e ben tollerate. Attenzione: il valore di 3 g al giorno che compare nell’abstract si riferisce all’apporto **alimentare abituale** per la salute generale, non alla dose di integrazione per chi si allena.",
+"kw": "creatina integratore sicurezza",
+"cifre_da_testo_completo": true
 },
 {
 "id": "jager_proteine",
@@ -2068,5 +2069,35 @@ const STUDI = [
 "liv": "A",
 "sintesi": "55 misure da 8 studi. Le serie multiple sono associate a un effetto maggiore della serie singola (differenza 0,10; p = 0,016), con una tendenza crescente al crescere delle serie: 0,24 per una serie, 0,34 per 2-3, 0,44 per 4-6. **Fra 2-3 e 4-6 serie non c’è differenza significativa.** Nel complesso le serie multiple sono associate a effetti superiori di circa il 40% rispetto alla serie singola, in allenati e non allenati. Base di pochi studi.",
 "kw": "serie multiple singola volume"
+},
+{
+"id": "creatina_reni",
+"pmid": "42507286",
+"doi": "10.1007/s11255-026-05287-x",
+"titolo": "Impact of creatine supplementation on kidney health: a systematic review and meta-analysis",
+"rivista": "International urology and nephrology",
+"anno": "2026",
+"autore": "de Souza Almeida A",
+"oa": true,
+"cit": 0,
+"tema": "nutrizione",
+"liv": "A",
+"sintesi": "26 studi randomizzati, 1036 partecipanti, fra sani e persone con malattia renale cronica. La creatina **alza la creatinina nel sangue** (+0,14 mg/dl) e **abbassa la filtrazione glomerulare stimata** con i metodi basati sulla creatinina (−10,75 ml/min). Ma misurando la filtrazione con Cr-EDTA, che è il metodo di riferimento, **non emerge alcuna differenza**, e nemmeno su urea, albuminuria, proteinuria e creatinina urinaria. La conclusione degli autori è che si tratta di un **artefatto del metodo di misura**, non di danno renale. Serve saperlo prima di fare le analisi: chi prende creatina può ricevere un referto che segnala una funzione renale ridotta senza che ci sia nulla di sbagliato.",
+"kw": "creatina reni creatinina filtrazione glomerulare sicurezza"
+},
+{
+"id": "volume_seduta",
+"pmid": "41565215",
+"doi": "10.1055/a-2791-5145",
+"titolo": "Don’t Sweat the Swelling: Exercise Volume’s Transient Effects in Trained Men",
+"rivista": "International journal of sports medicine",
+"anno": "2026",
+"autore": "Alvarez M",
+"oa": false,
+"cit": 0,
+"tema": "volume",
+"liv": "B",
+"sintesi": "13 uomini allenati (5,1 anni di esperienza, massimale per 10 ripetizioni di squat a 131 kg) hanno svolto tre sedute contrapposte da **7, 14 e 21 serie** per la parte bassa. La condizione a 21 serie ha prodotto **sforzo percepito più alto e recupero percepito più basso** delle altre. Ma su spessore muscolare, intensità dell’eco e volume-carico al test di 10 ripetizioni **non emerge alcuna differenza**, né fra le condizioni né nel tempo, e nessun gonfiore persistente: tutte le misure tornano ai valori di partenza entro 24 ore. È uno studio acuto su singole sedute, quindi non dice quale volume per seduta faccia crescere di più; dice che una seduta molto lunga costa in fatica percepita senza lasciare danni misurabili a 72 ore.",
+"kw": "volume per seduta serie sforzo percepito recupero gonfiore"
 }
 ];

@@ -543,7 +543,7 @@ const PRINCIPI = [
 "sommario": "Una scala di priorità onesta, dal molto documentato al quasi irrilevante.",
 "corpo": [
 "**Proteine.** L’integrazione aumenta massa magra e forza da allenamento, e oltre 1,62 g per kg al giorno di apporto totale non si osservano ulteriori guadagni. L’effetto cala con l’età e cresce con l’esperienza di allenamento. Non serve una polvere: serve arrivare alla quantità.",
-"**Creatina.** Fra gli integratori con il profilo di sicurezza meglio documentato, con effetti su forza e massa magra. È il secondo e ultimo con un rapporto fra prova ed effetto davvero solido.",
+"**Creatina.** Fra gli integratori con il profilo di sicurezza meglio documentato, con effetti su forza e massa magra. È il secondo e ultimo con un rapporto fra prova ed effetto davvero solido. La dose di mantenimento è **3-5 g al giorno**, fino a 5-10 per gli atleti più grossi; il carico a 0,3 g per kg per 5-7 giorni serve solo ad arrivarci prima. Alza la creatinina nel sangue senza danneggiare i reni: è un artefatto della misura.",
 "**Caffeina.** Migliora la prestazione in molti contesti, e più prestazione può significare più volume accumulato nel tempo. Non agisce sull’ipertrofia direttamente.",
 "**Beta-alanina.** Aumenta la carnosina muscolare e funziona da tampone del pH, ma l’effetto sulla prestazione si concentra in sforzi continui da uno a quattro minuti. Una serie da otto ripetizioni non è quella finestra.",
 "**HMB.** Metabolita della leucina, sicuro, con un meccanismo proposto plausibile. L’entità dell’effetto in persone allenate che già mangiano abbastanza proteine resta il punto discusso.",

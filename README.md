@@ -20,7 +20,7 @@ poi apri `http://localhost:8000` e, da iPhone, "Aggiungi a Home".
 | `style.css` | Impaginazione da manuale stampato: carta chiara, testo in grazie, sezioni numerate, colonna di margine. Il colore è riservato alle sigle di evidenza |
 | `app.js` | Navigazione su hash, viste, ricerca locale, ricerca live, calcolatori, salvataggi |
 | `data-principi.js` | 33 voci di meccanica e biologia: momenti, curve di resistenza, lunghezza-tensione, ritmo scapolo-omerale |
-| `data-studi.js` | 138 studi con PMID verificato, tema, livello di evidenza e riassunto |
+| `data-studi.js` | 140 studi con PMID verificato, tema, livello di evidenza e riassunto |
 | `data-muscoli.js` | 18 schede: meccanica, posizione articolare, 284 esercizi mappati per funzione e lunghezza |
 | `data-contenuti.js` | 48 problemi, 59 miti, 110 voci di glossario, 27 archivi con ricerche pronte |
 
@@ -65,12 +65,25 @@ Il metodo, in ordine:
    gli agganci approssimativi si scartano
 2. si recupera l'abstract e **la sintesi si scrive da quello**, non a memoria
 3. ogni cifra citata deve comparire nell'abstract; se non c'e', si toglie
-4. la sintesi non deve contenere affermazioni che l'abstract non sostiene,
+4. **la cifra deve anche riguardare la domanda che si sta facendo.** Non basta
+   che il numero sia nel testo: va verificato di che cosa parla. Il documento
+   di posizione sulla creatina nomina 3 g al giorno, ma come apporto
+   *alimentare abituale per la salute generale*; la dose di integrazione per
+   chi si allena e' 3-5 g dopo un carico di 0,3 g per kg. Numero giusto,
+   contesto sbagliato: la citazione risultava verificata e la raccomandazione
+   era falsa
+5. dove serve una dose o un protocollo, si legge il **testo completo**, non
+   l'abstract: gli abstract dei documenti di posizione riassumono le
+   conclusioni e omettono i numeri operativi
+6. le soglie devono venire dagli studi, non dal buon senso. Se nessuno ha
+   provato un valore, non si mette un numero: si dice che la soglia non e'
+   stabilita
+7. la sintesi non deve contenere affermazioni che l'abstract non sostiene,
    nemmeno se vere: se un fatto serve ma viene da altrove, si cita altrove
-5. i limiti che cambiano la lettura — popolazione non allenata, anziani, sole
+8. i limiti che cambiano la lettura — popolazione non allenata, anziani, sole
    donne, campione minuscolo, protocollo particolare — vanno scritti nella
    sintesi, non sottintesi
-6. dove due studi in archivio si contraddicono, lo si dice nella sintesi di
+9. dove due studi in archivio si contraddicono, lo si dice nella sintesi di
    entrambi invece di scegliere il piu' comodo
 
 ## Il controllo automatico

@@ -87,6 +87,7 @@ def presente(num, t, lettere):
     except ValueError: pass
     return False
 cifre_ko = []
+da_testo_pieno = []
 senza_abs = []
 for x in STUDI:
     a = ABS.get(x['pmid'], '')
@@ -95,7 +96,11 @@ for x in STUDI:
     L = a_lettere(a)
     nums = [n for n in re.findall(r'\d+(?:[,.]\d+)?', x['sintesi']) if not re.match(r'^(19|20)\d\d$', n)]
     manc = [n for n in nums if not presente(n, a, L)]
-    if manc: cifre_ko.append((x['id'], manc))
+    if not manc: continue
+    # Alcune voci dichiarano che le cifre vengono dal testo completo (tipico dei
+    # documenti di posizione, il cui abstract omette dosi e protocolli).
+    if x.get('cifre_da_testo_completo'): da_testo_pieno.append((x['id'], manc))
+    else: cifre_ko.append((x['id'], manc))
 
 print('%d studi in archivio' % len(STUDI))
 print('1. PMID          : %s' % ('tutti risolvono' if not ko else 'NON RISOLTI: %s' % ko))
@@ -103,7 +108,11 @@ print('2. titoli        : %s' % ('tutti corrispondono' if not titoli_ko else 'DI
 for i2, mio, vero in titoli_ko:
     print('     %-22s mio: %s\n     %-22s vero: %s' % (i2, mio, '', vero))
 print('3. cifre         : %d studi da controllare a mano%s'
-      % (len(cifre_ko), '' if not cifre_ko else ' (somme e rimandi ad altri studi sono attesi)'))
+      % (len(cifre_ko), '' if not cifre_ko else ' (somme nostre e rimandi ad altri studi sono attesi)'))
 for i2, m in cifre_ko:
     print('     %-22s %s' % (i2, ', '.join(m)))
+if da_testo_pieno:
+    print('   cifre dichiarate dal testo completo, non dall\'abstract (%d):' % len(da_testo_pieno))
+    for i2, m in da_testo_pieno:
+        print('     %-22s %s' % (i2, ', '.join(m)))
 print('   senza abstract in archivio (%d): %s' % (len(senza_abs), ', '.join(senza_abs) or '—'))

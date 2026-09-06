@@ -2450,8 +2450,8 @@ const MITI = [
 "m": "La creatina fa male ai reni",
 "v": "falso",
 "liv": "A",
-"s": "Il documento di posizione della International Society of Sports Nutrition la definisce fra gli integratori con il profilo di sicurezza meglio documentato. Nei soggetti sani non ci sono prove di danno renale, e l’aumento di creatinina nel sangue è un artefatto della misura, non un segno di danno.",
-"studi": ["kreider_creatina"],
+"s": "Il documento di posizione della International Society of Sports Nutrition la definisce fra gli integratori con il profilo di sicurezza meglio documentato. La meta-analisi più ampia sul punto, 26 studi randomizzati, trova che la creatina alza la creatinina nel sangue e abbassa la filtrazione glomerulare **stimata dalla creatinina**, ma che misurando la filtrazione con il metodo di riferimento non emerge nessuna differenza: è un artefatto della misura, non danno renale. Vale saperlo prima di fare le analisi, perché il referto può spaventare senza motivo.",
+"studi": ["kreider_creatina", "creatina_reni"],
 "id": "la_creatina_fa_male_ai"
 },
 {
