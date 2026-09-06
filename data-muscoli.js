@@ -3,1869 +3,252 @@ const MUSCOLI = [
 "id": "pettorale",
 "nome": "Grande pettorale",
 "gruppo": "Torso",
-"capi": [
-"Clavicolare (alto)",
-"Sternocostale (medio-basso)",
-"Addominale"
-],
-"funzioni": [
-"Adduzione orizzontale della spalla",
-"Flessione della spalla (capo clavicolare)",
-"Adduzione e intrarotazione"
-],
+"capi": ["Clavicolare (alto)", "Sternocostale (medio-basso)", "Addominale"],
+"funzioni": ["Adduzione orizzontale della spalla", "Flessione della spalla (capo clavicolare)", "Adduzione e intrarotazione"],
 "stimolo": "Il pettorale lavora portando l’omero verso la linea mediana. Lo stimolo maggiore arriva dove il muscolo è allungato, cioè in fondo alla discesa in panca e in apertura nelle croci — non nella strizzata finale, dove la tensione crolla.",
-"esercizi": [
-{
-"n": "Panca piana con bilanciere",
-"g": "A",
-"f": "adduzione orizzontale, capo sternale",
-"l": "media",
-"nota": "La barra si ferma sul petto: l’allungamento è limitato dall’attrezzo."
-},
-{
-"n": "Panca inclinata con manubri",
-"g": "A",
-"f": "flessione + adduzione, capo clavicolare",
-"l": "allungata",
-"nota": "I manubri scendono sotto la linea del torace: è il vantaggio sul bilanciere."
-},
-{
-"n": "Croci ai cavi",
-"g": "A",
-"f": "adduzione orizzontale isolata",
-"l": "allungata",
-"nota": "Tensione continua e apertura ampia. Il punto è la posizione allungata, non la chiusura."
-},
-{
-"n": "Chest press a macchina",
-"g": "B",
-"f": "adduzione orizzontale",
-"l": "media",
-"nota": "Utile a fine seduta o quando serve controllo, ma il range è deciso dalla macchina."
-},
-{
-"n": "Dips",
-"g": "B",
-"f": "adduzione + estensione della spalla",
-"l": "allungata",
-"nota": "Molto pettorale basso se il busto è inclinato in avanti. Attenzione alla spalla."
-},
-{
-"n": "Pec deck",
-"g": "B",
-"f": "adduzione orizzontale isolata",
-"l": "media",
-"nota": "Più stabile delle croci ai cavi, allungamento in genere minore."
-},
-{
-"n": "Panca inclinata con bilanciere",
-"g": "A",
-"f": "flessione + adduzione, capo clavicolare",
-"l": "media",
-"nota": "Inclinazione 15-30 gradi: oltre i 45 il lavoro passa al deltoide."
-},
-{
-"n": "Croci basso-alto ai cavi",
-"g": "A",
-"f": "adduzione con flessione, capo clavicolare",
-"l": "allungata",
-"nota": "La linea di trazione del capo clavicolare, con tensione continua."
-},
-{
-"n": "Panca declinata",
-"g": "B",
-"f": "adduzione + estensione, capo addominale",
-"l": "media",
-"nota": "Poco necessaria: la porzione bassa lavora già in ogni spinta piana."
-},
-{
-"n": "Push-up con sovraccarico",
-"g": "B",
-"f": "adduzione orizzontale",
-"l": "media",
-"nota": "La scapola è libera di muoversi, cosa che in panca non accade."
-},
-{
-"n": "Smith machine panca",
-"g": "B",
-"f": "adduzione orizzontale",
-"l": "media",
-"nota": "Percorso fisso: utile per spingere vicino al cedimento in sicurezza."
-}
-],
-"errori": [
-{
-"t": "Cercare la strizzata finale",
-"s": "È il tratto in cui la tensione sul pettorale è più bassa. Concentrati sulla parte allungata del movimento e non chiudere le mani oltre il necessario.",
-"liv": "B"
-},
-{
-"t": "Inseguire un’inclinazione precisa",
-"s": "Man mano che la panca si alza, la linea di trazione si avvicina a quella del deltoide anteriore e il contributo del capo clavicolare del pettorale cresce fino a un certo punto, poi cala. È un passaggio graduale, non una soglia: i lavori elettromiografici non concordano su dove cada il massimo, e comunque l’attivazione acuta non predice la crescita. Quindici-trenta gradi è un intervallo ragionevole da cui partire, non un numero da rispettare.",
-"liv": "C"
-},
-{
-"t": "Allenare solo spinte orizzontali",
-"s": "Il capo clavicolare ha una linea di trazione diversa e va servito da un movimento inclinato o da croci basso-alto.",
-"liv": "B"
-},
-{
-"t": "Presa troppo larga",
-"s": "Riduce l’escursione e aumenta lo stress sulla spalla nella posizione più vulnerabile, senza dare più pettorale.",
-"liv": "C"
-},
-{
-"t": "Rimbalzare la barra sul petto",
-"s": "Salta il tratto allungato, che è quello che stimola di più.",
-"liv": "B"
-}
-],
-"studi": [
-"pec_fiber",
-"maeo_hamstring",
-"wolf_partials",
-"panca_presa"
-],
+"esercizi": [{"n": "Panca piana con bilanciere", "g": "A", "f": "adduzione orizzontale, capo sternale", "l": "media", "nota": "La barra si ferma sul petto: l’allungamento è limitato dall’attrezzo."}, {"n": "Panca inclinata con manubri", "g": "A", "f": "flessione + adduzione, capo clavicolare", "l": "allungata", "nota": "I manubri scendono sotto la linea del torace: è il vantaggio sul bilanciere."}, {"n": "Croci ai cavi", "g": "A", "f": "adduzione orizzontale isolata", "l": "allungata", "nota": "Tensione continua e apertura ampia. Il punto è la posizione allungata, non la chiusura."}, {"n": "Chest press a macchina", "g": "B", "f": "adduzione orizzontale", "l": "media", "nota": "Utile a fine seduta o quando serve controllo, ma il range è deciso dalla macchina."}, {"n": "Dips", "g": "B", "f": "adduzione + estensione della spalla", "l": "allungata", "nota": "Molto pettorale basso se il busto è inclinato in avanti. Attenzione alla spalla."}, {"n": "Pec deck", "g": "B", "f": "adduzione orizzontale isolata", "l": "media", "nota": "Più stabile delle croci ai cavi, allungamento in genere minore."}, {"n": "Panca inclinata con bilanciere", "g": "A", "f": "flessione + adduzione, capo clavicolare", "l": "media", "nota": "Inclinazione 15-30 gradi: oltre i 45 il lavoro passa al deltoide."}, {"n": "Croci basso-alto ai cavi", "g": "A", "f": "adduzione con flessione, capo clavicolare", "l": "allungata", "nota": "La linea di trazione del capo clavicolare, con tensione continua."}, {"n": "Panca declinata", "g": "B", "f": "adduzione + estensione, capo addominale", "l": "media", "nota": "Poco necessaria: la porzione bassa lavora già in ogni spinta piana."}, {"n": "Push-up con sovraccarico", "g": "B", "f": "adduzione orizzontale", "l": "media", "nota": "La scapola è libera di muoversi, cosa che in panca non accade."}, {"n": "Smith machine panca", "g": "B", "f": "adduzione orizzontale", "l": "media", "nota": "Percorso fisso: utile per spingere vicino al cedimento in sicurezza."}, {"n": "Croci con manubri su panca piana", "g": "A", "f": "adduzione orizzontale isolata", "l": "allungata", "nota": "In basso il pettorale è alla lunghezza maggiore ed è lì che il momento è massimo. In alto la tensione svanisce: non serve chiudere."}, {"n": "Panca piana con manubri", "g": "A", "f": "adduzione orizzontale, capo sternale", "l": "allungata", "nota": "I manubri scendono sotto la linea del torace, cosa che il bilanciere non permette."}, {"n": "Croci su panca inclinata", "g": "B", "f": "flessione + adduzione, capo clavicolare", "l": "allungata", "nota": "Combina l’inclinazione con l’apertura: il capo clavicolare lavora allungato."}, {"n": "Croci ai cavi a braccio singolo", "g": "B", "f": "adduzione orizzontale isolata", "l": "allungata", "nota": "Permette di superare la linea mediana e di allungare di più il lato che lavora."}, {"n": "Chest press inclinata a macchina", "g": "B", "f": "flessione + adduzione", "l": "media", "nota": "Traiettoria guidata: utile a fine seduta, quando la stabilità cala prima del muscolo."}, {"n": "Push-up sulle maniglie o sui manubri", "g": "B", "f": "adduzione orizzontale", "l": "allungata", "nota": "I rialzi fanno scendere il petto sotto le mani: è l’unico modo di allungare in un push-up."}, {"n": "Dips con busto inclinato in avanti", "g": "B", "f": "adduzione + estensione della spalla", "l": "allungata", "nota": "L’inclinazione sposta il lavoro dal tricipite al pettorale basso."}, {"n": "Panca inclinata allo Smith", "g": "B", "f": "flessione + adduzione", "l": "media", "nota": "La guida permette di spingere vicino al cedimento senza qualcuno che assista."}, {"n": "Floor press", "g": "C", "f": "adduzione orizzontale a escursione ridotta", "l": "media", "nota": "Il pavimento ferma i gomiti a metà strada. Serve a risparmiare la spalla, non a far crescere il pettorale."}, {"n": "Hex press", "g": "C", "f": "adduzione isometrica + spinta", "l": "accorciata", "nota": "Manubri premuti l’uno contro l’altro. L’adduzione è isometrica e il carico resta basso: sensazione forte, tensione modesta."}, {"n": "Svend press", "g": "C", "f": "adduzione isometrica", "l": "accorciata", "nota": "Molto diffuso in rete. Il pettorale lavora in isometria contro un carico che non può essere alto: vale come riscaldamento, non come stimolo."}],
+"errori": [{"t": "Cercare la strizzata finale", "s": "È il tratto in cui la tensione sul pettorale è più bassa. Concentrati sulla parte allungata del movimento e non chiudere le mani oltre il necessario.", "liv": "B"}, {"t": "Inseguire un’inclinazione precisa", "s": "Man mano che la panca si alza, la linea di trazione si avvicina a quella del deltoide anteriore e il contributo del capo clavicolare del pettorale cresce fino a un certo punto, poi cala. È un passaggio graduale, non una soglia: i lavori elettromiografici non concordano su dove cada il massimo, e comunque l’attivazione acuta non predice la crescita. Quindici-trenta gradi è un intervallo ragionevole da cui partire, non un numero da rispettare.", "liv": "C"}, {"t": "Allenare solo spinte orizzontali", "s": "Il capo clavicolare ha una linea di trazione diversa e va servito da un movimento inclinato o da croci basso-alto.", "liv": "B"}, {"t": "Presa troppo larga", "s": "Riduce l’escursione e aumenta lo stress sulla spalla nella posizione più vulnerabile, senza dare più pettorale.", "liv": "C"}, {"t": "Rimbalzare la barra sul petto", "s": "Salta il tratto allungato, che è quello che stimola di più.", "liv": "B"}],
+"studi": ["pec_fiber", "maeo_hamstring", "wolf_partials", "panca_presa"],
 "volume": "10-20 serie settimanali. Conta anche il lavoro indiretto da spinte sopra la testa e dips.",
 "meccanica": "Il pettorale è più lungo con il braccio aperto e portato indietro, e lì il momento richiesto è massimo sia in panca sia nelle croci: è uno dei casi in cui carico e lunghezza coincidono, e per questo la parte bassa della discesa è quella che conta. Nelle croci con manubri però il momento crolla in chiusura, perché la distanza orizzontale fra spalla e mano va a zero: la strizzata finale è quasi scarica. Ai cavi la tensione resta, perché la direzione della forza la decidi tu.",
-"posizione": [
-"**Scapole** retratte e leggermente depresse, mantenute così per tutta la serie: danno all’omero una base contro cui spingere e limitano l’estensione della spalla in basso.",
-"**Torace** alto, curva toracica leggermente accentuata: accorcia il percorso e migliora l’angolo di lavoro.",
-"**Gomiti** a quarantacinque-sessanta gradi rispetto al tronco, non a novanta: riduce lo stress sulla spalla senza togliere lavoro al pettorale.",
-"**Piedi** piantati e bacino a contatto: la spinta parte da terra, e una base ferma è forza espressa."
-]
+"posizione": ["**Scapole** retratte e leggermente depresse, mantenute così per tutta la serie: danno all’omero una base contro cui spingere e limitano l’estensione della spalla in basso.", "**Torace** alto, curva toracica leggermente accentuata: accorcia il percorso e migliora l’angolo di lavoro.", "**Gomiti** a quarantacinque-sessanta gradi rispetto al tronco, non a novanta: riduce lo stress sulla spalla senza togliere lavoro al pettorale.", "**Piedi** piantati e bacino a contatto: la spinta parte da terra, e una base ferma è forza espressa."]
 },
 {
 "id": "dorsale",
 "nome": "Gran dorsale",
 "gruppo": "Torso",
-"capi": [
-"Porzione toracica",
-"Porzione lombare",
-"Porzione iliaca"
-],
-"funzioni": [
-"Estensione della spalla",
-"Adduzione della spalla",
-"Intrarotazione ed estensione del tronco"
-],
+"capi": ["Porzione toracica", "Porzione lombare", "Porzione iliaca"],
+"funzioni": ["Estensione della spalla", "Adduzione della spalla", "Intrarotazione ed estensione del tronco"],
 "stimolo": "Il dorsale porta l’omero verso il basso e indietro. È allungato quando il braccio è sopra la testa: è il motivo per cui il tratto iniziale di trazioni e lat machine, a braccia distese, vale più della chiusura sul petto.",
-"esercizi": [
-{
-"n": "Lat machine avanti",
-"g": "A",
-"f": "adduzione della spalla",
-"l": "allungata",
-"nota": "Parti a braccia completamente distese lasciando salire le scapole."
-},
-{
-"n": "Trazioni",
-"g": "A",
-"f": "adduzione della spalla",
-"l": "allungata",
-"nota": "Stesso pattern, carico legato al peso corporeo."
-},
-{
-"n": "Rematore con bilanciere",
-"g": "A",
-"f": "estensione della spalla + retrazione",
-"l": "media",
-"nota": "Lavora dorsale e alto schiena insieme. Busto fermo."
-},
-{
-"n": "Pulley basso",
-"g": "A",
-"f": "estensione della spalla",
-"l": "media",
-"nota": "Tira con i gomiti, non aprire il busto all’indietro."
-},
-{
-"n": "Pullover ai cavi",
-"g": "B",
-"f": "estensione pura della spalla",
-"l": "allungata",
-"nota": "Isola il dorsale togliendo i flessori del gomito dall’equazione."
-},
-{
-"n": "Rematore con manubrio",
-"g": "B",
-"f": "estensione della spalla",
-"l": "allungata",
-"nota": "Permette un allungamento maggiore in fondo."
-},
-{
-"n": "Pulldown con presa larga",
-"g": "A",
-"f": "adduzione della spalla",
-"l": "allungata",
-"nota": "La larghezza cambia poco forza e attivazione: scegli quella comoda."
-},
-{
-"n": "Rematore con manubrio a busto appoggiato",
-"g": "A",
-"f": "estensione della spalla",
-"l": "allungata",
-"nota": "Petto appoggiato: toglie la schiena dall’equazione."
-},
-{
-"n": "Trazioni zavorrate",
-"g": "A",
-"f": "adduzione della spalla",
-"l": "allungata",
-"nota": "Quando il peso corporeo non basta più."
-},
-{
-"n": "Rematore alla Smith machine",
-"g": "B",
-"f": "estensione + retrazione",
-"l": "media",
-"nota": "Percorso guidato, busto più facile da tenere fermo."
-},
-{
-"n": "Pulldown a braccio singolo",
-"g": "B",
-"f": "adduzione della spalla",
-"l": "allungata",
-"nota": "Escursione maggiore e correzione delle asimmetrie."
-}
-],
-"errori": [
-{
-"t": "Partire con le scapole già depresse",
-"s": "Accorcia il movimento proprio dove il dorsale è più lungo. Lascia salire le scapole in alto e poi tira.",
-"liv": "C"
-},
-{
-"t": "Tirare con le braccia",
-"s": "Pensa a portare i gomiti verso il fianco, non le mani verso il petto.",
-"liv": "C"
-},
-{
-"t": "Aprire il busto per finire la ripetizione",
-"s": "Sposta il lavoro sugli estensori lombari. Se serve, cala il carico.",
-"liv": "C"
-},
-{
-"t": "Cambiare presa sperando in effetti grossi",
-"s": "Le differenze fra prese alla lat machine sono minori di quanto si racconta: conta più l’escursione.",
-"liv": "B"
-},
-{
-"t": "Trascurare la presa",
-"s": "Se le mani cedono prima del dorsale, lo stimolo non arriva. Fasce da polso.",
-"liv": "C"
-}
-],
-"studi": [
-"vigotsky_emg",
-"wolf_partials",
-"pulldown_presa"
-],
+"esercizi": [{"n": "Lat machine avanti", "g": "A", "f": "adduzione della spalla", "l": "allungata", "nota": "Parti a braccia completamente distese lasciando salire le scapole."}, {"n": "Trazioni", "g": "A", "f": "adduzione della spalla", "l": "allungata", "nota": "Stesso pattern, carico legato al peso corporeo."}, {"n": "Rematore con bilanciere", "g": "A", "f": "estensione della spalla + retrazione", "l": "media", "nota": "Lavora dorsale e alto schiena insieme. Busto fermo."}, {"n": "Pulley basso", "g": "A", "f": "estensione della spalla", "l": "media", "nota": "Tira con i gomiti, non aprire il busto all’indietro."}, {"n": "Pullover ai cavi", "g": "B", "f": "estensione pura della spalla", "l": "allungata", "nota": "Isola il dorsale togliendo i flessori del gomito dall’equazione."}, {"n": "Rematore con manubrio", "g": "B", "f": "estensione della spalla", "l": "allungata", "nota": "Permette un allungamento maggiore in fondo."}, {"n": "Pulldown con presa larga", "g": "A", "f": "adduzione della spalla", "l": "allungata", "nota": "La larghezza cambia poco forza e attivazione: scegli quella comoda."}, {"n": "Rematore con manubrio a busto appoggiato", "g": "A", "f": "estensione della spalla", "l": "allungata", "nota": "Petto appoggiato: toglie la schiena dall’equazione."}, {"n": "Trazioni zavorrate", "g": "A", "f": "adduzione della spalla", "l": "allungata", "nota": "Quando il peso corporeo non basta più."}, {"n": "Rematore alla Smith machine", "g": "B", "f": "estensione + retrazione", "l": "media", "nota": "Percorso guidato, busto più facile da tenere fermo."}, {"n": "Pulldown a braccio singolo", "g": "B", "f": "adduzione della spalla", "l": "allungata", "nota": "Escursione maggiore e correzione delle asimmetrie."}, {"n": "Pulldown verso l’anca", "g": "A", "f": "estensione della spalla a escursione ampia", "l": "allungata", "nota": "Il cosiddetto iliac pulldown: busto inclinato indietro e barra tirata verso la cresta iliaca. Aggiunge estensione di spalla rispetto al pulldown al petto, quindi un tratto di accorciamento che la versione classica non raggiunge."}, {"n": "Rematore a T con appoggio al petto", "g": "A", "f": "estensione + retrazione", "l": "media", "nota": "L’appoggio toglie erettori e ischiocrurali dall’equazione: resta la schiena."}, {"n": "Trazioni a presa neutra", "g": "A", "f": "adduzione + estensione della spalla", "l": "allungata", "nota": "Presa più tollerabile per spalla e gomito, stesso stimolo delle trazioni prone."}, {"n": "Pulldown a braccia tese", "g": "B", "f": "estensione della spalla isolata", "l": "allungata", "nota": "Toglie il bicipite. Il momento è massimo con le braccia in alto, dove la dorsale è lunga."}, {"n": "Pullover con manubrio su panca", "g": "B", "f": "estensione della spalla", "l": "allungata", "nota": "La versione classica. Il punto è il tratto dietro la testa, non la chiusura."}, {"n": "Seal row", "g": "B", "f": "estensione della spalla", "l": "media", "nota": "Sdraiato sulla panca: nessun aiuto da gambe e schiena, il carico è tutto della schiena."}, {"n": "Rematore Meadows", "g": "B", "f": "estensione unilaterale al landmine", "l": "allungata", "nota": "La posizione trasversale rispetto al bilanciere permette un allungamento maggiore in fondo."}, {"n": "Rematore Pendlay", "g": "B", "f": "estensione della spalla, esplosivo", "l": "allungata", "nota": "Ogni ripetizione riparte da terra. Buono per la forza, meno controllabile per l’ipertrofia."}, {"n": "Rematore inverso al bilanciere o agli anelli", "g": "B", "f": "retrazione + estensione", "l": "media", "nota": "Carico regolabile con l’inclinazione del corpo e carico vertebrale basso: è la variante che risparmia la schiena."}, {"n": "Lat machine a presa inversa", "g": "B", "f": "estensione della spalla + flessione del gomito", "l": "allungata", "nota": "Più bicipite della presa prona, ma la dorsale lavora comunque in allungamento."}, {"n": "Rematore ai cavi a un braccio con rotazione", "g": "B", "f": "estensione unilaterale", "l": "allungata", "nota": "La rotazione del busto in fondo aggiunge escursione."}, {"n": "Kroc row", "g": "C", "f": "estensione unilaterale ad alte ripetizioni", "l": "media", "nota": "Serie lunghe con carichi alti e un po’ di slancio. Costruisce presa e tenuta; non è un esercizio di precisione."}],
+"errori": [{"t": "Partire con le scapole già depresse", "s": "Accorcia il movimento proprio dove il dorsale è più lungo. Lascia salire le scapole in alto e poi tira.", "liv": "C"}, {"t": "Tirare con le braccia", "s": "Pensa a portare i gomiti verso il fianco, non le mani verso il petto.", "liv": "C"}, {"t": "Aprire il busto per finire la ripetizione", "s": "Sposta il lavoro sugli estensori lombari. Se serve, cala il carico.", "liv": "C"}, {"t": "Cambiare presa sperando in effetti grossi", "s": "Le differenze fra prese alla lat machine sono minori di quanto si racconta: conta più l’escursione.", "liv": "B"}, {"t": "Trascurare la presa", "s": "Se le mani cedono prima del dorsale, lo stimolo non arriva. Fasce da polso.", "liv": "C"}],
+"studi": ["vigotsky_emg", "wolf_partials", "pulldown_presa"],
 "volume": "10-20 serie settimanali fra verticali e orizzontali.",
 "meccanica": "Il dorsale è più lungo con il braccio sopra la testa, ed è lì che il momento è massimo alla lat machine: i due punti coincidono, e il tratto iniziale a braccia distese è quello che vale. Nel rematore invece il momento massimo cade a metà escursione, con il muscolo a lunghezza intermedia.",
-"posizione": [
-"**Scapole** libere di salire in partenza: partire con le scapole già depresse accorcia il movimento proprio dove il dorsale è più lungo.",
-"**Spalla** che si estende e adduce: pensa a portare il gomito verso l’anca, non la mano verso il petto.",
-"**Busto** fermo nel rematore: se si alza a ogni ripetizione stai aggiungendo un’estensione d’anca che non avevi previsto.",
-"**Presa** neutra o prona se i flessori del gomito cedono per primi; fasce se cede la mano."
-]
+"posizione": ["**Scapole** libere di salire in partenza: partire con le scapole già depresse accorcia il movimento proprio dove il dorsale è più lungo.", "**Spalla** che si estende e adduce: pensa a portare il gomito verso l’anca, non la mano verso il petto.", "**Busto** fermo nel rematore: se si alza a ogni ripetizione stai aggiungendo un’estensione d’anca che non avevi previsto.", "**Presa** neutra o prona se i flessori del gomito cedono per primi; fasce se cede la mano."]
 },
 {
 "id": "altoschiena",
 "nome": "Trapezio medio, romboidi, deltoide posteriore",
 "gruppo": "Torso",
-"capi": [
-"Trapezio superiore",
-"Trapezio medio e inferiore",
-"Romboidi",
-"Deltoide posteriore"
-],
-"funzioni": [
-"Retrazione scapolare",
-"Depressione scapolare",
-"Abduzione orizzontale della spalla"
-],
+"capi": ["Trapezio superiore", "Trapezio medio e inferiore", "Romboidi", "Deltoide posteriore"],
+"funzioni": ["Retrazione scapolare", "Depressione scapolare", "Abduzione orizzontale della spalla"],
 "stimolo": "Sono muscoli che avvicinano le scapole o portano l’omero indietro sul piano orizzontale. Rispondono bene a carichi contenuti e ripetizioni alte: appena il carico sale, il movimento diventa una trazione e il lavoro se ne va altrove.",
-"esercizi": [
-{
-"n": "Reverse pec deck",
-"g": "A",
-"f": "abduzione orizzontale",
-"l": "media",
-"nota": "Il più diretto sul deltoide posteriore, e il più difficile da barare."
-},
-{
-"n": "Face pull",
-"g": "A",
-"f": "abduzione orizzontale + extrarotazione",
-"l": "media",
-"nota": "Carichi bassi, 15-20 ripetizioni."
-},
-{
-"n": "Rematore",
-"g": "B",
-"f": "retrazione scapolare",
-"l": "media",
-"nota": "Lavora l’alto schiena, ma il dorsale prende gran parte del carico."
-},
-{
-"n": "Alzate posteriori con manubri",
-"g": "B",
-"f": "abduzione orizzontale",
-"l": "media",
-"nota": "Braccia quasi tese: è un’apertura, non una trazione."
-},
-{
-"n": "Scrollate",
-"g": "B",
-"f": "elevazione scapolare",
-"l": "media",
-"nota": "Solo trapezio superiore. Serve se vuoi il trapezio, non per la postura."
-},
-{
-"n": "Rematore ai cavi alto",
-"g": "A",
-"f": "abduzione orizzontale",
-"l": "media",
-"nota": "Cavo all’altezza del viso, gomiti alti: molto deltoide posteriore."
-},
-{
-"n": "Alzate posteriori a macchina",
-"g": "A",
-"f": "abduzione orizzontale",
-"l": "media",
-"nota": "Difficile da barare, ideale a fine seduta."
-},
-{
-"n": "Rematore presa larga",
-"g": "B",
-"f": "retrazione + abduzione orizzontale",
-"l": "media",
-"nota": "La presa larga aumenta il contributo del capo posteriore."
-},
-{
-"n": "Scrollate ai cavi",
-"g": "B",
-"f": "elevazione scapolare",
-"l": "allungata",
-"nota": "Il cavo mantiene tensione anche in alto."
-}
-],
-"errori": [
-{
-"t": "Usare troppo carico",
-"s": "Con carichi alti il movimento diventa un rematore e il deltoide posteriore smette di essere il motore.",
-"liv": "C"
-},
-{
-"t": "Contare i rematori come lavoro per il deltoide posteriore",
-"s": "Contribuiscono, ma non bastano: serve almeno un esercizio dedicato.",
-"liv": "C"
-},
-{
-"t": "Confondere postura e ipertrofia",
-"s": "Gli esercizi per l’alto schiena non correggono la postura da soli: fanno crescere muscoli.",
-"liv": "C"
-}
-],
-"studi": [
-"lateral_raise",
-"vigotsky_emg",
-"schoenfeld_range_att"
-],
+"esercizi": [{"n": "Reverse pec deck", "g": "A", "f": "abduzione orizzontale", "l": "media", "nota": "Il più diretto sul deltoide posteriore, e il più difficile da barare."}, {"n": "Face pull", "g": "A", "f": "abduzione orizzontale + extrarotazione", "l": "media", "nota": "Carichi bassi, 15-20 ripetizioni."}, {"n": "Rematore", "g": "B", "f": "retrazione scapolare", "l": "media", "nota": "Lavora l’alto schiena, ma il dorsale prende gran parte del carico."}, {"n": "Alzate posteriori con manubri", "g": "B", "f": "abduzione orizzontale", "l": "media", "nota": "Braccia quasi tese: è un’apertura, non una trazione."}, {"n": "Scrollate", "g": "B", "f": "elevazione scapolare", "l": "media", "nota": "Solo trapezio superiore. Serve se vuoi il trapezio, non per la postura."}, {"n": "Rematore ai cavi alto", "g": "A", "f": "abduzione orizzontale", "l": "media", "nota": "Cavo all’altezza del viso, gomiti alti: molto deltoide posteriore."}, {"n": "Alzate posteriori a macchina", "g": "A", "f": "abduzione orizzontale", "l": "media", "nota": "Difficile da barare, ideale a fine seduta."}, {"n": "Rematore presa larga", "g": "B", "f": "retrazione + abduzione orizzontale", "l": "media", "nota": "La presa larga aumenta il contributo del capo posteriore."}, {"n": "Scrollate ai cavi", "g": "B", "f": "elevazione scapolare", "l": "allungata", "nota": "Il cavo mantiene tensione anche in alto."}, {"n": "Kelso shrug", "g": "B", "f": "retrazione scapolare a busto flesso", "l": "allungata", "nota": "Scrollata orizzontale: busto piegato in avanti, braccia tese, si muovono solo le scapole. In basso il trapezio medio è allungato sotto carico, ed è quello il punto dell’esercizio."}, {"n": "Scrollate a busto inclinato con manubri", "g": "B", "f": "retrazione scapolare", "l": "allungata", "nota": "Stessa logica della Kelso shrug con i manubri: escursione scapolare pura."}, {"n": "Alzate posteriori ai cavi incrociati", "g": "A", "f": "abduzione orizzontale", "l": "allungata", "nota": "Incrociando i cavi la tensione c’è già in partenza, quando il deltoide posteriore è lungo."}, {"n": "Rematore ai cavi con corda al viso", "g": "A", "f": "abduzione orizzontale + rotazione esterna", "l": "media", "nota": "Variante del face pull con più escursione in rotazione esterna."}, {"n": "Rematore con manubri a busto appoggiato", "g": "B", "f": "retrazione + estensione", "l": "media", "nota": "L’appoggio elimina lo slancio e il carico lombare."}, {"n": "Reverse fly a macchina a braccio singolo", "g": "B", "f": "abduzione orizzontale", "l": "media", "nota": "Un lato per volta: permette di lavorare sull’asimmetria."}, {"n": "Prone Y raise su panca inclinata", "g": "C", "f": "elevazione + rotazione della scapola", "l": "media", "nota": "Trapezio inferiore. I carichi necessariamente bassi ne fanno un complemento, non un motore di crescita."}, {"n": "Trap-3 raise", "g": "C", "f": "rotazione verso l’alto della scapola", "l": "media", "nota": "Per il trapezio inferiore. Utile in riabilitazione, contributo modesto alla massa."}, {"n": "Band pull-apart", "g": "C", "f": "retrazione + abduzione orizzontale", "l": "accorciata", "nota": "La resistenza dell’elastico è massima a fine movimento, dove il muscolo è corto. Riscaldamento, non stimolo."}],
+"errori": [{"t": "Usare troppo carico", "s": "Con carichi alti il movimento diventa un rematore e il deltoide posteriore smette di essere il motore.", "liv": "C"}, {"t": "Contare i rematori come lavoro per il deltoide posteriore", "s": "Contribuiscono, ma non bastano: serve almeno un esercizio dedicato.", "liv": "C"}, {"t": "Confondere postura e ipertrofia", "s": "Gli esercizi per l’alto schiena non correggono la postura da soli: fanno crescere muscoli.", "liv": "C"}],
+"studi": ["lateral_raise", "vigotsky_emg", "schoenfeld_range_att"],
 "volume": "Deltoide posteriore 8-16 serie settimanali, incluso il contributo dei rematori.",
 "meccanica": "Sono movimenti di abduzione orizzontale con braccio quasi teso: il braccio di leva è lungo e il momento è alto per tutta l’escursione, motivo per cui bastano carichi ridicoli. Il momento è massimo con il braccio perpendicolare al tronco.",
-"posizione": [
-"**Scapole** che si avvicinano al termine del movimento, senza forzare: la retrazione è parte dell’esercizio.",
-"**Gomito** quasi fisso: se lo pieghi trasformi l’apertura in una trazione e coinvolgi il dorsale.",
-"**Busto** immobile: nessuno slancio, nessuna estensione della schiena per accompagnare."
-]
+"posizione": ["**Scapole** che si avvicinano al termine del movimento, senza forzare: la retrazione è parte dell’esercizio.", "**Gomito** quasi fisso: se lo pieghi trasformi l’apertura in una trazione e coinvolgi il dorsale.", "**Busto** immobile: nessuno slancio, nessuna estensione della schiena per accompagnare."]
 },
 {
 "id": "deltoide",
 "nome": "Deltoide",
 "gruppo": "Spalla",
-"capi": [
-"Anteriore",
-"Laterale",
-"Posteriore"
-],
-"funzioni": [
-"Flessione della spalla (anteriore)",
-"Abduzione (laterale)",
-"Estensione e abduzione orizzontale (posteriore)"
-],
+"capi": ["Anteriore", "Laterale", "Posteriore"],
+"funzioni": ["Flessione della spalla (anteriore)", "Abduzione (laterale)", "Estensione e abduzione orizzontale (posteriore)"],
 "stimolo": "Tre capi con tre linee di trazione diverse, che vanno allenati separatamente. L’anteriore riceve moltissimo lavoro indiretto da ogni spinta: raramente serve isolarlo. Il laterale e il posteriore no, e sono quelli che danno larghezza.",
-"esercizi": [
-{
-"n": "Alzate laterali",
-"g": "A",
-"f": "abduzione",
-"l": "media",
-"nota": "Cavo o manubrio danno la stessa crescita: scegli quello che controlli meglio."
-},
-{
-"n": "Spinte sopra la testa",
-"g": "A",
-"f": "flessione + abduzione",
-"l": "media",
-"nota": "Lavora soprattutto l’anteriore, con contributo del laterale."
-},
-{
-"n": "Reverse pec deck",
-"g": "A",
-"f": "abduzione orizzontale",
-"l": "media",
-"nota": "Per il capo posteriore."
-},
-{
-"n": "Alzate laterali a macchina",
-"g": "B",
-"f": "abduzione",
-"l": "media",
-"nota": "Elimina lo slancio, utile a fine seduta."
-},
-{
-"n": "Alzate frontali",
-"g": "C",
-"f": "flessione",
-"l": "media",
-"nota": "Quasi sempre superflue: l’anteriore è già servito da panca e spinte."
-},
-{
-"n": "Alzate laterali ai cavi",
-"g": "A",
-"f": "abduzione",
-"l": "media",
-"nota": "Tensione continua e nessuno slancio se stai seduto."
-},
-{
-"n": "Spinte a macchina",
-"g": "B",
-"f": "flessione + abduzione",
-"l": "media",
-"nota": "Percorso guidato, utile per spingere vicino al cedimento."
-},
-{
-"n": "Arnold press",
-"g": "B",
-"f": "flessione + rotazione",
-"l": "media",
-"nota": "Aggiunge rotazione, non aggiunge crescita: sceglila se ti piace."
-},
-{
-"n": "Alzate laterali sul cavo dietro il corpo",
-"g": "B",
-"f": "abduzione da allungato",
-"l": "allungata",
-"nota": "Partendo con il braccio dietro, il deltoide parte più lungo."
-},
-{
-"n": "Spinte con manubri in piedi",
-"g": "B",
-"f": "flessione + abduzione",
-"l": "media",
-"nota": "Più core, meno carico sul deltoide: preferisci da seduto."
-}
-],
-"errori": [
-{
-"t": "Slanciare nelle alzate laterali",
-"s": "Appena il tronco accompagna, il deltoide smette di essere il motore. Abbassa il carico e fermati dove riesci a controllare.",
-"liv": "C"
-},
-{
-"t": "Aggiungere volume sull’anteriore",
-"s": "Con panca, inclinata e spinte hai già 8-12 serie indirette a settimana. Il volume in più va sul laterale e sul posteriore.",
-"liv": "C"
-},
-{
-"t": "Credere che sopra i novanta gradi «il lavoro passi al trapezio»",
-"s": "Non è così, e l’avevo scritto male. Con un manubrio il momento da vincere vale peso × lunghezza del braccio × seno dell’angolo: è massimo a novanta gradi e da lì in poi **cala**. Sopra la linea delle spalle non stai regalando il lavoro a un altro muscolo, stai lavorando sotto carico minore. Nel frattempo il trapezio superiore aumenta il suo contributo perché deve ruotare la scapola verso l’alto, cosa senza la quale il braccio non si alza affatto: è il suo mestiere, non un furto. Fermarsi intorno ai novanta gradi resta ragionevole per restare nel tratto più caricato, ma è un argomento di efficienza, non di sicurezza né di attivazione.",
-"liv": "M"
-},
-{
-"t": "Portare troppo carico sul laterale",
-"s": "È un esercizio da 12-20 ripetizioni. Con carichi alti il trapezio prende il sopravvento.",
-"liv": "C"
-}
-],
-"studi": [
-"lateral_raise",
-"vigotsky_emg"
-],
+"esercizi": [{"n": "Alzate laterali", "g": "A", "f": "abduzione", "l": "media", "nota": "Cavo o manubrio danno la stessa crescita: scegli quello che controlli meglio."}, {"n": "Spinte sopra la testa", "g": "A", "f": "flessione + abduzione", "l": "media", "nota": "Lavora soprattutto l’anteriore, con contributo del laterale."}, {"n": "Reverse pec deck", "g": "A", "f": "abduzione orizzontale", "l": "media", "nota": "Per il capo posteriore."}, {"n": "Alzate laterali a macchina", "g": "B", "f": "abduzione", "l": "media", "nota": "Elimina lo slancio, utile a fine seduta."}, {"n": "Alzate frontali", "g": "C", "f": "flessione", "l": "media", "nota": "Quasi sempre superflue: l’anteriore è già servito da panca e spinte."}, {"n": "Alzate laterali ai cavi", "g": "A", "f": "abduzione", "l": "media", "nota": "Tensione continua e nessuno slancio se stai seduto."}, {"n": "Spinte a macchina", "g": "B", "f": "flessione + abduzione", "l": "media", "nota": "Percorso guidato, utile per spingere vicino al cedimento."}, {"n": "Arnold press", "g": "B", "f": "flessione + rotazione", "l": "media", "nota": "Aggiunge rotazione, non aggiunge crescita: sceglila se ti piace."}, {"n": "Alzate laterali sul cavo dietro il corpo", "g": "B", "f": "abduzione da allungato", "l": "allungata", "nota": "Partendo con il braccio dietro, il deltoide parte più lungo."}, {"n": "Spinte con manubri in piedi", "g": "B", "f": "flessione + abduzione", "l": "media", "nota": "Più core, meno carico sul deltoide: preferisci da seduto."}, {"n": "Alzate laterali sdraiato di fianco su panca", "g": "B", "f": "abduzione dal basso", "l": "allungata", "nota": "La resistenza c’è già a braccio basso, dove il deltoide è lungo: è l’opposto delle alzate in piedi, dove in basso il momento è quasi nullo."}, {"n": "Egyptian lateral raise", "g": "B", "f": "abduzione con busto inclinato", "l": "allungata", "nota": "Ci si tiene a un montante e ci si inclina lontano dal cavo: aumenta la tensione proprio nel tratto basso."}, {"n": "Military press in piedi con bilanciere", "g": "A", "f": "flessione + abduzione della spalla", "l": "media", "nota": "Il carico più alto che il deltoide anteriore possa vedere."}, {"n": "Spinte con manubri su panca inclinata alta", "g": "B", "f": "flessione della spalla", "l": "allungata", "nota": "Schienale a 60-75 gradi: il deltoide anteriore parte più allungato che in verticale."}, {"n": "Alzate laterali a un braccio al cavo basso", "g": "A", "f": "abduzione isolata", "l": "media", "nota": "Tensione costante lungo tutto l’arco. Il braccio libero permette di controllare il busto."}, {"n": "Alzate laterali con parziali nel tratto basso", "g": "B", "f": "abduzione, tratto basso", "l": "allungata", "nota": "Raggiunto il cedimento si continua nel tratto basso, dove il momento è minore e il muscolo più lungo."}, {"n": "Push press", "g": "B", "f": "spinta assistita dalle gambe", "l": "media", "nota": "Le gambe superano il punto morto: serve a usare carichi che il solo deltoide non muoverebbe."}, {"n": "Landmine press", "g": "B", "f": "flessione della spalla", "l": "media", "nota": "Traiettoria obliqua, spesso più tollerabile per chi ha fastidio nella spinta verticale piena."}, {"n": "Rematore alto ai cavi a presa larga", "g": "B", "f": "abduzione + elevazione", "l": "media", "nota": "Deltoide laterale e trapezio insieme. Fermarsi quando i gomiti arrivano all’altezza delle spalle."}, {"n": "Cuban press", "g": "C", "f": "rotazione esterna + spinta", "l": "media", "nota": "Lavoro di cuffia con carichi bassi. Preparazione, non stimolo di crescita."}, {"n": "Lu raise", "g": "C", "f": "abduzione fino a sopra la testa", "l": "media", "nota": "Alzate portate oltre la linea delle spalle fino a chiudere in alto. Il momento è massimo a 90 gradi e cala salendo: il tratto aggiunto costa poco e rende poco."}],
+"errori": [{"t": "Slanciare nelle alzate laterali", "s": "Appena il tronco accompagna, il deltoide smette di essere il motore. Abbassa il carico e fermati dove riesci a controllare.", "liv": "C"}, {"t": "Aggiungere volume sull’anteriore", "s": "Con panca, inclinata e spinte hai già 8-12 serie indirette a settimana. Il volume in più va sul laterale e sul posteriore.", "liv": "C"}, {"t": "Credere che sopra i novanta gradi «il lavoro passi al trapezio»", "s": "Non è così, e l’avevo scritto male. Con un manubrio il momento da vincere vale peso × lunghezza del braccio × seno dell’angolo: è massimo a novanta gradi e da lì in poi **cala**. Sopra la linea delle spalle non stai regalando il lavoro a un altro muscolo, stai lavorando sotto carico minore. Nel frattempo il trapezio superiore aumenta il suo contributo perché deve ruotare la scapola verso l’alto, cosa senza la quale il braccio non si alza affatto: è il suo mestiere, non un furto. Fermarsi intorno ai novanta gradi resta ragionevole per restare nel tratto più caricato, ma è un argomento di efficienza, non di sicurezza né di attivazione.", "liv": "M"}, {"t": "Portare troppo carico sul laterale", "s": "È un esercizio da 12-20 ripetizioni. Con carichi alti il trapezio prende il sopravvento.", "liv": "C"}],
+"studi": ["lateral_raise", "vigotsky_emg"],
 "volume": "Laterale 10-20 serie, posteriore 8-16, anteriore raramente da integrare.",
 "meccanica": "È il caso di scuola del disaccoppiamento fra carico e lunghezza. Il deltoide laterale è più lungo con il braccio al fianco, dove il momento è quasi nullo; il momento è massimo a novanta gradi, dove il muscolo è già corto. Nessuna variante risolve del tutto il problema, e nel confronto diretto fra cavo e manubrio la differenza attesa non si è vista.",
-"posizione": [
-"**Scapola** libera di ruotare verso l’alto: è necessaria all’elevazione e non va bloccata.",
-"**Spalla** che non si eleva verso l’orecchio: la scrollata è il segnale che il carico è eccessivo.",
-"**Gomito** leggermente flesso e fisso, per accorciare il braccio di leva quel tanto che rende il carico gestibile.",
-"**Busto** fermo: se accompagna, il deltoide smette di essere il motore."
-]
+"posizione": ["**Scapola** libera di ruotare verso l’alto: è necessaria all’elevazione e non va bloccata.", "**Spalla** che non si eleva verso l’orecchio: la scrollata è il segnale che il carico è eccessivo.", "**Gomito** leggermente flesso e fisso, per accorciare il braccio di leva quel tanto che rende il carico gestibile.", "**Busto** fermo: se accompagna, il deltoide smette di essere il motore."]
 },
 {
 "id": "bicipite",
 "nome": "Bicipite brachiale e brachiale",
 "gruppo": "Braccio",
-"capi": [
-"Capo lungo del bicipite",
-"Capo breve del bicipite",
-"Brachiale",
-"Brachioradiale"
-],
-"funzioni": [
-"Flessione del gomito",
-"Supinazione dell’avambraccio",
-"Flessione della spalla (capo lungo)"
-],
+"capi": ["Capo lungo del bicipite", "Capo breve del bicipite", "Brachiale", "Brachioradiale"],
+"funzioni": ["Flessione del gomito", "Supinazione dell’avambraccio", "Flessione della spalla (capo lungo)"],
 "stimolo": "Il capo lungo attraversa la spalla: è allungato quando il braccio è dietro il corpo. Per questo il curl su panca inclinata e il curl ai cavi dietro il corpo lo stimolano diversamente dal curl in piedi.",
-"esercizi": [
-{
-"n": "Curl su panca inclinata",
-"g": "A",
-"f": "flessione con spalla estesa",
-"l": "allungata",
-"nota": "Lascia cadere il braccio indietro fra una ripetizione e l’altra."
-},
-{
-"n": "Curl con bilanciere EZ",
-"g": "A",
-"f": "flessione",
-"l": "media",
-"nota": "Gomiti fermi al fianco: portarli avanti scarica il bicipite."
-},
-{
-"n": "Curl ai cavi",
-"g": "B",
-"f": "flessione a tensione continua",
-"l": "media",
-"nota": "Il cavo mantiene tensione anche in alto."
-},
-{
-"n": "Panca Scott",
-"g": "B",
-"f": "flessione con spalla flessa",
-"l": "accorciata",
-"nota": "Il tratto iniziale, a braccio disteso, è quello che conta: non saltarlo."
-},
-{
-"n": "Hammer curl",
-"g": "B",
-"f": "flessione in presa neutra",
-"l": "media",
-"nota": "Lavora soprattutto brachiale e brachioradiale, non il bicipite."
-},
-{
-"n": "Curl ai cavi dietro il corpo",
-"g": "A",
-"f": "flessione con spalla estesa",
-"l": "allungata",
-"nota": "Il capo lungo parte allungato: stessa logica del curl su panca inclinata."
-},
-{
-"n": "Curl con bilanciere diritto",
-"g": "B",
-"f": "flessione in supinazione completa",
-"l": "media",
-"nota": "Supinazione bloccata: se il gomito protesta, passa all’EZ."
-},
-{
-"n": "Curl concentrato",
-"g": "B",
-"f": "flessione",
-"l": "media",
-"nota": "Poco carico, molto controllo. Nessun vantaggio dimostrato sugli altri."
-},
-{
-"n": "Curl al pulley basso",
-"g": "B",
-"f": "flessione a tensione continua",
-"l": "media",
-"nota": "Il cavo tiene tensione anche in chiusura."
-},
-{
-"n": "Chin-up",
-"g": "B",
-"f": "flessione + adduzione della spalla",
-"l": "allungata",
-"nota": "Carico alto sul bicipite, ma il dorsale fa gran parte del lavoro."
-}
-],
-"errori": [
-{
-"t": "Portare i gomiti in avanti",
-"s": "Trasforma il curl in una spinta della spalla e toglie tensione al bicipite.",
-"liv": "C"
-},
-{
-"t": "Saltare il tratto basso",
-"s": "È dove il bicipite è più lungo. Distendi completamente il braccio a ogni ripetizione.",
-"liv": "B"
-},
-{
-"t": "Contare i tiri come lavoro per i bicipiti",
-"s": "Contribuiscono con circa mezza serie ciascuno, ma non sostituiscono i curl diretti.",
-"liv": "C"
-},
-{
-"t": "Cercare la crescita in una regione precisa",
-"s": "Nei confronti diretti l’ipertrofia dei flessori risulta distribuita in modo simile lungo il muscolo: il picco non si costruisce con l’esercizio giusto.",
-"liv": "B"
-}
-],
-"studi": [
-"sato_rom",
-"biceps_regional"
-],
+"esercizi": [{"n": "Curl su panca inclinata", "g": "A", "f": "flessione con spalla estesa", "l": "allungata", "nota": "Lascia cadere il braccio indietro fra una ripetizione e l’altra."}, {"n": "Curl con bilanciere EZ", "g": "A", "f": "flessione", "l": "media", "nota": "Gomiti fermi al fianco: portarli avanti scarica il bicipite."}, {"n": "Curl ai cavi", "g": "B", "f": "flessione a tensione continua", "l": "media", "nota": "Il cavo mantiene tensione anche in alto."}, {"n": "Panca Scott", "g": "B", "f": "flessione con spalla flessa", "l": "accorciata", "nota": "Il tratto iniziale, a braccio disteso, è quello che conta: non saltarlo."}, {"n": "Hammer curl", "g": "B", "f": "flessione in presa neutra", "l": "media", "nota": "Lavora soprattutto brachiale e brachioradiale, non il bicipite."}, {"n": "Curl ai cavi dietro il corpo", "g": "A", "f": "flessione con spalla estesa", "l": "allungata", "nota": "Il capo lungo parte allungato: stessa logica del curl su panca inclinata."}, {"n": "Curl con bilanciere diritto", "g": "B", "f": "flessione in supinazione completa", "l": "media", "nota": "Supinazione bloccata: se il gomito protesta, passa all’EZ."}, {"n": "Curl concentrato", "g": "B", "f": "flessione", "l": "media", "nota": "Poco carico, molto controllo. Nessun vantaggio dimostrato sugli altri."}, {"n": "Curl al pulley basso", "g": "B", "f": "flessione a tensione continua", "l": "media", "nota": "Il cavo tiene tensione anche in chiusura."}, {"n": "Chin-up", "g": "B", "f": "flessione + adduzione della spalla", "l": "allungata", "nota": "Carico alto sul bicipite, ma il dorsale fa gran parte del lavoro."}, {"n": "Curl su panca inclinata a un braccio", "g": "A", "f": "flessione a spalla estesa", "l": "allungata", "nota": "La spalla dietro il busto allunga il capo lungo: è la posizione in cui il bicipite rende di più."}, {"n": "Spider curl", "g": "B", "f": "flessione del gomito", "l": "media", "nota": "Petto appoggiato a una panca inclinata: nessuno slancio possibile. La spalla flessa accorcia il capo lungo."}, {"n": "Panca Scott a un braccio con manubrio", "g": "B", "f": "flessione del gomito", "l": "accorciata", "nota": "Il momento massimo cade a inizio movimento, dove il bicipite è lungo: è il tratto da non saltare."}, {"n": "Curl inverso a presa prona", "g": "B", "f": "flessione del gomito, brachiale e brachioradiale", "l": "media", "nota": "La pronazione mette il bicipite in svantaggio e lascia lavorare brachiale e brachioradiale."}, {"n": "Curl con corda ai cavi", "g": "B", "f": "flessione + supinazione", "l": "media", "nota": "La corda lascia libera la mano di supinare in cima."}, {"n": "Curl a martello con corda", "g": "B", "f": "flessione a presa neutra", "l": "media", "nota": "Brachioradiale e brachiale, i due muscoli che danno spessore al braccio visto di lato."}, {"n": "Curl alla macchina", "g": "B", "f": "flessione guidata", "l": "media", "nota": "Traiettoria fissa: buono per portare a cedimento in sicurezza a fine seduta."}, {"n": "Drag curl", "g": "C", "f": "flessione + estensione della spalla", "l": "media", "nota": "Il bilanciere striscia sul busto e i gomiti vanno indietro, così il capo lungo resta più lungo. Il carico utilizzabile però è basso."}, {"n": "Zottman curl", "g": "C", "f": "flessione supinata, ritorno pronato", "l": "media", "nota": "Sale supinato e scende pronato. Idea elegante, esecuzione confusa: due esercizi separati rendono di più."}, {"n": "Curl 21", "g": "C", "f": "flessione a tratti parziali", "l": "variabile", "nota": "Sette parziali basse, sette alte, sette complete. Produce molto bruciore con carichi bassi, e il bruciore non è lo stimolo."}],
+"errori": [{"t": "Portare i gomiti in avanti", "s": "Trasforma il curl in una spinta della spalla e toglie tensione al bicipite.", "liv": "C"}, {"t": "Saltare il tratto basso", "s": "È dove il bicipite è più lungo. Distendi completamente il braccio a ogni ripetizione.", "liv": "B"}, {"t": "Contare i tiri come lavoro per i bicipiti", "s": "Contribuiscono con circa mezza serie ciascuno, ma non sostituiscono i curl diretti.", "liv": "C"}, {"t": "Cercare la crescita in una regione precisa", "s": "Nei confronti diretti l’ipertrofia dei flessori risulta distribuita in modo simile lungo il muscolo: il picco non si costruisce con l’esercizio giusto.", "liv": "B"}],
+"studi": ["sato_rom", "biceps_regional"],
 "volume": "8-16 serie dirette settimanali, oltre al contributo indiretto dei tiri.",
 "meccanica": "Con il manubrio il momento è massimo a gomito a novanta gradi, dove il bicipite è a lunghezza intermedia, e crolla sia a braccio disteso sia in chiusura. Il capo lungo è più lungo con la spalla estesa: il curl su panca inclinata e il curl ai cavi dietro il corpo servono a spostare il carico verso quella posizione.",
-"posizione": [
-"**Gomito** fermo al fianco: portarlo in avanti aggiunge una flessione di spalla e scarica il bicipite.",
-"**Spalla** ferma o deliberatamente estesa se cerchi il capo lungo; mai in flessione progressiva.",
-"**Polso** neutro o leggermente esteso: con il bilanciere diritto la supinazione è bloccata e il gomito può protestare.",
-"**Escursione** completa in basso, dove il muscolo è lungo e quasi tutti si fermano prima."
-]
+"posizione": ["**Gomito** fermo al fianco: portarlo in avanti aggiunge una flessione di spalla e scarica il bicipite.", "**Spalla** ferma o deliberatamente estesa se cerchi il capo lungo; mai in flessione progressiva.", "**Polso** neutro o leggermente esteso: con il bilanciere diritto la supinazione è bloccata e il gomito può protestare.", "**Escursione** completa in basso, dove il muscolo è lungo e quasi tutti si fermano prima."]
 },
 {
 "id": "tricipite",
 "nome": "Tricipite brachiale",
 "gruppo": "Braccio",
-"capi": [
-"Capo lungo",
-"Capo laterale",
-"Capo mediale"
-],
-"funzioni": [
-"Estensione del gomito",
-"Estensione della spalla (capo lungo)"
-],
+"capi": ["Capo lungo", "Capo laterale", "Capo mediale"],
+"funzioni": ["Estensione del gomito", "Estensione della spalla (capo lungo)"],
 "stimolo": "Il capo lungo è oltre metà della massa del tricipite ed è l’unico che attraversa la spalla: cresce molto di più se lo alleni con il braccio sopra la testa o dietro il corpo. È la singola scelta di esercizio con l’effetto più grande documentato sul braccio.",
-"esercizi": [
-{
-"n": "Estensione sopra la testa",
-"g": "A",
-"f": "estensione del gomito con spalla flessa",
-"l": "allungata",
-"nota": "Circa il 40% di crescita in più rispetto ai pushdown a braccio neutro."
-},
-{
-"n": "Skullcrusher dietro la testa",
-"g": "A",
-"f": "estensione con spalla parzialmente flessa",
-"l": "allungata",
-"nota": "Dietro la testa, non sulla fronte: sulla fronte il capo lungo resta accorciato."
-},
-{
-"n": "Pushdown ai cavi",
-"g": "B",
-"f": "estensione del gomito",
-"l": "accorciata",
-"nota": "Lavora bene capo laterale e mediale. Gomiti fermi."
-},
-{
-"n": "Panca presa stretta",
-"g": "B",
-"f": "estensione + spinta",
-"l": "media",
-"nota": "Permette carichi alti, ma la spalla resta neutra."
-},
-{
-"n": "Dips",
-"g": "B",
-"f": "estensione + spinta",
-"l": "media",
-"nota": "Busto verticale per spostare il lavoro sul tricipite."
-},
-{
-"n": "Estensione ai cavi sopra la testa con corda",
-"g": "A",
-"f": "estensione con spalla flessa",
-"l": "allungata",
-"nota": "La versione più comoda da caricare progressivamente."
-},
-{
-"n": "Estensione con manubrio a due mani",
-"g": "A",
-"f": "estensione con spalla flessa",
-"l": "allungata",
-"nota": "Alternativa senza cavi, escursione piena."
-},
-{
-"n": "Pushdown a barra diritta",
-"g": "B",
-"f": "estensione del gomito",
-"l": "accorciata",
-"nota": "Presa prona, gomiti fermi al fianco."
-},
-{
-"n": "Kickback ai cavi",
-"g": "C",
-"f": "estensione con spalla estesa",
-"l": "accorciata",
-"nota": "Tensione massima dove il tricipite è corto: contributo modesto."
-}
-],
-"errori": [
-{
-"t": "Allenare solo con i pushdown",
-"s": "Tiene la spalla neutra e lascia il capo lungo, il più grosso, sottostimolato.",
-"liv": "A"
-},
-{
-"t": "Skullcrusher sulla fronte",
-"s": "Accorcia il capo lungo proprio dove servirebbe tensione. Porta il bilanciere dietro la testa.",
-"liv": "B"
-},
-{
-"t": "Gomiti che si aprono o si muovono",
-"s": "Sposta il lavoro sulle spalle. Se non riesci a tenerli fermi, il carico è troppo.",
-"liv": "C"
-},
-{
-"t": "Contare le spinte come lavoro sufficiente",
-"s": "Panca e spinte danno circa mezza serie ciascuna al tricipite, e sempre con la spalla neutra. Il capo lungo resta scoperto.",
-"liv": "A"
-}
-],
-"studi": [
-"maeo_triceps",
-"wolf_partials"
-],
+"esercizi": [{"n": "Estensione sopra la testa", "g": "A", "f": "estensione del gomito con spalla flessa", "l": "allungata", "nota": "Circa il 40% di crescita in più rispetto ai pushdown a braccio neutro."}, {"n": "Skullcrusher dietro la testa", "g": "A", "f": "estensione con spalla parzialmente flessa", "l": "allungata", "nota": "Dietro la testa, non sulla fronte: sulla fronte il capo lungo resta accorciato."}, {"n": "Pushdown ai cavi", "g": "B", "f": "estensione del gomito", "l": "accorciata", "nota": "Lavora bene capo laterale e mediale. Gomiti fermi."}, {"n": "Panca presa stretta", "g": "B", "f": "estensione + spinta", "l": "media", "nota": "Permette carichi alti, ma la spalla resta neutra."}, {"n": "Dips", "g": "B", "f": "estensione + spinta", "l": "media", "nota": "Busto verticale per spostare il lavoro sul tricipite."}, {"n": "Estensione ai cavi sopra la testa con corda", "g": "A", "f": "estensione con spalla flessa", "l": "allungata", "nota": "La versione più comoda da caricare progressivamente."}, {"n": "Estensione con manubrio a due mani", "g": "A", "f": "estensione con spalla flessa", "l": "allungata", "nota": "Alternativa senza cavi, escursione piena."}, {"n": "Pushdown a barra diritta", "g": "B", "f": "estensione del gomito", "l": "accorciata", "nota": "Presa prona, gomiti fermi al fianco."}, {"n": "Kickback ai cavi", "g": "C", "f": "estensione con spalla estesa", "l": "accorciata", "nota": "Tensione massima dove il tricipite è corto: contributo modesto."}, {"n": "JM Press", "g": "B", "f": "estensione del gomito sotto carico alto", "l": "media", "nota": "Via di mezzo fra panca a presa stretta e skullcrusher: il bilanciere scende verso il mento con i gomiti raccolti. Permette carichi molto più alti di un’estensione isolata, ma il capo lungo resta a lunghezza intermedia perché la spalla non va sopra la testa. Da abbinare a un’estensione overhead, non da sostituirle."}, {"n": "French press seduto con bilanciere EZ", "g": "A", "f": "estensione a spalla flessa", "l": "allungata", "nota": "Spalla sopra la testa: il capo lungo lavora allungato, la condizione in cui cresce di più."}, {"n": "Estensione ai cavi sopra la testa a un braccio", "g": "B", "f": "estensione unilaterale a spalla flessa", "l": "allungata", "nota": "Stessa logica della versione a due mani, con più controllo sull’asimmetria."}, {"n": "Estensione ai cavi dietro la testa in ginocchio", "g": "B", "f": "estensione a spalla flessa", "l": "allungata", "nota": "Il busto stabile toglie lo slancio della schiena."}, {"n": "Panca a presa stretta allo Smith", "g": "B", "f": "estensione + spinta", "l": "media", "nota": "La guida permette di tenere i gomiti raccolti senza pensare all’equilibrio."}, {"n": "Dip machine", "g": "B", "f": "estensione del gomito guidata", "l": "accorciata", "nota": "Carico facile da progredire e sicuro da portare a cedimento."}, {"n": "Diamond push-up", "g": "B", "f": "estensione + spinta", "l": "media", "nota": "Il carico è il peso del corpo: utile finché non diventa troppo facile, poi va zavorrato."}, {"n": "Tate press", "g": "C", "f": "estensione con gomiti aperti", "l": "media", "nota": "I manubri scendono verso il petto ruotando. Capo laterale e mediale; il capo lungo lavora poco."}, {"n": "Katana extension", "g": "C", "f": "estensione unilaterale trasversale", "l": "allungata", "nota": "Cavo tirato da dietro la spalla opposta. Molto vista in rete: l’allungamento è buono, il carico gestibile modesto."}, {"n": "Pushdown a presa inversa", "g": "C", "f": "estensione del gomito", "l": "accorciata", "nota": "Cambia poco rispetto alla presa prona: ruotare il polso non isola il capo mediale."}],
+"errori": [{"t": "Allenare solo con i pushdown", "s": "Tiene la spalla neutra e lascia il capo lungo, il più grosso, sottostimolato.", "liv": "A"}, {"t": "Skullcrusher sulla fronte", "s": "Accorcia il capo lungo proprio dove servirebbe tensione. Porta il bilanciere dietro la testa.", "liv": "B"}, {"t": "Gomiti che si aprono o si muovono", "s": "Sposta il lavoro sulle spalle. Se non riesci a tenerli fermi, il carico è troppo.", "liv": "C"}, {"t": "Contare le spinte come lavoro sufficiente", "s": "Panca e spinte danno circa mezza serie ciascuna al tricipite, e sempre con la spalla neutra. Il capo lungo resta scoperto.", "liv": "A"}],
+"studi": ["maeo_triceps", "wolf_partials"],
 "volume": "10-20 serie settimanali, di cui almeno metà dirette.",
 "meccanica": "Il capo lungo è più lungo con la spalla flessa, cioè con il braccio sopra la testa. Nell’estensione overhead il momento è alto proprio lì: carico e lunghezza coincidono, ed è il motivo meccanico dietro al quaranta per cento di crescita in più rispetto al pushdown, dove il capo lungo lavora accorciato.",
-"posizione": [
-"**Spalla** portata deliberatamente in flessione per il capo lungo: sopra la testa o su panca inclinata.",
-"**Gomito** fermo nello spazio: se scende e sale, stai aggiungendo una spinta di spalla.",
-"**Escursione** profonda dietro la nuca: è il tratto allungato, ed è quello che conta.",
-"**Polso** neutro: con il bilanciere diritto l’avambraccio è bloccato e il gomito accusa."
-]
+"posizione": ["**Spalla** portata deliberatamente in flessione per il capo lungo: sopra la testa o su panca inclinata.", "**Gomito** fermo nello spazio: se scende e sale, stai aggiungendo una spinta di spalla.", "**Escursione** profonda dietro la nuca: è il tratto allungato, ed è quello che conta.", "**Polso** neutro: con il bilanciere diritto l’avambraccio è bloccato e il gomito accusa."]
 },
 {
 "id": "quadricipite",
 "nome": "Quadricipite femorale",
 "gruppo": "Gamba",
-"capi": [
-"Retto femorale",
-"Vasto laterale",
-"Vasto mediale",
-"Vasto intermedio"
-],
-"funzioni": [
-"Estensione del ginocchio",
-"Flessione dell’anca (solo retto femorale)"
-],
+"capi": ["Retto femorale", "Vasto laterale", "Vasto mediale", "Vasto intermedio"],
+"funzioni": ["Estensione del ginocchio", "Flessione dell’anca (solo retto femorale)"],
 "stimolo": "Tre capi su quattro attraversano solo il ginocchio e rispondono bene ad accosciate e presse. Il retto femorale attraversa anche l’anca: nello squat è accorciato all’anca mentre si allunga al ginocchio, quindi resta a lunghezza quasi costante. Kubo 2019 trova infatti che lo squat completo batte quello parziale su tutti i muscoli dell’arto inferiore **tranne il retto femorale e gli ischiocrurali**. Serve la leg extension, meglio se con lo schienale reclinato.",
-"esercizi": [
-{
-"n": "Squat (bilanciere o guidato)",
-"g": "A",
-"f": "estensione del ginocchio + anca",
-"l": "allungata",
-"nota": "Scendi sotto il parallelo: in fondo quadricipite, glutei e adduttore magno sono alla lunghezza maggiore."
-},
-{
-"n": "Leg press",
-"g": "A",
-"f": "estensione del ginocchio + anca",
-"l": "allungata",
-"nota": "Ampiezza piena senza staccare il bacino dallo schienale."
-},
-{
-"n": "Leg extension",
-"g": "A",
-"f": "estensione isolata del ginocchio",
-"l": "variabile",
-"nota": "Reclina lo schienale: ad anca aperta il retto femorale parte allungato e cresce di più."
-},
-{
-"n": "Hack squat",
-"g": "A",
-"f": "estensione del ginocchio",
-"l": "allungata",
-"nota": "Schiena appoggiata, molto carico sul quadricipite."
-},
-{
-"n": "Affondo bulgaro",
-"g": "B",
-"f": "estensione monopodalica",
-"l": "allungata",
-"nota": "Busto in avanti per coinvolgere glutei e adduttori."
-},
-{
-"n": "Sissy squat",
-"g": "C",
-"f": "estensione con anca estesa",
-"l": "allungata",
-"nota": "Mette in tensione il retto femorale dove la leg extension non arriva."
-},
-{
-"n": "Pressa orizzontale",
-"g": "A",
-"f": "estensione del ginocchio + anca",
-"l": "allungata",
-"nota": "Schiena appoggiata, escursione facile da controllare."
-},
-{
-"n": "Pendulum squat",
-"g": "A",
-"f": "estensione del ginocchio",
-"l": "allungata",
-"nota": "Percorso guidato che permette profondità piena in sicurezza."
-},
-{
-"n": "Squat frontale",
-"g": "B",
-"f": "estensione del ginocchio",
-"l": "allungata",
-"nota": "Busto più verticale, più quadricipite e meno catena posteriore."
-},
-{
-"n": "Step-up alto",
-"g": "B",
-"f": "estensione monopodalica",
-"l": "allungata",
-"nota": "Escursione ampia con carichi bassi."
-},
-{
-"n": "Squat allo Smith",
-"g": "B",
-"f": "estensione del ginocchio + anca",
-"l": "allungata",
-"nota": "Il bilanciere guidato ti lascia scendere più in basso in sicurezza."
-}
-],
-"errori": [
-{
-"t": "Fermarsi al parallelo",
-"s": "Perdi la porzione allungata, che è quella che stimola di più.",
-"liv": "B"
-},
-{
-"t": "Contare solo accosciate e presse",
-"s": "Fanno crescere i vasti ma poco il retto femorale. Serve la leg extension.",
-"liv": "B"
-},
-{
-"t": "Leg extension con schienale verticale",
-"s": "Ad anca a 90 gradi il retto femorale parte accorciato. Reclina lo schienale.",
-"liv": "B"
-},
-{
-"t": "Trascurare la mobilità di caviglia",
-"s": "L’escursione passiva della caviglia condiziona la profondità raggiungibile: se è limitata, alza i talloni invece di accorciare la discesa.",
-"liv": "B"
-}
-],
-"studi": [
-"squat_regional",
-"leg_ext_hip",
-"squat_depth",
-"pedrosa_rom",
-"kubo_moment",
-"pressa_squat",
-"mobilita_squat",
-"squat_stance"
-],
+"esercizi": [{"n": "Squat (bilanciere o guidato)", "g": "A", "f": "estensione del ginocchio + anca", "l": "allungata", "nota": "Scendi sotto il parallelo: in fondo quadricipite, glutei e adduttore magno sono alla lunghezza maggiore."}, {"n": "Leg press", "g": "A", "f": "estensione del ginocchio + anca", "l": "allungata", "nota": "Ampiezza piena senza staccare il bacino dallo schienale."}, {"n": "Leg extension", "g": "A", "f": "estensione isolata del ginocchio", "l": "variabile", "nota": "Reclina lo schienale: ad anca aperta il retto femorale parte allungato e cresce di più."}, {"n": "Hack squat", "g": "A", "f": "estensione del ginocchio", "l": "allungata", "nota": "Schiena appoggiata, molto carico sul quadricipite."}, {"n": "Affondo bulgaro", "g": "B", "f": "estensione monopodalica", "l": "allungata", "nota": "Busto in avanti per coinvolgere glutei e adduttori."}, {"n": "Sissy squat", "g": "C", "f": "estensione con anca estesa", "l": "allungata", "nota": "Mette in tensione il retto femorale dove la leg extension non arriva."}, {"n": "Pressa orizzontale", "g": "A", "f": "estensione del ginocchio + anca", "l": "allungata", "nota": "Schiena appoggiata, escursione facile da controllare."}, {"n": "Pendulum squat", "g": "A", "f": "estensione del ginocchio", "l": "allungata", "nota": "Percorso guidato che permette profondità piena in sicurezza."}, {"n": "Squat frontale", "g": "B", "f": "estensione del ginocchio", "l": "allungata", "nota": "Busto più verticale, più quadricipite e meno catena posteriore."}, {"n": "Step-up alto", "g": "B", "f": "estensione monopodalica", "l": "allungata", "nota": "Escursione ampia con carichi bassi."}, {"n": "Squat allo Smith", "g": "B", "f": "estensione del ginocchio + anca", "l": "allungata", "nota": "Il bilanciere guidato ti lascia scendere più in basso in sicurezza."}, {"n": "Reverse Nordic curl", "g": "B", "f": "estensione del ginocchio ad anca estesa", "l": "allungata", "nota": "In ginocchio ci si lascia andare indietro controllando la discesa. È uno dei pochi modi di caricare il retto femorale con l’anca aperta, cioè dove accosciate e presse non arrivano."}, {"n": "Sissy squat a macchina", "g": "B", "f": "estensione del ginocchio ad anca estesa", "l": "allungata", "nota": "Versione caricabile del sissy squat: ginocchia avanti, anca aperta, retto femorale allungato."}, {"n": "Split squat con bilanciere", "g": "B", "f": "estensione monopodalica", "l": "allungata", "nota": "Più stabile dell’affondo bulgaro e permette carichi più alti."}, {"n": "ATG split squat", "g": "B", "f": "estensione monopodalica in flessione profonda", "l": "allungata", "nota": "Affondo portato fino in fondo con il ginocchio oltre la punta. Richiede mobilità di caviglia: va introdotto per gradi."}, {"n": "Cyclist squat con talloni rialzati", "g": "B", "f": "estensione del ginocchio", "l": "allungata", "nota": "Il rialzo sposta il lavoro sul quadricipite riducendo la richiesta all’anca e alla caviglia."}, {"n": "Belt squat", "g": "B", "f": "estensione del ginocchio + anca", "l": "allungata", "nota": "Il carico è appeso al bacino: gambe cariche, colonna scarica. Utile quando la schiena è il limite."}, {"n": "Leg press monopodalica", "g": "B", "f": "estensione monopodalica", "l": "allungata", "nota": "Pareggia i lati e permette carichi relativi alti senza reggere un bilanciere."}, {"n": "Leg extension a un arto", "g": "B", "f": "estensione isolata", "l": "variabile", "nota": "Il lato debole lavora senza che il forte compensi."}, {"n": "Affondo camminato", "g": "B", "f": "estensione monopodalica", "l": "allungata", "nota": "Molto volume in poco tempo, ma difficile da progredire con precisione."}, {"n": "Squat bulgaro allo Smith", "g": "B", "f": "estensione monopodalica", "l": "allungata", "nota": "La guida toglie l’equilibrio dall’equazione e lascia lavorare la gamba."}, {"n": "Zercher squat", "g": "C", "f": "estensione del ginocchio + anca", "l": "allungata", "nota": "Bilanciere nell’incavo dei gomiti. Il limite diventa la tolleranza delle braccia, non la forza delle gambe."}],
+"errori": [{"t": "Fermarsi al parallelo", "s": "Perdi la porzione allungata, che è quella che stimola di più.", "liv": "B"}, {"t": "Contare solo accosciate e presse", "s": "Fanno crescere i vasti ma poco il retto femorale. Serve la leg extension.", "liv": "B"}, {"t": "Leg extension con schienale verticale", "s": "Ad anca a 90 gradi il retto femorale parte accorciato. Reclina lo schienale.", "liv": "B"}, {"t": "Trascurare la mobilità di caviglia", "s": "L’escursione passiva della caviglia condiziona la profondità raggiungibile: se è limitata, alza i talloni invece di accorciare la discesa.", "liv": "B"}],
+"studi": ["squat_regional", "leg_ext_hip", "squat_depth", "pedrosa_rom", "kubo_moment", "pressa_squat", "mobilita_squat", "squat_stance"],
 "volume": "10-20 serie settimanali.",
 "meccanica": "Nell’accosciata il momento al ginocchio cresce con la profondità e i vasti lavorano allungati: carico e lunghezza coincidono, ed è per questo che scendere conta. Il retto femorale fa eccezione perché è biarticolare: mentre si allunga al ginocchio si accorcia all’anca, e resta a lunghezza quasi costante. Nella leg extension il momento è massimo a ginocchio esteso, cioè dove il quadricipite è corto: reclinare lo schienale non cambia questo, ma allunga il retto femorale all’anca.",
-"posizione": [
-"**Anca** aperta nella leg extension: schienale reclinato il più possibile.",
-"**Ginocchia** che seguono la direzione dei piedi, libere di avanzare oltre la punta se la caviglia lo permette.",
-"**Piedi** a base media con punte leggermente extraruotate; allarga se il bacino si ribalta.",
-"**Colonna** in posizione stabile: il crollo del busto in avanti sposta il carico dal ginocchio alla schiena."
-]
+"posizione": ["**Anca** aperta nella leg extension: schienale reclinato il più possibile.", "**Ginocchia** che seguono la direzione dei piedi, libere di avanzare oltre la punta se la caviglia lo permette.", "**Piedi** a base media con punte leggermente extraruotate; allarga se il bacino si ribalta.", "**Colonna** in posizione stabile: il crollo del busto in avanti sposta il carico dal ginocchio alla schiena."]
 },
 {
 "id": "femorali",
 "nome": "Ischiocrurali",
 "gruppo": "Gamba",
-"capi": [
-"Capo lungo del bicipite femorale",
-"Capo breve del bicipite femorale",
-"Semitendinoso",
-"Semimembranoso"
-],
-"funzioni": [
-"Flessione del ginocchio",
-"Estensione dell’anca"
-],
+"capi": ["Capo lungo del bicipite femorale", "Capo breve del bicipite femorale", "Semitendinoso", "Semimembranoso"],
+"funzioni": ["Flessione del ginocchio", "Estensione dell’anca"],
 "stimolo": "Due funzioni distinte che vanno allenate entrambe. Tre capi su quattro attraversano l’anca: sono più lunghi quando l’anca è flessa, ed è per questo che il leg curl da seduto rende più di quello prono. Il capo breve non attraversa l’anca e non risente della posizione.",
-"esercizi": [
-{
-"n": "Leg curl seduto",
-"g": "A",
-"f": "flessione del ginocchio ad anca flessa",
-"l": "allungata",
-"nota": "Il 14% di crescita contro il 9% della versione prona, in 12 settimane."
-},
-{
-"n": "Stacco rumeno",
-"g": "A",
-"f": "estensione dell’anca",
-"l": "allungata",
-"nota": "Anche indietro, schiena neutra, scendi finché senti tirare."
-},
-{
-"n": "Leg curl sdraiato",
-"g": "B",
-"f": "flessione del ginocchio ad anca estesa",
-"l": "media",
-"nota": "Bacino incollato alla panca: se si stacca, il femorale si accorcia."
-},
-{
-"n": "Nordic curl",
-"g": "B",
-"f": "flessione eccentrica",
-"l": "allungata",
-"nota": "Frena la discesa il più a lungo possibile."
-},
-{
-"n": "Good morning",
-"g": "B",
-"f": "estensione dell’anca",
-"l": "allungata",
-"nota": "Alternativa allo stacco rumeno con carico più basso."
-},
-{
-"n": "Iperestensioni a 45 gradi",
-"g": "C",
-"f": "estensione dell’anca",
-"l": "media",
-"nota": "Utile come complemento leggero."
-},
-{
-"n": "Stacco rumeno con manubri",
-"g": "A",
-"f": "estensione dell’anca",
-"l": "allungata",
-"nota": "Carico più vicino al baricentro, meno richiesta sugli erettori."
-},
-{
-"n": "Leg curl monopodalico",
-"g": "B",
-"f": "flessione del ginocchio",
-"l": "allungata",
-"nota": "Corregge asimmetrie, molto comuni sui femorali."
-},
-{
-"n": "Glute-ham raise",
-"g": "B",
-"f": "flessione + estensione",
-"l": "allungata",
-"nota": "Allena entrambe le funzioni nello stesso movimento."
-},
-{
-"n": "Stacco a gambe tese alla Smith",
-"g": "B",
-"f": "estensione dell’anca",
-"l": "allungata",
-"nota": "Percorso guidato, bilanciere che resta addosso."
-}
-],
-"errori": [
-{
-"t": "Fare solo stacchi",
-"s": "Coprono l’estensione d’anca ma non la flessione del ginocchio. Serve un leg curl.",
-"liv": "B"
-},
-{
-"t": "Fare solo leg curl",
-"s": "Specularmente, lasciano fuori l’estensione dell’anca.",
-"liv": "B"
-},
-{
-"t": "Staccare il bacino nel leg curl prono",
-"s": "Flettendo l’anca accorci il muscolo proprio dove serve tensione.",
-"liv": "C"
-},
-{
-"t": "Affidarsi al Nordic curl per prevenire gli infortuni",
-"s": "Quando si correggono i problemi metodologici delle meta-analisi, l’evidenza sulla prevenzione risulta inconcludente. Allenalo per la massa, non come assicurazione.",
-"liv": "A"
-}
-],
-"studi": [
-"maeo_hamstring",
-"bourne_hamstring",
-"nordic_prevenzione",
-"schoenfeld_range_att"
-],
+"esercizi": [{"n": "Leg curl seduto", "g": "A", "f": "flessione del ginocchio ad anca flessa", "l": "allungata", "nota": "Il 14% di crescita contro il 9% della versione prona, in 12 settimane."}, {"n": "Stacco rumeno", "g": "A", "f": "estensione dell’anca", "l": "allungata", "nota": "Anche indietro, schiena neutra, scendi finché senti tirare."}, {"n": "Leg curl sdraiato", "g": "B", "f": "flessione del ginocchio ad anca estesa", "l": "media", "nota": "Bacino incollato alla panca: se si stacca, il femorale si accorcia."}, {"n": "Nordic curl", "g": "B", "f": "flessione eccentrica", "l": "allungata", "nota": "Frena la discesa il più a lungo possibile."}, {"n": "Good morning", "g": "B", "f": "estensione dell’anca", "l": "allungata", "nota": "Alternativa allo stacco rumeno con carico più basso."}, {"n": "Iperestensioni a 45 gradi", "g": "C", "f": "estensione dell’anca", "l": "media", "nota": "Utile come complemento leggero."}, {"n": "Stacco rumeno con manubri", "g": "A", "f": "estensione dell’anca", "l": "allungata", "nota": "Carico più vicino al baricentro, meno richiesta sugli erettori."}, {"n": "Leg curl monopodalico", "g": "B", "f": "flessione del ginocchio", "l": "allungata", "nota": "Corregge asimmetrie, molto comuni sui femorali."}, {"n": "Glute-ham raise", "g": "B", "f": "flessione + estensione", "l": "allungata", "nota": "Allena entrambe le funzioni nello stesso movimento."}, {"n": "Stacco a gambe tese alla Smith", "g": "B", "f": "estensione dell’anca", "l": "allungata", "nota": "Percorso guidato, bilanciere che resta addosso."}, {"n": "Reverse hyperextension", "g": "B", "f": "estensione dell’anca a busto fisso", "l": "accorciata", "nota": "Sdraiato a pancia in giù sulla panca, si spingono le gambe verso l’alto. Il momento all’anca è massimo con le gambe orizzontali, cioè quando gli ischiocrurali sono corti: complementare allo stacco rumeno, non alternativo."}, {"n": "Stacco rumeno da deficit", "g": "B", "f": "estensione dell’anca in allungamento", "l": "allungata", "nota": "In piedi su un rialzo: si aggiunge escursione proprio dove il muscolo è già lungo."}, {"n": "Stacco rumeno a una gamba con manubrio", "g": "B", "f": "estensione monopodalica", "l": "allungata", "nota": "Escursione ampia con carico basso: spesso è l’equilibrio a limitare prima del muscolo."}, {"n": "Leg curl in piedi a un arto", "g": "B", "f": "flessione del ginocchio", "l": "media", "nota": "Ad anca estesa il capo lungo del bicipite femorale parte più corto che nel leg curl seduto."}, {"n": "Iperestensione a 45 gradi con parte alta arrotondata", "g": "B", "f": "estensione dell’anca", "l": "media", "nota": "Arrotondando la parte alta della schiena il lavoro si sposta su glutei e femorali invece che sugli erettori."}, {"n": "Good morning seduto", "g": "B", "f": "estensione del tronco ad anca fissa", "l": "allungata", "nota": "Da seduti l’anca non si muove: lavorano erettori e ischiocrurali prossimali."}, {"n": "Razor curl", "g": "C", "f": "flessione del ginocchio + estensione d’anca", "l": "accorciata", "nota": "Nordic curl con l’anca che si flette per ridurre la difficoltà. Riduce però anche il tratto allungato, che è la parte utile."}, {"n": "Leg curl con slider o fitball", "g": "C", "f": "flessione del ginocchio", "l": "media", "nota": "Utile senza attrezzatura, ma il carico non è progredibile."}, {"n": "Kettlebell swing", "g": "C", "f": "estensione esplosiva dell’anca", "l": "media", "nota": "Carico basso e tempo sotto tensione minimo. È condizionamento, non ipertrofia."}],
+"errori": [{"t": "Fare solo stacchi", "s": "Coprono l’estensione d’anca ma non la flessione del ginocchio. Serve un leg curl.", "liv": "B"}, {"t": "Fare solo leg curl", "s": "Specularmente, lasciano fuori l’estensione dell’anca.", "liv": "B"}, {"t": "Staccare il bacino nel leg curl prono", "s": "Flettendo l’anca accorci il muscolo proprio dove serve tensione.", "liv": "C"}, {"t": "Affidarsi al Nordic curl per prevenire gli infortuni", "s": "Quando si correggono i problemi metodologici delle meta-analisi, l’evidenza sulla prevenzione risulta inconcludente. Allenalo per la massa, non come assicurazione.", "liv": "A"}],
+"studi": ["maeo_hamstring", "bourne_hamstring", "nordic_prevenzione", "schoenfeld_range_att"],
 "volume": "10-20 serie settimanali fra le due funzioni.",
 "meccanica": "Due funzioni, due meccaniche opposte. Nel leg curl il momento è massimo a ginocchio semi-esteso e cala in chiusura; ad anca flessa i capi biarticolari partono più lunghi, ed è la ragione per cui la versione seduta rende più della prona. Nello stacco rumeno il momento all’anca è massimo a busto orizzontale, dove i femorali sono al massimo dell’allungamento: carico e lunghezza coincidono.",
-"posizione": [
-"**Anca** flessa nel leg curl per allungare i capi biarticolari; bacino incollato alla panca nella versione prona.",
-"**Ginocchia** quasi ferme nello stacco rumeno: se si piegano è diventato uno stacco.",
-"**Colonna** in posizione stabile e bilanciere addosso: la distanza orizzontale è ciò che carica la schiena.",
-"**Escursione** fino a dove arriva la mobilità dell’anca, non oltre."
-]
+"posizione": ["**Anca** flessa nel leg curl per allungare i capi biarticolari; bacino incollato alla panca nella versione prona.", "**Ginocchia** quasi ferme nello stacco rumeno: se si piegano è diventato uno stacco.", "**Colonna** in posizione stabile e bilanciere addosso: la distanza orizzontale è ciò che carica la schiena.", "**Escursione** fino a dove arriva la mobilità dell’anca, non oltre."]
 },
 {
 "id": "glutei",
 "nome": "Grande gluteo",
 "gruppo": "Gamba",
-"capi": [
-"Porzione superiore",
-"Porzione inferiore"
-],
-"funzioni": [
-"Estensione dell’anca",
-"Extrarotazione",
-"Abduzione (porzione superiore)"
-],
+"capi": ["Porzione superiore", "Porzione inferiore"],
+"funzioni": ["Estensione dell’anca", "Extrarotazione", "Abduzione (porzione superiore)"],
 "stimolo": "Estende l’anca, e come tutti i muscoli risponde meglio dove è allungato: anca molto flessa, cioè in fondo a un’accosciata profonda o a uno stacco rumeno.",
-"esercizi": [
-{
-"n": "Stacco rumeno",
-"g": "A",
-"f": "estensione dell’anca ad anca flessa",
-"l": "allungata",
-"nota": "Uno dei migliori per il gluteo, non solo per i femorali."
-},
-{
-"n": "Squat profondo",
-"g": "A",
-"f": "estensione dell’anca + ginocchio",
-"l": "allungata",
-"nota": "La profondità è ciò che porta il gluteo in allungamento."
-},
-{
-"n": "Affondo bulgaro",
-"g": "A",
-"f": "estensione monopodalica",
-"l": "allungata",
-"nota": "Busto inclinato in avanti per caricare il gluteo."
-},
-{
-"n": "Hip thrust",
-"g": "B",
-"f": "estensione dell’anca ad anca estesa",
-"l": "accorciata",
-"nota": "Massima tensione in accorciamento: complementare, non sostitutivo."
-},
-{
-"n": "Abduzioni",
-"g": "C",
-"f": "abduzione",
-"l": "media",
-"nota": "Per la porzione superiore, contributo modesto alla massa."
-},
-{
-"n": "Hip thrust a macchina",
-"g": "B",
-"f": "estensione dell’anca",
-"l": "accorciata",
-"nota": "Carico facile da progredire, tensione massima in accorciamento."
-},
-{
-"n": "Stacco rumeno a una gamba",
-"g": "A",
-"f": "estensione monopodalica",
-"l": "allungata",
-"nota": "Escursione d’anca maggiore che nella versione a due gambe."
-},
-{
-"n": "Pressa a piedi alti",
-"g": "B",
-"f": "estensione dell’anca + ginocchio",
-"l": "allungata",
-"nota": "Spostando i piedi in alto aumenta il contributo del gluteo."
-},
-{
-"n": "Iperestensioni a 45 gradi",
-"g": "B",
-"f": "estensione dell’anca",
-"l": "media",
-"nota": "Con busto arrotondato in alto il gluteo lavora più degli erettori."
-}
-],
-"errori": [
-{
-"t": "Affidarsi solo agli hip thrust",
-"s": "Caricano il gluteo nella posizione accorciata. Vanno abbinati a un movimento che lo alluinghi.",
-"liv": "C"
-},
-{
-"t": "Squat parziali",
-"s": "Senza profondità il gluteo lavora poco.",
-"liv": "B"
-},
-{
-"t": "Scegliere fra hip thrust e squat",
-"s": "Caricano il gluteo in posizioni opposte — il momento massimo cade ad anca flessa nell’accosciata e ad anca estesa nell’hip thrust — quindi sono complementari: se il gluteo è una priorità, servono entrambi. È un argomento meccanico: il confronto diretto fra i due esercizi esiste solo su salto e sprint, non sull’ipertrofia.",
-"liv": "M"
-}
-],
-"studi": [
-"glute_exercises",
-"squat_depth",
-"adductor_squat",
-"hip_thrust_squat"
-],
+"esercizi": [{"n": "Stacco rumeno", "g": "A", "f": "estensione dell’anca ad anca flessa", "l": "allungata", "nota": "Uno dei migliori per il gluteo, non solo per i femorali."}, {"n": "Squat profondo", "g": "A", "f": "estensione dell’anca + ginocchio", "l": "allungata", "nota": "La profondità è ciò che porta il gluteo in allungamento."}, {"n": "Affondo bulgaro", "g": "A", "f": "estensione monopodalica", "l": "allungata", "nota": "Busto inclinato in avanti per caricare il gluteo."}, {"n": "Hip thrust", "g": "B", "f": "estensione dell’anca ad anca estesa", "l": "accorciata", "nota": "Massima tensione in accorciamento: complementare, non sostitutivo."}, {"n": "Abduzioni", "g": "C", "f": "abduzione", "l": "media", "nota": "Per la porzione superiore, contributo modesto alla massa."}, {"n": "Hip thrust a macchina", "g": "B", "f": "estensione dell’anca", "l": "accorciata", "nota": "Carico facile da progredire, tensione massima in accorciamento."}, {"n": "Stacco rumeno a una gamba", "g": "A", "f": "estensione monopodalica", "l": "allungata", "nota": "Escursione d’anca maggiore che nella versione a due gambe."}, {"n": "Pressa a piedi alti", "g": "B", "f": "estensione dell’anca + ginocchio", "l": "allungata", "nota": "Spostando i piedi in alto aumenta il contributo del gluteo."}, {"n": "Iperestensioni a 45 gradi", "g": "B", "f": "estensione dell’anca", "l": "media", "nota": "Con busto arrotondato in alto il gluteo lavora più degli erettori."}, {"n": "Reverse hyperextension", "g": "B", "f": "estensione dell’anca a busto fisso", "l": "accorciata", "nota": "È l’esercizio in cui ci si sdraia a pancia in giù sulla panca e si spingono le gambe in alto. Il momento massimo cade a gambe orizzontali, con il gluteo accorciato: stessa logica dell’hip thrust. Complementare allo stacco rumeno, che invece carica in allungamento."}, {"n": "Cable pull-through", "g": "B", "f": "estensione dell’anca ai cavi", "l": "allungata", "nota": "Cerniera d’anca con il cavo fra le gambe: la resistenza è massima in fondo, dove il gluteo è lungo."}, {"n": "Affondo indietro da deficit", "g": "B", "f": "estensione monopodalica", "l": "allungata", "nota": "Il rialzo aumenta la flessione d’anca in fondo, cioè l’allungamento del gluteo."}, {"n": "Hip thrust in B-stance", "g": "B", "f": "estensione dell’anca sbilanciata", "l": "accorciata", "nota": "Un piede avanzato porta gran parte del carico su una gamba sola senza perdere stabilità."}, {"n": "Step-up alto", "g": "B", "f": "estensione monopodalica", "l": "allungata", "nota": "Più alto è il gradino, più l’anca parte flessa. Salire senza spingere con la gamba di sotto."}, {"n": "Abduzione a macchina con busto inclinato in avanti", "g": "B", "f": "abduzione dell’anca", "l": "media", "nota": "Inclinando il busto si sposta il lavoro sulla porzione superiore del grande gluteo."}, {"n": "Kickback ai cavi", "g": "B", "f": "estensione dell’anca isolata", "l": "accorciata", "nota": "Isola bene ma carica il gluteo dove è corto: complemento, non fondamentale."}, {"n": "Curtsy lunge", "g": "C", "f": "estensione + adduzione", "l": "allungata", "nota": "Affondo incrociato, molto proposto in rete per il gluteo. Il carico gestibile è basso e la posizione del ginocchio va controllata."}, {"n": "Ponte glutei a una gamba", "g": "C", "f": "estensione monopodalica", "l": "accorciata", "nota": "A corpo libero è un riscaldamento. Con un carico sul bacino diventa una variante dell’hip thrust."}, {"n": "Frog pump", "g": "C", "f": "estensione dell’anca a piante unite", "l": "accorciata", "nota": "Escursione minima e carico basso. Produce molto bruciore e poco stimolo."}],
+"errori": [{"t": "Affidarsi solo agli hip thrust", "s": "Caricano il gluteo nella posizione accorciata. Vanno abbinati a un movimento che lo alluinghi.", "liv": "C"}, {"t": "Squat parziali", "s": "Senza profondità il gluteo lavora poco.", "liv": "B"}, {"t": "Scegliere fra hip thrust e squat", "s": "Caricano il gluteo in posizioni opposte — il momento massimo cade ad anca flessa nell’accosciata e ad anca estesa nell’hip thrust — quindi sono complementari: se il gluteo è una priorità, servono entrambi. È un argomento meccanico: il confronto diretto fra i due esercizi esiste solo su salto e sprint, non sull’ipertrofia.", "liv": "M"}],
+"studi": ["glute_exercises", "squat_depth", "adductor_squat", "hip_thrust_squat"],
 "volume": "8-16 serie settimanali, molte delle quali condivise con quadricipite e femorali.",
 "meccanica": "Il gluteo è più lungo ad anca molto flessa, cioè in fondo a un’accosciata profonda o a uno stacco rumeno, e lì il momento all’anca è massimo: coincidenza favorevole. L’hip thrust è il contrario: il momento massimo cade a anca estesa, dove il gluteo è corto. Sono due stimoli complementari, non alternativi.",
-"posizione": [
-"**Bacino** in posizione neutra, senza ribaltamento in fondo.",
-"**Anca** portata in flessione profonda dove l’esercizio lo consente: è lì che il gluteo si allunga.",
-"**Busto** inclinato in avanti nell’affondo bulgaro per aumentare il momento all’anca.",
-"**Piedi** più avanti nella pressa per spostare lavoro dal ginocchio all’anca."
-]
+"posizione": ["**Bacino** in posizione neutra, senza ribaltamento in fondo.", "**Anca** portata in flessione profonda dove l’esercizio lo consente: è lì che il gluteo si allunga.", "**Busto** inclinato in avanti nell’affondo bulgaro per aumentare il momento all’anca.", "**Piedi** più avanti nella pressa per spostare lavoro dal ginocchio all’anca."]
 },
 {
 "id": "adduttori",
 "nome": "Adduttori e adduttore magno",
 "gruppo": "Gamba",
-"capi": [
-"Adduttore magno",
-"Adduttore lungo e breve",
-"Gracile",
-"Pettineo"
-],
-"funzioni": [
-"Adduzione dell’anca",
-"Estensione dell’anca (adduttore magno)"
-],
+"capi": ["Adduttore magno", "Adduttore lungo e breve", "Gracile", "Pettineo"],
+"funzioni": ["Adduzione dell’anca", "Estensione dell’anca (adduttore magno)"],
 "stimolo": "L’adduttore magno è costruito soprattutto per estendere l’anca, non per addurre: la sua capacità di coppia in estensione è oltre il doppio di quella in adduzione. Che questo si traduca in un contributo rilevante nell’accosciata profonda è un’inferenza meccanica, non una misura diretta. È un muscolo grosso che aggiunge circonferenza reale alla coscia, e quasi tutti lo trascurano.",
-"esercizi": [
-{
-"n": "Squat profondo",
-"g": "A",
-"f": "estensione dell’anca",
-"l": "allungata",
-"nota": "Più scendi, più l’adduttore magno lavora."
-},
-{
-"n": "Affondo bulgaro",
-"g": "A",
-"f": "estensione monopodalica",
-"l": "allungata",
-"nota": "Il passo lungo aumenta il contributo degli adduttori."
-},
-{
-"n": "Macchina adduttori",
-"g": "B",
-"f": "adduzione isolata",
-"l": "allungata",
-"nota": "Escursione completa fino all’apertura massima che controlli."
-},
-{
-"n": "Copenhagen plank",
-"g": "C",
-"f": "adduzione isometrica",
-"l": "media",
-"nota": "Utile per la resistenza, poco per la massa."
-},
-{
-"n": "Squat sumo",
-"g": "A",
-"f": "estensione + adduzione dell’anca",
-"l": "allungata",
-"nota": "La base larga aumenta la richiesta sugli adduttori."
-},
-{
-"n": "Stacco sumo",
-"g": "A",
-"f": "estensione + adduzione",
-"l": "allungata",
-"nota": "Distribuzione del carico diversa dal convenzionale, più adduttori."
-},
-{
-"n": "Affondo laterale",
-"g": "B",
-"f": "adduzione eccentrica",
-"l": "allungata",
-"nota": "Allunga sotto carico l’adduttore della gamba tesa."
-}
-],
-"errori": [
-{
-"t": "Ignorarli del tutto",
-"s": "È metà o più della coppia di estensione d’anca nell’accosciata, e contribuisce visibilmente allo spessore della coscia.",
-"liv": "B"
-},
-{
-"t": "Escursione ridotta alla macchina",
-"s": "Il tratto in apertura è quello che conta.",
-"liv": "C"
-},
-{
-"t": "Pensare che servano solo per la salute dell’anca",
-"s": "L’adduttore magno è progettato soprattutto per estendere l’anca e contribuisce visibilmente allo spessore della coscia.",
-"liv": "B"
-}
-],
-"studi": [
-"adductor_squat",
-"squat_depth",
-"stacco_stile",
-"squat_stance"
-],
+"esercizi": [{"n": "Squat profondo", "g": "A", "f": "estensione dell’anca", "l": "allungata", "nota": "Più scendi, più l’adduttore magno lavora."}, {"n": "Affondo bulgaro", "g": "A", "f": "estensione monopodalica", "l": "allungata", "nota": "Il passo lungo aumenta il contributo degli adduttori."}, {"n": "Macchina adduttori", "g": "B", "f": "adduzione isolata", "l": "allungata", "nota": "Escursione completa fino all’apertura massima che controlli."}, {"n": "Copenhagen plank", "g": "C", "f": "adduzione isometrica", "l": "media", "nota": "Utile per la resistenza, poco per la massa."}, {"n": "Squat sumo", "g": "A", "f": "estensione + adduzione dell’anca", "l": "allungata", "nota": "La base larga aumenta la richiesta sugli adduttori."}, {"n": "Stacco sumo", "g": "A", "f": "estensione + adduzione", "l": "allungata", "nota": "Distribuzione del carico diversa dal convenzionale, più adduttori."}, {"n": "Affondo laterale", "g": "B", "f": "adduzione eccentrica", "l": "allungata", "nota": "Allunga sotto carico l’adduttore della gamba tesa."}, {"n": "Adduzione ai cavi in piedi", "g": "B", "f": "adduzione isolata", "l": "allungata", "nota": "La resistenza è massima a gamba aperta, che è la posizione allungata."}, {"n": "Leg press a base larga e piedi alti", "g": "B", "f": "estensione dell’anca + adduzione", "l": "allungata", "nota": "Piedi larghi e alti sulla pedana: anca più flessa e adduttore magno più caricato."}, {"n": "Hack squat a base larga", "g": "B", "f": "estensione + adduzione", "l": "allungata", "nota": "La base larga aumenta il contributo dell’adduttore magno rispetto alla base stretta."}, {"n": "Affondo laterale con manubri", "g": "B", "f": "estensione + adduzione monopodalica", "l": "allungata", "nota": "Carico progredibile, a differenza della versione a corpo libero."}, {"n": "Cossack squat", "g": "C", "f": "accosciata laterale profonda", "l": "allungata", "nota": "Escursione molto ampia sull’adduttore della gamba tesa. Carico basso: vale per la mobilità."}, {"n": "Adduzione con slider", "g": "C", "f": "adduzione isolata", "l": "allungata", "nota": "Senza attrezzatura. Difficile da progredire e facile da esagerare al primo tentativo."}],
+"errori": [{"t": "Ignorarli del tutto", "s": "È metà o più della coppia di estensione d’anca nell’accosciata, e contribuisce visibilmente allo spessore della coscia.", "liv": "B"}, {"t": "Escursione ridotta alla macchina", "s": "Il tratto in apertura è quello che conta.", "liv": "C"}, {"t": "Pensare che servano solo per la salute dell’anca", "s": "L’adduttore magno è progettato soprattutto per estendere l’anca e contribuisce visibilmente allo spessore della coscia.", "liv": "B"}],
+"studi": ["adductor_squat", "squat_depth", "stacco_stile", "squat_stance"],
 "volume": "4-10 serie settimanali dirette, più il contributo delle accosciate profonde.",
 "meccanica": "L’adduttore magno agisce soprattutto come estensore dell’anca, e il suo momento è massimo ad anca molto flessa: in fondo all’accosciata profonda e nell’affondo con passo lungo. Alla macchina adduttori il momento è massimo in apertura, che è anche il punto di massimo allungamento.",
-"posizione": [
-"**Anca** in flessione profonda e base larga: è la combinazione che carica l’adduttore magno.",
-"**Escursione** completa in apertura alla macchina, che è il tratto che conta.",
-"**Piedi** extraruotati nello squat sumo, coerenti con la direzione delle ginocchia."
-]
+"posizione": ["**Anca** in flessione profonda e base larga: è la combinazione che carica l’adduttore magno.", "**Escursione** completa in apertura alla macchina, che è il tratto che conta.", "**Piedi** extraruotati nello squat sumo, coerenti con la direzione delle ginocchia."]
 },
 {
 "id": "polpacci",
 "nome": "Tricipite surale",
 "gruppo": "Gamba",
-"capi": [
-"Gastrocnemio mediale",
-"Gastrocnemio laterale",
-"Soleo"
-],
-"funzioni": [
-"Flessione plantare",
-"Flessione del ginocchio (gastrocnemio)"
-],
+"capi": ["Gastrocnemio mediale", "Gastrocnemio laterale", "Soleo"],
+"funzioni": ["Flessione plantare", "Flessione del ginocchio (gastrocnemio)"],
 "stimolo": "Il gastrocnemio attraversa il ginocchio: lavora a gamba tesa e smette di contribuire a ginocchio piegato. Il soleo sta sotto e lavora in entrambe le posizioni. Il calf in piedi è nettamente superiore per il gastrocnemio, mentre per il soleo le due versioni sono equivalenti.",
-"esercizi": [
-{
-"n": "Calf raise in piedi",
-"g": "A",
-"f": "flessione plantare a ginocchio esteso",
-"l": "allungata",
-"nota": "+12,4% di gastrocnemio laterale contro +1,7% della versione seduta."
-},
-{
-"n": "Calf raise alla pressa",
-"g": "A",
-"f": "flessione plantare a ginocchio quasi esteso",
-"l": "allungata",
-"nota": "Buona alternativa, carico facile da gestire."
-},
-{
-"n": "Calf raise seduto",
-"g": "B",
-"f": "flessione plantare a ginocchio flesso",
-"l": "allungata",
-"nota": "Il soleo cresce come in piedi; il gastrocnemio quasi per niente."
-},
-{
-"n": "Calf raise monopodalico",
-"g": "B",
-"f": "flessione plantare",
-"l": "allungata",
-"nota": "Utile per correggere asimmetrie."
-},
-{
-"n": "Calf raise allo Smith",
-"g": "A",
-"f": "flessione plantare a ginocchio esteso",
-"l": "allungata",
-"nota": "Carico progredibile e stabile."
-},
-{
-"n": "Calf raise con parziali in allungamento",
-"g": "A",
-"f": "flessione plantare",
-"l": "allungata",
-"nota": "Nella porzione allungata le parziali producono più gastrocnemio del range completo."
-},
-{
-"n": "Donkey calf raise",
-"g": "B",
-"f": "flessione plantare ad anca flessa",
-"l": "allungata",
-"nota": "Anca flessa: il gastrocnemio parte più lungo."
-}
-],
-"errori": [
-{
-"t": "Fare solo la versione seduta",
-"s": "Lascia fuori il gastrocnemio, che è la parte visibile del polpaccio.",
-"liv": "A"
-},
-{
-"t": "Rimbalzare in basso",
-"s": "Il tendine d’Achille restituisce energia e il muscolo lavora meno. Pausa in basso.",
-"liv": "C"
-},
-{
-"t": "Aspettarsi risultati da 3 serie a fine seduta",
-"s": "Se sono una priorità servono 8-16 serie settimanali distribuite, non un riempitivo.",
-"liv": "A"
-}
-],
-"studi": [
-"kinoshita_calf",
-"kassiano_partials",
-"tendine_carico"
-],
+"esercizi": [{"n": "Calf raise in piedi", "g": "A", "f": "flessione plantare a ginocchio esteso", "l": "allungata", "nota": "+12,4% di gastrocnemio laterale contro +1,7% della versione seduta."}, {"n": "Calf raise alla pressa", "g": "A", "f": "flessione plantare a ginocchio quasi esteso", "l": "allungata", "nota": "Buona alternativa, carico facile da gestire."}, {"n": "Calf raise seduto", "g": "B", "f": "flessione plantare a ginocchio flesso", "l": "allungata", "nota": "Il soleo cresce come in piedi; il gastrocnemio quasi per niente."}, {"n": "Calf raise monopodalico", "g": "B", "f": "flessione plantare", "l": "allungata", "nota": "Utile per correggere asimmetrie."}, {"n": "Calf raise allo Smith", "g": "A", "f": "flessione plantare a ginocchio esteso", "l": "allungata", "nota": "Carico progredibile e stabile."}, {"n": "Calf raise con parziali in allungamento", "g": "A", "f": "flessione plantare", "l": "allungata", "nota": "Nella porzione allungata le parziali producono più gastrocnemio del range completo."}, {"n": "Donkey calf raise", "g": "B", "f": "flessione plantare ad anca flessa", "l": "allungata", "nota": "Anca flessa: il gastrocnemio parte più lungo."}, {"n": "Calf raise all’hack squat", "g": "A", "f": "flessione plantare a ginocchio esteso", "l": "allungata", "nota": "Ginocchio teso, quindi il gastrocnemio partecipa pienamente. Carico facile da progredire."}, {"n": "Calf raise seduto a macchina", "g": "B", "f": "flessione plantare a ginocchio flesso", "l": "allungata", "nota": "A ginocchio piegato il gastrocnemio è accorciato e resta il soleo: è l’unico modo di caricarlo davvero."}, {"n": "Calf raise alla pressa a un piede", "g": "B", "f": "flessione plantare monopodalica", "l": "allungata", "nota": "Raddoppia il carico relativo a parità di peso sulla pedana."}, {"n": "Calf raise con parziali nel tratto basso", "g": "B", "f": "flessione plantare, tratto allungato", "l": "allungata", "nota": "Raggiunto il cedimento si continua nel tratto basso, che è quello che rende di più."}, {"n": "Salto della corda", "g": "C", "f": "flessione plantare ripetuta", "l": "media", "nota": "Condizionamento e rigidità del tendine. Non è uno stimolo ipertrofico."}],
+"errori": [{"t": "Fare solo la versione seduta", "s": "Lascia fuori il gastrocnemio, che è la parte visibile del polpaccio.", "liv": "A"}, {"t": "Rimbalzare in basso", "s": "Il tendine d’Achille restituisce energia e il muscolo lavora meno. Pausa in basso.", "liv": "C"}, {"t": "Aspettarsi risultati da 3 serie a fine seduta", "s": "Se sono una priorità servono 8-16 serie settimanali distribuite, non un riempitivo.", "liv": "A"}],
+"studi": ["kinoshita_calf", "kassiano_partials", "tendine_carico"],
 "volume": "8-16 serie settimanali se sono una priorità, 4-6 per mantenere.",
 "meccanica": "Il momento alla caviglia è massimo a piede piatto o in flessione dorsale, cioè dove il tricipite surale è allungato: coincidenza favorevole, purché non si rimbalzi. Il gastrocnemio è biarticolare: a ginocchio piegato è già accorciato e smette di contribuire, e resta solo il soleo.",
-"posizione": [
-"**Ginocchio** esteso per il gastrocnemio, flesso se vuoi isolare il soleo.",
-"**Caviglia** in escursione completa, con pausa in basso per annullare il contributo elastico del tendine.",
-"**Avampiede** stabile sul gradino, senza cedimenti laterali."
-]
+"posizione": ["**Ginocchio** esteso per il gastrocnemio, flesso se vuoi isolare il soleo.", "**Caviglia** in escursione completa, con pausa in basso per annullare il contributo elastico del tendine.", "**Avampiede** stabile sul gradino, senza cedimenti laterali."]
 },
 {
 "id": "core",
 "nome": "Addome e core",
 "gruppo": "Torso",
-"capi": [
-"Retto dell’addome",
-"Obliqui interni ed esterni",
-"Trasverso",
-"Erettori spinali",
-"Quadrato dei lombi"
-],
-"funzioni": [
-"Flessione del tronco",
-"Rotazione e inclinazione laterale",
-"Stabilizzazione anti-estensione e anti-rotazione"
-],
+"capi": ["Retto dell’addome", "Obliqui interni ed esterni", "Trasverso", "Erettori spinali", "Quadrato dei lombi"],
+"funzioni": ["Flessione del tronco", "Rotazione e inclinazione laterale", "Stabilizzazione anti-estensione e anti-rotazione"],
 "stimolo": "Il retto dell’addome è un muscolo come gli altri: cresce con carico progressivo e serie vicine al cedimento, non con centinaia di crunch. Gli esercizi di stabilizzazione servono al controllo, non alla massa.",
-"esercizi": [
-{
-"n": "Crunch ai cavi",
-"g": "A",
-"f": "flessione del tronco sotto carico",
-"l": "media",
-"nota": "Il carico si può progredire, a differenza del crunch a corpo libero."
-},
-{
-"n": "Sollevamento gambe alla sbarra",
-"g": "B",
-"f": "flessione lombo-pelvica",
-"l": "allungata",
-"nota": "Porta il bacino in retroversione, non limitarti ad alzare le gambe."
-},
-{
-"n": "Ab wheel",
-"g": "B",
-"f": "anti-estensione",
-"l": "allungata",
-"nota": "Molto impegnativo, ottimo controllo."
-},
-{
-"n": "Plank",
-"g": "C",
-"f": "anti-estensione isometrica",
-"l": "media",
-"nota": "Utile per il controllo, quasi inutile per la massa."
-},
-{
-"n": "Iperestensioni",
-"g": "B",
-"f": "estensione del tronco",
-"l": "media",
-"nota": "Per gli erettori spinali."
-},
-{
-"n": "Crunch alla macchina",
-"g": "A",
-"f": "flessione del tronco sotto carico",
-"l": "media",
-"nota": "Progressione di carico semplice, che è ciò che manca ai crunch a corpo libero."
-},
-{
-"n": "Dragon flag",
-"g": "C",
-"f": "anti-estensione",
-"l": "allungata",
-"nota": "Molto difficile, poco progredibile."
-},
-{
-"n": "Rotazioni ai cavi",
-"g": "B",
-"f": "rotazione del tronco",
-"l": "media",
-"nota": "Per gli obliqui, con carico progressivo."
-},
-{
-"n": "Side plank con carico",
-"g": "C",
-"f": "anti-inclinazione",
-"l": "media",
-"nota": "Controllo, non massa."
-}
-],
-"errori": [
-{
-"t": "Solo alte ripetizioni a corpo libero",
-"s": "Senza progressione di carico l’addome smette di crescere, come qualsiasi altro muscolo.",
-"liv": "C"
-},
-{
-"t": "Confondere stabilità e ipertrofia",
-"s": "Il plank allena il controllo, non fa crescere il retto dell’addome.",
-"liv": "C"
-},
-{
-"t": "Allenare il core per la prestazione altrui",
-"s": "Il lavoro di stabilità del core ha effetti piccoli e incerti sulla prestazione sportiva: allenalo perché vuoi l’addome, non perché ti farà alzare più pesi.",
-"liv": "C"
-}
-],
-"studi": [
-"plotkin_overload"
-],
+"esercizi": [{"n": "Crunch ai cavi", "g": "A", "f": "flessione del tronco sotto carico", "l": "media", "nota": "Il carico si può progredire, a differenza del crunch a corpo libero."}, {"n": "Sollevamento gambe alla sbarra", "g": "B", "f": "flessione lombo-pelvica", "l": "allungata", "nota": "Porta il bacino in retroversione, non limitarti ad alzare le gambe."}, {"n": "Ab wheel", "g": "B", "f": "anti-estensione", "l": "allungata", "nota": "Molto impegnativo, ottimo controllo."}, {"n": "Plank", "g": "C", "f": "anti-estensione isometrica", "l": "media", "nota": "Utile per il controllo, quasi inutile per la massa."}, {"n": "Iperestensioni", "g": "B", "f": "estensione del tronco", "l": "media", "nota": "Per gli erettori spinali."}, {"n": "Crunch alla macchina", "g": "A", "f": "flessione del tronco sotto carico", "l": "media", "nota": "Progressione di carico semplice, che è ciò che manca ai crunch a corpo libero."}, {"n": "Dragon flag", "g": "C", "f": "anti-estensione", "l": "allungata", "nota": "Molto difficile, poco progredibile."}, {"n": "Rotazioni ai cavi", "g": "B", "f": "rotazione del tronco", "l": "media", "nota": "Per gli obliqui, con carico progressivo."}, {"n": "Side plank con carico", "g": "C", "f": "anti-inclinazione", "l": "media", "nota": "Controllo, non massa."}, {"n": "Reverse crunch", "g": "B", "f": "flessione lombare, retroversione del bacino", "l": "accorciata", "nota": "Il bacino si arrotola verso le costole. Se le gambe si limitano a sollevarsi, stai allenando i flessori dell’anca."}, {"n": "Pallof press", "g": "B", "f": "antirotazione", "l": "media", "nota": "Isometria contro una rotazione. Allena l’obliquo a resistere, che è la sua funzione principale sotto carico."}, {"n": "Sit-up su panca declinata con carico", "g": "B", "f": "flessione del tronco", "l": "allungata", "nota": "Il declino aggiunge il tratto in cui l’addome è lungo, che il crunch a terra non raggiunge."}, {"n": "Toes to bar", "g": "B", "f": "flessione dell’anca + del tronco", "l": "allungata", "nota": "Escursione completa da appeso. Servono presa e spalle che reggano prima dell’addome."}, {"n": "Crunch ai cavi in ginocchio inclinato di lato", "g": "B", "f": "flessione + inclinazione laterale", "l": "media", "nota": "Aggiunge la componente obliqua al crunch ai cavi."}, {"n": "Suitcase carry", "g": "B", "f": "antiflessione laterale", "l": "media", "nota": "Camminare con un carico da un lato solo. Allena l’obliquo nella funzione che ha davvero."}, {"n": "Hollow body hold", "g": "C", "f": "flessione isometrica", "l": "media", "nota": "Isometria a corpo libero. Buona base, poco progredibile."}, {"n": "L-sit", "g": "C", "f": "flessione isometrica + sostegno", "l": "accorciata", "nota": "Molto difficile e poco caricabile in progressione. È una posizione da conquistare, non un esercizio di massa."}, {"n": "Stir the pot", "g": "C", "f": "antiestensione dinamica", "l": "media", "nota": "Plank sulla fitball con movimento circolare. Più coordinazione che ipertrofia."}],
+"errori": [{"t": "Solo alte ripetizioni a corpo libero", "s": "Senza progressione di carico l’addome smette di crescere, come qualsiasi altro muscolo.", "liv": "C"}, {"t": "Confondere stabilità e ipertrofia", "s": "Il plank allena il controllo, non fa crescere il retto dell’addome.", "liv": "C"}, {"t": "Allenare il core per la prestazione altrui", "s": "Il lavoro di stabilità del core ha effetti piccoli e incerti sulla prestazione sportiva: allenalo perché vuoi l’addome, non perché ti farà alzare più pesi.", "liv": "C"}],
+"studi": ["plotkin_overload"],
 "volume": "4-12 serie settimanali dirette.",
 "meccanica": "Nel crunch il momento è massimo a tronco quasi disteso e cala man mano che ti chiudi. Nel sollevamento gambe da appeso il momento all’anca è massimo a gambe orizzontali. Negli esercizi anti-estensione, come la ruota, il momento cresce con la distanza fra mani e bacino: il punto più lontano è il più duro.",
-"posizione": [
-"**Bacino** portato in retroversione nei sollevamenti: senza quello lavorano i flessori d’anca, non l’addome.",
-"**Colonna** che si flette deliberatamente nei crunch: qui la flessione è l’esercizio, non un errore.",
-"**Respiro** espirato in chiusura per completare la flessione."
-]
+"posizione": ["**Bacino** portato in retroversione nei sollevamenti: senza quello lavorano i flessori d’anca, non l’addome.", "**Colonna** che si flette deliberatamente nei crunch: qui la flessione è l’esercizio, non un errore.", "**Respiro** espirato in chiusura per completare la flessione."]
 },
 {
 "id": "avambracci",
 "nome": "Avambracci e presa",
 "gruppo": "Braccio",
-"capi": [
-"Flessori del carpo",
-"Estensori del carpo",
-"Brachioradiale",
-"Muscoli intrinseci della mano"
-],
-"funzioni": [
-"Flessione ed estensione del polso",
-"Presa e chiusura delle dita",
-"Pronazione e supinazione"
-],
+"capi": ["Flessori del carpo", "Estensori del carpo", "Brachioradiale", "Muscoli intrinseci della mano"],
+"funzioni": ["Flessione ed estensione del polso", "Presa e chiusura delle dita", "Pronazione e supinazione"],
 "stimolo": "La presa si allena come qualsiasi altro muscolo: con carico progressivo e serie vicine al cedimento. Non migliora da sola facendo tiri, e quando cede prima del dorsale diventa il fattore che limita tutto il resto.",
-"esercizi": [
-{
-"n": "Farmer walk",
-"g": "A",
-"f": "presa isometrica",
-"l": "media",
-"nota": "Carico alto e progredibile, il più efficiente per la presa."
-},
-{
-"n": "Dead hang",
-"g": "A",
-"f": "presa isometrica",
-"l": "allungata",
-"nota": "Semplice, misurabile in secondi."
-},
-{
-"n": "Curl ai polsi",
-"g": "A",
-"f": "flessione del polso",
-"l": "allungata",
-"nota": "Per i flessori, carichi bassi e ripetizioni alte."
-},
-{
-"n": "Estensione ai polsi",
-"g": "A",
-"f": "estensione del polso",
-"l": "allungata",
-"nota": "Spesso trascurata, utile se il gomito esterno dà fastidio."
-},
-{
-"n": "Curl con presa neutra",
-"g": "B",
-"f": "flessione del gomito e del polso",
-"l": "media",
-"nota": "Brachioradiale insieme ai flessori."
-},
-{
-"n": "Pinch grip",
-"g": "B",
-"f": "presa fra pollice e dita",
-"l": "media",
-"nota": "Allena una presa diversa da quella a uncino."
-}
-],
-"errori": [
-{
-"t": "Aspettarsi che la presa cresca dai tiri",
-"s": "Negli studi la forza di presa risponde ad allenamento specifico di mano e polso: i tiri la usano ma non la sviluppano.",
-"liv": "B"
-},
-{
-"t": "Usare sempre le fasce",
-"s": "Toglie il limite quando serve, ma se le usi su tutto la presa non progredisce mai.",
-"liv": "C"
-}
-],
-"studi": [
-"presa_forza"
-],
+"esercizi": [{"n": "Farmer walk", "g": "A", "f": "presa isometrica", "l": "media", "nota": "Carico alto e progredibile, il più efficiente per la presa."}, {"n": "Dead hang", "g": "A", "f": "presa isometrica", "l": "allungata", "nota": "Semplice, misurabile in secondi."}, {"n": "Curl ai polsi", "g": "A", "f": "flessione del polso", "l": "allungata", "nota": "Per i flessori, carichi bassi e ripetizioni alte."}, {"n": "Estensione ai polsi", "g": "A", "f": "estensione del polso", "l": "allungata", "nota": "Spesso trascurata, utile se il gomito esterno dà fastidio."}, {"n": "Curl con presa neutra", "g": "B", "f": "flessione del gomito e del polso", "l": "media", "nota": "Brachioradiale insieme ai flessori."}, {"n": "Pinch grip", "g": "B", "f": "presa fra pollice e dita", "l": "media", "nota": "Allena una presa diversa da quella a uncino."}, {"n": "Curl ai polsi dietro la schiena", "g": "B", "f": "flessione del polso", "l": "allungata", "nota": "Il bilanciere dietro il corpo permette un allungamento maggiore che sulla panca."}, {"n": "Curl inverso con bilanciere EZ", "g": "B", "f": "flessione del gomito a presa prona", "l": "media", "nota": "Brachioradiale ed estensori del polso insieme."}, {"n": "Wrist roller", "g": "B", "f": "flessione ed estensione ripetute", "l": "media", "nota": "Corda avvolta su un manico. Molto tempo sotto tensione con carico basso."}, {"n": "Trasporto con presa a pinza sui dischi", "g": "B", "f": "presa a pinza", "l": "media", "nota": "Allena la presa fra pollice e dita, quella che le fasce da polso nascondono."}, {"n": "Hang a un braccio", "g": "C", "f": "presa isometrica", "l": "allungata", "nota": "Molto impegnativo anche per la spalla: da introdurre solo se la spalla è a posto."}],
+"errori": [{"t": "Aspettarsi che la presa cresca dai tiri", "s": "Negli studi la forza di presa risponde ad allenamento specifico di mano e polso: i tiri la usano ma non la sviluppano.", "liv": "B"}, {"t": "Usare sempre le fasce", "s": "Toglie il limite quando serve, ma se le usi su tutto la presa non progredisce mai.", "liv": "C"}],
+"studi": ["presa_forza"],
 "volume": "4-10 serie settimanali dirette se la presa ti limita, altrimenti bastano i farmer walk.",
 "meccanica": "Nella tenuta il momento è statico e dipende dal peso: cresce con il tempo sotto carico, non con l’angolo. Nei curl ai polsi il momento è massimo a polso in estensione, che è anche la posizione di massimo allungamento dei flessori.",
-"posizione": [
-"**Polso** in escursione completa nei curl al polso, senza compensare col gomito.",
-"**Avambraccio** appoggiato e fermo: è l’unico modo di isolare il movimento del polso.",
-"**Presa** a uncino o mista nelle tenute lunghe, se la presa in chiusura cede prima."
-]
+"posizione": ["**Polso** in escursione completa nei curl al polso, senza compensare col gomito.", "**Avambraccio** appoggiato e fermo: è l’unico modo di isolare il movimento del polso.", "**Presa** a uncino o mista nelle tenute lunghe, se la presa in chiusura cede prima."]
 },
 {
 "id": "trapsup",
 "nome": "Trapezio superiore e collo",
 "gruppo": "Spalla",
-"capi": [
-"Trapezio superiore",
-"Elevatore della scapola",
-"Sternocleidomastoideo",
-"Splenio"
-],
-"funzioni": [
-"Elevazione della scapola",
-"Estensione e inclinazione del collo",
-"Rotazione superiore della scapola"
-],
+"capi": ["Trapezio superiore", "Elevatore della scapola", "Sternocleidomastoideo", "Splenio"],
+"funzioni": ["Elevazione della scapola", "Estensione e inclinazione del collo", "Rotazione superiore della scapola"],
 "stimolo": "Il trapezio superiore eleva la scapola: cresce con le scrollate e con qualunque cosa carichi la spalla verso il basso. È visivamente importante nel bodybuilding e ha una spiacevole tendenza a intromettersi negli esercizi in cui non lo vuoi.",
-"esercizi": [
-{
-"n": "Scrollate con bilanciere",
-"g": "A",
-"f": "elevazione scapolare",
-"l": "media",
-"nota": "Escursione piena, senza rotazioni della spalla."
-},
-{
-"n": "Scrollate ai cavi",
-"g": "A",
-"f": "elevazione scapolare",
-"l": "allungata",
-"nota": "Tensione anche in alto, dove il bilanciere la perde."
-},
-{
-"n": "Farmer walk",
-"g": "B",
-"f": "elevazione isometrica",
-"l": "allungata",
-"nota": "Il trapezio lavora per non far scendere la spalla."
-},
-{
-"n": "Rematore alto",
-"g": "B",
-"f": "elevazione + abduzione",
-"l": "media",
-"nota": "Coinvolge trapezio e deltoide, attenzione alla spalla."
-},
-{
-"n": "Estensioni del collo con resistenza",
-"g": "B",
-"f": "estensione del collo",
-"l": "media",
-"nota": "Per lo spessore del collo, carichi molto bassi."
-}
-],
-"errori": [
-{
-"t": "Ruotare le spalle nelle scrollate",
-"s": "Non aggiunge escursione utile e carica la spalla in una posizione debole. Su e giù, in linea.",
-"liv": "C"
-},
-{
-"t": "Confondere trapezio superiore e medio",
-"s": "Il superiore eleva, il medio retrae. Sono funzioni diverse e servono esercizi diversi.",
-"liv": "C"
-}
-],
+"esercizi": [{"n": "Scrollate con bilanciere", "g": "A", "f": "elevazione scapolare", "l": "media", "nota": "Escursione piena, senza rotazioni della spalla."}, {"n": "Scrollate ai cavi", "g": "A", "f": "elevazione scapolare", "l": "allungata", "nota": "Tensione anche in alto, dove il bilanciere la perde."}, {"n": "Farmer walk", "g": "B", "f": "elevazione isometrica", "l": "allungata", "nota": "Il trapezio lavora per non far scendere la spalla."}, {"n": "Rematore alto", "g": "B", "f": "elevazione + abduzione", "l": "media", "nota": "Coinvolge trapezio e deltoide, attenzione alla spalla."}, {"n": "Estensioni del collo con resistenza", "g": "B", "f": "estensione del collo", "l": "media", "nota": "Per lo spessore del collo, carichi molto bassi."}, {"n": "Scrollate con manubri", "g": "A", "f": "elevazione scapolare", "l": "media", "nota": "Le braccia lungo i fianchi permettono un’escursione leggermente maggiore che col bilanciere davanti."}, {"n": "Scrollate allo Smith", "g": "B", "f": "elevazione scapolare", "l": "media", "nota": "La guida permette di caricare senza pensare all’equilibrio del bilanciere."}, {"n": "Scrollate con presa larga al bilanciere", "g": "B", "f": "elevazione + retrazione", "l": "media", "nota": "La presa larga aggiunge una componente di retrazione al movimento."}, {"n": "Overhead shrug", "g": "C", "f": "elevazione a braccia alte", "l": "accorciata", "nota": "Con le braccia sopra la testa la scapola è già ruotata: escursione minima e carico basso."}, {"n": "Flessione laterale del collo con resistenza", "g": "C", "f": "inclinazione del collo", "l": "media", "nota": "Progredire molto lentamente: il collo non tollera salti di carico."}],
+"errori": [{"t": "Ruotare le spalle nelle scrollate", "s": "Non aggiunge escursione utile e carica la spalla in una posizione debole. Su e giù, in linea.", "liv": "C"}, {"t": "Confondere trapezio superiore e medio", "s": "Il superiore eleva, il medio retrae. Sono funzioni diverse e servono esercizi diversi.", "liv": "C"}],
 "studi": [],
 "volume": "4-12 serie settimanali dirette, più il contributo dei farmer walk e delle tirate.",
 "meccanica": "Nelle scrollate il momento è verticale e quasi costante lungo la breve escursione, motivo per cui l’esercizio tollera carichi alti. La rotazione della spalla non aggiunge escursione utile e carica l’articolazione in una posizione debole.",
-"posizione": [
-"**Scapola** che sale e scende in linea, senza rotazioni.",
-"**Collo** neutro: non portare la testa verso la spalla.",
-"**Braccia** come ganci: se i gomiti si piegano stai facendo un rematore."
-]
+"posizione": ["**Scapola** che sale e scende in linea, senza rotazioni.", "**Collo** neutro: non portare la testa verso la spalla.", "**Braccia** come ganci: se i gomiti si piegano stai facendo un rematore."]
 },
 {
 "id": "erettori",
 "nome": "Erettori spinali",
 "gruppo": "Schiena",
-"capi": [
-"Ileocostale",
-"Lunghissimo del torace",
-"Spinale",
-"Multifido"
-],
-"funzioni": [
-"Estensione del tronco",
-"Resistenza alla flessione sotto carico",
-"Inclinazione e rotazione"
-],
+"capi": ["Ileocostale", "Lunghissimo del torace", "Spinale", "Multifido"],
+"funzioni": ["Estensione del tronco", "Resistenza alla flessione sotto carico", "Inclinazione e rotazione"],
 "stimolo": "Negli stacchi e negli squat lavorano soprattutto in isometria, per impedire alla colonna di flettersi. Se sono l’anello debole, cedono prima del muscolo bersaglio e lo stimolo non arriva mai dove serve.",
-"esercizi": [
-{
-"n": "Iperestensioni a 45 gradi",
-"g": "A",
-"f": "estensione del tronco",
-"l": "allungata",
-"nota": "Progredibili con un disco al petto, e caricano poco la colonna."
-},
-{
-"n": "Back extension a 90 gradi",
-"g": "A",
-"f": "estensione del tronco",
-"l": "allungata",
-"nota": "Escursione maggiore, richiesta più alta."
-},
-{
-"n": "Stacco rumeno",
-"g": "B",
-"f": "isometria anti-flessione",
-"l": "media",
-"nota": "Gli erettori tengono la posizione, non producono il movimento."
-},
-{
-"n": "Good morning",
-"g": "B",
-"f": "estensione + isometria",
-"l": "allungata",
-"nota": "Carico basso, escursione controllata."
-},
-{
-"n": "Reverse hyper",
-"g": "B",
-"f": "estensione dell’anca e del tronco",
-"l": "media",
-"nota": "Compressione ridotta sulla colonna."
-},
-{
-"n": "Jefferson curl",
-"g": "C",
-"f": "flessione e estensione caricata",
-"l": "allungata",
-"nota": "Carichi molto bassi e progressione lenta: è mobilità caricata, non forza."
-}
-],
-"errori": [
-{
-"t": "Non allenarli mai direttamente",
-"s": "Se cedono prima dei femorali nello stacco, il femorale non arriva vicino al cedimento e non cresce.",
-"liv": "C"
-},
-{
-"t": "Evitare ogni flessione della colonna per principio",
-"s": "La terapia con esercizio funziona per la lombalgia cronica e nessuna modalità risulta superiore: evitare il movimento non protegge.",
-"liv": "A"
-}
-],
-"studi": [
-"lombalgia_esercizio",
-"tendine_carico"
-],
+"esercizi": [{"n": "Iperestensioni a 45 gradi", "g": "A", "f": "estensione del tronco", "l": "allungata", "nota": "Progredibili con un disco al petto, e caricano poco la colonna."}, {"n": "Back extension a 90 gradi", "g": "A", "f": "estensione del tronco", "l": "allungata", "nota": "Escursione maggiore, richiesta più alta."}, {"n": "Stacco rumeno", "g": "B", "f": "isometria anti-flessione", "l": "media", "nota": "Gli erettori tengono la posizione, non producono il movimento."}, {"n": "Good morning", "g": "B", "f": "estensione + isometria", "l": "allungata", "nota": "Carico basso, escursione controllata."}, {"n": "Reverse hyper", "g": "B", "f": "estensione dell’anca e del tronco", "l": "media", "nota": "Compressione ridotta sulla colonna."}, {"n": "Jefferson curl", "g": "C", "f": "flessione e estensione caricata", "l": "allungata", "nota": "Carichi molto bassi e progressione lenta: è mobilità caricata, non forza."}, {"n": "Stacco da terra", "g": "A", "f": "estensione dell’anca e del tronco", "l": "media", "nota": "Il carico assoluto più alto che gli erettori possano vedere, ma in isometria: non si accorciano, resistono."}, {"n": "Stacco con bilanciere esagonale", "g": "B", "f": "estensione dell’anca e del tronco", "l": "media", "nota": "Il carico è più vicino al centro di massa: momento lombare più basso a parità di peso sollevato."}, {"n": "Good morning seduto", "g": "B", "f": "estensione del tronco", "l": "allungata", "nota": "L’anca è bloccata dalla posizione seduta: il movimento è tutto lombare e toracico."}, {"n": "Back extension con disco al petto", "g": "B", "f": "estensione del tronco", "l": "allungata", "nota": "Tenere il disco al petto allunga il braccio di leva rispetto a tenerlo dietro il collo."}, {"n": "Bird dog", "g": "C", "f": "antiestensione e antirotazione", "l": "media", "nota": "Carico bassissimo. Riscaldamento o riabilitazione, non costruzione."}],
+"errori": [{"t": "Non allenarli mai direttamente", "s": "Se cedono prima dei femorali nello stacco, il femorale non arriva vicino al cedimento e non cresce.", "liv": "C"}, {"t": "Evitare ogni flessione della colonna per principio", "s": "La terapia con esercizio funziona per la lombalgia cronica e nessuna modalità risulta superiore: evitare il movimento non protegge.", "liv": "A"}],
+"studi": ["lombalgia_esercizio", "tendine_carico"],
 "volume": "4-10 serie settimanali dirette, oltre al lavoro isometrico di stacchi e accosciate.",
 "meccanica": "Il lavoro è quasi sempre isometrico: gli erettori non producono il movimento, impediscono alla colonna di flettersi. Il momento che devono contrastare vale peso × distanza orizzontale fra carico e colonna, e cresce man mano che il busto si inclina. Nelle iperestensioni invece il momento è massimo a busto orizzontale.",
-"posizione": [
-"**Colonna** in posizione stabile mantenuta per tutta la serie: è un lavoro di tenuta.",
-"**Anca** che produce il movimento nelle iperestensioni a quarantacinque gradi, se vuoi caricare i glutei; colonna che si estende se vuoi gli erettori.",
-"**Carico** vicino al corpo, sempre: la distanza orizzontale è ciò che paghi."
-]
+"posizione": ["**Colonna** in posizione stabile mantenuta per tutta la serie: è un lavoro di tenuta.", "**Anca** che produce il movimento nelle iperestensioni a quarantacinque gradi, se vuoi caricare i glutei; colonna che si estende se vuoi gli erettori.", "**Carico** vicino al corpo, sempre: la distanza orizzontale è ciò che paghi."]
 },
 {
 "id": "flessorianca",
 "nome": "Flessori dell’anca",
 "gruppo": "Gamba",
-"capi": [
-"Ileopsoas",
-"Retto femorale",
-"Sartorio",
-"Tensore della fascia lata"
-],
-"funzioni": [
-"Flessione dell’anca",
-"Stabilizzazione del bacino",
-"Estensione del ginocchio (retto femorale)"
-],
+"capi": ["Ileopsoas", "Retto femorale", "Sartorio", "Tensore della fascia lata"],
+"funzioni": ["Flessione dell’anca", "Stabilizzazione del bacino", "Estensione del ginocchio (retto femorale)"],
 "stimolo": "Gruppo quasi sempre ignorato, che conta per due motivi: l’ileopsoas è un flessore potente che nessun esercizio di gamba allena, e il retto femorale ha bisogno di lavoro ad anca estesa che accosciate e presse non danno.",
-"esercizi": [
-{
-"n": "Sollevamento gambe da appeso",
-"g": "A",
-"f": "flessione dell’anca",
-"l": "allungata",
-"nota": "Porta il bacino in retroversione, non limitarti ad alzare le gambe."
-},
-{
-"n": "Flessione d’anca ai cavi",
-"g": "A",
-"f": "flessione isolata",
-"l": "allungata",
-"nota": "Carico progredibile, la versione più diretta per l’ileopsoas."
-},
-{
-"n": "Sissy squat",
-"g": "B",
-"f": "estensione del ginocchio ad anca estesa",
-"l": "allungata",
-"nota": "Mette in tensione il retto femorale dove la leg extension non arriva."
-},
-{
-"n": "Leg extension con schienale reclinato",
-"g": "A",
-"f": "estensione del ginocchio ad anca aperta",
-"l": "allungata",
-"nota": "Ad anca a 40 gradi il retto femorale cresce più che a 90."
-},
-{
-"n": "Sollevamento gambe su panca inclinata",
-"g": "B",
-"f": "flessione dell’anca",
-"l": "media",
-"nota": "Versione più accessibile della sbarra."
-}
-],
-"errori": [
-{
-"t": "Allenare il retto femorale solo con le accosciate",
-"s": "Nello squat è accorciato all’anca mentre si allunga al ginocchio: gli studi regionali trovano crescita scarsa o assente.",
-"liv": "B"
-},
-{
-"t": "Alzare solo le gambe nei leg raise",
-"s": "Senza retroversione del bacino il lavoro resta sui flessori d’anca e l’addome partecipa poco.",
-"liv": "C"
-}
-],
-"studi": [
-"leg_ext_hip",
-"squat_regional"
-],
+"esercizi": [{"n": "Sollevamento gambe da appeso", "g": "A", "f": "flessione dell’anca", "l": "allungata", "nota": "Porta il bacino in retroversione, non limitarti ad alzare le gambe."}, {"n": "Flessione d’anca ai cavi", "g": "A", "f": "flessione isolata", "l": "allungata", "nota": "Carico progredibile, la versione più diretta per l’ileopsoas."}, {"n": "Sissy squat", "g": "B", "f": "estensione del ginocchio ad anca estesa", "l": "allungata", "nota": "Mette in tensione il retto femorale dove la leg extension non arriva."}, {"n": "Leg extension con schienale reclinato", "g": "A", "f": "estensione del ginocchio ad anca aperta", "l": "allungata", "nota": "Ad anca a 40 gradi il retto femorale cresce più che a 90."}, {"n": "Sollevamento gambe su panca inclinata", "g": "B", "f": "flessione dell’anca", "l": "media", "nota": "Versione più accessibile della sbarra."}, {"n": "Reverse Nordic curl", "g": "B", "f": "estensione del ginocchio ad anca estesa", "l": "allungata", "nota": "Carica il retto femorale nella posizione che accosciate e presse non raggiungono."}, {"n": "Sollevamento del ginocchio ai cavi in piedi", "g": "B", "f": "flessione dell’anca", "l": "allungata", "nota": "Cavigliera al cavo basso: tensione costante su tutto l’arco, a differenza del sollevamento a corpo libero."}, {"n": "Sollevamento gambe da appeso con fermo in alto", "g": "B", "f": "flessione dell’anca controllata", "l": "allungata", "nota": "Il fermo toglie lo slancio, che è il modo in cui quasi tutti aggirano l’esercizio."}, {"n": "Psoas march con elastico", "g": "C", "f": "flessione alternata dell’anca", "l": "media", "nota": "Carico basso, molto usato nella preparazione atletica come complemento."}],
+"errori": [{"t": "Allenare il retto femorale solo con le accosciate", "s": "Nello squat è accorciato all’anca mentre si allunga al ginocchio: gli studi regionali trovano crescita scarsa o assente.", "liv": "B"}, {"t": "Alzare solo le gambe nei leg raise", "s": "Senza retroversione del bacino il lavoro resta sui flessori d’anca e l’addome partecipa poco.", "liv": "C"}],
+"studi": ["leg_ext_hip", "squat_regional"],
 "volume": "4-8 serie settimanali, in buona parte condivise con l’addome.",
 "meccanica": "L’ileopsoas ha il momento massimo nella prima parte della flessione d’anca. Il retto femorale è biarticolare: nella leg extension con anca estesa parte lungo, ed è la posizione in cui rende di più.",
-"posizione": [
-"**Bacino** in retroversione nei sollevamenti gambe, altrimenti l’escursione utile non arriva.",
-"**Anca** aperta nella leg extension e nel sissy squat: è ciò che allunga il retto femorale.",
-"**Colonna** che non si inarca per compensare la mancanza di escursione d’anca."
-]
+"posizione": ["**Bacino** in retroversione nei sollevamenti gambe, altrimenti l’escursione utile non arriva.", "**Anca** aperta nella leg extension e nel sissy squat: è ciò che allunga il retto femorale.", "**Colonna** che non si inarca per compensare la mancanza di escursione d’anca."]
 },
 {
 "id": "tibiale",
 "nome": "Tibiale anteriore e stinco",
 "gruppo": "Gamba",
-"capi": [
-"Tibiale anteriore",
-"Estensore lungo delle dita",
-"Peronei"
-],
-"funzioni": [
-"Flessione dorsale della caviglia",
-"Inversione ed eversione del piede",
-"Controllo dell’appoggio"
-],
+"capi": ["Tibiale anteriore", "Estensore lungo delle dita", "Peronei"],
+"funzioni": ["Flessione dorsale della caviglia", "Inversione ed eversione del piede", "Controllo dell’appoggio"],
 "stimolo": "L’antagonista del polpaccio, che quasi nessuno allena. Vale per due ragioni: aggiunge spessore visibile allo stinco, e la mobilità in flessione dorsale condiziona la profondità che riesci a raggiungere nell’accosciata.",
-"esercizi": [
-{
-"n": "Tibialis raise al muro",
-"g": "A",
-"f": "flessione dorsale",
-"l": "allungata",
-"nota": "A corpo libero, progredibile con un disco sui piedi."
-},
-{
-"n": "Flessione dorsale ai cavi",
-"g": "A",
-"f": "flessione dorsale caricata",
-"l": "allungata",
-"nota": "Carico progredibile, la versione migliore se hai il cavo libero."
-},
-{
-"n": "Camminata sui talloni",
-"g": "B",
-"f": "flessione dorsale isometrica",
-"l": "media",
-"nota": "Semplice, poco progredibile."
-},
-{
-"n": "Eversione con elastico",
-"g": "B",
-"f": "eversione",
-"l": "media",
-"nota": "Per i peronei, utile dopo distorsioni."
-}
-],
-"errori": [
-{
-"t": "Ignorarlo e poi lamentarsi della profondità di squat",
-"s": "L’escursione passiva della caviglia condiziona il comportamento dinamico nell’accosciata.",
-"liv": "B"
-}
-],
-"studi": [
-"mobilita_squat"
-],
+"esercizi": [{"n": "Tibialis raise al muro", "g": "A", "f": "flessione dorsale", "l": "allungata", "nota": "A corpo libero, progredibile con un disco sui piedi."}, {"n": "Flessione dorsale ai cavi", "g": "A", "f": "flessione dorsale caricata", "l": "allungata", "nota": "Carico progredibile, la versione migliore se hai il cavo libero."}, {"n": "Camminata sui talloni", "g": "B", "f": "flessione dorsale isometrica", "l": "media", "nota": "Semplice, poco progredibile."}, {"n": "Eversione con elastico", "g": "B", "f": "eversione", "l": "media", "nota": "Per i peronei, utile dopo distorsioni."}, {"n": "Tibialis raise con carico appeso al piede", "g": "B", "f": "flessione dorsale", "l": "allungata", "nota": "Versione progredibile del tibialis raise al muro, dove il carico è fisso."}, {"n": "Flessione dorsale alla leg press", "g": "C", "f": "flessione dorsale", "l": "allungata", "nota": "Con la pedana si carica più che con l’elastico, ma la posizione è scomoda."}, {"n": "Trascinamento della slitta all’indietro", "g": "C", "f": "flessione dorsale ripetuta", "l": "media", "nota": "Molto proposto per la salute del ginocchio. Il lavoro è continuo ma il carico non è misurabile con precisione."}, {"n": "Camminata sulle punte", "g": "C", "f": "flessione plantare + stabilità", "l": "media", "nota": "Complemento alla camminata sui talloni, non un sostituto del lavoro sui polpacci."}],
+"errori": [{"t": "Ignorarlo e poi lamentarsi della profondità di squat", "s": "L’escursione passiva della caviglia condiziona il comportamento dinamico nell’accosciata.", "liv": "B"}],
+"studi": ["mobilita_squat"],
 "volume": "3-8 serie settimanali, bastano pochi minuti a fine seduta gambe.",
 "meccanica": "Il momento in flessione dorsale è massimo a caviglia estesa, cioè dove il tibiale è allungato. È un muscolo piccolo con escursione breve: risponde a carichi bassi e ripetizioni alte.",
-"posizione": [
-"**Tallone** fermo come perno, avampiede libero di salire.",
-"**Ginocchio** quasi esteso: piegarlo riduce l’escursione utile.",
-"**Escursione** completa fino alla flessione plantare massima che controlli."
-]
+"posizione": ["**Tallone** fermo come perno, avampiede libero di salire.", "**Ginocchio** quasi esteso: piegarlo riduce l’escursione utile.", "**Escursione** completa fino alla flessione plantare massima che controlli."]
 },
 {
 "id": "serrato",
 "nome": "Serrato anteriore e controllo scapolare",
 "gruppo": "Torso",
-"capi": [
-"Serrato anteriore",
-"Trapezio inferiore",
-"Piccolo pettorale"
-],
-"funzioni": [
-"Protrazione della scapola",
-"Rotazione superiore della scapola",
-"Stabilizzazione della scapola sulla gabbia toracica"
-],
+"capi": ["Serrato anteriore", "Trapezio inferiore", "Piccolo pettorale"],
+"funzioni": ["Protrazione della scapola", "Rotazione superiore della scapola", "Stabilizzazione della scapola sulla gabbia toracica"],
 "stimolo": "Muscoli che tengono la scapola dove serve. Non fanno volume estetico, ma quando non lavorano la spalla lavora senza base: è una delle cause ricorrenti di fastidio nelle spinte sopra la testa e in panca.",
-"esercizi": [
-{
-"n": "Push-up plus",
-"g": "A",
-"f": "protrazione scapolare",
-"l": "accorciata",
-"nota": "A fine push-up spingi ulteriormente la scapola in avanti."
-},
-{
-"n": "Serratus slide al muro",
-"g": "A",
-"f": "rotazione superiore",
-"l": "allungata",
-"nota": "Scorri le braccia in alto mantenendo il contatto."
-},
-{
-"n": "Pullover ai cavi",
-"g": "B",
-"f": "protrazione + estensione",
-"l": "allungata",
-"nota": "Coinvolge serrato e dorsale insieme."
-},
-{
-"n": "Y raise su panca inclinata",
-"g": "B",
-"f": "rotazione superiore, trapezio inferiore",
-"l": "allungata",
-"nota": "Carichi bassissimi, controllo alto."
-},
-{
-"n": "Overhead carry",
-"g": "B",
-"f": "stabilizzazione isometrica",
-"l": "accorciata",
-"nota": "Braccio sopra la testa, la scapola deve tenere."
-}
-],
-"errori": [
-{
-"t": "Trattarli come esercizi di riscaldamento e nulla più",
-"s": "Se la spalla ti dà fastidio in panca, la base scapolare è una delle prime cose da guardare.",
-"liv": "C"
-},
-{
-"t": "Usare carichi da ipertrofia",
-"s": "Sono muscoli di controllo: con carico alto il movimento viene fatto da altri.",
-"liv": "C"
-}
-],
-"studi": [
-"spalla_impingement"
-],
+"esercizi": [{"n": "Push-up plus", "g": "A", "f": "protrazione scapolare", "l": "accorciata", "nota": "A fine push-up spingi ulteriormente la scapola in avanti."}, {"n": "Serratus slide al muro", "g": "A", "f": "rotazione superiore", "l": "allungata", "nota": "Scorri le braccia in alto mantenendo il contatto."}, {"n": "Pullover ai cavi", "g": "B", "f": "protrazione + estensione", "l": "allungata", "nota": "Coinvolge serrato e dorsale insieme."}, {"n": "Y raise su panca inclinata", "g": "B", "f": "rotazione superiore, trapezio inferiore", "l": "allungata", "nota": "Carichi bassissimi, controllo alto."}, {"n": "Overhead carry", "g": "B", "f": "stabilizzazione isometrica", "l": "accorciata", "nota": "Braccio sopra la testa, la scapola deve tenere."}, {"n": "Scapular push-up", "g": "B", "f": "protrazione scapolare", "l": "accorciata", "nota": "Solo le scapole si muovono, i gomiti restano tesi. Carico basso ma molto specifico."}, {"n": "Landmine press a un braccio", "g": "B", "f": "protrazione + flessione della spalla", "l": "accorciata", "nota": "La protrazione finale è la parte che allena il serrato."}, {"n": "Wall slide con elastico", "g": "B", "f": "rotazione verso l’alto della scapola", "l": "allungata", "nota": "Insegna la rotazione della scapola che l’elevazione del braccio richiede."}, {"n": "Bear crawl", "g": "C", "f": "protrazione sotto carico", "l": "media", "nota": "Molto diffuso in rete. Coordinazione e stabilità più che ipertrofia."}],
+"errori": [{"t": "Trattarli come esercizi di riscaldamento e nulla più", "s": "Se la spalla ti dà fastidio in panca, la base scapolare è una delle prime cose da guardare.", "liv": "C"}, {"t": "Usare carichi da ipertrofia", "s": "Sono muscoli di controllo: con carico alto il movimento viene fatto da altri.", "liv": "C"}],
+"studi": ["spalla_impingement"],
 "volume": "3-8 serie settimanali, oppure integrati nel riscaldamento delle spinte.",
 "meccanica": "Il dentato anteriore lavora quasi sempre in isometria o in escursioni brevi, contro momenti piccoli: il suo compito non è muovere un carico ma tenere la scapola aderente alla gabbia e ruotarla verso l’alto insieme al trapezio.",
-"posizione": [
-"**Scapola** che protrae e ruota verso l’alto, senza staccarsi dalla gabbia toracica.",
-"**Braccio** che sale in linea con il piano della scapola, non sul piano frontale puro.",
-"**Carico** basso: sono muscoli di controllo, con carichi alti il movimento lo fanno altri."
-]
+"posizione": ["**Scapola** che protrae e ruota verso l’alto, senza staccarsi dalla gabbia toracica.", "**Braccio** che sale in linea con il piano della scapola, non sul piano frontale puro.", "**Carico** basso: sono muscoli di controllo, con carichi alti il movimento lo fanno altri."]
 }
 ];

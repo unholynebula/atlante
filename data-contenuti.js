@@ -2339,20 +2339,15 @@ const MITI = [
 "v": "falso",
 "s": "Non esiste un meccanismo per cui il muscolo si 'abitui' a un esercizio. Quello che serve è sovraccarico progressivo: aggiungere carico o ripetizioni nel tempo. Cambiare esercizi troppo spesso impedisce proprio di misurare la progressione, che è l’unico segnale affidabile che hai.",
 "liv": "C",
-"studi": [
-"plotkin_overload"
-],
+"studi": ["plotkin_overload"],
 "id": "bisogna_confondere_il_muscolo_cambiando"
 },
 {
 "m": "L’indolenzimento del giorno dopo indica che l’allenamento ha funzionato",
 "v": "falso",
-"s": "L’indolenzimento riflette il danno muscolare, non lo stimolo di crescita. Nelle prime settimane l’aumento di sintesi proteica è in gran parte riparazione del danno e correla con l’ipertrofia solo dopo che il danno si attenua. Un muscolo può crescere senza dolore e dolere senza crescere.",
+"s": "L’indolenzimento riflette il danno muscolare, non lo stimolo di crescita. Nelle prime settimane l’aumento di sintesi proteica è in gran parte riparazione del danno e correla con l’ipertrofia solo dopo che il danno si attenua. Un muscolo può crescere senza dolore e dolere senza crescere. Vale anche quando si confrontano due esercizi: l’indolenzimento dipende soprattutto dalla novità del movimento e dal lavoro in allungamento, e cala in poche sedute anche se lo stimolo resta identico. Un esercizio nuovo che ti lascia a pezzi non è per questo migliore di quello che facevi prima.",
 "liv": "B",
-"studi": [
-"damas_timeline",
-"doms_hypertrophy"
-],
+"studi": ["damas_edema", "damas_timeline", "doms_hypertrophy"],
 "id": "l_indolenzimento_del_giorno_dopo"
 },
 {
@@ -2360,11 +2355,7 @@ const MITI = [
 "v": "falso",
 "s": "Le meta-analisi convergono: per l’ipertrofia il carico come variabile isolata è irrilevante in un intervallo ampio, a patto di andare vicino al cedimento. La forza massimale invece migliora di più con i carichi alti. La definizione dipende dal grasso corporeo, non dalle ripetizioni.",
 "liv": "A",
-"studi": [
-"schoenfeld_load",
-"lopez_load",
-"schoenfeld_load15"
-],
+"studi": ["schoenfeld_load", "lopez_load", "schoenfeld_load15"],
 "id": "le_ripetizioni_alte_definiscono_quelle"
 },
 {
@@ -2372,11 +2363,7 @@ const MITI = [
 "v": "falso",
 "s": "L’ipertrofia aumenta avvicinandosi al cedimento, ma 1-2 ripetizioni in riserva danno praticamente lo stesso risultato con metà della fatica. Sui multiarticolari il cedimento sistematico riduce il volume che riesci a sostenere, e quindi può abbassare lo stimolo settimanale totale.",
 "liv": "A",
-"studi": [
-"refalo_failure",
-"refalo_review",
-"grgic_failure"
-],
+"studi": ["refalo_failure", "refalo_review", "grgic_failure"],
 "id": "serve_andare_a_cedimento_su"
 },
 {
@@ -2384,10 +2371,7 @@ const MITI = [
 "v": "parziale",
 "s": "A volume settimanale pari, la frequenza non ha un effetto identificabile sull’ipertrofia: puoi distribuire come preferisci. Ma spalmare su più sedute riduce le serie per muscolo per volta, e quindi la fatica accumulata dentro la singola seduta. Non è la frequenza a far crescere: è quanto volume di qualità riesci a sostenere.",
 "liv": "A",
-"studi": [
-"schoenfeld_freq",
-"pelland_volume"
-],
+"studi": ["schoenfeld_freq", "pelland_volume"],
 "id": "un_muscolo_va_allenato_una"
 },
 {
@@ -2395,10 +2379,7 @@ const MITI = [
 "v": "falso",
 "s": "L’ampiezza del segnale elettromiografico misura l’attivazione istantanea in condizioni specifiche, non l’adattamento a lungo termine. Diversi esercizi con EMG alto crescono poco, e viceversa: lo squat ha EMG elevato sul quadricipite ma fa crescere poco il retto femorale.",
 "liv": "A",
-"studi": [
-"vigotsky_emg",
-"squat_regional"
-],
+"studi": ["vigotsky_emg", "squat_regional"],
 "id": "l_emg_dice_quale_esercizio"
 },
 {
@@ -2406,9 +2387,7 @@ const MITI = [
 "v": "falso",
 "s": "La percezione non predice la crescita. È utile come indizio sulla tecnica, ma il criterio è la progressione dei carichi e delle ripetizioni nel tempo, non quanto brucia.",
 "liv": "B",
-"studi": [
-"vigotsky_emg"
-],
+"studi": ["vigotsky_emg"],
 "id": "bisogna_sentire_il_muscolo_lavorare"
 },
 {
@@ -2416,11 +2395,7 @@ const MITI = [
 "v": "parziale",
 "s": "Dipende da dove si fa la parziale. Nella porzione allungata del movimento le parziali producono adattamenti pari o superiori al range completo; nella porzione accorciata sono inferiori. Il principio generale è che conta la lunghezza a cui alleni il muscolo.",
 "liv": "B",
-"studi": [
-"pedrosa_rom",
-"wolf_partials",
-"kassiano_partials"
-],
+"studi": ["pedrosa_rom", "wolf_partials", "kassiano_partials"],
 "id": "il_range_completo_e_sempre"
 },
 {
@@ -2428,9 +2403,7 @@ const MITI = [
 "v": "falso",
 "s": "Lo stretching statico prolungato prima di un allenamento di forza riduce temporaneamente l’espressione di forza. Curiosamente, se fatto per tempi molto lunghi e in modo cronico produce anche ipertrofia, ma come pratica pre-allenamento non fa quello che si crede.",
 "liv": "B",
-"studi": [
-"warneke_stretch"
-],
+"studi": ["warneke_stretch"],
 "id": "lo_stretching_prima_di_allenarsi"
 },
 {
@@ -2438,9 +2411,7 @@ const MITI = [
 "v": "parziale",
 "s": "L’ordine influenza i guadagni di forza, che favoriscono ciò che metti per primo, ma non l’ipertrofia. Conta indirettamente: quello che fai da fresco lo fai con più carico.",
 "liv": "A",
-"studi": [
-"nunes_order"
-],
+"studi": ["nunes_order"],
 "id": "l_ordine_degli_esercizi_e"
 },
 {
@@ -2448,9 +2419,7 @@ const MITI = [
 "v": "falso",
 "s": "L’apporto proteico giornaliero totale è la variabile che conta, con un plateau intorno a 1,6 grammi per chilo al giorno. La tempistica precisa attorno all’allenamento ha effetti minimi in confronto.",
 "liv": "A",
-"studi": [
-"morton_protein"
-],
+"studi": ["morton_protein"],
 "id": "serve_una_finestra_anabolica_di"
 },
 {
@@ -2458,9 +2427,7 @@ const MITI = [
 "v": "falso",
 "s": "Una settimana di scarico non aggiunge ipertrofia, ma non ne toglie. È uno strumento per gestire la fatica quando serve, non un appuntamento da calendario.",
 "liv": "B",
-"studi": [
-"deload"
-],
+"studi": ["deload"],
 "id": "il_deload_e_obbligatorio_ogni"
 },
 {
@@ -2468,10 +2435,7 @@ const MITI = [
 "v": "falso",
 "s": "Il tonnellaggio sale anche solo aggiungendo serie leggere o ripetizioni facili. Le variabili che predicono la crescita sono il numero di serie dure e la vicinanza al cedimento, non i chili moltiplicati per le ripetizioni.",
 "liv": "A",
-"studi": [
-"pelland_volume",
-"refalo_failure"
-],
+"studi": ["pelland_volume", "refalo_failure"],
 "id": "piu_tonnellaggio_significa_allenamento_migliore"
 },
 {
@@ -2479,9 +2443,7 @@ const MITI = [
 "v": "falso",
 "s": "A volume e intensità pari non emergono differenze di ipertrofia. I pesi liberi trasferiscono meglio a test con pesi liberi, ma è specificità della forza, non superiorità per la massa.",
 "liv": "B",
-"studi": [
-"haun_hypertrophy"
-],
+"studi": ["haun_hypertrophy"],
 "id": "le_macchine_sono_inferiori_ai"
 },
 {
@@ -2489,9 +2451,7 @@ const MITI = [
 "v": "falso",
 "liv": "A",
 "s": "Il documento di posizione della International Society of Sports Nutrition la definisce fra gli integratori con il profilo di sicurezza meglio documentato. Nei soggetti sani non ci sono prove di danno renale, e l’aumento di creatinina nel sangue è un artefatto della misura, non un segno di danno.",
-"studi": [
-"kreider_creatina"
-],
+"studi": ["kreider_creatina"],
 "id": "la_creatina_fa_male_ai"
 },
 {
@@ -2499,11 +2459,7 @@ const MITI = [
 "v": "falso",
 "liv": "A",
 "s": "Conta l’apporto giornaliero totale, con un plateau intorno a 1,6 g per chilo. La distribuzione ha un effetto piccolo, e le meta-analisi sulla tempistica mostrano che l’effetto apparente sparisce quando si correggono le differenze di apporto complessivo.",
-"studi": [
-"morton_protein",
-"schoenfeld_timing",
-"jager_proteine"
-],
+"studi": ["morton_protein", "schoenfeld_timing", "jager_proteine"],
 "id": "bisogna_mangiare_proteine_ogni_tre"
 },
 {
@@ -2511,9 +2467,7 @@ const MITI = [
 "v": "falso",
 "liv": "A",
 "s": "Le differenze assolute di forza sono grandi, ma quelle relative alla sezione muscolare sono molto minori, e gli adattamenti relativi all’allenamento sono simili. Programmazione, volume e vicinanza al cedimento seguono gli stessi principi.",
-"studi": [
-"nuzzo_sesso"
-],
+"studi": ["nuzzo_sesso"],
 "id": "le_donne_devono_allenarsi_in"
 },
 {
@@ -2521,11 +2475,7 @@ const MITI = [
 "v": "parziale",
 "liv": "A",
 "s": "L’interferenza esiste ma dipende da modalità, volume e frequenza: la corsa interferisce più della bici, e sedute separate interferiscono meno. Volumi moderati di aerobico non compromettono l’ipertrofia.",
-"studi": [
-"schoenfeld_concurrent",
-"petre_concurrent",
-"fyfe_interferenza"
-],
+"studi": ["schoenfeld_concurrent", "petre_concurrent", "fyfe_interferenza"],
 "id": "il_cardio_brucia_i_muscoli"
 },
 {
@@ -2533,9 +2483,7 @@ const MITI = [
 "v": "falso",
 "liv": "A",
 "s": "Nell’intervallo da mezzo secondo a otto secondi per fase non emergono differenze di ipertrofia. Contare i tempi aggiunge complicazione senza aggiungere risultato: basta non buttare giù il peso.",
-"studi": [
-"schoenfeld_tempo"
-],
+"studi": ["schoenfeld_tempo"],
 "id": "bisogna_controllare_i_tempi_di"
 },
 {
@@ -2543,11 +2491,7 @@ const MITI = [
 "v": "falso",
 "liv": "B",
 "s": "Lo squat profondo produce più ipertrofia del parziale e adattamenti tendinei maggiori. Il carico gestito è ciò a cui l’articolazione si adatta: quello che crea problemi sono gli aumenti improvvisi, non la profondità.",
-"studi": [
-"squat_depth",
-"kubo_moment",
-"tendine_carico"
-],
+"studi": ["squat_depth", "kubo_moment", "tendine_carico"],
 "id": "lo_squat_profondo_rovina_le"
 },
 {
@@ -2555,10 +2499,7 @@ const MITI = [
 "v": "falso",
 "liv": "B",
 "s": "Il gonfiore è spostamento di fluidi. Nelle prime settimane una parte consistente dell’aumento di sezione misurato è proprio edema, non tessuto nuovo: è il motivo per cui gli studi brevi sovrastimano l’ipertrofia dei principianti.",
-"studi": [
-"damas_edema",
-"damas_timeline"
-],
+"studi": ["damas_edema", "damas_timeline"],
 "id": "il_pump_indica_che_il"
 },
 {
@@ -2566,10 +2507,7 @@ const MITI = [
 "v": "parziale",
 "liv": "A",
 "s": "Producono ipertrofia paragonabile alle serie tradizionali, ma in meno tempo e con meno volume. Sono strumenti di efficienza: se il tempo non ti manca, non ti stanno dando niente in più.",
-"studi": [
-"grgic_dropset",
-"sodergren_restpause"
-],
+"studi": ["grgic_dropset", "sodergren_restpause"],
 "id": "i_drop_set_e_il"
 },
 {
@@ -2577,10 +2515,7 @@ const MITI = [
 "v": "parziale",
 "liv": "A",
 "s": "Per la forza la periodizzazione dà un vantaggio misurabile ma moderato (dimensione dell’effetto 0,43). Quale modello sia migliore non è stabilito. Per l’ipertrofia il fattore dominante resta il volume settimanale accumulato vicino al cedimento.",
-"studi": [
-"period_meta",
-"pelland_volume"
-],
+"studi": ["period_meta", "pelland_volume"],
 "id": "la_periodizzazione_e_indispensabile_per"
 },
 {
@@ -2588,10 +2523,7 @@ const MITI = [
 "v": "falso",
 "liv": "A",
 "s": "Nello studio classico su 585 persone allenate su un braccio, i guadagni vanno da nulli a oltre il cinquanta per cento con lo stesso programma. La variabilità individuale è reale e grande, e i marcatori che si pensava la spiegassero non lo fanno.",
-"studi": [
-"risposta_variabile",
-"roberts_responders"
-],
+"studi": ["risposta_variabile", "roberts_responders"],
 "id": "chi_non_risponde_all_allenamento"
 },
 {
@@ -2599,11 +2531,7 @@ const MITI = [
 "v": "falso",
 "liv": "B",
 "s": "La forza cala in modo misurabile ma graduale, e il muscolo conserva una memoria epigenetica dell’ipertrofia che rende la ricrescita più rapida della crescita iniziale. Sei mesi di allenamento continuo o alternato a pause danno ipertrofia finale simile.",
-"studi": [
-"bosquet_detraining",
-"memoria_muscolare",
-"ogasawara_ritorno"
-],
+"studi": ["bosquet_detraining", "memoria_muscolare", "ogasawara_ritorno"],
 "id": "se_smetti_per_un_mese"
 },
 {
@@ -2611,10 +2539,7 @@ const MITI = [
 "v": "parziale",
 "liv": "A",
 "s": "Qualcosa esiste, ma non nella forma che si racconta in palestra. L’esame critico delle prove ridimensiona il fenomeno: le differenze di forza a pari dimensione si spiegano meglio con leve, tecnica e specificità dell’allenamento.",
-"studi": [
-"roberts_sarcoplasma",
-"haun_hypertrophy"
-],
+"studi": ["roberts_sarcoplasma", "haun_hypertrophy"],
 "id": "l_ipertrofia_sarcoplasmatica_spiega_i"
 },
 {
@@ -2630,10 +2555,7 @@ const MITI = [
 "v": "falso",
 "liv": "A",
 "s": "Con carichi bassi e restrizione del flusso l’ipertrofia è paragonabile a quella dei carichi alti, mentre la forza massimale resta a favore dei carichi alti. È uno strumento vero, utile quando il carico articolare è un problema.",
-"studi": [
-"lixandrao_bfr",
-"loenneke_bfr"
-],
+"studi": ["lixandrao_bfr", "loenneke_bfr"],
 "id": "la_restrizione_del_flusso_sanguigno"
 },
 {
@@ -2641,10 +2563,7 @@ const MITI = [
 "v": "parziale",
 "liv": "B",
 "s": "Il vantaggio del cavo è reale ma diverso da come lo si racconta: non è «tensione costante», è **direzione orientabile**. Puoi scegliere dove cade il picco di carico rispetto alla lunghezza del muscolo. Quando però la cosa è stata messa alla prova direttamente, confrontando alzate laterali ai cavi e con manubri per otto settimane su allenati, la differenza attesa non si è vista.",
-"studi": [
-"lateral_raise",
-"haun_hypertrophy"
-],
+"studi": ["lateral_raise", "haun_hypertrophy"],
 "id": "il_cavo_e_superiore_al"
 },
 {
@@ -2652,11 +2571,7 @@ const MITI = [
 "v": "falso",
 "liv": "B",
 "s": "È quello che succede necessariamente quando scendi in profondità con il busto verticale. Vietarlo obbliga a inclinare il busto, che sposta il carico dal ginocchio alla colonna: non riduce lo stress, lo trasferisce. Il vincolo reale è la mobilità della caviglia.",
-"studi": [
-"escamilla_squat",
-"mobilita_squat",
-"kubo_moment"
-],
+"studi": ["escamilla_squat", "mobilita_squat", "kubo_moment"],
 "id": "il_ginocchio_non_deve_superare"
 },
 {
@@ -2664,10 +2579,7 @@ const MITI = [
 "v": "falso",
 "liv": "M",
 "s": "Nelle spinte la retrazione dà all’omero una base stabile ed è utile. Nelle tirate è il contrario: partire con le scapole già depresse accorcia il movimento proprio dove il dorsale è più lungo. Il dorsale si allunga quando la scapola sale, ed è quella la posizione da cui partire.",
-"studi": [
-"inman_scapola",
-"wolf_partials"
-],
+"studi": ["inman_scapola", "wolf_partials"],
 "id": "bisogna_spingere_le_scapole_indietro"
 },
 {
@@ -2675,10 +2587,7 @@ const MITI = [
 "v": "falso",
 "liv": "A",
 "s": "L’instabilità riduce il carico che puoi esprimere, e il carico è quello che genera tensione. La rassegna sull’argomento non trova vantaggi di ipertrofia rispetto al lavoro stabile. Serve in riabilitazione e per il controllo, non per costruire massa.",
-"studi": [
-"behm_instabilita",
-"saeterbakken_instab"
-],
+"studi": ["behm_instabilita", "saeterbakken_instab"],
 "id": "le_superfici_instabili_allenano_meglio"
 },
 {
@@ -2686,10 +2595,7 @@ const MITI = [
 "v": "falso",
 "liv": "A",
 "s": "Nell’intervallo praticabile, da mezzo secondo a otto secondi per fase, la durata della ripetizione non cambia l’ipertrofia. Allungare artificialmente i tempi riduce il carico usabile senza compensare con altro. Quello che conta è il numero di serie dure vicine al cedimento.",
-"studi": [
-"schoenfeld_tempo",
-"pelland_volume"
-],
+"studi": ["schoenfeld_tempo", "pelland_volume"],
 "id": "il_tempo_sotto_tensione_e"
 },
 {
@@ -2697,12 +2603,7 @@ const MITI = [
 "v": "falso",
 "liv": "A",
 "s": "Il principio della dimensione dice che le unità motorie grandi vengono reclutate comunque quando la serie si avvicina al cedimento. Con il 30% del massimale portato a cedimento l’ipertrofia è paragonabile a quella con l'80%. Cambia quante ripetizioni servono, non se arrivi allo stimolo.",
-"studi": [
-"mitchell_carico",
-"burd_carico",
-"henneman_size",
-"schoenfeld_load"
-],
+"studi": ["mitchell_carico", "burd_carico", "henneman_size", "schoenfeld_load"],
 "id": "con_il_carico_basso_alleni"
 },
 {
@@ -2710,11 +2611,7 @@ const MITI = [
 "v": "parziale",
 "liv": "B",
 "s": "Evitare il movimento non protegge: la terapia con esercizio funziona per la lombalgia cronica e nessuna modalità risulta superiore. Allo stesso tempo, flettersi sotto un carico massimale in un punto di momento elevato ha poco da guadagnare. La posizione difendibile è intermedia: la colonna non è di vetro, ma con carichi alti conviene una posizione stabile.",
-"studi": [
-"lombalgia_esercizio",
-"cholewicki_stacco",
-"kingma_flessione"
-],
+"studi": ["lombalgia_esercizio", "cholewicki_stacco", "kingma_flessione"],
 "id": "bisogna_evitare_qualsiasi_flessione_della"
 },
 {
@@ -2722,11 +2619,7 @@ const MITI = [
 "v": "falso",
 "liv": "A",
 "s": "Il bruciore è accumulo di metaboliti, e lo stress metabolico è considerato un contributo secondario. Il segnale primario è la tensione meccanica, che non produce necessariamente bruciore. Serie pesanti a ripetizioni basse crescono benissimo senza bruciare.",
-"studi": [
-"roberts_mechanisms",
-"schoenfeld_mechanisms",
-"wackerhage_mech"
-],
+"studi": ["roberts_mechanisms", "schoenfeld_mechanisms", "wackerhage_mech"],
 "id": "se_non_senti_bruciare_non"
 },
 {
@@ -2734,11 +2627,7 @@ const MITI = [
 "v": "falso",
 "liv": "B",
 "s": "L’ipertrofia regionale è documentata su più muscoli: il pettorale si attiva per regioni distinte secondo la direzione del movimento, e nel leg extension l’angolo dell’anca cambia quanto cresce il retto femorale. Non vale però ovunque: sui flessori del gomito il confronto diretto trova crescita distribuita in modo simile.",
-"studi": [
-"squat_regional",
-"pec_fiber",
-"biceps_regional"
-],
+"studi": ["squat_regional", "pec_fiber", "biceps_regional"],
 "id": "un_muscolo_cresce_in_modo"
 },
 {
@@ -2746,11 +2635,7 @@ const MITI = [
 "v": "falso",
 "liv": "A",
 "s": "Quello che conta è la tensione e la vicinanza al cedimento, non l’attrezzo. Il limite del corpo libero è la **progressione**: quando il peso corporeo non basta più, serve un modo di aggiungere carico. Finché la progressione c’è, la crescita c’è.",
-"studi": [
-"plotkin_overload",
-"mitchell_carico",
-"haun_hypertrophy"
-],
+"studi": ["plotkin_overload", "mitchell_carico", "haun_hypertrophy"],
 "id": "allenare_a_corpo_libero_non"
 },
 {
@@ -2758,11 +2643,7 @@ const MITI = [
 "v": "parziale",
 "liv": "A",
 "s": "La caffeina migliora la prestazione in molti contesti, e più prestazione può significare più volume nel tempo. Ma nessuno degli stimolanti agisce direttamente sull’ipertrofia. Gli unici integratori con effetto documentato sulla massa sono creatina e proteine, e nessuno dei due va preso prima.",
-"studi": [
-"guest_caffeina",
-"kreider_creatina",
-"morton_protein"
-],
+"studi": ["guest_caffeina", "kreider_creatina", "morton_protein"],
 "id": "gli_integratori_pre_allenamento_migliorano"
 },
 {
@@ -2770,11 +2651,7 @@ const MITI = [
 "v": "falso",
 "liv": "B",
 "s": "La forza cala gradualmente e il muscolo conserva una memoria epigenetica dell’ipertrofia che rende la ricrescita più rapida della costruzione iniziale. Sei mesi di allenamento continuo o alternati a pause producono ipertrofia finale simile.",
-"studi": [
-"memoria_muscolare",
-"bosquet_detraining",
-"ogasawara_ritorno"
-],
+"studi": ["memoria_muscolare", "bosquet_detraining", "ogasawara_ritorno"],
 "id": "la_finestra_per_rientrare_dopo"
 },
 {
@@ -2782,11 +2659,7 @@ const MITI = [
 "v": "parziale",
 "liv": "A",
 "s": "La relazione dose-risposta fra volume e ipertrofia è crescente con rendimenti decrescenti, e vale in generale. Quello che cambia con l’esperienza non è la direzione ma la quantità che riesci a recuperare, e l’entità del guadagno che ti aspetti da ogni serie in più.",
-"studi": [
-"pelland_volume",
-"volume_alto",
-"currier_volume"
-],
+"studi": ["pelland_volume", "volume_alto", "currier_volume"],
 "id": "il_volume_alto_serve_solo"
 },
 {
@@ -2794,11 +2667,7 @@ const MITI = [
 "v": "parziale",
 "liv": "A",
 "s": "Dipende dall’obiettivo. Gli adattamenti di forza sono specifici del gesto, quindi chi vuole alzare di più in panca deve fare panca. L’ipertrofia invece risponde alla tensione sul muscolo, e lì conta quale muscolo carichi e a che lunghezza, non come si chiama l’esercizio.",
-"studi": [
-"haun_hypertrophy",
-"pressa_squat",
-"maeo_triceps"
-],
+"studi": ["haun_hypertrophy", "pressa_squat", "maeo_triceps"],
 "id": "serve_allenare_l_esercizio_non"
 },
 {
@@ -2806,11 +2675,7 @@ const MITI = [
 "v": "falso",
 "liv": "B",
 "s": "È vero che aiuta a fare più ripetizioni, ed è esattamente il problema: quello che il tendine restituisce, il muscolo non lo produce. Il rimbalzo toglie lavoro proprio nel tratto in cui il muscolo è più lungo, cioè quello che vorresti caricare. Una pausa di un secondo annulla quasi del tutto il contributo elastico.",
-"studi": [
-"kinoshita_calf",
-"kassiano_partials",
-"tendine_carico"
-],
+"studi": ["kinoshita_calf", "kassiano_partials", "tendine_carico"],
 "id": "il_rimbalzo_in_fondo_aiuta"
 },
 {
@@ -2818,11 +2683,7 @@ const MITI = [
 "v": "parziale",
 "liv": "B",
 "s": "Le leve individuali contano davvero: braccia lunghe aumentano l’escursione e il momento sulla spalla, e questo si riflette nel carico esprimibile. Ma le variazioni dei bracci di leva interni sono altrettanto importanti e non si vedono da fuori. La conformazione sposta il punto di partenza, non il potere di migliorare.",
-"studi": [
-"braccio_leva",
-"vigotsky_moment",
-"risposta_variabile"
-],
+"studi": ["braccio_leva", "vigotsky_moment", "risposta_variabile"],
 "id": "chi_ha_braccia_lunghe_non"
 },
 {
@@ -2830,11 +2691,7 @@ const MITI = [
 "v": "falso",
 "liv": "A",
 "s": "Le oscillazioni ormonali indotte dall’esercizio sono troppo piccole e troppo brevi per spiegare la crescita, e nello studio da cui nasce l’idea le concentrazioni **a riposo** non cambiavano dopo dodici settimane. Il segnale primario è la tensione meccanica. Per capire la scala vera: nel confronto sul testosterone sovrafisiologico, chi lo riceveva senza allenarsi guadagnava area muscolare mentre il placebo la perdeva.",
-"studi": [
-"mccall_ormoni",
-"bhasin_testosterone",
-"roberts_mechanisms"
-],
+"studi": ["mccall_ormoni", "bhasin_testosterone", "roberts_mechanisms"],
 "id": "bisogna_allenarsi_per_massimizzare_il"
 },
 {
@@ -2842,9 +2699,7 @@ const MITI = [
 "v": "falso",
 "liv": "A",
 "s": "Aumenta la carnosina muscolare e tampona il pH, ma l’effetto documentato sulla prestazione si concentra in sforzi continui da uno a quattro minuti. Una serie di otto ripetizioni non cade in quella finestra. Non c’è motivo di aspettarsi ipertrofia.",
-"studi": [
-"trexler_beta_alanina"
-],
+"studi": ["trexler_beta_alanina"],
 "id": "la_beta_alanina_aiuta_a"
 },
 {
@@ -2852,9 +2707,7 @@ const MITI = [
 "v": "falso",
 "liv": "B",
 "s": "Dosi massime da banco di ibuprofene assunte con regolarità durante un programma sono state associate a **meno** ipertrofia rispetto a dosi basse di acido acetilsalicilico. Se ti serve per un dolore prendilo, ma non come routine post-allenamento.",
-"studi": [
-"lilja_ibuprofene"
-],
+"studi": ["lilja_ibuprofene"],
 "id": "prendere_un_antinfiammatorio_dopo_l"
 },
 {
@@ -2862,10 +2715,7 @@ const MITI = [
 "v": "falso",
 "liv": "B",
 "s": "È il contrario. Dopo sei serie di panca a cedimento, il calo di velocità a quattro minuti era del 29% negli uomini contro il 21% nelle donne, e il calo dalla prima all’ultima serie del 15% contro il 9%. Le donne tollerano meglio il lavoro vicino al cedimento.",
-"studi": [
-"refalo_velocita",
-"nuzzo_sesso"
-],
+"studi": ["refalo_velocita", "nuzzo_sesso"],
 "id": "le_donne_devono_evitare_il"
 },
 {
@@ -2873,9 +2723,7 @@ const MITI = [
 "v": "falso",
 "liv": "A",
 "s": "Esiste un documento di consenso internazionale sull’allenamento contro resistenza nei giovani, adottato da società di medicina dello sport, scienze motorie e pediatria. Il punto critico è la supervisione tecnica e la progressione graduale, non l’età.",
-"studi": [
-"lloyd_giovani"
-],
+"studi": ["lloyd_giovani"],
 "id": "l_allenamento_coi_pesi_blocca"
 },
 {
@@ -2883,10 +2731,7 @@ const MITI = [
 "v": "parziale",
 "liv": "A",
 "s": "Cambiano le dosi, non i principi. La relazione dose-risposta negli anziani esiste ancora, e la risposta all’integrazione proteica **cala** con l’età, cioè serve più proteina per lo stesso effetto. Abbassare tutto per prudenza toglie proprio lo stimolo che conserva l’autonomia.",
-"studi": [
-"borde_anziani",
-"morton_protein"
-],
+"studi": ["borde_anziani", "morton_protein"],
 "id": "dopo_i_sessant_anni_serve"
 },
 {
@@ -2894,11 +2739,7 @@ const MITI = [
 "v": "falso",
 "liv": "A",
 "s": "In otto settimane su persone allenate, con una gamba a cedimento e l’altra a 1-2 ripetizioni in riserva, l’aumento di spessore del quadricipite è risultato praticamente identico: 0,181 contro 0,182 centimetri. Quello che cambia è la fatica, costantemente maggiore a cedimento.",
-"studi": [
-"refalo_ipertrofia",
-"refalo_velocita",
-"grgic_failure"
-],
+"studi": ["refalo_ipertrofia", "refalo_velocita", "grgic_failure"],
 "id": "andare_a_cedimento_fa_crescere"
 },
 {
@@ -2906,11 +2747,7 @@ const MITI = [
 "v": "parziale",
 "liv": "A",
 "s": "Nella meta-analisi bayesiana le durate si sovrappongono ampiamente, ma nel confronto diretto su allenati tre minuti hanno prodotto più forza di un minuto. E allenare a cedimento rallenta il recupero **fino a 24-48 ore**, anche a parità di volume totale. Il recupero conta soprattutto per quello che ti permette di fare dopo.",
-"studi": [
-"singer_rest",
-"schoenfeld_rest",
-"moran_recupero"
-],
+"studi": ["singer_rest", "schoenfeld_rest", "moran_recupero"],
 "id": "il_recupero_fra_le_serie"
 },
 {
@@ -2918,9 +2755,7 @@ const MITI = [
 "v": "falso",
 "liv": "B",
 "s": "Nei fumatori di lungo corso la sintesi proteica muscolare è depressa e l’espressione di miostatina, che è un freno alla crescita, è aumentata. Non è una questione di volume: è il macchinario della crescita a lavorare peggio.",
-"studi": [
-"petersen_fumo"
-],
+"studi": ["petersen_fumo"],
 "id": "se_fumi_basta_allenarsi_di"
 },
 {
@@ -2928,11 +2763,48 @@ const MITI = [
 "v": "falso",
 "liv": "B",
 "s": "È la misura oggettiva più semplice della fatica accumulata. Quattro minuti dopo sei serie di panca, la velocità era scesa del 25% a cedimento, del 13% a 1 RIR e dell'8% a 3 RIR, e a 48 ore le differenze erano sparite. Ti dice quanto stai pagando una scelta, senza chiederti come ti senti.",
-"studi": [
-"refalo_velocita",
-"helms_rpe"
-],
+"studi": ["refalo_velocita", "helms_rpe"],
 "id": "il_calo_di_velocita_del"
+},
+{
+"m": "Gli esercizi «segreti» che girano in rete fanno crescere più dei fondamentali",
+"v": "falso",
+"liv": "A",
+"s": "Quando due esercizi vengono confrontati direttamente a parità di volume, di solito non c’è differenza. Cavi contro manubri nelle alzate laterali: nessuna differenza di spessore del deltoide. Parziali allungate contro escursione completa: risultati simili. Squat contro leg press: entrambi funzionano, con trasferimenti specifici diversi. Quello che cambia il risultato è la posizione in cui l’esercizio carica il muscolo, non il nome che ha.",
+"studi": ["lateral_raise", "wolf_partials", "pressa_squat"],
+"id": "gli_esercizi_segreti_che_girano"
+},
+{
+"m": "Gli esercizi di attivazione e di stabilità aggiungono massa",
+"v": "falso",
+"liv": "B",
+"s": "Band pull-apart, clam, bird dog, scapular push-up, plank: hanno un senso in riabilitazione o come riscaldamento, e alcuni sono ottimi per lo scopo per cui sono nati. Ma il carico che permettono è troppo basso per essere uno stimolo di crescita, e spesso la resistenza è massima dove il muscolo è già corto. Nel programma stanno prima del lavoro vero, non al posto suo.",
+"studi": ["glute_exercises", "behm_instabilita"],
+"id": "gli_esercizi_di_attivazione_e"
+},
+{
+"m": "L’attivazione elettromiografica dice quale esercizio fa crescere di più",
+"v": "falso",
+"liv": "A",
+"s": "È l’argomento con cui viene giustificata quasi ogni classifica di esercizi che trovi in rete. L’ampiezza del segnale elettromiografico non è una misura dello stimolo ipertrofico e non permette di prevedere gli adattamenti a lungo termine. Un esercizio può dare un segnale più alto e produrre meno crescita, per esempio perché lavora dove il muscolo è corto.",
+"studi": ["vigotsky_emg", "schoenfeld_range_att"],
+"id": "lattivazione_elettromiografica_dice_quale_esercizio"
+},
+{
+"m": "Gli esercizi che isolano un capo muscolare cambiano la forma del muscolo",
+"v": "parziale",
+"liv": "B",
+"s": "L’ipertrofia regionale esiste ed è documentata: il pettorale si attiva per regioni secondo la direzione del movimento, l’angolo dell’anca nel leg extension cambia quanto cresce il retto femorale, e il calf in piedi batte quello da seduto sul gastrocnemio. Ma non vale ovunque: sui flessori del gomito il confronto diretto trova crescita distribuita in modo simile. La leva vera è la lunghezza a cui carichi, non l’intenzione di «colpire» una porzione.",
+"studi": ["pec_fiber", "leg_ext_hip", "kinoshita_calf", "biceps_regional"],
+"id": "gli_esercizi_che_isolano_un"
+},
+{
+"m": "I fondamentali con bilanciere sono sempre superiori alle macchine e ai cavi",
+"v": "falso",
+"liv": "A",
+"s": "L’opposto del mito precedente, ed è sbagliato allo stesso modo. Nel confronto diretto pesi liberi e macchine migliorano entrambi gli esiti funzionali, con trasferimenti specifici al compito allenato. Le macchine permettono di arrivare vicino al cedimento senza che siano l’equilibrio o la presa a fermarti: su un isolamento è un vantaggio, non un compromesso.",
+"studi": ["pressa_squat", "speirs_unilateral"],
+"id": "i_fondamentali_con_bilanciere_sono"
 }
 ];
 const GLOSSARIO = [

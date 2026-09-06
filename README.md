@@ -21,8 +21,8 @@ poi apri `http://localhost:8000` e, da iPhone, "Aggiungi a Home".
 | `app.js` | Navigazione su hash, viste, ricerca locale, ricerca live, calcolatori, salvataggi |
 | `data-principi.js` | 33 voci di meccanica e biologia: momenti, curve di resistenza, lunghezza-tensione, ritmo scapolo-omerale |
 | `data-studi.js` | 138 studi con PMID verificato, tema, livello di evidenza e riassunto |
-| `data-muscoli.js` | 18 schede: meccanica, posizione articolare, 144 esercizi mappati per funzione e lunghezza |
-| `data-contenuti.js` | 48 problemi, 54 miti, 110 voci di glossario, 27 archivi con ricerche pronte |
+| `data-muscoli.js` | 18 schede: meccanica, posizione articolare, 284 esercizi mappati per funzione e lunghezza |
+| `data-contenuti.js` | 48 problemi, 59 miti, 110 voci di glossario, 27 archivi con ricerche pronte |
 
 ## Impianto
 
