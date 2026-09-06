@@ -11,7 +11,7 @@ const STUDI = [
 "cit": 9,
 "tema": "anatomia",
 "liv": "B",
-"sintesi": "Le variazioni individuali del braccio di leva dell’estensione del ginocchio si riflettono nella funzione meccanica. Spiega perché due persone con lo stesso muscolo esprimono forze diverse.",
+"sintesi": "Modello muscoloscheletrico del ginocchio a 12 gradi di libertà usato per simulare il braccio di leva dell’estensione **durante cammino e corsa**. Il braccio di leva cambia con l’angolo di flessione e con la direzione del movimento, e gli autori trovano **un’ampia variabilità fra individui**, spiegata in gran parte da movimenti fuori dal piano sagittale. Serve come prova che il braccio di leva non è un numero fisso; non è uno studio sulla forza espressa in palestra.",
 "kw": "braccio di leva torque individuale"
 },
 {
@@ -26,7 +26,7 @@ const STUDI = [
 "cit": 236,
 "tema": "anatomia",
 "liv": "B",
-"sintesi": "Il muscolo umano conserva una memoria epigenetica dell’ipertrofia: dopo un periodo di stop, i geni coinvolti restano marcati e la ricrescita è più rapida.",
+"sintesi": "Il muscolo umano conserva una memoria epigenetica della crescita. Dopo carico, scarico fino al ritorno alla massa di partenza, e nuovo carico, la demetilazione risulta **più diffusa alla ripresa che al primo carico** (18.816 siti contro 9.153). Alcuni geni — fra cui UBR5 — restano demetilati anche durante lo scarico e mostrano **il maggiore aumento di espressione e di massa muscolare alla ripresa**. Lo studio documenta una risposta più ampia al ricarico, non misura direttamente la velocità di recupero.",
 "kw": "memoria muscolare epigenetica ricrescita"
 },
 {
@@ -71,7 +71,7 @@ const STUDI = [
 "cit": 343,
 "tema": "anatomia",
 "liv": "B",
-"sintesi": "Allenamento concentrico ed eccentrico a confronto sull’architettura del quadricipite: i due producono adattamenti architetturali diversi, non solo quantità diverse di crescita.",
+"sintesi": "21 uomini e donne, 10 settimane di sole concentriche o sole eccentriche sugli estensori del ginocchio più 3 mesi di sospensione. L’aumento di lunghezza del fascicolo è risultato **simile fra i due gruppi**, e gli autori concludono esplicitamente che gli adattamenti architetturali sono **determinati da fattori diversi dal tipo di contrazione**. L’angolo di pennazione è cresciuto in entrambi i gruppi (+11,5% a 5 settimane, +17,9% a 10) e gli autori lo attribuiscono ai vincoli di spazio nel muscolo che sta crescendo. Va letto insieme a Franchi 2014, che invece trova differenze fra le due modalità: sul punto la letteratura non è concorde.",
 "kw": "architettura concentrico eccentrico quadricipite"
 },
 {
@@ -86,7 +86,7 @@ const STUDI = [
 "cit": 298,
 "tema": "anatomia",
 "liv": "B",
-"sintesi": "L’allenamento di forza cambia le proprietà meccaniche del tendine rotuleo: aumenta la rigidezza, che a sua volta cambia come la forza viene trasmessa.",
+"sintesi": "**Anziani** (età media 74 anni nel gruppo allenato), 14 settimane di leg extension e leg press. L’allenamento ha ridotto l’allungamento del tendine rotuleo a tutti i livelli di forza, cioè **ne ha aumentato rigidezza e modulo di Young**. È la prima dimostrazione in vivo che il tendine si irrigidisce con l’allenamento anche in età avanzata, con possibili ricadute su rischio di infortunio e rapidità di espressione della forza. Campione anziano: non estendere automaticamente ai giovani.",
 "kw": "tendine rotuleo rigidezza forza adattamento"
 },
 {
@@ -101,7 +101,7 @@ const STUDI = [
 "cit": 111,
 "tema": "anatomia",
 "liv": "B",
-"sintesi": "Contrazioni isometriche di durata diversa e loro effetto sull’elasticità del tendine del quadricipite: il tendine si adatta al carico, con tempi propri.",
+"sintesi": "8 giovani uomini, 12 settimane di isometrico unilaterale, confrontando contrazioni lunghe e brevi. Il volume del quadricipite è cresciuto in modo simile nelle due condizioni (7,4% e 7,6%). Sul tendine invece la differenza c’è: **la rigidità è aumentata in modo significativo solo con le contrazioni di lunga durata**, mentre le brevi non hanno prodotto cambiamenti misurabili. Il tendine, a differenza del muscolo, sembra rispondere alla durata della tensione più che al volume.",
 "kw": "tendine elasticità isometria adattamento"
 },
 {
@@ -116,7 +116,7 @@ const STUDI = [
 "cit": 804,
 "tema": "anatomia",
 "liv": "A",
-"sintesi": "La rassegna di riferimento sull’architettura muscolare: perché la sezione trasversa fisiologica, e non il volume, predice la forza, e cosa comportano lunghezza dei fascicoli e angolo di pennazione.",
+"sintesi": "La rassegna di riferimento sull’architettura muscolare: disposizione delle fibre e delle unità motorie nei muscoli umani di arto superiore e inferiore, e come queste strutture siano organizzate per ottimizzare la funzione. Tratta anche la capacità del muscolo di **cambiare architettura** in risposta a immobilizzazione, esercizio eccentrico e trasposizione tendinea: le fibre percepiscono tensione e deformazione e modificano il numero di sarcomeri adattandosi al nuovo ambiente meccanico.",
 "kw": "architettura sezione fisiologica pennazione fascicoli"
 },
 {
@@ -146,22 +146,22 @@ const STUDI = [
 "cit": 40,
 "tema": "carico",
 "liv": "B",
-"sintesi": "43 persone con almeno un anno di allenamento, 8 settimane. Aumentare il carico tenendo fisse le ripetizioni contro aumentare le ripetizioni tenendo fisso il carico: gli esiti su ipertrofia, forza e resistenza sono risultati paragonabili. Il sovraccarico progressivo non deve per forza essere in chili.",
+"sintesi": "43 persone con almeno un anno di allenamento, 8 settimane, quattro esercizi per la parte bassa due volte a settimana. Aumentare il carico tenendo fisse le ripetizioni contro aumentare le ripetizioni tenendo fisso il carico: la crescita del retto femorale favorisce leggermente le ripetizioni (2,8 mm), i guadagni di forza dinamica leggermente il carico (2,0 kg), ma gli autori giudicano entrambe le differenze **di rilevanza pratica discutibile**. Il sovraccarico progressivo non deve per forza essere in chili.",
 "kw": "sovraccarico progressivo ripetizioni carico"
 },
 {
 "id": "lopez_load",
-"pmid": "35029596",
+"pmid": "33433148",
 "doi": "10.1249/mss.0000000000002838",
-"titolo": "Resistance Training Load Effects on Muscle Hypertrophy and Strength Gain: Systematic Review and Network Meta-analysis-Corrigendum",
+"titolo": "Resistance Training Load Effects on Muscle Hypertrophy and Strength Gain: Systematic Review and Network Meta-analysis",
 "rivista": "Medicine and science in sports and exercise",
-"anno": "2022",
-"autore": "",
+"anno": "2021",
+"autore": "Lopez P",
 "oa": false,
 "cit": 3,
 "tema": "carico",
 "liv": "A",
-"sintesi": "Meta-analisi a rete: per l’ipertrofia i carichi funzionano in un intervallo ampio, per la forza contano le percentuali alte.",
+"sintesi": "28 studi, 747 adulti sani, con la condizione che tutte le serie fossero portate a cedimento volontario. Confrontando carichi bassi (oltre 15 ripetizioni massime), moderati (9-15) e alti (8 o meno): **sull’ipertrofia nessuna differenza fra i carichi**, né nell’analisi complessiva né nei sottogruppi. **Sulla forza carichi alti e moderati battono i bassi** (differenza media standardizzata 0,60-0,63 e 0,34-0,35), con vantaggio non significativo degli alti sui moderati. Nota: il PMID citato in precedenza era quello del corrigendum, ora corretto sull’articolo originale.",
 "kw": "carico rete meta-analisi"
 },
 {
@@ -191,7 +191,7 @@ const STUDI = [
 "cit": 60,
 "tema": "carico",
 "liv": "B",
-"sintesi": "Dose minima efficace per aumentare il massimale in uomini allenati: bastano volumi sorprendentemente contenuti per mantenere e far crescere la forza.",
+"sintesi": "Dose minima efficace per aumentare il massimale in uomini allenati. **Una sola serie** da 6-12 ripetizioni al 70-85% del massimale, 2-3 volte a settimana ad alto sforzo, per 8-12 settimane, produce aumenti significativi: +12,09 kg sul massimale complessivo, +17,48 kg su squat e +8,25 kg su panca. Gli autori li definiscono però **espressamente «suboptimal»**: è la dose minima che funziona, non quella che massimizza. Non è chiaro se valga anche per lo stacco, per le donne allenate e per gli atleti di forza avanzati.",
 "kw": "dose minima forza massimale"
 },
 {
@@ -236,7 +236,7 @@ const STUDI = [
 "cit": 445,
 "tema": "carico",
 "liv": "B",
-"sintesi": "18 uomini, 10 settimane, una gamba per condizione. Aumenti di volume muscolare misurati in risonanza: **+6,8% al 30% del massimale per 3 serie, +7,2% all'80% per 3 serie, +3,2% all'80% per una sola serie**. Nessuna differenza fra le tre. La forza dinamica massimale invece è cresciuta di più con l'80%: il carico non decide l’ipertrofia, decide la forza.",
+"sintesi": "18 uomini, 10 settimane, una gamba per condizione. Aumenti di volume muscolare misurati in risonanza: **+6,8% al 30% del massimale per 3 serie, +7,2% all’80% per 3 serie, +3,2% all’80% per una sola serie**. Nessuna differenza fra le tre. La forza dinamica massimale invece è cresciuta di più con l’80%: il carico non decide l’ipertrofia, decide la forza.",
 "kw": "carico trenta ottanta percento cedimento ipertrofia"
 },
 {
@@ -258,7 +258,7 @@ const STUDI = [
 "id": "grgic_rir_aff",
 "pmid": "40644671",
 "doi": "10.1519/jsc.0000000000005190",
-"titolo": "Validity and Test-Retest Reliability of Repetitions-In-Reserve Across Different Low-Loads in the Barbell Bench Press With Blood Flow Restriction",
+"titolo": "Validity and Test-Retest Reliability of Repetitions-In-Reserve Across Different Low-Loads in the Barbell Bench Press with Blood Flow Restriction",
 "rivista": "Journal of strength and conditioning research",
 "anno": "2025",
 "autore": "Grant WM",
@@ -266,7 +266,7 @@ const STUDI = [
 "cit": 0,
 "tema": "cedimento",
 "liv": "B",
-"sintesi": "Validità e affidabilità della stima delle ripetizioni in riserva in esercizi diversi: funziona meglio vicino al cedimento e sulle macchine, peggio lontano e sui multiarticolari.",
+"sintesi": "Attenzione al contesto: lo studio riguarda **la panca a carichi molto bassi con restrizione del flusso sanguigno**, non l’allenamento normale. Le stime di ripetizioni in riserva sono risultate moderatamente affidabili ma con **limiti di concordanza amplissimi, da -7 a +7 ripetizioni**, e l’errore cresce enormemente al calare del carico: al 20% del massimale l’errore mediano era di 52 ripetizioni contro 9 al 30%. Gli autori concludono che in questo contesto il RIR non deve sostituire la prescrizione a percentuale di massimale. Per l’accuratezza del RIR nell’allenamento ordinario il riferimento è Steele 2017.",
 "kw": "RIR affidabilità validità stima"
 },
 {
@@ -311,7 +311,7 @@ const STUDI = [
 "cit": 32,
 "tema": "cedimento",
 "liv": "A",
-"sintesi": "Rassegna sistematica: allenarsi vicino al cedimento è sufficiente, e non serve raggiungerlo per massimizzare l’ipertrofia.",
+"sintesi": "15 studi. Nell’analisi principale emerge un piccolo effetto a favore del lavoro più vicino al cedimento (0,19, intervallo da 0,00 a 0,37; p = 0,045), **non moderato dal volume-carico né dal carico relativo**. Ma nei sottogruppi il vantaggio sparisce: nessuna differenza fra cedimento vero e non cedimento (0,12), e nessuna fra soglie di perdita di velocità alte e moderate (0,08). Gli autori ne deducono una relazione **non lineare** fra vicinanza al cedimento e ipertrofia.",
 "kw": "cedimento RIR rassegna"
 },
 {
@@ -326,7 +326,7 @@ const STUDI = [
 "cit": 31,
 "tema": "cedimento",
 "liv": "B",
-"sintesi": "24 persone allenate, sei serie di panca al 75% del massimale portate a cedimento, a 1 RIR o a 3 RIR. **Quattro minuti dopo, la velocità di sollevamento era scesa del 25% a cedimento, del 13% a 1 RIR e dell'8% a 3 RIR.** A 24 ore il divario era quasi chiuso e a 48 ore sparito. Il calo di velocità dalla prima all’ultima serie era del 22% a cedimento contro il 9% a 1 RIR. Negli uomini il calo era maggiore che nelle donne.",
+"sintesi": "24 persone allenate, sei serie di panca al 75% del massimale portate a cedimento, a 1 RIR o a 3 RIR. **Quattro minuti dopo, la velocità di sollevamento era scesa del 25% a cedimento, del 13% a 1 RIR e dell’8% a 3 RIR.** A 24 ore il divario era quasi chiuso e a 48 ore sparito. Il calo di velocità dalla prima all’ultima serie era del 22% a cedimento contro il 9% a 1 RIR. Negli uomini il calo era maggiore che nelle donne.",
 "kw": "cedimento RIR fatica velocità recupero panca"
 },
 {
@@ -341,7 +341,7 @@ const STUDI = [
 "cit": 111,
 "tema": "cedimento",
 "liv": "A",
-"sintesi": "15 studi. Nessuna differenza significativa fra cedimento e non cedimento né sulla forza (ES −0,09) né sull’ipertrofia (ES 0,22). Negli studi in cui il volume non era pareggiato, il non cedimento risultava anzi favorito sulla forza. Tutti i partecipanti erano giovani adulti.",
+"sintesi": "15 studi, tutti su giovani adulti. Nel complesso nessuna differenza significativa fra cedimento e non cedimento, né sulla forza (dimensione dell’effetto −0,09) né sull’ipertrofia (0,22). Due sottogruppi contano però molto. Dove il volume non era pareggiato, il **non** cedimento risultava favorito sulla forza (−0,32). E **nel sottogruppo dei soli individui già allenati il cedimento mostra un effetto significativo sull’ipertrofia** (0,15, intervallo 0,03-0,26). Gli autori concludono che il cedimento non è necessario, ma nemmeno dannoso, e chiedono più studi proprio sui molto allenati.",
 "kw": "cedimento fatica"
 },
 {
@@ -356,7 +356,7 @@ const STUDI = [
 "cit": 31,
 "tema": "cedimento",
 "liv": "B",
-"sintesi": "Rassegna concettuale sulla vicinanza al cedimento: chiarisce che indolenzimento e fatica non sono indicatori di stimolo.",
+"sintesi": "Rassegna esplorativa sulla vicinanza al cedimento. Due conclusioni. Primo: **non esiste una definizione condivisa di cedimento**, e nei lavori non a cedimento la distanza effettiva dal cedimento è spesso ignota, il che rende difficile confrontare gli studi. Secondo: sulle prove disponibili arrivare al cedimento **probabilmente non è superiore** per l’ipertrofia, mentre produce più fatica neuromuscolare, più danno muscolare e più fastidio percepito, con possibili ricadute su recupero e aderenza nel lungo periodo.",
 "kw": "indolenzimento DOMS fatica"
 },
 {
@@ -386,7 +386,7 @@ const STUDI = [
 "cit": 33,
 "tema": "cedimento",
 "liv": "B",
-"sintesi": "Le persone sbagliano sistematicamente a stimare quante ripetizioni mancano al cedimento, e tendono a sottostimare lo sforzo residuo. È il limite pratico di ogni prescrizione basata sul RIR.",
+"sintesi": "141 partecipanti di esperienza diversa, serie singole portate a cedimento su tutto il corpo, con previsione preventiva di quante ripetizioni sarebbero riuscite. Le persone **sottostimano le ripetizioni che riescono effettivamente a fare**, con un errore standard di misura fra 2,64 e 3,38 ripetizioni: credono di essere più vicine al cedimento di quanto siano. L’accuratezza tende a migliorare con l’esperienza. Gli autori raccomandano cautela nell’usare il RIR come base della prescrizione. È il limite pratico di tutto l’impianto basato sulle ripetizioni in riserva.",
 "kw": "RIR stima errore autovalutazione"
 },
 {
@@ -461,7 +461,7 @@ const STUDI = [
 "cit": 189,
 "tema": "frequenza",
 "liv": "A",
-"sintesi": "10 studi. L’analisi per frequenza binaria trova un effetto significativo sull’ipertrofia (P = 0,002), a favore della frequenza più alta. Il limite noto è che molti studi inclusi non pareggiavano il volume settimanale, ed è il motivo per cui l’aggiornamento del 2019 su soli confronti a volume pari arriva a conclusioni diverse.",
+"sintesi": "10 studi. Usando la frequenza come predittore binario emerge un effetto significativo sull’ipertrofia (P = 0,002) a favore della frequenza più alta (dimensione dell’effetto 0,49 contro 0,30). Gli autori concludono che i grandi gruppi vanno allenati **almeno due volte a settimana**, e lasciano aperto se tre sia meglio di due. Attenzione: questa conclusione **contrasta** con la meta-analisi più ampia dello stesso gruppo del 2019 (25 studi), che a volume pareggiato non trova differenze. Le due vanno lette insieme.",
 "kw": "frequenza due volte settimana"
 },
 {
@@ -476,37 +476,37 @@ const STUDI = [
 "cit": 0,
 "tema": "infortuni",
 "liv": "B",
-"sintesi": "Effetti del carico meccanico su struttura e funzione del tendine d’Achille: il tendine si adatta al carico, ma con tempi più lunghi del muscolo.",
+"sintesi": "Rassegna sul tendine d’Achille e la meccanotrasduzione. Un carico moderato attiva vie di segnalazione mediate dalle integrine che stimolano i tenociti, la sintesi di collagene e il rimodellamento ordinato della matrice, aumentando rigidezza, modulo elastico e resistenza. Il sovraccarico cronico **e anche il disuso** producono invece collagene disorganizzato e infiammazione, predisponendo alla tendinopatia. Nel recupero da infortunio il carico progressivo precoce migliora la guarigione.",
 "kw": "tendine achille carico adattamento"
 },
 {
 "id": "lombalgia_esercizio",
-"pmid": "40106279",
+"pmid": "42676082",
 "doi": null,
-"titolo": "Exercise Therapy for Chronic Low Back Pain",
-"rivista": "American family physician",
-"anno": "2025",
-"autore": "Skully R.",
+"titolo": "The Efficacy of Exercise Therapy for Nonspecific Chronic Low Back Pain According to the FITT Principle: A Systematic Review With Meta-analyses",
+"rivista": "The Journal of orthopaedic and sports physical therapy",
+"anno": "2026",
+"autore": "Blanco-Heras L",
 "oa": false,
 "cit": 0,
 "tema": "infortuni",
 "liv": "A",
-"sintesi": "Terapia con esercizio per la lombalgia cronica: funziona, e nessuna modalità risulta chiaramente superiore alle altre. Il movimento in sé è la variabile attiva.",
+"sintesi": "70 studi randomizzati, 3991 persone con lombalgia cronica aspecifica. I programmi ad **alta frequenza (almeno 3 sedute a settimana)** migliorano la disabilità a lungo termine rispetto a quelli a bassa frequenza (differenza media standardizzata 0,29, certezza moderata). Fra le modalità, esercizio sensorimotorio e yoga mostrano riduzioni della disabilità, ma con certezza dell’evidenza che va da molto bassa a moderata. La leva più solida è la frequenza, non la scelta della modalità.",
 "kw": "lombalgia cronica esercizio terapia"
 },
 {
 "id": "spalla_impingement",
-"pmid": "40092169",
-"doi": "10.1136/bmjsem-2025-002523",
-"titolo": "Effectiveness of a sport-specific exercise programme for overhead athletes with unilateral subacromial shoulder pain: a study protocol of a randomised controlled trial",
-"rivista": "BMJ open sport & exercise medicine",
-"anno": "2025",
-"autore": "Guérineau F",
+"pmid": "42328611",
+"doi": "10.3389/fbioe.2026.1840050",
+"titolo": "A systematic review and meta-analysis of the efficacy of exercise therapy for the rehabilitation of rotator cuff-related shoulder pain: a subgroup analysis of racquet sport athletes",
+"rivista": "Frontiers in bioengineering and biotechnology",
+"anno": "2026",
+"autore": "Wu J",
 "oa": true,
 "cit": 1,
 "tema": "infortuni",
 "liv": "B",
-"sintesi": "Programma di esercizio specifico per atleti overhead con problemi di spalla: struttura dell’intervento e risultati.",
+"sintesi": "8 studi randomizzati sul dolore di spalla legato alla cuffia dei rotatori. **Nel complesso l’esercizio non si distingue dal controllo** sul dolore (differenza media standardizzata 0,01; p = 0,93), con eterogeneità altissima (I² = 96,5%). Nel sottogruppo degli atleti di sport di racchetta l’esercizio riduce invece il dolore in modo netto (−0,94; p < 0,001), mentre negli altri atleti l’effetto va nella direzione opposta. Gli autori stessi chiedono cautela: pochi studi, eterogeneità elevata e probabile bias di pubblicazione. Va preso come indizio, non come prova.",
 "kw": "spalla overhead esercizio riabilitazione"
 },
 {
@@ -566,7 +566,7 @@ const STUDI = [
 "cit": 86,
 "tema": "infortuni",
 "liv": "B",
-"sintesi": "Carichi sulla colonna lombare durante sollevamenti massimali nei powerlifter: quantifica compressione e taglio, e mostra quanto siano alti anche con tecnica corretta.",
+"sintesi": "57 powerlifter (44 uomini, 13 donne) analizzati in gara. Le stime di carico compressivo medio su L4/L5 arrivano fino a **17.192 newton**, con momenti massimi di 988 N·m a L4/L5 e 1047 N·m all’anca. Lo **stile sumo riduce del 10% il momento articolare e dell’8% il carico di taglio** rispetto al convenzionale. Gli autori notano una grande variabilità nel modo in cui i diversi atleti distribuiscono il carico, anche a livello nazionale.",
 "kw": "colonna lombare carico compressione taglio stacco"
 },
 {
@@ -581,7 +581,7 @@ const STUDI = [
 "cit": 0,
 "tema": "lunghezza",
 "liv": "A",
-"sintesi": "Dose ottimale di stiramento per aumentare l’escursione articolare in soggetti non atleti: quanto e quanto spesso serve davvero.",
+"sintesi": "Meta-analisi su oltre 4000 persone, atleti e non, con ischiocrurali accorciati. Lo stiramento statico migliora l’escursione articolare di circa 9-12 gradi rispetto al non fare nulla; la facilitazione propriocettiva neuromuscolare aggiunge poco (3,18 gradi in più). Il punto pratico: **una singola sessione breve, un minuto e mezzo, non supera la soglia di cambiamento minimo rilevabile**, mentre un volume cumulativo di circa **70 minuti distribuito su almeno una settimana** ha buone probabilità di superarla. La relazione dose-risposta non è lineare.",
 "kw": "stretching dose escursione mobilità"
 },
 {
@@ -596,7 +596,7 @@ const STUDI = [
 "cit": 3,
 "tema": "lunghezza",
 "liv": "B",
-"sintesi": "Su soggetti allenati, 8 settimane: parziali allungati e range completo producono spessore muscolare e forza simili. Le parziali allungate non sono superiori, ma nemmeno inferiori.",
+"sintesi": "30 persone allenate, un arto per condizione, parziali nella porzione allungata contro escursione completa sulla parte alta. Spessore muscolare e massimale alla lat machine sono risultati **simili**, con stime vicine allo zero e fattori di Bayes che danno supporto «moderato» all’ipotesi nulla. La raccomandazione degli autori è di **enfatizzare comunque la posizione allungata**, ottenendola indifferentemente con l’escursione completa o con le parziali allungate.",
 "kw": "parziali range completo allenati"
 },
 {
@@ -641,7 +641,7 @@ const STUDI = [
 "cit": 12,
 "tema": "lunghezza",
 "liv": "A",
-"sintesi": "Calf raise in piedi contro da seduto, 12 settimane. Gastrocnemio laterale +12,4% contro +1,7%, mediale +9,2% contro +0,6%. Il soleo invece cresce uguale nelle due condizioni (2,1% contro 2,9%).",
+"sintesi": "Calf raise in piedi contro da seduto, 12 settimane, una gamba per condizione, volumi misurati in risonanza. Gastrocnemio laterale **+12,4% contro +1,7%**, mediale **+9,2% contro +0,6%**, tricipite surale nel complesso +5,6% contro +2,1%. Il soleo invece cresce uguale nelle due condizioni (2,1% contro 2,9%): è l’unico che non attraversa il ginocchio, quindi la sua lunghezza non cambia fra le due posizioni. Gli autori leggono l’insieme come prova che allenare a lunghezze maggiori favorisce l’ipertrofia.",
 "kw": "polpacci gastrocnemio soleo calf raise"
 },
 {
@@ -656,7 +656,7 @@ const STUDI = [
 "cit": 29,
 "tema": "lunghezza",
 "liv": "B",
-"sintesi": "Parziali nella porzione allungata producono più ipertrofia del gastrocnemio rispetto al range completo.",
+"sintesi": "Donne giovani, calf raise per 3 serie da 15-20 ripetizioni massime in tre condizioni: escursione completa, solo la porzione allungata, solo la porzione accorciata. La porzione **allungata** ha prodotto più crescita del gastrocnemio mediale sia rispetto al completo (+15,2% contro +6,7%) sia rispetto all’accorciato (+3,4%). Sul gastrocnemio laterale batte l’accorciato ma **non batte in modo significativo l’escursione completa** (+14,9% contro +7,3%, p = 0,060). Il vantaggio netto quindi vale sul capo mediale.",
 "kw": "polpacci parziali gastrocnemio"
 },
 {
@@ -686,7 +686,7 @@ const STUDI = [
 "cit": 30,
 "tema": "lunghezza",
 "liv": "B",
-"sintesi": "Ripetizioni parziali svolte nella porzione allungata del movimento producono adattamenti pari o superiori al range completo sul quadricipite.",
+"sintesi": "**45 donne non allenate**, esercizio di leg extension, quattro configurazioni di escursione. Le parziali svolte nella **porzione allungata** hanno prodotto la crescita regionale maggiore, superiore a tutti gli altri gruppi al 70% della lunghezza del femore. Le parziali nella porzione accorciata sono risultate paragonabili al gruppo che non si allenava. Sul massimale ogni gruppo migliora soprattutto nell’escursione che ha allenato.",
 "kw": "range di movimento parziali quadricipite"
 },
 {
@@ -731,7 +731,7 @@ const STUDI = [
 "cit": 21,
 "tema": "lunghezza",
 "liv": "B",
-"sintesi": "Curl allenato ad angoli di gomito diversi: la posizione che tiene il flessore più lungo produce più spessore muscolare.",
+"sintesi": "**32 giovani adulti non allenati**, 5 settimane, curl con gomito esteso (0-50 gradi) contro flesso (80-130 gradi), stessa ampiezza di movimento. Lo spessore muscolare è cresciuto di più nella condizione a gomito esteso, cioè con il flessore più lungo (**+8,9% contro +3,4%**). Interessante anche l’effetto crociato: il braccio non allenato ha guadagnato forza solo nel gruppo esteso. Studio breve e su principianti.",
 "kw": "bicipiti angolo gomito lunghezza"
 },
 {
@@ -746,7 +746,7 @@ const STUDI = [
 "cit": 79,
 "tema": "lunghezza",
 "liv": "B",
-"sintesi": "Squat allenato a profondità diverse: i volumi dei muscoli degli arti inferiori rispondono in modo diverso, a favore della maggiore profondità.",
+"sintesi": "17 uomini, 10 settimane, squat completo contro squat a mezza escursione. Il massimale di squat completo cresce molto di più nel gruppo che si allenava completo (+31,8% contro +11,3%), mentre **sul massimale di mezzo squat non c’è differenza**. Sui volumi muscolari il completo risulta più efficace, **con due eccezioni esplicite: il retto femorale e gli ischiocrurali**, dove il vantaggio non si osserva.",
 "kw": "squat profondità volumi muscolari"
 },
 {
@@ -791,7 +791,7 @@ const STUDI = [
 "cit": 47,
 "tema": "meccanismi",
 "liv": "A",
-"sintesi": "L’ipertrofia sarcoplasmatica esiste davvero o è un’invenzione da palestra? Esame critico delle prove: c’è qualcosa, ma non quello che si racconta.",
+"sintesi": "Esame critico dell’ipertrofia sarcoplasmatica, cioè l’espansione del sarcoplasma sproporzionata rispetto all’accumulo di proteine miofibrillari. Gli autori discutono i **metodi** con cui è stata indagata e la mettono a confronto con le altre modalità di crescita: quella convenzionale, con accumulo proporzionale, e il cosiddetto impacchettamento miofibrillare. Concludono proponendo ricerca futura. È una rassegna sui metodi e sulle definizioni: non stabilisce quanto pesi il fenomeno nella pratica.",
 "kw": "sarcoplasmatica miofibrillare unicorno"
 },
 {
@@ -836,7 +836,7 @@ const STUDI = [
 "cit": 137,
 "tema": "meccanismi",
 "liv": "B",
-"sintesi": "Nelle prime settimane l’aumento di sezione muscolare misurato è in buona parte gonfiore da edema, non tessuto nuovo. Motivo per cui gli studi brevi sovrastimano l’ipertrofia dei principianti.",
+"sintesi": "10 giovani **non allenati**, 10 settimane. La sezione muscolare cresce del 2,7% alla terza settimana e del 10,4% alla fine. Ma normalizzando l’intensità dell’eco rispetto all’aumento di sezione, **solo alla terza settimana** il segnale indica gonfiore: l’aumento precoce è in buona parte **edema da danno muscolare**, non tessuto nuovo, e infatti mioglobina e interleuchina-6 erano elevate proprio in quel momento. Gli autori concludono che un aumento di sezione precoce non va chiamato ipertrofia senza misurare anche il danno.",
 "kw": "edema gonfiore sezione principianti"
 },
 {
@@ -851,7 +851,7 @@ const STUDI = [
 "cit": 200,
 "tema": "meccanismi",
 "liv": "B",
-"sintesi": "I meccanismi molecolari dell’interferenza fra resistenza ed endurance: cosa accade davvero nelle vie di segnalazione, al di là dell’aneddoto.",
+"sintesi": "Rassegna sui meccanismi molecolari dell’interferenza. Il punto centrale è negativo e va detto: negli animali le vie di segnalazione dell’endurance possono inibire la sintesi proteica, ma **negli studi sull’uomo non è stata osservata un’interferenza molecolare acuta** che spieghi la minore ipertrofia dopo allenamento concorrente. Il meccanismo, quindi, non è dimostrato: l’effetto pratico si osserva, la sua causa molecolare no.",
 "kw": "interferenza molecolare segnalazione"
 },
 {
@@ -881,7 +881,7 @@ const STUDI = [
 "cit": 652,
 "tema": "meccanismi",
 "liv": "A",
-"sintesi": "La rassegna che ha reso popolare la tripartizione tensione meccanica, stress metabolico e danno muscolare. Storicamente centrale, oggi in parte superata sul ruolo del danno.",
+"sintesi": "La rassegna che ha reso popolare la tripartizione tensione meccanica, stress metabolico e danno muscolare come mediatori dell’ipertrofia, mettendo a confronto l’approccio del bodybuilder e quello del powerlifter. Storicamente centrale. Sul ruolo del danno muscolare va letta insieme al lavoro successivo di Damas 2016 e alla rassegna di Wackerhage 2019, che ridimensionano l’idea che il danno sia necessario alla crescita.",
 "kw": "meccanismi tensione stress metabolico danno"
 },
 {
@@ -941,7 +941,7 @@ const STUDI = [
 "cit": 1,
 "tema": "metodo",
 "liv": "B",
-"sintesi": "Affidabilità intra e inter-operatore della misura ecografica dello spessore muscolare. Serve a capire quanto rumore c’è nei numeri che leggi negli studi.",
+"sintesi": "Affidabilità della misura ecografica dello spessore dei glutei e del capo lungo del bicipite femorale. **Lo stesso operatore ottiene risultati da moderati a buoni; operatori diversi solo da scarsi a moderati** (coefficiente di generalizzabilità 0,48-0,72 sui glutei, 0,52 sul bicipite femorale). È la ragione per cui i confronti fra studi con operatori diversi vanno presi con prudenza, e per cui i disegni in cui ciascuno fa da controllo a se stesso sono più informativi.",
 "kw": "ecografia affidabilità misura spessore"
 },
 {
@@ -1016,7 +1016,7 @@ const STUDI = [
 "cit": 29,
 "tema": "nutrizione",
 "liv": "A",
-"sintesi": "Documento di posizione. L’HMB è un metabolita della leucina; il consumo cronico risulta sicuro fino ad almeno un anno e senza effetti negativi su tolleranza al glucosio e sensibilità insulinica. Il meccanismo proposto è duplice, aumento della sintesi proteica e riduzione della degradazione, per una via indipendente da quella che rileva la leucina. Può ridurre il danno muscolare.",
+"sintesi": "Documento di posizione. L’HMB è un metabolita della leucina; il consumo cronico risulta sicuro fino ad almeno un anno, senza effetti negativi su tolleranza al glucosio e sensibilità insulinica. Il meccanismo proposto è duplice — più sintesi proteica e meno degradazione — per una via di attivazione indipendente da quella che rileva la leucina. Può ridurre il danno muscolare e favorire il recupero. Il punto che conta per chi è già allenato: **migliora forza e potenza nei non allenati, ma nei soggetti allenati i risultati sono contrastanti**. Dose studiata 38 mg per kg al giorno.",
 "kw": "HMB leucina metabolita sintesi degradazione"
 },
 {
@@ -1046,7 +1046,7 @@ const STUDI = [
 "cit": 415,
 "tema": "nutrizione",
 "liv": "A",
-"sintesi": "Documento di posizione sulla caffeina: migliora la prestazione in molti contesti, con dosi e tempistiche indicate. Sulla forza massimale l’effetto è più piccolo che sulla resistenza.",
+"sintesi": "Documento di posizione sulla caffeina. Migliora in modo acuto molti aspetti della prestazione — resistenza muscolare, velocità del movimento, forza, sprint, salto, lancio — con benefici da piccoli a moderati, e **in molti ma non in tutti gli studi**. Dosi di 3-6 mg/kg sono ben supportate. La risposta individuale varia molto, in parte per differenze genetiche nel metabolismo della caffeina e in parte per l’assunzione abituale. Migliora anche attenzione e vigilanza.",
 "kw": "caffeina prestazione dose"
 },
 {
@@ -1091,7 +1091,7 @@ const STUDI = [
 "cit": 523,
 "tema": "nutrizione",
 "liv": "A",
-"sintesi": "Documento di posizione sulle proteine: quantità giornaliera, distribuzione nei pasti e qualità della fonte. È il riferimento pratico da cui partire.",
+"sintesi": "Documento di posizione sulle proteine. L’esercizio contro resistenza e l’assunzione di proteine stimolano entrambi la sintesi proteica muscolare e sono **sinergici** quando le proteine si assumono prima o dopo l’allenamento. Le proteine a digestione rapida, ricche di amminoacidi essenziali e con leucina adeguata, sono le più efficaci nello stimolare la sintesi. L’integrazione è un modo pratico, non una necessità: gli obiettivi si raggiungono anche con cibi interi. Dato specifico: **30-40 g di caseine prima di dormire** aumentano la sintesi notturna e il tasso metabolico senza interferire con la lipolisi.",
 "kw": "proteine distribuzione fonte"
 },
 {
@@ -1106,7 +1106,7 @@ const STUDI = [
 "cit": 80,
 "tema": "nutrizione",
 "liv": "B",
-"sintesi": "In deficit calorico la sintesi proteica miofibrillare cala, ma allenamento contro resistenza e apporto proteico adeguato distribuito nella giornata la riportano su.",
+"sintesi": "Attenzione alla popolazione: **uomini anziani in sovrappeso o obesi** (età media 66 anni), 4 settimane di restrizione calorica. La sintesi proteica miofibrillare cala in deficit, ma **distribuire le proteine in modo bilanciato sui quattro pasti** (25% ciascuno) la mantiene più alta rispetto a concentrarle in un pasto solo. Aggiungendo l’allenamento contro resistenza, il gruppo a distribuzione bilanciata torna ai valori di normocalorica, quello a distribuzione sbilanciata no. Il principio è plausibile ma qui è misurato in anziani obesi, non in giovani allenati.",
 "kw": "deficit calorico dieta sintesi proteica"
 },
 {
@@ -1121,7 +1121,7 @@ const STUDI = [
 "cit": 182,
 "tema": "nutrizione",
 "liv": "A",
-"sintesi": "Documento di posizione. Quattro settimane a 4-6 g al giorno aumentano la carnosina muscolare, che agisce da tampone del pH dentro la cellula. Migliora la prestazione **soprattutto in sforzi continui da 1 a 4 minuti**: fuori da quella finestra l’effetto è poco rilevante, e per l’ipertrofia non c’è motivo di aspettarsi granché. L’unico effetto collaterale riportato è il formicolio, attenuabile con dosi frazionate da 1,6 g.",
+"sintesi": "Documento di posizione. Quattro settimane a 4-6 g al giorno aumentano la carnosina muscolare, che agisce da tampone del pH dentro la cellula. Migliora la prestazione **soprattutto in sforzi continui da 1 a 4 minuti**. Sulla **forza** gli autori dicono esplicitamente che **servono altre ricerche**: non è un integratore con effetti dimostrati sull’ipertrofia. L’unico effetto collaterale riportato è il formicolio, attenuabile con dosi frazionate da 1,6 g o formulazioni a rilascio prolungato.",
 "kw": "beta alanina carnosina tampone formicolio"
 },
 {
@@ -1151,7 +1151,7 @@ const STUDI = [
 "cit": 114,
 "tema": "nutrizione",
 "liv": "A",
-"sintesi": "Raccomandazioni basate sull’evidenza per la preparazione a una gara natural: calorie, macronutrienti, tempistiche, integratori.",
+"sintesi": "Raccomandazioni per la preparazione a una gara natural. Le calorie vanno impostate per una perdita di circa **0,5-1% del peso a settimana** per limitare la perdita di muscolo. Le alterazioni di tempistica e frequenza dei pasti hanno **poco effetto** su perdita di grasso e mantenimento della massa magra. Fra gli integratori risultano utili creatina, caffeina e beta-alanina. La disidratazione e la manipolazione degli elettroliti nelle ultime ore sono **pericolose** e potrebbero non migliorare l’aspetto. Gli autori segnalano il rischio aumentato di disturbi alimentari e dell’immagine corporea negli sport estetici.",
 "kw": "nutrizione gara natural preparazione"
 },
 {
@@ -1211,22 +1211,22 @@ const STUDI = [
 "cit": 8,
 "tema": "organizzazione",
 "liv": "A",
-"sintesi": "Confronto fra tipi di allenamento concorrente su forza e ipertrofia degli arti inferiori: le modalità non sono equivalenti.",
+"sintesi": "Meta-analisi sui tipi di endurance dentro l’allenamento concorrente. **Tutte le modalità concorrenti risultano inferiori al solo allenamento contro resistenza sulla forza massimale degli arti inferiori.** Fra le modalità, l’intervallato ad alta intensità è quello che limita di più il danno, sia sulla forza sia sulla sezione muscolare. Gli intervalli di confidenza attraversano lo zero in quasi tutti i confronti, quindi le differenze fra modalità vanno prese come indicazione, non come certezza. Indicazione pratica: se devi fare cardio, l’intervallato interferisce meno.",
 "kw": "concorrente cardio forza"
 },
 {
 "id": "iversen_nopain",
-"pmid": "34784019",
+"pmid": "34125411",
 "doi": "10.1007/s40279-021-01592-w",
-"titolo": "Response to Comment on: \"No Time to Lift? Designing Time-Efficient Training Programs for Strength and Hypertrophy: A Narrative Review\"",
+"titolo": "No Time to Lift? Designing Time-Efficient Training Programs for Strength and Hypertrophy: A Narrative Review",
 "rivista": "Sports medicine (Auckland, N.Z.)",
-"anno": "2022",
+"anno": "2021",
 "autore": "Iversen VM",
 "oa": false,
 "cit": 2,
 "tema": "organizzazione",
 "liv": "B",
-"sintesi": "Come costruire programmi efficienti quando il tempo è poco: cosa tagliare per primo senza perdere risultati.",
+"sintesi": "Come allenarsi bene quando il tempo è poco. Le raccomandazioni degli autori: dare priorità a esercizi **bilaterali e multiarticolari** con movimento dinamico completo, e tenere almeno una spinta per le gambe, una trazione per la parte alta e una spinta per la parte alta. **Il volume settimanale conta più della frequenza**: minimo 4 serie a settimana per gruppo muscolare in un intervallo di 6-15 ripetizioni massime. Superserie, drop set e rest-pause dimezzano circa il tempo a parità di volume, ma sono **probabilmente migliori per l’ipertrofia che per la forza**. Riscaldamento solo specifico per l’esercizio; stretching solo se l’obiettivo è la flessibilità.",
 "kw": "tempo efficienza programma minimo"
 },
 {
@@ -1241,7 +1241,7 @@ const STUDI = [
 "cit": 90,
 "tema": "organizzazione",
 "liv": "A",
-"sintesi": "Meta-analisi sulla privazione acuta di sonno: la prestazione fisica peggiora, e l’effetto è più marcato nel pomeriggio e sulle attività prolungate.",
+"sintesi": "Meta-analisi sulla perdita acuta di sonno. La prestazione fisica cala in media del **7,56%**, con effetti significativi in tutte le categorie di esercizio. Contano il tipo di privazione — gli effetti negativi consistenti si vedono con privazione totale e con restrizione nella seconda parte della notte — e le ore di veglia accumulate, con circa **0,4% di calo per ogni ora sveglio** prima della prestazione. I compiti svolti **al pomeriggio** sono penalizzati, quelli **al mattino risultano in gran parte non compromessi**: se hai dormito male, allenati presto.",
 "kw": "sonno privazione prestazione"
 },
 {
@@ -1256,7 +1256,7 @@ const STUDI = [
 "cit": 40,
 "tema": "organizzazione",
 "liv": "A",
-"sintesi": "Meta-analisi sull’ordine degli esercizi: chi va per primo guadagna più forza, ma l’ordine non ha effetto significativo sull’ipertrofia.",
+"sintesi": "11 studi di qualità metodologica da buona a eccellente. Considerando tutti i test insieme **l’ordine non fa differenza** (−0,11; p = 0,306). Ma guardando esercizio per esercizio l’effetto c’è ed è netto: si guadagna più forza **nell’esercizio che si mette per primo**, sia che si tratti di multiarticolari (0,32; p = 0,034) sia di monoarticolari (−0,58; p = 0,032). **Sull’ipertrofia nessun effetto** (0,03; p = 0,862). Metti per primo ciò su cui vuoi diventare forte; per la crescita l’ordine non conta.",
 "kw": "ordine esercizi sequenza"
 },
 {
@@ -1286,7 +1286,7 @@ const STUDI = [
 "cit": 74,
 "tema": "organizzazione",
 "liv": "B",
-"sintesi": "Rassegna sul sonno insufficiente e la forza muscolare, con le implicazioni pratiche per chi si allena contro resistenza.",
+"sintesi": "17 studi, di qualità metodologica da moderata a debole. Il quadro è più sfumato di quanto si creda: **una notte di privazione totale ha poco effetto sulla forza**. A ridurre la forza sono piuttosto **notti consecutive di sonno ridotto**, e l’effetto si vede sui movimenti multiarticolari, non su quelli monoarticolari. Sulle risposte ormonali i risultati sono contrastanti. Gli autori notano che il calo si attenua con interventi sulla motivazione, come allenarsi in gruppo o assumere caffeina.",
 "kw": "sonno forza recupero"
 },
 {
@@ -1301,7 +1301,7 @@ const STUDI = [
 "cit": 94,
 "tema": "organizzazione",
 "liv": "A",
-"sintesi": "Meta-analisi su periodizzazione contro programmazione non periodizzata: la periodizzazione dà guadagni di forza maggiori, con differenze fra i modelli piccole.",
+"sintesi": "18 studi, 81 effetti, pubblicati fra il 1988 e il 2015. La periodizzazione produce un aumento del massimale maggiore rispetto alla programmazione non periodizzata, con **effetto moderato** (dimensione dell’effetto 0,43, intervallo di confidenza 0,27-0,58). Gli autori concludono che la variazione dello stimolo è importante per la forza massimale, e che periodi più lunghi a frequenza più alta sembrano preferibili.",
 "kw": "periodizzazione forza modelli"
 },
 {
@@ -1316,7 +1316,7 @@ const STUDI = [
 "cit": 99,
 "tema": "organizzazione",
 "liv": "C",
-"sintesi": "Indagine su cosa fanno davvero i bodybuilder in preparazione: volumi, frequenze, tecniche. Descrive la pratica, non dimostra che funzioni.",
+"sintesi": "Indagine su 127 bodybuilder agonisti maschi. In preparazione riducono le serie per esercizio, alzano le ripetizioni da 7-9 a 10-15 e accorciano i recuperi. Un dato di contesto che va tenuto presente leggendo qualunque cosa venga da questo ambiente: **fra chi gareggiava a livello amatoriale, 56 su 73 riferivano uso di steroidi anabolizzanti**, e gli integratori erano usati da tutti. Descrive la pratica, non dimostra che funzioni.",
 "kw": "bodybuilder pratica indagine"
 },
 {
@@ -1406,7 +1406,7 @@ const STUDI = [
 "cit": 1,
 "tema": "popolazioni",
 "liv": "B",
-"sintesi": "I marcatori del recettore degli androgeni non distinguono chi risponde da chi non risponde all’allenamento. Un candidato in meno fra le spiegazioni della variabilità.",
+"sintesi": "Confronto fra chi risponde e chi non risponde all’allenamento, in individui **non allenati**, sui marcatori del recettore degli androgeni. Nella grande maggioranza dei marcatori — valori di base, risposte acute e croniche — **non emergono differenze fra i due gruppi**. L’unica eccezione è l’attività di legame al DNA misurata acutamente, che si muove in direzioni opposte nei due gruppi. La conclusione degli autori è che l’assenza di ipertrofia nei principianti non sembra spiegabile con questi marcatori.",
 "kw": "responder androgeni variabilità"
 },
 {
@@ -1451,7 +1451,7 @@ const STUDI = [
 "cit": 455,
 "tema": "popolazioni",
 "liv": "A",
-"sintesi": "Relazioni dose-risposta negli anziani sani: durata, frequenza, volume e intensità che producono i guadagni migliori. Le raccomandazioni non sono le stesse dei giovani.",
+"sintesi": "Relazioni dose-risposta negli anziani sani: periodo di allenamento, intensità, tempo sotto tensione e recupero fra le serie emergono come variabili rilevanti per forza e morfologia muscolare. Gli autori però **segnalano esplicitamente i limiti**: qualità metodologica complessivamente scarsa degli studi inclusi (punteggio PEDro medio 4,6) ed eterogeneità molto alta. Da usare come orientamento, non come prescrizione precisa.",
 "kw": "anziani dose risposta età"
 },
 {
@@ -1496,7 +1496,7 @@ const STUDI = [
 "cit": 277,
 "tema": "popolazioni",
 "liv": "A",
-"sintesi": "585 persone allenate su un solo braccio per 12 settimane. La variazione di sezione va da **−2% a +59%**, il massimale da 0 a +250%, la forza isometrica da −32% a +149%. Alcuni non guadagnano nulla, altri raddoppiano la forza. Le donne hanno guadagnato più degli uomini in forza relativa.",
+"sintesi": "585 persone (342 donne, 243 uomini) hanno allenato per 12 settimane il **solo braccio non dominante**, che partiva non allenato. La variazione di sezione del bicipite va da **−2% a +59%**, il massimale da 0 a +250%, la forza isometrica da −32% a +149%. Alcuni non guadagnano nulla, altri raddoppiano la forza. Gli uomini hanno un vantaggio solo lieve sui guadagni relativi di dimensione, mentre **le donne guadagnano nettamente di più in forza relativa**.",
 "kw": "variabilità risposta individuale responder"
 },
 {
@@ -1526,7 +1526,7 @@ const STUDI = [
 "cit": 8,
 "tema": "recupero",
 "liv": "A",
-"sintesi": "9 studi, 19 misure. Le durate di recupero si sovrappongono ampiamente e l’eterogeneità è alta. Nei confronti controllati le stime centrali **tendono a favorire i recuperi più lunghi** su braccio e coscia (0,13 e 0,17 a favore), mentre sul corpo intero sono vicine a zero. La conclusione utile è che la durata del recupero è una leva debole: accorciare non fa crescere di più.",
+"sintesi": "9 studi, 19 misure. Le durate di recupero si sovrappongono ampiamente. Nei confronti controllati le stime centrali **tendono a favorire i recuperi più lunghi** su braccio e coscia (0,13 e 0,17), mentre sul corpo intero sono vicine a zero. Gli autori indicano un piccolo beneficio a stare **sopra i 60 secondi**, probabilmente mediato dal volume-carico che si riesce a sostenere, ma **non rilevano differenze apprezzabili oltre i 90 secondi**. Allenarsi a cedimento o fermarsi prima non cambia questa interazione. In breve: accorciare sotto il minuto penalizza, allungare oltre il minuto e mezzo non aggiunge ipertrofia dimostrata — se allunghi ancora, il motivo è la forza (Grgic 2018, Schoenfeld 2016), non l’ipertrofia.",
 "kw": "recupero pause tra serie"
 },
 {
@@ -1541,7 +1541,7 @@ const STUDI = [
 "cit": 84,
 "tema": "recupero",
 "liv": "A",
-"sintesi": "Meta-analisi sui recuperi e la forza: pause più lunghe favoriscono i guadagni di forza, con effetto più marcato sui multiarticolari.",
+"sintesi": "23 studi, 491 partecipanti, tutti di qualità metodologica da buona a moderata. Guadagni di forza consistenti si ottengono anche con recuperi brevi, ma per **massimizzare** la forza **negli individui già allenati servono pause superiori ai 2 minuti**. Nei non allenati bastano 60-120 secondi. È la base dell’indicazione di recuperi lunghi sui fondamentali.",
 "kw": "recupero forza multiarticolari"
 },
 {
@@ -1556,7 +1556,7 @@ const STUDI = [
 "cit": 94,
 "tema": "recupero",
 "liv": "B",
-"sintesi": "21 uomini allenati, 8 settimane, 3 sedute a settimana. Recuperi di 3 minuti contro 1 minuto: la forza massimale su squat e panca è risultata significativamente maggiore con i 3 minuti. È il lavoro che ha spostato la pratica verso recuperi lunghi.",
+"sintesi": "21 uomini allenati, 8 settimane, 3 sedute a settimana, 3 serie da 8-12 ripetizioni massime su 7 esercizi. Recuperi di 3 minuti contro 1 minuto: con i 3 minuti la forza massimale è risultata significativamente maggiore su squat e panca, **e anche lo spessore muscolare della coscia anteriore**, con una tendenza sul tricipite (p = 0,06). Sulla resistenza locale nessuna differenza. Il vantaggio dei recuperi lunghi qui riguarda quindi sia la forza sia l’ipertrofia.",
 "kw": "recupero tre minuti un minuto"
 },
 {
@@ -1571,7 +1571,7 @@ const STUDI = [
 "cit": 0,
 "tema": "selezione",
 "liv": "B",
-"sintesi": "Effetti di posizione del bilanciere, larghezza della base, ripetizione e carico sull’attivazione muscolare nello squat.",
+"sintesi": "18 partecipanti, elettromiografia e cinematica nello squat variando posizione del bilanciere (alta o bassa), larghezza della base, carico e ripetizioni. Emergono differenze puntuali — la base larga aumenta l’attivazione del vasto mediale, il carico alto quella di vasto laterale e semitendinoso, la base stretta aumenta di 3,7 gradi la flessione massima del ginocchio — ma la conclusione degli autori è netta: **nessuna combinazione di parametri risulta complessivamente favorita**, e chi si allena può sceglierla in base a ciò che gli risulta più comodo.",
 "kw": "squat stance larghezza bilanciere"
 },
 {
@@ -1586,7 +1586,7 @@ const STUDI = [
 "cit": 2,
 "tema": "selezione",
 "liv": "B",
-"sintesi": "Alzate laterali con cavi contro manubri, 8 settimane su allenati, un braccio per condizione: nessuna differenza di spessore del deltoide laterale. Il profilo di resistenza non cambia il risultato.",
+"sintesi": "24 persone allenate, uomini e donne, 8 settimane, cinque serie di alzate laterali a cedimento due volte a settimana, con l’escursione standardizzata fra le condizioni. Un braccio ai cavi, l’altro con i manubri. Lo spessore del deltoide laterale è cresciuto del **3,3-4,6%** e le analisi danno supporto da «moderato» a «estremo» **all’ipotesi nulla**: nessuna differenza fra cavi e manubri. Il diverso profilo di resistenza non ha cambiato il risultato.",
 "kw": "alzate laterali cavi manubri deltoide"
 },
 {
@@ -1601,7 +1601,7 @@ const STUDI = [
 "cit": 4,
 "tema": "selezione",
 "liv": "B",
-"sintesi": "L’adduttore magno umano è costruito soprattutto per estendere l’anca, non per addurre: nello squat contribuisce in modo rilevante alla spinta, e questo lo rende un muscolo da allenare per la coscia.",
+"sintesi": "Con imaging a tensore di diffusione gli autori mostrano che l’adduttore magno ha un **braccio di leva più lungo per l’estensione d’anca che per l’adduzione**, e che la coppia massima teorica del muscolo intero è **oltre il doppio** per l’estensione rispetto all’adduzione. La capacità calcolata correlava con la coppia di estensione misurata al dinamometro. È uno studio di architettura e capacità teorica: non misura esercizi, quindi non dice quanto lavori nell’accosciata o nello stacco.",
 "kw": "adduttore magno anca squat coscia"
 },
 {
@@ -1616,7 +1616,7 @@ const STUDI = [
 "cit": 1,
 "tema": "selezione",
 "liv": "B",
-"sintesi": "Confronto di ipertrofia regionale dei flessori del gomito fra condizioni: la crescita risulta simile lungo il muscolo.",
+"sintesi": "Contesto specifico da tenere presente: 21 persone allenate, curl a **carico basso (30% del massimale) con restrizione vascular**, 4 sedute a settimana per 3 settimane. Un braccio lavorava con la spalla estesa (bicipite più lungo), l’altro con la spalla flessa. La sezione dei flessori del gomito è aumentata in entrambe le condizioni e **in modo simile** a tutte le altezze misurate. Il metodo con occlusione era scelto apposta per ottenere crescita senza il gonfiore da danno che confonde le misure precoci. Nota che qui la lunghezza del muscolo **non** ha fatto differenza, a differenza di quanto trovano Maeo e Kinoshita in altre condizioni.",
 "kw": "bicipiti regionale flessori gomito"
 },
 {
@@ -1631,7 +1631,7 @@ const STUDI = [
 "cit": 1,
 "tema": "selezione",
 "liv": "B",
-"sintesi": "Analisi biomeccanica di stacco convenzionale e sumo: distribuzione del carico e richieste articolari diverse a parità di peso sollevato.",
+"sintesi": "30 sollevatori esperti, stacco convenzionale e sumo all’85% del massimale. Il **convenzionale** attiva di più il bicipite femorale e gli erettori spinali toracici: è più orientato alla catena posteriore e agli estensori d’anca. Il **sumo** attiva di più il vasto laterale nella prima fase e impone richieste maggiori di stabilizzazione mediolaterale, con un momento di inversione della caviglia superiore. Non è che uno sia migliore: caricano cose diverse.",
 "kw": "stacco sumo convenzionale biomeccanica"
 },
 {
@@ -1646,7 +1646,7 @@ const STUDI = [
 "cit": 1,
 "tema": "selezione",
 "liv": "B",
-"sintesi": "Hip thrust contro squat sugli arti inferiori: caricano il gluteo in posizioni opposte e i risultati non sono interscambiabili.",
+"sintesi": "Meta-analisi che confronta squat e hip thrust **su prestazioni atletiche**, non su ipertrofia. Lo squat migliora il salto verticale più dell’hip thrust; su salto orizzontale, sprint brevi e cambio di direzione **nessuno dei due produce effetti significativi**. Gli autori chiedono studi di qualità più alta. Da questo lavoro non si possono trarre conclusioni su quale dei due faccia crescere di più il gluteo: non è ciò che ha misurato.",
 "kw": "hip thrust squat gluteo"
 },
 {
@@ -1661,7 +1661,7 @@ const STUDI = [
 "cit": 5,
 "tema": "selezione",
 "liv": "B",
-"sintesi": "Allenamento specifico di mano e propriocezione per migliorare la forza di presa: la presa si allena, e non migliora da sola con i tiri.",
+"sintesi": "Meta-analisi sull’allenamento specifico della mano. Effetto da piccolo a moderato sulla forza di presa (g = 0,44) e grande sulla destrezza manuale (g = 1,11); sulla forza di pinza positivo ma non significativo. Il dato che conta per chi si allena: **l’effetto è molto più grande negli anziani (g = 0,97) che nei giovani adulti (g = 0,18)**. I protocolli di sola forza hanno funzionato meglio di quelli misti. Gli autori segnalano alto rischio di bias.",
 "kw": "presa avambraccio forza"
 },
 {
@@ -1676,7 +1676,7 @@ const STUDI = [
 "cit": 1,
 "tema": "selezione",
 "liv": "B",
-"sintesi": "La larghezza della presa in panca cambia la relazione fra carico e velocità e il massimale espresso. Non è un dettaglio neutro.",
+"sintesi": "Tre larghezze di presa in panca a confronto sulla relazione carico-velocità. **Sul massimale non emergono differenze significative fra le prese**, né sulla velocità al massimale. Cambia invece la velocità associata a ogni percentuale di carico: presa stretta e media producono valori più alti della presa larga. Le tre misure di velocità sono risultate molto affidabili (coefficiente di correlazione intraclasse 0,90-0,97). Serve a chi usa la velocità per regolare il carico: il profilo va rifatto se cambi presa.",
 "kw": "presa larghezza panca velocità"
 },
 {
@@ -1691,7 +1691,7 @@ const STUDI = [
 "cit": 2,
 "tema": "selezione",
 "liv": "B",
-"sintesi": "Lo squat produce ipertrofia regionale disomogenea nel quadricipite: cresce soprattutto il vasto laterale, molto meno il retto femorale.",
+"sintesi": "18 studenti universitari, 7 settimane di squat parallelo. Tutti e quattro i capi del quadricipite sono cresciuti in modo significativo e **fra i muscoli non emerge alcuna differenza statistica** nell’entità della crescita. Il risultato interessante è un altro: l’aumento del massimale correlava **solo** con l’ipertrofia del vasto laterale (r = 0,717).",
 "kw": "squat quadricipite retto femorale regionale"
 },
 {
@@ -1706,7 +1706,7 @@ const STUDI = [
 "cit": 5,
 "tema": "selezione",
 "liv": "B",
-"sintesi": "Il grande pettorale si attiva per regioni distinte a seconda della direzione del movimento: clavicolare e sternale non sono intercambiabili.",
+"sintesi": "**29 giovani donne sane**, elettromiografia ad alta densità su compiti isometrici in direzioni diverse. Le regioni del grande pettorale — clavicolare, sternocostale superiore e media — **si attivano in misura diversa a seconda della direzione** del compito: la regione media domina in estensione, adduzione con rotazione esterna e rotazione interna a braccio alto. In flessione in avanti e orizzontale, invece, le tre regioni si attivano in modo simile. Sono compiti isometrici, non esercizi con sovraccarico, e i dati sono su donne.",
 "kw": "pettorale regioni clavicolare sternale"
 },
 {
@@ -1721,7 +1721,7 @@ const STUDI = [
 "cit": 15,
 "tema": "selezione",
 "liv": "B",
-"sintesi": "Analisi elettromiografica di grande gluteo, medio gluteo e tensore della fascia lata nei principali esercizi.",
+"sintesi": "Elettromiografia di grande gluteo, medio gluteo e tensore della fascia lata in 13 esercizi, alcuni con e senza elastico. Il criterio usato è il rapporto fra attivazione dei glutei e del tensore della fascia lata, perché nella riabilitazione si vuole il primo senza il secondo. **Il clam, con e senza elastico, ottiene il rapporto migliore**, seguito dal running man su superficie instabile e dal ponte con elastico. È uno studio di attivazione a fini riabilitativi, non un confronto di efficacia ipertrofica.",
 "kw": "glutei elettromiografia esercizi"
 },
 {
@@ -1766,7 +1766,7 @@ const STUDI = [
 "cit": 39,
 "tema": "selezione",
 "liv": "B",
-"sintesi": "Differenze regionali di attivazione degli ischiocrurali fra esercizi: la selezione decide quale porzione del muscolo lavora.",
+"sintesi": "10 uomini allenati, stacco a gambe tese (dominante d’anca) contro leg curl (dominante di ginocchio), entrambi a cedimento con il carico del massimale per 8 ripetizioni. **Il leg curl ha prodotto un’attivazione significativamente maggiore nelle porzioni distali** degli ischiocrurali, sia laterali sia mediali. Gli autori avvertono però che resta da dimostrare che differenze di attivazione producano differenze di crescita — vedi Vigotsky 2018 sui limiti dell’elettromiografia.",
 "kw": "femorali attivazione regionale esercizi"
 },
 {
@@ -1796,7 +1796,7 @@ const STUDI = [
 "cit": 15,
 "tema": "selezione",
 "liv": "B",
-"sintesi": "Confronto fra varianti di rematore: attivazione del tronco e carico sulla colonna cambiano sensibilmente fra le versioni, a parità di esercizio nominale.",
+"sintesi": "Tre varianti di rematore a confronto su attivazione del tronco e carico vertebrale. Il **rematore inverso** è quello con il carico più basso sulla colonna, coerente con la minore attivazione degli erettori lombari: è la scelta di chi deve risparmiare la schiena. Il **rematore in piedi con busto flesso** produce un’attivazione ampia e simmetrica su tutta la schiena ma **il carico vertebrale più alto**, oltre alla maggiore rigidità. Il rematore a un braccio ai cavi sollecita soprattutto la capacità antirotatoria del tronco. Studio su 7 soggetti.",
 "kw": "rematore varianti tronco colonna attivazione"
 },
 {
@@ -1811,7 +1811,7 @@ const STUDI = [
 "cit": 243,
 "tema": "selezione",
 "liv": "A",
-"sintesi": "Rassegna biomeccanica sul ginocchio nell’accosciata: come profondità, larghezza della base e posizione del bilanciere cambiano forze e coppie articolari. È il riferimento classico per capire cosa carica cosa.",
+"sintesi": "Rassegna biomeccanica classica sul ginocchio nell’accosciata: forze di taglio e compressione tibiofemorali, attivazione di quadricipite, ischiocrurali e gastrocnemio al variare di profondità, larghezza della base e posizione del bilanciere. L’attività muscolare cresce all’aumentare della flessione del ginocchio, e gli autori concludono che **l’accosciata parallela non è dannosa per un ginocchio sano** e la raccomandano rispetto a quella profonda, per un possibile aumento del rischio a carico di menischi e legamenti. Va detto che si tratta di una preoccupazione teorica di una rassegna del 2001: Bloomquist 2013, che ha confrontato direttamente le due profondità per 12 settimane, trova un vantaggio muscolare della profonda senza segnalare danni. Sul punto le fonti non concordano.",
 "kw": "squat ginocchio biomeccanica coppie profondità"
 },
 {
@@ -1826,7 +1826,7 @@ const STUDI = [
 "cit": 62,
 "tema": "selezione",
 "liv": "A",
-"sintesi": "Analisi tridimensionale di stacco sumo e convenzionale: distribuzione diversa delle coppie fra anca, ginocchio e colonna a parità di carico sollevato.",
+"sintesi": "Analisi tridimensionale su 24 atleti in gara, 12 sumo e 12 convenzionali. Il convenzionale comporta una distanza verticale del bilanciere, un lavoro meccanico e un dispendio stimato **maggiori del 25-40%**. Le coppie e i bracci di leva a **caviglia e ginocchio differiscono in modo significativo** fra i due stili, mentre **all’anca non emergono differenze significative**. Nel sumo il tronco resta più verticale e la presa è più stretta.",
 "kw": "stacco sumo convenzionale coppie tridimensionale"
 },
 {
@@ -1841,7 +1841,7 @@ const STUDI = [
 "cit": 0,
 "tema": "tecniche",
 "liv": "A",
-"sintesi": "Meta-analisi recente su ipertrofia e forza con restrizione del flusso: conferma il quadro, con indicazioni su pressione e protocollo.",
+"sintesi": "Meta-analisi 2025 su 12 studi e 859 atleti di sport di squadra. Aggiungere la restrizione del flusso all’allenamento contro resistenza produce un effetto **piccolo** su ipertrofia (differenza media standardizzata 0,32) e forza (0,42), e **nessun effetto** su potenza esplosiva, salto e sprint. Gli autori la presentano come strumento accessorio di gestione del carico e affermano esplicitamente che **la prescrizione ottimale resta da stabilire**.",
 "kw": "BFR restrizione protocollo"
 },
 {
@@ -1856,7 +1856,7 @@ const STUDI = [
 "cit": 3,
 "tema": "tecniche",
 "liv": "A",
-"sintesi": "Confronto fra azione eccentrica e concentrica sull’ipertrofia: le differenze sono piccole, con una leggera tendenza a favore dell’eccentrica.",
+"sintesi": "26 studi, 682 partecipanti. **Nel risultato principale non c’è differenza statistica** fra azione eccentrica e concentrica sull’ipertrofia (0,285, intervallo da −0,131 a 0,701; p = 0,179), con eterogeneità alta e **certezza dell’evidenza classificata «molto bassa»** secondo GRADE. Alcuni sottogruppi favoriscono l’eccentrica: arti superiori, interventi entro le 8 settimane, misura dello spessore muscolare e contrazione isocinetica. Interpretare con prudenza.",
 "kw": "eccentrico concentrico azione"
 },
 {
@@ -1886,7 +1886,7 @@ const STUDI = [
 "cit": 15,
 "tema": "tecniche",
 "liv": "B",
-"sintesi": "Rest-pause e drop set danno forza e ipertrofia simili alle serie tradizionali. Servono a risparmiare tempo, non ad aggiungere stimolo.",
+"sintesi": "28 uomini allenati, 8 settimane, volume totale pareggiato fra rest-pause, drop set e serie tradizionali. **Sulla forza il rest-pause ha battuto le serie tradizionali** nel massimale di squat (interazione significativa, P = 0,001); fra le altre condizioni nessuna differenza. Sullo spessore della coscia **nessuna differenza fra i gruppi**. La conclusione degli autori: a volume pareggiato queste tecniche non producono più ipertrofia, ma il rest-pause dà un vantaggio modesto sulla forza.",
 "kw": "rest pause serie tradizionali"
 },
 {
@@ -1901,7 +1901,7 @@ const STUDI = [
 "cit": 19,
 "tema": "tecniche",
 "liv": "B",
-"sintesi": "Le superserie riducono il tempo di seduta ma peggiorano velocità e potenza espresse, e alzano lo sforzo percepito. Compromesso, non pasto gratis.",
+"sintesi": "Superserie in panca, tre configurazioni. **Tutte riducono velocità e potenza medie** rispetto al riferimento, e le configurazioni agonista-antagonista e stesso-gruppo alzano molto lo sforzo percepito. Le riduzioni maggiori di velocità, potenza e forza di picco si vedono abbinando esercizi per lo **stesso** gruppo muscolare. La raccomandazione degli autori: se usi le superserie per risparmiare tempo, accoppia esercizi per **gruppi diversi**, non per lo stesso gruppo. Efficienza pagata in qualità del lavoro.",
 "kw": "superserie tempo sforzo"
 },
 {
@@ -1931,7 +1931,7 @@ const STUDI = [
 "cit": 70,
 "tema": "tecniche",
 "liv": "B",
-"sintesi": "Squat unilaterale contro bilaterale su forza, sprint e agilità: entrambi funzionano, con trasferimenti specifici diversi.",
+"sintesi": "18 giocatori di rugby, 5 settimane, split squat bulgaro contro squat bilaterale. Entrambi i gruppi sono migliorati su massimale bilaterale, massimale unilaterale, sprint sui 40 m e cambio di direzione, e **nessuna interazione fra gruppo e tempo è risultata significativa su nessuna variabile**: nei limiti di questo studio le due modalità sono risultate ugualmente efficaci, senza il trasferimento specifico che ci si aspetterebbe. Studio breve e su un campione piccolo.",
 "kw": "unilaterale bilaterale monopodalico"
 },
 {
@@ -1946,7 +1946,7 @@ const STUDI = [
 "cit": 83,
 "tema": "tecniche",
 "liv": "A",
-"sintesi": "Meta-analisi sulla durata della ripetizione: nell’intervallo da mezzo secondo a otto secondi per fase non emergono differenze di ipertrofia. Contare i tempi non serve.",
+"sintesi": "8 studi. Nell’intervallo da **mezzo secondo a otto secondi** per ripetizione gli esiti di ipertrofia sono simili: contare i tempi dentro quella finestra non serve. Gli autori aggiungono però che le durate **volontariamente molto lente, oltre i 10 secondi per ripetizione, risultano inferiori** per l’ipertrofia, pur con pochi studi controllati a disposizione.",
 "kw": "tempo cadenza durata ripetizione"
 },
 {
@@ -1961,7 +1961,7 @@ const STUDI = [
 "cit": 25,
 "tema": "tecniche",
 "liv": "B",
-"sintesi": "Posizione del corpo e tipo di carico nelle spinte sopra la testa: seduti si esprime più forza che in piedi, e con bilanciere più che con manubri. La stabilità della base è forza esprimibile.",
+"sintesi": "15 uomini, spinte sopra la testa con bilanciere o manubri, seduti o in piedi. **Sul massimale la stabilità paga**: in piedi con i manubri si solleva il 7% in meno che in piedi col bilanciere e il 10% in meno che da seduti coi manubri. Ma il risultato interessante è opposto: **la versione meno stabile, in piedi con i manubri, è quella con l’attivazione maggiore dei deltoidi**, pur essendo quella con il massimale più basso. Da seduto il deltoide posteriore si attiva circa il 25% in meno che in piedi. Carico esprimibile e attivazione vanno in direzioni diverse.",
 "kw": "stabilità posizione spinte forza seduto"
 },
 {
@@ -1991,7 +1991,7 @@ const STUDI = [
 "cit": 399,
 "tema": "tecniche",
 "liv": "A",
-"sintesi": "Meta-analisi storica su eccentrico contro concentrico: l’eccentrico produce più forza e massa quando l’intensità è più alta, che è quasi sempre il caso.",
+"sintesi": "20 studi randomizzati. Quando l’eccentrico viene svolto ad **alta intensità**, produce aumenti di forza totale ed eccentrica superiori al concentrico, e maggiori incrementi di circonferenza muscolare. I guadagni dell’eccentrico risultano però **più specifici** per velocità e tipo di contrazione allenata. Gli autori attribuiscono la superiorità proprio ai carichi più alti che si riescono a sostenere in eccentrica, non a una proprietà intrinseca della contrazione.",
 "kw": "eccentrico forza massa"
 },
 {
@@ -2021,7 +2021,7 @@ const STUDI = [
 "cit": 125,
 "tema": "volume",
 "liv": "A",
-"sintesi": "Meta-analisi bayesiana a rete sulla prescrizione: volume, carico e frequenza confrontati su forza e ipertrofia in adulti sani.",
+"sintesi": "Meta-analisi a rete su 178 studi per la forza (5097 persone) e 119 per l’ipertrofia (3364), con quasi metà donne. **Tutte le prescrizioni battono il non allenarsi.** Per la forza vincono i **carichi alti, sopra l’80% del massimale**: la combinazione meglio classificata è carico alto, serie multiple, tre volte a settimana. Per l’ipertrofia **tutte le prescrizioni risultano paragonabili**, e quella meglio classificata è carico alto, serie multiple, due volte a settimana. Gli autori riportano che l’analisi di soglia mostra risultati «estremamente robusti». È il riferimento più solido per impostare carico, serie e frequenza.",
 "kw": "prescrizione volume carico frequenza"
 },
 {
@@ -2051,7 +2051,7 @@ const STUDI = [
 "cit": 147,
 "tema": "volume",
 "liv": "A",
-"sintesi": "Meta-analisi sul volume settimanale e i guadagni di forza: più serie danno più forza, con rendimenti decrescenti.",
+"sintesi": "Meta-analisi sul volume settimanale e la forza. Volumi medi e alti si sono dimostrati più efficaci di quelli bassi, che producono gli aumenti più piccoli. Fra volume alto e basso sui massimali di esercizi specifici la differenza è però **marginale e al limite della significatività** (0,14; p = 0,06). Per i principianti e gli intermedi i volumi bassi non bastano; per i ben allenati sia volumi medi sia alti sono dosi adeguate.",
 "kw": "volume forza serie"
 },
 {
@@ -2066,7 +2066,7 @@ const STUDI = [
 "cit": 156,
 "tema": "volume",
 "liv": "A",
-"sintesi": "Serie multiple producono più ipertrofia della serie singola, con un effetto dose-risposta chiaro. È il lavoro che ha chiuso la questione del monoserie.",
+"sintesi": "55 misure da 8 studi. Le serie multiple sono associate a un effetto maggiore della serie singola (differenza 0,10; p = 0,016), con una tendenza crescente al crescere delle serie: 0,24 per una serie, 0,34 per 2-3, 0,44 per 4-6. **Fra 2-3 e 4-6 serie non c’è differenza significativa.** Nel complesso le serie multiple sono associate a effetti superiori di circa il 40% rispetto alla serie singola, in allenati e non allenati. Base di pochi studi.",
 "kw": "serie multiple singola volume"
 }
 ];

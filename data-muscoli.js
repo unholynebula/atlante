@@ -754,7 +754,7 @@ const MUSCOLI = [
 "Estensione del ginocchio",
 "Flessione dell’anca (solo retto femorale)"
 ],
-"stimolo": "Tre capi su quattro attraversano solo il ginocchio e rispondono bene ad accosciate e presse. Il retto femorale attraversa anche l’anca: nello squat è accorciato all’anca mentre si allunga al ginocchio, e infatti cresce poco. Serve la leg extension, meglio se con lo schienale reclinato.",
+"stimolo": "Tre capi su quattro attraversano solo il ginocchio e rispondono bene ad accosciate e presse. Il retto femorale attraversa anche l’anca: nello squat è accorciato all’anca mentre si allunga al ginocchio, quindi resta a lunghezza quasi costante. Kubo 2019 trova infatti che lo squat completo batte quello parziale su tutti i muscoli dell’arto inferiore **tranne il retto femorale e gli ischiocrurali**. Serve la leg extension, meglio se con lo schienale reclinato.",
 "esercizi": [
 {
 "n": "Squat (bilanciere o guidato)",
@@ -1091,8 +1091,8 @@ const MUSCOLI = [
 },
 {
 "t": "Scegliere fra hip thrust e squat",
-"s": "Caricano il gluteo in posizioni opposte e i risultati non sono interscambiabili: se il gluteo è una priorità, servono entrambi.",
-"liv": "B"
+"s": "Caricano il gluteo in posizioni opposte — il momento massimo cade ad anca flessa nell’accosciata e ad anca estesa nell’hip thrust — quindi sono complementari: se il gluteo è una priorità, servono entrambi. È un argomento meccanico: il confronto diretto fra i due esercizi esiste solo su salto e sprint, non sull’ipertrofia.",
+"liv": "M"
 }
 ],
 "studi": [
@@ -1124,7 +1124,7 @@ const MUSCOLI = [
 "Adduzione dell’anca",
 "Estensione dell’anca (adduttore magno)"
 ],
-"stimolo": "L’adduttore magno è costruito soprattutto per estendere l’anca, non per addurre: nello squat contribuisce in modo rilevante alla spinta. È un muscolo grosso che aggiunge circonferenza reale alla coscia, e quasi tutti lo trascurano.",
+"stimolo": "L’adduttore magno è costruito soprattutto per estendere l’anca, non per addurre: la sua capacità di coppia in estensione è oltre il doppio di quella in adduzione. Che questo si traduca in un contributo rilevante nell’accosciata profonda è un’inferenza meccanica, non una misura diretta. È un muscolo grosso che aggiunge circonferenza reale alla coscia, e quasi tutti lo trascurano.",
 "esercizi": [
 {
 "n": "Squat profondo",

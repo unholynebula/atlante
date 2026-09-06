@@ -1045,7 +1045,7 @@ const PROBLEMI = [
 "soluzioni": [
 {
 "s": "Accorcia i recuperi solo per guadagnare tempo, sapendo cosa costa",
-"come": "La meta-analisi bayesiana più recente trova ampia sovrapposizione fra le durate e alta eterogeneità, con le stime centrali che semmai **favoriscono i recuperi più lunghi** su braccio e coscia. Accorciare non fa crescere di più: è un compromesso che paghi in prestazione sulle serie successive per finire prima. Se il tempo non ti manca, non c’è motivo di farlo.",
+"come": "La meta-analisi bayesiana più recente trova ampia sovrapposizione fra le durate e alta eterogeneità, con le stime centrali che semmai **favoriscono i recuperi più lunghi** su braccio e coscia. Gli stessi autori però **non rilevano differenze apprezzabili oltre i 90 secondi**. Quindi: scendere sotto il minuto penalizza; se devi tagliare, il taglio meno costoso è da tre minuti a un minuto e mezzo sugli isolamenti. Sui fondamentali pesanti la ragione per tenere i tre minuti è la forza espressa nelle serie successive, non l’ipertrofia.",
 "liv": "A"
 },
 {
@@ -2576,7 +2576,7 @@ const MITI = [
 "m": "La periodizzazione è indispensabile per crescere",
 "v": "parziale",
 "liv": "A",
-"s": "Per la forza la periodizzazione dà un vantaggio misurabile, con differenze piccole fra i modelli. Per l’ipertrofia il fattore dominante resta il volume settimanale accumulato vicino al cedimento.",
+"s": "Per la forza la periodizzazione dà un vantaggio misurabile ma moderato (dimensione dell’effetto 0,43). Quale modello sia migliore non è stabilito. Per l’ipertrofia il fattore dominante resta il volume settimanale accumulato vicino al cedimento.",
 "studi": [
 "period_meta",
 "pelland_volume"
@@ -2733,7 +2733,7 @@ const MITI = [
 "m": "Un muscolo cresce in modo uniforme, quindi l’esercizio non cambia la forma",
 "v": "falso",
 "liv": "B",
-"s": "L’ipertrofia regionale è documentata su più muscoli: lo squat fa crescere il vasto laterale ma quasi non tocca il retto femorale, il pettorale si attiva per regioni secondo la direzione del movimento. Non vale però ovunque: sui flessori del gomito il confronto diretto trova crescita distribuita in modo simile.",
+"s": "L’ipertrofia regionale è documentata su più muscoli: il pettorale si attiva per regioni distinte secondo la direzione del movimento, e nel leg extension l’angolo dell’anca cambia quanto cresce il retto femorale. Non vale però ovunque: sui flessori del gomito il confronto diretto trova crescita distribuita in modo simile.",
 "studi": [
 "squat_regional",
 "pec_fiber",

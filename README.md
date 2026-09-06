@@ -65,7 +65,31 @@ Il metodo, in ordine:
    gli agganci approssimativi si scartano
 2. si recupera l'abstract e **la sintesi si scrive da quello**, non a memoria
 3. ogni cifra citata deve comparire nell'abstract; se non c'e', si toglie
-4. i PMID si ricontrollano in blocco: `python3 verifica_pmid.py`
+4. la sintesi non deve contenere affermazioni che l'abstract non sostiene,
+   nemmeno se vere: se un fatto serve ma viene da altrove, si cita altrove
+5. i limiti che cambiano la lettura — popolazione non allenata, anziani, sole
+   donne, campione minuscolo, protocollo particolare — vanno scritti nella
+   sintesi, non sottintesi
+6. dove due studi in archivio si contraddicono, lo si dice nella sintesi di
+   entrambi invece di scegliere il piu' comodo
+
+## Il controllo automatico
+
+    python3 verifica_pmid.py
+
+Fa tre cose, tutte contro la fonte originale:
+
+1. **i PMID risolvono** su PubMed;
+2. **i titoli corrispondono** a quelli del PMID. Serve a scoprire le citazioni
+   agganciate allo studio sbagliato — un corrigendum al posto dell'articolo,
+   una lettera di risposta al posto della rassegna, un omonimo;
+3. **le cifre delle sintesi compaiono negli abstract**, convertendo i numeri
+   che l'abstract scrive a lettere.
+
+Il terzo controllo segnala anche casi legittimi che vanno letti a mano: somme
+fatte da noi (12 uomini + 6 donne = 18), rimandi ad altri studi dell'archivio,
+e abstract che Europe PMC restituisce troncati. Non e' un semaforo verde
+automatico: e' una lista di cose da guardare.
 
 ## Come aggiungere contenuto
 

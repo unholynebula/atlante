@@ -388,7 +388,7 @@ const PRINCIPI = [
 "sommario": "Un muscolo non cresce in modo uniforme, e l’esercizio decide dove.",
 "corpo": [
 "Un muscolo non è un’unità funzionale omogenea. Le fibre possono essere organizzate in compartimenti con innervazione parzialmente distinta, e la crescita in risposta all’allenamento risulta disomogenea lungo il ventre muscolare.",
-"Gli esempi documentati sono numerosi. Lo squat fa crescere il vasto laterale nella porzione centrale e lascia quasi fermo il retto femorale. Il grande pettorale si attiva per regioni distinte secondo la direzione del movimento, e clavicolare e sternale non sono intercambiabili. Negli ischiocrurali la selezione dell’esercizio cambia quale capo lavora.",
+"Gli esempi documentati sono numerosi. Nello squat tutti e quattro i capi del quadricipite crescono, senza differenze statistiche fra loro; quello che distingue il vasto laterale è che solo la sua crescita correla con l’aumento del massimale. Il grande pettorale si attiva per regioni distinte secondo la direzione del movimento, e clavicolare e sternale non sono intercambiabili. Negli ischiocrurali la selezione dell’esercizio cambia quale capo lavora.",
 "Non tutti i muscoli però si comportano così. Sui flessori del gomito il confronto diretto ha trovato crescita distribuita in modo simile: il «picco del bicipite» non si costruisce scegliendo l’esercizio giusto.",
 "La lezione pratica è misurata: per i gruppi con compartimentazione documentata la varietà di angoli e di linee di trazione ha una ragione meccanica, per gli altri è probabilmente indifferente. Vale la pena variare dove c’è una motivazione anatomica, non per principio."
 ],
