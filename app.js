@@ -358,10 +358,18 @@ V.muscolo = function(id){
   }
   h += '<h2>Esercizi per funzione</h2>'+
     '<p class="guida">Il grado indica quanto l’esercizio serve questo muscolo: A primario, B utile, C marginale.</p>';
-  m.esercizi.forEach(function(e){
+  m.esercizi.forEach(function(e, k){
+    const idEs = 'es-'+m.id+'-'+k;
     h += '<div class="es"><span class="es-g g-'+e.g+'">'+e.g+'</span>'+
       '<span><span class="es-n">'+e.n+'</span><span class="es-f">'+e.f+'</span>'+
-      (e.nota ? '<span class="es-nota">'+gr(e.nota)+'</span>' : '')+'</span>'+
+      (e.nota ? '<span class="es-nota">'+gr(e.nota)+'</span>' : '')+
+      (e.esec && e.esec.length
+        ? '<button class="es-apri" data-esec="'+idEs+'">Esecuzione \u25b8</button>'+
+          '<span class="es-corpo" id="'+idEs+'" hidden>'+
+          e.esec.map(function(r){ return '<span class="es-r">'+gr(r)+'</span>'; }).join('')+
+          '</span>'
+        : '')+
+      '</span>'+
       '<span class="es-len">'+e.l+'</span></div>';
   });
   h += '<h2>Errori che costano</h2><div class="num-el">';
@@ -855,6 +863,15 @@ document.addEventListener('click', function(ev){
       c.hidden = !c.hidden;
       if(seg) seg.textContent = seg.textContent.replace(c.hidden ? '▾' : '▸', c.hidden ? '▸' : '▾');
       rif.classList.toggle('aperto', !c.hidden);
+    }
+    return;
+  }
+  const esx = ev.target.closest('[data-esec]');
+  if(esx){
+    const c = document.getElementById(esx.getAttribute('data-esec'));
+    if(c){
+      c.hidden = !c.hidden;
+      esx.textContent = 'Esecuzione ' + (c.hidden ? '\u25b8' : '\u25be');
     }
     return;
   }

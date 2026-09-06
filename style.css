@@ -207,6 +207,17 @@ a{color:var(--inchiostro);text-decoration:none;border-bottom:1px solid var(--ros
 .es-n{display:block;font-size:16px;font-weight:600;}
 .es-f{display:block;font-family:var(--bastoni);font-size:11.5px;color:var(--inchiostro-3);margin-top:4px;line-height:1.45;}
 .es-nota{display:block;font-size:14px;color:var(--inchiostro-2);margin-top:6px;line-height:1.55;}
+/* Il dettaglio di esecuzione sta chiuso: la scheda resta leggibile come indice
+   e si apre solo l'esercizio che interessa. */
+.es-apri{
+  display:inline-block;margin-top:9px;background:none;border:none;padding:0;cursor:pointer;
+  font-family:var(--bastoni);font-size:9.5px;font-weight:700;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--rosso);
+}
+.es-corpo{display:block;margin-top:11px;padding-left:12px;border-left:1px solid var(--filo-2);}
+.es-r{display:block;font-size:14px;line-height:1.6;color:var(--inchiostro-2);margin-bottom:8px;}
+.es-r:last-child{margin-bottom:0;}
+.es-r strong{color:var(--inchiostro);font-weight:600;}
 .es-len{
   font-family:var(--bastoni);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;
   color:var(--inchiostro-3);white-space:nowrap;
