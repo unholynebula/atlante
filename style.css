@@ -79,9 +79,18 @@ button,input,textarea{font-family:inherit;color:inherit;}
 /* Unghiature: la striscia di sfoglio resta sempre in testa, come i tagli
    laterali di un dizionario. Da qui si raggiunge ogni parte in un tocco,
    compreso l'indice generale. */
+/* Le nove parti sommate misurano 525px: con l'intervallo precedente di 18px
+   superavano i 620px utili e l'ultima voce, Note, restava tagliata fuori a
+   ogni larghezza. Con l'avvolgimento nessuna voce puo' piu' sparire: al
+   massimo l'indice occupa due righe. */
 .sfoglio{
-  max-width:660px;margin:0 auto;padding:0 20px;display:flex;gap:0 18px;
-  overflow-x:auto;-webkit-overflow-scrolling:touch;
+  max-width:660px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;
+  gap:0 11px;
+}
+@media (max-width:560px){
+  .sfoglio{gap:0 12px;padding:0 16px;}
+  .unghia{padding:6px 0 7px;font-size:10.5px;}
+  .unghia .rom{margin-right:4px;}
 }
 .sfoglio::-webkit-scrollbar{display:none;}
 .unghia{
@@ -164,7 +173,6 @@ a{color:var(--inchiostro);text-decoration:none;border-bottom:1px solid var(--ros
 /* corpo dei principi: colonna di lettura piena, capoversi ampi */
 .prosa p{font-size:16px;line-height:1.68;margin:0 0 15px;color:var(--inchiostro);}
 .prosa p strong{font-weight:600;}
-.prosa.saggio p:first-child::first-line{font-variant:small-caps;letter-spacing:0.02em;}
 .artic{border-top:1px solid var(--filo);}
 .artic > div{display:grid;grid-template-columns:82px 1fr;column-gap:16px;padding:11px 0;border-bottom:1px solid var(--filo);}
 .artic .marg{font-family:var(--bastoni);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding-top:6px;text-align:left;line-height:1.3;}
@@ -291,7 +299,7 @@ a{color:var(--inchiostro);text-decoration:none;border-bottom:1px solid var(--ros
 .calc{border-top:1px solid var(--filo-2);margin-bottom:26px;}
 .calc-riga{display:grid;grid-template-columns:1fr 96px;column-gap:14px;align-items:center;padding:10px 0;border-bottom:1px solid var(--filo);}
 .calc-et{font-size:15px;}
-.calc-nota{font-family:var(--bastoni);font-size:11px;color:var(--inchiostro-3);margin-top:3px;line-height:1.45;}
+.calc-nota{display:block;font-family:var(--bastoni);font-size:11px;color:var(--inchiostro-3);margin-top:3px;line-height:1.45;}
 .calc-in{
   width:100%;text-align:right;background:transparent;border:none;border-bottom:1px solid var(--filo-2);
   font-family:var(--macchina);font-size:16px;padding:6px 2px;border-radius:0;

@@ -521,40 +521,88 @@ V.fonte = function(id){
 };
 
 V.strumenti = function(){
-  let h = testa('strumenti','Strumenti','');
-  h += '<h2>Calcoli</h2>' + CALCOLI;
+  let h = testa('strumenti','Strumenti','Ogni numero di riferimento viene da uno studio in archivio, citato sotto il calcolo.');
+  h += '<h2>Carico e progressione</h2>' + CALC_CARICO;
+  h += '<h2>Volume e tempo</h2>' + CALC_VOLUME;
+  h += '<h2>Nutrizione e integratori</h2>' + CALC_NUTRIZIONE;
   h += '<h2>Glossario</h2><div class="gloss">';
   GLOSSARIO.forEach(function(g){ h += '<div><dt>'+g.t+'</dt><dd>'+g.d+'</dd></div>'; });
   return h + '</div>';
 };
 
-const CALCOLI =
-'<div class="calc"><h3>Massimale stimato</h3>'+
-  '<div class="calc-riga"><span class="calc-et">Peso<span class="calc-nota">chilogrammi sollevati</span></span><input class="calc-in" id="c1w" type="text" inputmode="decimal" value="100"></div>'+
-  '<div class="calc-riga"><span class="calc-et">Ripetizioni</span><input class="calc-in" id="c1r" type="text" inputmode="numeric" value="8"></div>'+
-  '<div class="calc-riga"><span class="calc-et">RIR<span class="calc-nota">ripetizioni che restavano</span></span><input class="calc-in" id="c1rir" type="text" inputmode="numeric" value="1"></div>'+
-  '<div class="calc-out" id="c1out"></div>'+
-  '<p class="guida" style="margin-top:12px;">Epley e Brzycki sono formule diverse: se divergono molto sei fuori dall’intervallo in cui sono attendibili, indicativamente sotto le dodici ripetizioni.</p></div>'+
-'<div class="calc"><h3>Volume settimanale di un muscolo</h3>'+
-  '<div class="calc-riga"><span class="calc-et">Serie dirette<span class="calc-nota">il muscolo è il bersaglio</span></span><input class="calc-in" id="c2d" type="text" inputmode="numeric" value="9"></div>'+
-  '<div class="calc-riga"><span class="calc-et">Serie indirette<span class="calc-nota">partecipa ma non è il bersaglio</span></span><input class="calc-in" id="c2i" type="text" inputmode="numeric" value="8"></div>'+
-  '<div class="calc-out" id="c2out"></div><div class="scala"><i id="c2bar"></i></div>'+
-  '<p class="guida" style="margin-top:12px;">Le indirette contano mezza serie, secondo la convenzione del volume frazionale. Riferimento per un allenato: dieci-venti serie a settimana.</p></div>'+
-'<div class="calc"><h3>Carico per un altro numero di ripetizioni</h3>'+
-  '<div class="calc-riga"><span class="calc-et">Peso attuale</span><input class="calc-in" id="c3w" type="text" inputmode="decimal" value="100"></div>'+
-  '<div class="calc-riga"><span class="calc-et">Ripetizioni attuali</span><input class="calc-in" id="c3r" type="text" inputmode="numeric" value="8"></div>'+
-  '<div class="calc-riga"><span class="calc-et">Ripetizioni bersaglio</span><input class="calc-in" id="c3t" type="text" inputmode="numeric" value="12"></div>'+
-  '<div class="calc-out" id="c3out"></div>'+
-  '<p class="guida" style="margin-top:12px;">A parità di massimale stimato. Serve a cambiare intervallo senza perdere il filo della progressione.</p></div>'+
-'<div class="calc"><h3>Percentuale di massimale</h3>'+
-  '<div class="calc-riga"><span class="calc-et">Ripetizioni</span><input class="calc-in" id="c4r" type="text" inputmode="numeric" value="8"></div>'+
-  '<div class="calc-riga"><span class="calc-et">RIR</span><input class="calc-in" id="c4rir" type="text" inputmode="numeric" value="2"></div>'+
-  '<div class="calc-out" id="c4out"></div>'+
-  '<p class="guida" style="margin-top:12px;">Stima a quale percentuale del massimale stai lavorando. La stima del RIR è sistematicamente ottimista: vedi '+'§3'+'.</p></div>';
+function riga(et, nota, id, val, modo){
+  return '<div class="calc-riga"><span class="calc-et">'+et+
+    (nota ? '<span class="calc-nota">'+nota+'</span>' : '')+'</span>'+
+    '<input class="calc-in" id="'+id+'" type="text" inputmode="'+(modo||'decimal')+'" value="'+val+'"></div>';
+}
+function box(titolo, righe, id, guida, barra){
+  return '<div class="calc"><h3>'+titolo+'</h3>'+righe+'<div class="calc-out" id="'+id+'"></div>'+
+    (barra ? '<div class="scala"><i id="'+barra+'"></i></div>' : '')+
+    (guida ? '<p class="guida" style="margin-top:12px;">'+gr(guida)+'</p>' : '')+'</div>';
+}
+
+const CALC_CARICO =
+box('Massimale stimato',
+  riga('Peso','chilogrammi sollevati','c1w','100')+
+  riga('Ripetizioni','','c1r','8','numeric')+
+  riga('RIR','ripetizioni che restavano','c1rir','1','numeric'),
+  'c1out',
+  'Epley e Brzycki sono formule diverse: se divergono molto sei fuori dall’intervallo in cui sono attendibili, indicativamente sotto le dodici ripetizioni. Ricorda che la stima del RIR è sistematicamente ottimista: in media si sottovalutano di 2,64-3,38 ripetizioni quelle che restano davvero (Steele 2017).')+
+box('Carico per un altro numero di ripetizioni',
+  riga('Peso attuale','','c3w','100')+
+  riga('Ripetizioni attuali','','c3r','8','numeric')+
+  riga('Ripetizioni bersaglio','','c3t','12','numeric'),
+  'c3out',
+  'A parità di massimale stimato. Serve a cambiare intervallo senza perdere il filo della progressione.')+
+box('Percentuale di massimale',
+  riga('Ripetizioni','','c4r','8','numeric')+
+  riga('RIR','','c4rir','2','numeric'),
+  'c4out',
+  'Stima a quale percentuale del massimale stai lavorando. Per l’ipertrofia l’intervallo utile è ampio; per la forza massimale servono carichi sopra l’80% (Currier 2023).')+
+box('Dischi per lato',
+  riga('Carico bersaglio','bilanciere compreso','c5t','100')+
+  riga('Peso del bilanciere','20 kg l’olimpico, 10-15 l’EZ o il manubrio','c5b','20'),
+  'c5out',
+  'Dischi da 25, 20, 15, 10, 5, 2,5 e 1,25 kg. Se il carico esatto non è componibile ti dà il più vicino sotto, con lo scarto.');
+
+const CALC_VOLUME =
+box('Volume settimanale di un muscolo',
+  riga('Serie dirette','il muscolo è il bersaglio','c2d','9','numeric')+
+  riga('Serie indirette','partecipa ma non è il bersaglio','c2i','8','numeric'),
+  'c2out',
+  'Le indirette contano mezza serie, secondo la convenzione del volume frazionale che Pelland 2025 trova essenziale per prevedere gli adattamenti. Riferimento per un allenato: dieci-venti serie a settimana.', 'c2bar')+
+box('Volume distribuito sulle sedute',
+  riga('Serie settimanali','per questo muscolo','c6v','16','numeric')+
+  riga('Sedute a settimana','in cui lo alleni','c6s','2','numeric'),
+  'c6out',
+  'A volume pareggiato la frequenza non cambia l’ipertrofia (Schoenfeld 2019), ma i grandi gruppi vanno allenati **almeno due volte a settimana** (Grgic 2018). Oltre le dieci serie in una sola seduta la resa per serie cala.', 'c6bar')+
+box('Durata della seduta',
+  riga('Serie totali','tutte le serie allenanti','c7n','20','numeric')+
+  riga('Recupero medio','secondi fra le serie','c7r','150','numeric')+
+  riga('Durata di una serie','secondi sotto carico','c7d','40','numeric'),
+  'c7out',
+  'Se sfori il tempo che hai, il taglio meno costoso è accorciare i recuperi **sugli isolamenti**: sotto il minuto si perde, ma fra 90 secondi e tre minuti non emergono differenze di ipertrofia (Singer 2024). Sui fondamentali i recuperi lunghi servono alla forza espressa nelle serie successive (Grgic 2018).');
+
+const CALC_NUTRIZIONE =
+box('Proteine al giorno',
+  riga('Peso corporeo','chilogrammi','c8p','80')+
+  riga('Pasti al giorno','','c8n','4','numeric'),
+  'c8out',
+  'La soglia è 1,62 g per kg al giorno: oltre quella, integrare non aggiunge altra massa magra (Morton 2018). Per pasto servono circa 0,25 g per kg, o 20-40 g in assoluto (Jäger 2017). In deficit calorico marcato le raccomandazioni salgono parecchio: 2,3-3,1 g per kg di **massa magra** in preparazione a una gara (Helms 2014).')+
+box('Ritmo di dimagrimento',
+  riga('Peso attuale','chilogrammi','c9a','85')+
+  riga('Peso obiettivo','chilogrammi','c9b','78'),
+  'c9out',
+  'Perdere fra lo 0,5 e l’1% del peso a settimana è l’intervallo che massimizza il mantenimento del muscolo (Helms 2014). Le settimane stimate sono ottimistiche: il dispendio energetico cala durante la perdita di peso e il deficit va rivisto strada facendo (Trexler 2014).')+
+box('Caffeina e creatina per il tuo peso',
+  riga('Peso corporeo','chilogrammi','c10p','80'),
+  'c10out',
+  'Caffeina: 3-6 mg per kg migliorano la prestazione; sopra i 9 mg per kg gli effetti collaterali aumentano senza vantaggi (Guest 2021). Creatina monoidrato: la dose abituale indicata è 3 g al giorno, e l’assunzione fino a 30 g al giorno per cinque anni risulta sicura e ben tollerata (Kreider 2017).');
 
 function num(id){ const e=$(id); return e ? (parseFloat(String(e.value).replace(',','.'))||0) : 0; }
 function usc(v,e){ return '<div><div class="out-v">'+v+'</div><div class="out-e">'+e+'</div></div>'; }
-function r1(x){ return Math.round(x*10)/10; }
+function r1(x){ return String(Math.round(x*10)/10).replace('.',','); }
+function vir(x){ return String(x).replace('.',','); }
 function calcola(){
   if($('c1out')){
     const w=num('c1w'), r=num('c1r')+num('c1rir');
@@ -579,6 +627,58 @@ function calcola(){
   if($('c4out')){
     const r=num('c4r')+num('c4rir');
     $('c4out').innerHTML = usc(Math.round(r>0?100/(1+r/30):0)+'%','Del massimale') + usc(r1(r),'Rip. equivalenti');
+  }
+  if($('c5out')){
+    const t=num('c5t'), b=num('c5b'), lato=(t-b)/2;
+    const tagli=[25,20,15,10,5,2.5,1.25];
+    let resto=lato, usati=[];
+    if(lato>0) tagli.forEach(function(d){ while(resto >= d-1e-9){ usati.push(d); resto-=d; } });
+    const somma=usati.reduce(function(a,x){ return a+x; },0), eff=b+2*somma;
+    const conta={}; usati.forEach(function(d){ conta[d]=(conta[d]||0)+1; });
+    const testo=Object.keys(conta).sort(function(x,y){ return y-x; })
+      .map(function(d){ return conta[d]+'×'+vir(d); }).join('   ') || (lato<=0 ? 'solo bilanciere' : '—');
+    $('c5out').innerHTML = usc(testo,'Per lato') + usc(r1(eff),'Carico effettivo, kg')
+      + usc(r1(t-eff),'Scarto, kg');
+  }
+  if($('c6out')){
+    const v=num('c6v'), s=Math.max(1,Math.round(num('c6s')));
+    const per=v/s;
+    let g='equilibrato', cls='';
+    if(s<2){ g='meno di due sedute: sotto il riferimento'; cls='avviso'; }
+    else if(per>10){ g='troppe serie in una seduta'; cls='avviso'; }
+    else if(per<2){ g='poche serie per seduta'; cls='scarso'; }
+    $('c6out').innerHTML = usc(r1(per),'Serie per seduta') + usc(s,'Sedute') + usc(g,'Giudizio');
+    $('c6bar').style.width = Math.min(100, per/12*100)+'%';
+    $('c6bar').className = cls;
+  }
+  if($('c7out')){
+    const n=num('c7n'), r=num('c7r'), d=num('c7d');
+    const sec = n>0 ? n*d + Math.max(0,n-1)*r : 0;
+    const min = Math.floor(sec/60), res = Math.round(sec%60);
+    $('c7out').innerHTML = usc(min+'′'+(res<10?'0':'')+res+'″','Tempo di lavoro')
+      + usc(Math.round(n*d/60)+'′','Sotto carico') + usc(Math.round(Math.max(0,n-1)*r/60)+'′','In recupero');
+  }
+  if($('c8out')){
+    const p=num('c8p'), n=Math.max(1,Math.round(num('c8n')));
+    const tot=p*1.62, perPasto=tot/n, minPasto=Math.max(p*0.25, 20);
+    $('c8out').innerHTML = usc(Math.round(tot),'Grammi al giorno')
+      + usc(Math.round(perPasto),'Per pasto, ×'+n)
+      + usc(Math.round(minPasto),'Soglia per pasto, g');
+  }
+  if($('c9out')){
+    const a=num('c9a'), b=num('c9b'), da=a-b;
+    if(da<=0){ $('c9out').innerHTML = usc('—','Nessun calo richiesto'); }
+    else {
+      const lento=a*0.005, rapido=a*0.01;
+      $('c9out').innerHTML = usc(r1(da),'Chili da perdere')
+        + usc(Math.ceil(da/rapido)+'-'+Math.ceil(da/lento),'Settimane')
+        + usc(r1(lento)+'-'+r1(rapido),'Kg a settimana');
+    }
+  }
+  if($('c10out')){
+    const p=num('c10p');
+    $('c10out').innerHTML = usc(Math.round(p*3)+'-'+Math.round(p*6),'Caffeina, mg')
+      + usc(Math.round(p*9),'Soglia effetti avversi, mg') + usc('3','Creatina, g al giorno');
   }
 }
 
