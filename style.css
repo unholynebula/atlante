@@ -48,6 +48,11 @@ body{
   font-variant-numeric:oldstyle-nums;
 }
 button,input,textarea{font-family:inherit;color:inherit;}
+/* Una classe che dichiara display batte la regola [hidden]{display:none} del
+   browser, perche' ha specificita' maggiore. Senza questa riga qualunque
+   elemento nascosto con l'attributo hidden e stilato con un display esplicito
+   resterebbe visibile. */
+[hidden]{display:none !important;}
 
 /* ---------- testata e titolo corrente ---------- */
 #top{
