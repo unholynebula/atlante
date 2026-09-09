@@ -1,5 +1,8 @@
 # Atlante
 
+> Contesto completo del progetto, metodo di verifica, trappole tecniche
+> gia' pagate e lavoro aperto: **[ATLANTE.md](ATLANTE.md)**.
+
 Riferimento sull'allenamento basato sulla ricerca. Web app statica, pensata per iPhone.
 
 ## Avvio
