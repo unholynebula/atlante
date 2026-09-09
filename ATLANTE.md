@@ -11,10 +11,16 @@ lavoro senza la conversazione in cui è stato costruito. Aggiornato al
 Riferimento sull'allenamento contro resistenza per iPhone, in italiano.
 Web app statica, senza framework e senza passaggio di build.
 
-- **Repo:** `https://github.com/unholynebula/atlante`
-- **Online:** `https://unholynebula.github.io/atlante/`
+- **Repo:** `https://github.com/zanfeti/atlante`
+- **Online:** `https://zanfeti.github.io/atlante/`
 - **Locale:** `/Users/matteocamerini/Claude/atlante`
 - **Pubblicazione:** `git push origin main` → GitHub Pages ci mette 1-3 minuti
+
+> **L'account GitHub è stato rinominato** da `unholynebula` a `zanfeti`.
+> Il vecchio indirizzo `unholynebula.github.io/atlante/` ora risponde **404**:
+> il segnalibro sul telefono va rifatto. Il vecchio indirizzo del repo
+> reindirizza ancora, ma conviene aggiornare il remoto locale con
+> `git remote set-url origin https://github.com/zanfeti/atlante.git`.
 
 Per chi è: **Matteo**, 5 anni di allenamento, vuole diventare il miglior coach
 della sua zona. L'atlante è lo strumento di studio, non un'app di allenamento.
@@ -363,7 +369,8 @@ l'editor della scheda.
 
 ## 13. Progetto gemello: `scheda`
 
-`/Users/matteocamerini/Claude/scheda`, da `https://github.com/unholynebula/scheda`.
+`/Users/matteocamerini/Claude/scheda`, da `https://github.com/zanfeti/scheda`
+(anche qui l'account è stato rinominato da `unholynebula`).
 App di registrazione degli allenamenti, file singolo, italiano.
 
 **In sospeso, da fare a mano sul suo telefono:** se la configurazione era già
